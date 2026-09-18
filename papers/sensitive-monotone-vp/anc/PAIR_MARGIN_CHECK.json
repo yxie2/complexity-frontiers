@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-15T17:05:17.749178+00:00",
+  "script_sha256": "6002aeeffafcbfbb1756196e9c09af9d18a171dc11280088da9de041dcc33342",
+  "manuscript_sha256": "fda4cc184b88d8b8129131c4bf999b20e73dc88624dee954a68a3c2f2ba30807",
+  "symbolic_factorization_checked": true,
+  "direct_colorings_checked": 2016,
+  "density_pairs_checked": 93610,
+  "incorrect_half_clone_bounds_rejected": 60,
+  "square_root_mean_margin": "16/225",
+  "mean_excess_over_one_two_hundredth": "23/405000",
+  "minimum_integer_v_for_two_term_loss": 35218,
+  "host_constants": [
+    {
+      "host": "base_clique",
+      "degree": 17263679,
+      "N_upper_factor": 552437728,
+      "a": "1/8485443502080000",
+      "b": "1/12728165253120000"
+    },
+    {
+      "host": "state_clique",
+      "degree": 46975,
+      "N_upper_factor": 1503200,
+      "a": "1/23089152000000",
+      "b": "1/34633728000000"
+    }
+  ],
+  "scope": "Finite exact identities and constants only. The sign, spectral, expectation, and conditioning arguments are proved analytically in the manuscript."
+}

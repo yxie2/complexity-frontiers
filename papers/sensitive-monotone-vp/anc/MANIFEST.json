@@ -1,0 +1,110 @@
+{
+  "scope": "Names, sizes, and SHA-256 hashes of the supplied ancillary files, excluding this manifest.",
+  "files": [
+    {
+      "path": "check_all_step_cover.py",
+      "sha256": "457cb4ac0faa704111b2040574d5fc48eed943c3ea4eb1b5f48e6268b3256131",
+      "bytes": 9590
+    },
+    {
+      "path": "check_counting_normalization.py",
+      "sha256": "109d3315b78e5d6675ef14ea32d120f31fc7ff90143aeef69c67c53f5db32669",
+      "bytes": 9899
+    },
+    {
+      "path": "check_euler_conditioning.py",
+      "sha256": "b0e895309165082b013d719ac3bea68e8305f64c19067e5ae29088f6da8ea107",
+      "bytes": 10736
+    },
+    {
+      "path": "check_euler_refinements.py",
+      "sha256": "4df2cdab278f742206f7ac41d38c4bafb458757dac66b194d4eeddce902a5433",
+      "bytes": 9038
+    },
+    {
+      "path": "check_inactive_forest.py",
+      "sha256": "e6acf6903e9724a6b161cbd89aaa43fae1e3cbdc0a3ad484477c804ee1875ad9",
+      "bytes": 12046
+    },
+    {
+      "path": "check_lowest_component.py",
+      "sha256": "4f44cbcdc9b99dda38026ae841de0c52b6ee3adde2c8b53c3e3ceac1693218ca",
+      "bytes": 5010
+    },
+    {
+      "path": "check_pair_margin.py",
+      "sha256": "6002aeeffafcbfbb1756196e9c09af9d18a171dc11280088da9de041dcc33342",
+      "bytes": 3296
+    },
+    {
+      "path": "check_shared_charge.py",
+      "sha256": "5be0b8b9ffda8f4fc1771c82fa3f6f70799d7c2028b11b0523c78a4bb46a2a9d",
+      "bytes": 7703
+    },
+    {
+      "path": "check_shared_decomposition.py",
+      "sha256": "a2c63267a3fcf91c81be38fc1c3b496390452cf1133196c0c8c6b1b99dd1a582",
+      "bytes": 7429
+    },
+    {
+      "path": "COUNTING_NORMALIZATION_CHECK.json",
+      "sha256": "7abe5e8a57c2736a740edef12b00ee8fd45d919f447b21b11029bb9f12066b39",
+      "bytes": 912
+    },
+    {
+      "path": "EULER_CONDITIONING_CHECK.json",
+      "sha256": "c9d731abe1e12dd008472c3a76636e9911fdc5d752e8eb4b6f3d5c9008464271",
+      "bytes": 19359
+    },
+    {
+      "path": "EULER_REFINEMENTS_CHECK.json",
+      "sha256": "d67964a32764718eb483f1ec1c6139fa2273294dde04d5fa9107c7a9044f04c4",
+      "bytes": 5535
+    },
+    {
+      "path": "LOWEST_COMPONENT_CHECK.json",
+      "sha256": "f9c1131415574b701ecc4bd7ce8f2395dccfe5f80a6f348ab2539ad82b29b2f9",
+      "bytes": 809
+    },
+    {
+      "path": "PAIR_MARGIN_CHECK.json",
+      "sha256": "6881a7b07d9b365cd00386c2579df1b8f8a92e309cffa2ee2c82ca2aa91c4d21",
+      "bytes": 1101
+    },
+    {
+      "path": "README.md",
+      "sha256": "4cc0a01a5d809cb0f26e206e69677fec9847f65bc00f1e893d34f52d67bf9ce3",
+      "bytes": 2615
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "0fb13e0d2f4bc94c0892e6c6c4deb86844d5b1a29d481dfa898f986669fec688",
+      "bytes": 45
+    },
+    {
+      "path": "RUN_CHECKS.json",
+      "sha256": "990e7063bd7c5e96377aaf6c94d31456458111ccba9a1c682552da2d91380c6d",
+      "bytes": 2796
+    },
+    {
+      "path": "run_checks.py",
+      "sha256": "83ac79d8492113eee868b8e4d15773137363a20bfedb35ba1174ead2974f8967",
+      "bytes": 2682
+    },
+    {
+      "path": "SHARED_CHARGE_CHECK.json",
+      "sha256": "49cfd5b483db730eeb77b5ec703164bd839b6b99f279aef9bf5661bbfa67d08f",
+      "bytes": 1181
+    },
+    {
+      "path": "SHARED_DECOMPOSITION_CHECK.json",
+      "sha256": "cce766fcf22e6aa82d9a12b901b37558b9e697f9609c21886294f0d603a4a16b",
+      "bytes": 965
+    },
+    {
+      "path": "verify.py",
+      "sha256": "f7bd9e07875f71c736e71036982dd6564ff9a5db5c948d6c88f116df6d0955df",
+      "bytes": 17848
+    }
+  ]
+}

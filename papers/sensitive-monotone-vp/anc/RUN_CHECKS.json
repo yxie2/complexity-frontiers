@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-15T17:05:44.593114+00:00",
+  "python": "3.11.9",
+  "dependencies": {
+    "networkx": "3.5",
+    "numpy": "1.26.3",
+    "sympy": "1.14.0"
+  },
+  "checks": [
+    {
+      "script": "check_euler_conditioning.py",
+      "result": "EULER_CONDITIONING_CHECK.json",
+      "status": "PASS",
+      "script_sha256": "b0e895309165082b013d719ac3bea68e8305f64c19067e5ae29088f6da8ea107",
+      "result_sha256": "c9d731abe1e12dd008472c3a76636e9911fdc5d752e8eb4b6f3d5c9008464271",
+      "elapsed_seconds": 9.938
+    },
+    {
+      "script": "check_euler_refinements.py",
+      "result": "EULER_REFINEMENTS_CHECK.json",
+      "status": "PASS",
+      "script_sha256": "4df2cdab278f742206f7ac41d38c4bafb458757dac66b194d4eeddce902a5433",
+      "result_sha256": "d67964a32764718eb483f1ec1c6139fa2273294dde04d5fa9107c7a9044f04c4",
+      "elapsed_seconds": 5.594
+    },
+    {
+      "script": "check_pair_margin.py",
+      "result": "PAIR_MARGIN_CHECK.json",
+      "status": "PASS",
+      "script_sha256": "6002aeeffafcbfbb1756196e9c09af9d18a171dc11280088da9de041dcc33342",
+      "result_sha256": "6881a7b07d9b365cd00386c2579df1b8f8a92e309cffa2ee2c82ca2aa91c4d21",
+      "elapsed_seconds": 1.782
+    },
+    {
+      "script": "check_shared_decomposition.py",
+      "result": "SHARED_DECOMPOSITION_CHECK.json",
+      "status": "PASS",
+      "script_sha256": "a2c63267a3fcf91c81be38fc1c3b496390452cf1133196c0c8c6b1b99dd1a582",
+      "result_sha256": "cce766fcf22e6aa82d9a12b901b37558b9e697f9609c21886294f0d603a4a16b",
+      "elapsed_seconds": 28.516
+    },
+    {
+      "script": "check_lowest_component.py",
+      "result": "LOWEST_COMPONENT_CHECK.json",
+      "status": "PASS",
+      "script_sha256": "4f44cbcdc9b99dda38026ae841de0c52b6ee3adde2c8b53c3e3ceac1693218ca",
+      "result_sha256": "f9c1131415574b701ecc4bd7ce8f2395dccfe5f80a6f348ab2539ad82b29b2f9",
+      "elapsed_seconds": 0.547
+    },
+    {
+      "script": "check_counting_normalization.py",
+      "result": "COUNTING_NORMALIZATION_CHECK.json",
+      "status": "PASS",
+      "script_sha256": "109d3315b78e5d6675ef14ea32d120f31fc7ff90143aeef69c67c53f5db32669",
+      "result_sha256": "7abe5e8a57c2736a740edef12b00ee8fd45d919f447b21b11029bb9f12066b39",
+      "elapsed_seconds": 0.688
+    },
+    {
+      "script": "check_shared_charge.py",
+      "result": "SHARED_CHARGE_CHECK.json",
+      "status": "PASS",
+      "script_sha256": "5be0b8b9ffda8f4fc1771c82fa3f6f70799d7c2028b11b0523c78a4bb46a2a9d",
+      "result_sha256": "49cfd5b483db730eeb77b5ec703164bd839b6b99f279aef9bf5661bbfa67d08f",
+      "elapsed_seconds": 0.421
+    }
+  ],
+  "scope": "Finite identities and implementations only; the asymptotic theorems require the written proofs."
+}

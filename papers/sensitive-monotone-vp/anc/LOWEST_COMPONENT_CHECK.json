@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-15T17:05:16.465871+00:00",
+  "seed": 202609151245,
+  "script_sha256": "4f44cbcdc9b99dda38026ae841de0c52b6ee3adde2c8b53c3e3ceac1693218ca",
+  "manuscript_sha256": "fda4cc184b88d8b8129131c4bf999b20e73dc88624dee954a68a3c2f2ba30807",
+  "circuits": 400,
+  "gate_components_checked": 12800,
+  "random_self_shared_products": 1432,
+  "large_degree_fixture": {
+    "least_degree": 64,
+    "maximum_degree": 128
+  },
+  "nonmultilinear_cube_example_grid_points": 121,
+  "incorrect_highest_component_approximation_rejected": true,
+  "elapsed_seconds": 0.21799999999348074,
+  "scope": "Exact finite circuit expansions check the extraction and sharing accounting. The continuum scaling and asymptotic lower bound are analytic proofs in the manuscript."
+}

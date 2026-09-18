@@ -1,0 +1,2070 @@
+\pdfoutput=1
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,array}
+\usepackage{xurl}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks
+\title{Strongly Exponential Sensitive Monotone Bounds in VP\\
+via Eulerian Conditioning}
+\author{Ying Xie\\Kennesaw State University\\
+\texttt{yxie2@kennesaw.edu}}
+\date{September 15, 2026}
+\hypersetup{pdftitle={Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning},
+pdfauthor={Ying Xie},
+pdfsubject={Monotone arithmetic complexity},
+pdfcreator={},pdfproducer={}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We present a strongly exponential sensitive monotone circuit lower bound
+for an explicit family of arborescence polynomials in uniform VP.
+If \(N\) is the actual number of variables, \(P_H\) is the arborescence
+polynomial, and \(F_H\) is the product of the outgoing-choice group sums,
+then \(\operatorname{monSIZE}(F_H\pm\epsilon P_H)\ge 2^{bN}\)
+for fixed \(a,b>0\) and \(2^{-aN}\le\epsilon\le1/2\).
+The circuits may use arbitrary nonnegative real constants and unrestricted
+fan-out. The construction conditions independent local permutations of
+an expander's oriented edges to form one Eulerian cycle.
+The BEST theorem and two spectral trace identities bound the conditioning
+cost, while permutation exposure supplies a concentration estimate strong
+enough to absorb that cost. A fixed clique blow-up realizes an
+inner-product gadget and yields one distribution with exponentially small
+discrepancy for every balanced partition of the variable groups.
+The resulting coefficient argument charges shared gates.
+As consequences, a uniform VP family with coefficients one and two has a
+sharp multiplicative approximation threshold of \(\sqrt2\), even for
+approximation on the whole cube without a degree restriction, and
+strongly exponential exact monotone counting complexity on Boolean inputs.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+Monotone arithmetic circuits compute polynomials using addition,
+multiplication, and nonnegative constants. General arithmetic circuits
+can additionally exploit cancellation. Sensitive lower bounds ask whether
+a small coefficient perturbation of an easy polynomial can already force
+a large monotone circuit. The perturbation parameter is part of the
+statement: hardness at a fixed perturbation does not by itself imply
+hardness for exponentially small perturbations.
+
+Hrube\v{s} introduced a systematic study of this phenomenon
+\cite{Hrubes2020}. Chattopadhyay, Datta, and Mukhopadhyay related
+sensitive monotone lower bounds to communication complexity
+\cite{CDM2021}. Chattopadhyay, Datta, Ghosal, and Mukhopadhyay
+\cite{CDGM2022} proved ordinary \(2^{\Omega(N)}\) monotone lower bounds
+for sparse spanning-tree polynomials in VP, and sensitive
+\(2^{\Omega(\sqrt N)}\) bounds for a complete-graph family in VP.
+Here and throughout this comparison, \(N\) counts actual input variables.
+Their Section~7 asks for strongly exponential sensitive bounds.
+Chattopadhyay, Ghosal, and Mukhopadhyay subsequently obtained such
+sensitive bounds for a graph-inner-product family in VNP
+\cite{CGM2022}; that result does not supply a VP upper bound.
+
+\subsection{Main result}
+
+For a graph \(H\) with a distinguished root, assign one variable
+\(x_{z,w}\) to each arc from a nonroot vertex \(z\) to a neighbor \(w\).
+Let \(F_H\) be the product, over nonroot vertices, of the sums of
+their outgoing variables. Let \(P_H\) sum precisely those full-group
+monomials whose chosen arcs lead every vertex to the root.
+The matrix-tree determinant computes \(P_H\) by polynomial-size
+general arithmetic circuits.
+
+\begin{theorem}[Asymptotic form]\label{thm:asymptotic}
+There are positive constants \(a,b\) and explicit polynomial families
+\((F_N,P_N)\) on exactly \(N\) variables, for every sufficiently large \(N\),
+such that \(F_N\) has an \(O(N)\)-size monotone circuit, \(P_N\) is in
+uniform VP, and
+\[
+\operatorname{monSIZE}(F_N\pm\epsilon P_N)\ge 2^{bN}
+\qquad\text{whenever}\qquad 2^{-aN}\le\epsilon\le\tfrac12.
+\]
+Each target has the full support of \(F_N\) and coefficients
+\(1\) and \(1\pm\epsilon\). The lower bound allows arbitrary
+nonnegative real constants and unrestricted sharing.
+\end{theorem}
+
+The core family is given by a fixed clique blow-up of a simple
+constant-degree expander. Theorem~\ref{thm:finite} provides numerical
+constants and a finite cutoff. Section~\ref{sec:explicit} supplies a
+uniform explicit family and the padding argument that proves
+Theorem~\ref{thm:asymptotic}. The constants are conservative; degree
+and blow-up factors are fixed before the family size tends to infinity.
+
+The point is the simultaneous combination of VP membership,
+strongly exponential size in actual variables, and sensitivity down
+to an exponentially small perturbation. The ordinary strongly
+exponential VP separation is already known \cite{CDGM2022}.
+No claim about Boolean circuit lower bounds or about separating
+general arithmetic complexity classes follows from the present theorem.
+
+\subsection{Proof mechanism}
+
+The proof uses the discrepancy-to-coefficient framework of
+\cite{CDM2021,CDGM2022}. Its central construction is a distribution
+on rooted neighbor maps of a sparse host which has exponentially small
+rectangle discrepancy under every balanced partition of the outgoing
+variable groups. A single distribution must work for all partitions;
+the sampled layout itself need not be simultaneously good for all of them.
+
+Let \(B\) be a simple \(d\)-regular base with \(v=d|V(B)|\) oriented
+edge states. Independent local permutations define a cycle cover of
+these states. Condition the cover to consist of one cycle.
+The BEST theorem \cite{FarrellLevine2015} expresses the probability
+of this event through the spanning-tree count of \(B\). The identities
+for the first and second spectral traces show that the reciprocal
+conditioning probability is at most
+\[
+v\exp\bigl(O(v/d^2)\bigr).
+\]
+Keeping the signed first trace, rather than replacing it by an
+absolute-value estimate, is important for this bound.
+
+A fixed number of clones per state realizes a two-track parity gadget
+along this Eulerian cycle using only edges of the host. For each fixed
+balanced partition, expansion guarantees a positive expected density
+of stages whose first bit is held entirely on one side and whose second
+bit is held entirely on the other. Revealing permutation images
+individually gives a tail bound \(\exp(-\Omega(v))\). At a sufficiently
+large fixed degree this tail absorbs the conditioning cost.
+The retained stages give a large inner product, whose elementary
+discrepancy estimate yields the desired universal bound.
+
+Finally, a nonnegative full-group output forces productive gates
+to be set-multilinear. Removing one balanced gate at all its uses
+charges at most one product to that gate. This gives the circuit-size
+bound even with unrestricted fan-out.
+
+\subsection{Consequences and related models}
+
+The polynomial \(R_H=2F_H-P_H\) has coefficients one and two on every
+full-group monomial. Section~\ref{sec:approx} proves an exact
+approximation threshold: any fixed symmetric multiplicative factor
+below \(\sqrt2\) requires \(2^{\Omega(N)}\) monotone size, whereas
+\(\sqrt2 F_H\) attains factor \(\sqrt2\) with linear size.
+This holds coefficientwise and uniformly on \([0,1]^N\), without a
+degree bound on the competing circuit. The passage from the cube to
+coefficients uses least-homogeneous-component extraction, a standard
+monotone tool \cite{JerrumSnir1982,Jukna2016}.
+
+Section~\ref{sec:counting} extends the size bound to exact arithmetic
+counting on the whole Boolean cube. We give a full-group normalization
+with explicit cost \((2g+1)s+g\), where \(g\) is the number of groups.
+Removing repeated consistent indicators has classical precedents
+in sum-product networks \cite{Peharz2015,MartensMedabalimi2015};
+the normalization principle is not claimed as a new contribution.
+The full-cube equality hypothesis is essential to this application.
+
+The main argument occupies Sections~\ref{sec:model}--\ref{sec:explicit}.
+Appendix~\ref{app:best} gives the direct BEST counting argument,
+Appendix~\ref{app:thin} reduces the host degree, and
+Appendix~\ref{app:general} extends the construction to any fixed-degree
+simple expander family with a fixed positive spectral gap after a
+suitable fixed clique blow-up.
+
+
+
+\section{Polynomials and circuit model}\label{sec:model}
+
+All arithmetic circuits are directed acyclic graphs with binary \(+\)
+and \(\times\) gates. Size counts arithmetic gates, not input occurrences.
+Monotone circuits use nonnegative real constants, and fan-out is unrestricted.
+General circuits may use negative rational constants. A uniform VP family
+has polynomially many variables, polynomial degree, and a polynomial-time
+constructible family of polynomial-size general arithmetic circuits.
+When a real \(\epsilon\) is not specified by a uniform rational sequence,
+it is treated as a supplied scalar parameter.
+
+A polynomial is \emph{full-group set-multilinear} for a partition
+\(X_1,\ldots,X_g\) when each monomial uses exactly one variable from each
+group, with exponent one. The notation \([m]Q\) denotes a coefficient.
+For a graph \(B\), the clique blow-up \(B[K_t]\) replaces each vertex
+by a \(t\)-clique and each edge by a complete bipartite graph between
+the corresponding cliques. All logarithms in probability estimates
+are natural unless their base is displayed.
+
+Fix integers \(d\ge734\), \(L\ge32\). Let \(B\) be a connected
+simple \(d\)-regular graph on \(n\) vertices with
+\begin{equation}\label{eq:1}
+\lambda_2(A_B/d)\le\rho:=2/27.
+\end{equation}
+Write \(v=dn\). Let \(H=B[K_{dL}]\), a fixed clique blow-up
+of the base graph. Its degree is \(D_H=(d+1)dL-1\).
+Choose any fixed root \(r\). Give every directed arc out of a
+nonroot vertex a different variable, so the actual input count is
+\begin{equation}\label{eq:2}
+N=(Lv-1)D_H .
+\end{equation}
+Define
+\[
+ F_H=\prod_{z\ne r}\sum_{w\in N_H(z)}x_{z,w},\qquad
+ P_H=\sum_{\nu:\ \mathrm{all\ vertices\ reach}\ r}
+                              \prod_{z\ne r}x_{z,\nu(z)}.
+\]
+The sum is over all choices of one neighbor at each nonroot vertex.
+The rooted out-Laplacian determinant equals \(P_H\), so \(F_H,P_H\)
+have uniform polynomial-size general arithmetic circuits when \(B\)
+is explicit.
+
+\begin{theorem}[Finite sensitive bound]\label{thm:finite} Put \(K=LD_H\), \(c=1/7680000\),
+\(a=c/(2K)\), and \(b=c/(3K)\). For every \(B\) satisfying \eqref{eq:1}
+with \(v\ge2^{32}\),
+\begin{equation}\label{eq:3}
+\operatorname{monSIZE}(F_H\pm\epsilon P_H)\ge2^{bN}
+                        \qquad(2^{-aN}\le\epsilon\le1/2).
+\end{equation}
+The constants \(a,b\) depend on the fixed \(d,L\).
+The exponent is not uniform in growing degree or clone count.
+\end{theorem}
+
+The competing monotone circuits have binary addition and multiplication,
+arbitrary nonnegative real constants, and unrestricted fan-out. Size
+counts arithmetic gates. Their intermediate gates are not assumed
+set-multilinear. The output coefficients are all positive: they are
+1 and \(1\pm\epsilon\), and their support is that of the easy product
+\(F_H\).
+
+The communication domain is the full product
+\(\mathcal X_H=\prod_{z\ne r}N_H(z)\). A partition assigns whole
+outgoing-choice groups to the two players and is balanced if each
+side contains between \((Lv-1)/3\) and \(2(Lv-1)/3\) groups.
+For a distribution \(\Delta\), discrepancy is the largest absolute
+signed mass
+\[
+     \left|\sum_{\nu\in\mathcal U\times\mathcal V}
+                       \Delta(\nu)(2g_H(\nu)-1)\right|
+\]
+over rectangles for that partition, where \(g_H\) is the arborescence
+indicator. There is no promise on allowable neighbor maps.
+
+\subsection{Determinant upper bound}\label{sub:determinant}
+
+Let \(h=|V(H)|\). Omit the row and column of the root and use the
+row vector
+\[
+       \sum_{w\in N_H(z)}x_{z,w}(e_z-e_w),\qquad e_r:=0
+\]
+at each \(z\ne r\). Row multilinearity of the determinant shows
+that the coefficient of \(m_\nu=\prod_{z\ne r}x_{z,\nu(z)}\)
+is the determinant with rows \(e_z-e_{\nu(z)}\).
+If every vertex reaches the root, a common ordering of rows and
+columns by an acyclic order makes this matrix triangular with
+diagonal one. Its determinant is one.
+Otherwise choose a nonroot directed cycle and put a vector equal
+to one on that cycle's entire basin and zero elsewhere. Its
+difference across every selected outgoing arc is zero. It is a
+nonzero kernel vector, so the determinant is zero.
+Thus the determinant is exactly \(P_H\).
+
+The determinant has uniform polynomial-size general arithmetic
+circuits over rational constants. The construction of \(H\) is
+uniform as described below, and \(F_H\) is a product of group sums.
+Consequently \(F_H\pm\epsilon P_H\) has a polynomial-size circuit
+with \(\epsilon\) as a parameter or a supplied constant.
+For an unambiguously uniform family over the rationals one may
+fix \(\epsilon=1/2\), or set
+\(\epsilon_N=2^{-\lceil aN/2\rceil}\), which lies in the proved
+interval for sufficiently large \(N\) and has \(O(N)\)-bit
+rational representation.
+No polynomial-size set-multilinear circuit or polynomial-size
+formula upper bound is being asserted for \(P_H\).
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Parameter & Meaning\\
+\midrule
+\(n\) & Number of base vertices\\
+\(d\) & Fixed base degree\\
+\(v=dn\) & Number of oriented edge states\\
+\(L\) & Fixed number of clones per state\\
+\(h=Lv\) & Number of host vertices\\
+\(D_H=(d+1)dL-1\) & Host degree\\
+\(N=(h-1)D_H\) & Actual variable count\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\section{Eulerian distribution and parity embedding}\label{sec:distribution}
+
+\subsection{Local permutations and the conditioning probability}\label{sub:cover}
+Let \(S\) be the oriented edges of \(B\), so \(|S|=v\).
+Independently at each base vertex \(w\), choose a uniform permutation
+\(\sigma_w\) of its neighbors. Set
+\begin{equation}\label{eq:4}
+\pi(u,w)=(w,\sigma_w(u)).
+\end{equation}
+This is a permutation of \(S\). Immediate reversals are allowed.
+Let \(E\) be the event that \(\pi\) is a single cycle.
+
+Write \(t_o(B)\) for the number of spanning trees of \(B\), oriented
+toward a fixed base vertex \(o\). The BEST theorem \cite{FarrellLevine2015} gives exactly
+\begin{equation}\label{eq:5}
+\Pr[E]=\frac{t_o(B)((d-1)!)^n}{(d!)^n}
+                          =\frac{t_o(B)}{d^n}.
+\end{equation}
+A single cyclic transition configuration corresponds to exactly one
+Eulerian tour starting with any prescribed directed edge; hence there
+is no extra factor \(d\), \(n\), or \(v\) in the numerator of \eqref{eq:5}.
+A direct counting proof and an efficient sampler appear in Appendix~\ref{app:best}.
+
+Let \(\theta_1=1,\theta_2,\ldots,\theta_n\) be the normalized
+adjacency eigenvalues. The matrix-tree formula yields
+\begin{equation}\label{eq:6}
+\Pr[E]=\frac1v\prod_{i=2}^n(1-\theta_i).
+\end{equation}
+Simplicity and regularity give the exact identities
+\begin{equation}\label{eq:7}
+\sum_{i=2}^n\theta_i=-1,\qquad
+        \sum_{i=2}^n\theta_i^2=n/d-1=v/d^2-1.
+\end{equation}
+For every \(0\le\rho<1\) and \(-1\le x\le\rho\),
+\begin{equation}\label{eq:8}
+\log(1-x)\ge -x-\frac{x^2}{2(1-\rho)}.
+\end{equation}
+Indeed, if
+\(f(x)=\log(1-x)+x+x^2/[2(1-\rho)]\), then
+\[
+                 f'(x)=\frac{x(\rho-x)}{(1-\rho)(1-x)}.
+\]
+Thus \(f\) decreases to \(f(0)=0\) on \([-1,0]\) and increases
+on \([0,\rho]\). This also covers a bipartite eigenvalue \(-1\).
+Using \eqref{eq:7}--\eqref{eq:8} in \eqref{eq:6}, and \(1/[2(1-\rho)]=27/50\), gives
+\begin{equation}\label{eq:9}
+\Pr[E]\ge
+             \frac1v\exp\left(-\frac{27v}{50d^2}\right).
+\end{equation}
+The linear trace term in \eqref{eq:7} is essential: replacing it by the
+absolute sum of eigenvalues would give a much more expensive
+conditioning bound.
+
+\subsection{A direct parity gadget}\label{sub:gadget}
+Index the states by their tail and a neighbor label,
+\(S=V(B)\times[d]\). Divide each \(dL\)-clone base cluster
+of \(H\) into \(d\) labeled state clusters \(I_s\) of size \(L\).
+If \(s=(u,w)\) and \(\pi(s)=(w,z)\), the two tails \(u,w\)
+are adjacent in \(B\). Thus every original transition has every
+needed physical intercluster edge in \(H\), including reversals.
+No routing graph is used.
+
+Fix a state \(s_0\) whose cluster contains the root \(r\).
+Choose four distinct uniform labeled clones
+\[
+                      a_{s,0},a_{s,1},b_{s,0},b_{s,1}
+\]
+in every state cluster; exclude \(r\) in its own cluster.
+Choices in different clusters are independent. Sample \(\pi\)
+from the original local-permutation distribution conditioned on
+\(E\), independently of these clone choices.
+
+For each state \(u\ne s_0\), sample independent uniform bits
+\(x_u,y_u\), and write \(w=\pi(u)\). For each track
+\(\ell\in\{0,1\}\), set
+\begin{equation}\label{eq:10}
+a_{u,\ell}\longmapsto
+ \begin{cases}a_{w,\ell},&x_u=0,\\ b_{w,\ell},&x_u=1,\end{cases}
+ \qquad
+ b_{w,\ell}\longmapsto a_{w,\ell\oplus y_u}.
+\end{equation}
+The first two destinations are different labeled clones, so both
+bit choices are different valid outgoing arcs.
+Set \(c_0=a_{s_0,0}\), \(c_1=a_{s_0,1}\), and
+\begin{equation}\label{eq:11}
+c_0\longmapsto a_{\pi(s_0),0},
+                         \qquad c_1\longmapsto r.
+\end{equation}
+The two \(b\)-vertices in \(I_{\pi(s_0)}\) point to the same-index
+\(a\)-vertices there. Every remaining nonroot clone in \(I_s\)
+points to \(a_{s,0}\), using its clique edge.
+
+For every admissible layout and every assignment of the auxiliary
+bits, the following deterministic identity holds:
+\begin{equation}\label{eq:12}
+g_H(\nu)=\sum_{u\ne s_0}x_u y_u\pmod2.
+\end{equation}
+\begin{proof}[Proof of the parity identity]
+Fix an admissible layout and all the auxiliary bits. Since the
+conditioning event \(E\) makes \(\pi\) a single cycle, enumerate the
+states as
+\[
+ s_i=\pi^i(s_0)\quad(0\le i\le v-1),\qquad s_v=s_0.
+\]
+Here \(v\ge2\), as the underlying base graph is simple and has
+positive degree. We follow the active stages in the order
+\(s_1,\ldots,s_{v-1}\); the transition out of \(s_0\) is instead
+the special connector and root exit in \eqref{eq:11}.
+
+\emph{The outgoing map is well defined.}
+Every \(a\)-vertex outside \(I_{s_0}\) receives exactly one rule
+from \eqref{eq:10}, and the two \(a\)-vertices in \(I_{s_0}\) receive
+the rules in \eqref{eq:11}. Because \(\pi\) is a permutation, every
+\(b\)-vertex outside \(I_{s_1}\) has a unique predecessor state
+and receives exactly one rule from \eqref{eq:10}. The two \(b\)-vertices
+in \(I_{s_1}\) have the separately specified, fixed rules.
+Every other nonroot vertex is a filler vertex. Thus each nonroot
+vertex has exactly one outgoing arc, and the root has none.
+The intercluster arcs follow adjacent tails in \(B\); all other
+arcs lie in a cluster clique and have distinct endpoints.
+In particular, the rules neither conflict nor use a loop.
+
+\emph{One stage and the two paths.}
+Put \(t_i=x_{s_i}y_{s_i}\) for \(1\le i\le v-1\), and let
+\(P=t_1\oplus\cdots\oplus t_{v-1}\).
+For either incoming rail \(\ell\), the path from
+\(a_{s_i,\ell}\) to the next \(a\)-vertex is exactly one of
+the following:
+\[
+\begin{array}{ccl}
+x_{s_i}=0 &:&
+ a_{s_i,\ell}\longmapsto a_{s_{i+1},\ell}
+ \quad\text{for either value of }y_{s_i},\\[2pt]
+x_{s_i}=1,\ y_{s_i}=0 &:&
+ a_{s_i,\ell}\longmapsto b_{s_{i+1},\ell}
+ \longmapsto a_{s_{i+1},\ell},\\[2pt]
+x_{s_i}=1,\ y_{s_i}=1 &:&
+ a_{s_i,\ell}\longmapsto b_{s_{i+1},\ell}
+ \longmapsto a_{s_{i+1},\ell\oplus1}.
+\end{array}
+\]
+Consequently each stage induces the permutation
+\(\ell\mapsto\ell\oplus t_i\) of the two rails.
+Induction on \(j\) shows that the path beginning at
+\(a_{s_1,\ell}\) reaches
+\(a_{s_{j+1},\,\ell\oplus t_1\oplus\cdots\oplus t_j}\)
+after \(j\) active stages. In particular, the two paths,
+stopped at their final \(a\)-vertex in \(I_{s_0}\), have endpoints
+\[
+ a_{s_1,0}\leadsto c_P,\qquad
+ a_{s_1,1}\leadsto c_{1\oplus P}.
+\]
+These are vertex-disjoint simple paths. Indeed, the two rail
+indices stay distinct at every state, the intermediate
+\(b\)-vertices are distinct from all \(a\)-vertices, and the state
+order \(s_1,\ldots,s_v\) contains no repetition. Together the paths
+contain every \(a\)-vertex. Neither contains \(r\).
+
+\emph{Odd parity: \(P=1\).}
+The path starting on rail zero ends at \(c_1\) and exits to
+\(r\). The path starting on rail one ends at \(c_0\), whose
+connector leads to the start of the first path. Thus the full
+forward trajectories are
+\[
+\begin{aligned}
+ a_{s_1,0}&\leadsto c_1\longmapsto r,\\
+ a_{s_1,1}&\leadsto c_0\longmapsto
+ a_{s_1,0}\leadsto c_1\longmapsto r.
+\end{aligned}
+\]
+This accounts also for the trajectory from \(c_0\): its return
+to \(I_{s_1}\) does not close a cycle, since the next active
+traversal ends at \(c_1\). Every \(a\)-vertex therefore reaches
+the root.
+
+\emph{Even parity: \(P=0\).}
+Now the path starting on rail zero ends at \(c_0\), so the
+connector closes the simple directed cycle
+\[
+ a_{s_1,0}\leadsto c_0\longmapsto a_{s_1,0}.
+\]
+This cycle does not contain \(r\). The disjoint path starting
+on rail one ends at \(c_1\) and then at \(r\).
+In particular, the outgoing map fails the requirement that
+every nonroot vertex reach \(r\).
+
+\emph{Vertices outside the two paths.}
+Every unused \(b\)-vertex points directly to an \(a\)-vertex
+in its own state cluster. This includes the two exceptional
+\(b\)-vertices in \(I_{s_1}\), whose rules are fixed, and
+the \(b\)-vertices bypassed at stages with \(x_{s_i}=0\).
+Every filler vertex likewise points directly to an \(a\)-vertex.
+Such vertices can create no additional directed cycle.
+Hence in the odd case all nonroot vertices reach \(r\);
+in the even case there is exactly one nonroot directed cycle.
+By the definition of \(g_H\), its value is respectively
+one and zero, which proves \eqref{eq:12}.
+
+The argument holds for every admissible layout and every bit
+assignment, independently of their probability. It uses no
+spectral estimate, concentration bound, or finite enumeration.
+\end{proof}
+
+There are \(k=v-1\) stages. Each \(x_u\) affects only the two
+outgoing choices at \(a_{u,0},a_{u,1}\), and each \(y_u\) affects
+only those at \(b_{\pi(u),0},b_{\pi(u),1}\).
+
+Let \(\Delta\) denote the pushforward of this random experiment to
+the full product of neighbor maps. Thus a layout consists of the
+conditioned permutation and the clone labels, and the remaining
+randomness consists of the auxiliary bits \(x_u,y_u\). These auxiliary
+bits are distinct from the formal arc variables \(x_{z,w}\).
+The distribution is fixed before a communication partition is chosen.
+
+
+\section{Universal discrepancy and the size lower bound}\label{sec:discrepancy}
+
+\subsection{Expansion and monochromatic pairs}\label{sub:mean}
+Fix any balanced partition of all nonroot physical vertices.
+For analysis assign the root either color. Let \(a_s\) be the
+Alice fraction in \(I_s\), and \(\mu=v^{-1}\sum_s a_s\).
+For \(Lv\ge100\), \(\mu\in[33/100,67/100]\).
+
+The one-point transition matrix for the unconditioned cover is
+\(P((u,w),(w,z))=1/d\). It is doubly stochastic.
+The symmetric matrix \(Q=(P+P^\top)/2\) has image in the
+functions \(a(u)+b(w)\). For each base eigenvalue \(\theta\),
+its matrix on the associated two lifted functions is
+\[
+                     \frac12
+                     \begin{pmatrix}\theta&1\\1&\theta\end{pmatrix}.
+\]
+Dependent lifted functions are quotiented out. Every other nonzero
+eigenvector is already in this image. Thus its gap above constants
+is at least \((1-\rho)/2=25/54\). A possible base eigenvalue
+\(-1\) contributes a lifted eigenvalue \(-1\) and causes no
+problem for this upper bound on the nonconstant spectrum.
+Put \(\delta_0=25/54\). With normalized inner products,
+\begin{equation}\label{eq:13}
+\mathbb E_{s\ {\rm uniform},\,t\sim P(s,\cdot)} a_s(1-a_t)
+       =\mu-\langle a,Qa\rangle
+       \ge\delta_0\mu(1-\mu).
+\end{equation}
+Indeed, the spectral bound gives
+\(\langle a,Qa\rangle\le\mu^2+(1-\delta_0)\operatorname{Var}(a)\).
+Since \(0\le a_s\le1\), we have
+\(\operatorname{Var}(a)\le\mu(1-\mu)\), yielding \eqref{eq:13}.
+
+Put \(c_L=1/L\). The probability of selecting two Alice clones
+in a cluster with Alice fraction \(a=j/L\) is
+\[
+             p_L(a)=\frac{j(j-1)}{L(L-1)}
+                    =\frac{a(a-c_L)}{1-c_L}.
+\]
+It satisfies \(\sqrt{p_L(a)}\ge(a-c_L)_+\).
+For \(a=0\) this is immediate; for \(a\ge c_L\), square both
+nonnegative sides and use
+\[
+ p_L(a)-(a-c_L)^2
+     =\frac{c_L(a-c_L)(a+1-c_L)}{1-c_L}\ge0.
+\]
+For nonnegative \(A,B,c\),
+\((A-c)_+(B-c)_+\ge AB-c(A+B)\): if one factor is truncated,
+the right side is nonpositive; otherwise expand the left side.
+Since the transition is doubly stochastic,
+\(\mathbb E[a_s+1-a_t]=1\). Hence \eqref{eq:13} implies
+\[
+ \mathbb E\sqrt{p_L(a_s)p_L(1-a_t)}
+                 \ge\delta_0\mu(1-\mu)-\frac1L
+                 \ge\frac{16}{225}\qquad(L\ge32).
+\]
+The final value follows exactly from
+\((25/54)(33\cdot67/10000)-1/32=16/225\).
+Cauchy--Schwarz gives
+\(\mathbb E[p_L(a_s)p_L(1-a_t)]\ge256/50625\).
+Original transitions are between distinct state clusters because
+the base graph has no loops, so their selected pairs are independent.
+
+Let \(Z\) count original transitions \(u\mapsto\pi(u)\) whose
+two \(a_u\)-vertices are Alice and whose two \(b_{\pi(u)}\)-vertices
+are Bob. Under the unconditioned cover and clone choices,
+\begin{equation}\label{eq:14}
+\mathbb E Z\ge
+  \frac{256}{50625}v-2
+                             \ge\eta v,\qquad \eta:=1/200.
+\end{equation}
+The subtraction of two covers the exceptional root cluster.
+The excess of the coefficient over \(1/200\) is exactly
+\(23/405000\), so \(v\ge35218\) suffices for \eqref{eq:14}.
+
+\subsection{Exposure concentration and conditioning}\label{sub:concentration}
+We first work under the \emph{unconditioned} law: the local
+permutations are independent and uniform, and the clone placements
+are independent across state clusters and independent of the
+permutations. Fix the communication partition, including the root's
+analysis color. For the clone placement \(\mathcal R_s\) in \(I_s\),
+write
+\[
+ A_s={\bf1}_{\{a_{s,0},a_{s,1}\ {\rm are\ Alice}\}},\qquad
+ B_s={\bf1}_{\{b_{s,0},b_{s,1}\ {\rm are\ Bob}\}}.
+\]
+Then the count from \eqref{eq:14} is
+\[
+ Z=\sum_{s\in S} A_sB_{\pi(s)}.
+\]
+The auxiliary input bits are not involved in \(Z\).
+
+\emph{Exposure order and conditional means.}
+Choose deterministic orders of the state clusters, base vertices,
+and neighbors of each base vertex. First reveal the \(v\) clone
+placements \(\mathcal R_s\), one whole placement at a time.
+Then, at each base vertex \(w\), reveal the first \(d-1\) images
+of \(\sigma_w\) in the chosen neighbor order; its last image is
+forced. Let \(\mathcal F_i\) be the information after step \(i\).
+There are \(J=v+n(d-1)\le2v\) steps, and
+\[
+ Y_i=\mathbb E[Z\mid\mathcal F_i],\qquad
+ Y_0=\mathbb EZ,\quad Y_J=Z
+\]
+is the corresponding Doob martingale.
+For a fixed positive-probability history through step \(i-1\),
+let \(h_i(q)\) be the conditional expectation of \(Z\) when the
+next revealed value is \(q\). We show that
+\(\lvert h_i(q)-h_i(q')\rvert\le2\) for all compatible \(q,q'\).
+
+\emph{A clone-placement step.}
+Compare two possible placements in \(I_s\), and couple all
+unrevealed placements and all local permutations identically.
+This is a coupling of the correct conditional laws by independence.
+For each resulting fixed permutation \(\pi\), only the summands
+indexed by \(s\) and \(\pi^{-1}(s)\) can change: these are the
+unique outgoing and incoming transitions of the state.
+Each summand lies in \(\{0,1\}\), so the two completed values of
+\(Z\) differ by at most two. Averaging over this coupling gives
+the required bound for the two conditional means. The exclusion
+of \(r\) from its cluster's clone choices changes the allowed
+placements there, but not their independence from the remaining
+randomness.
+
+\emph{A permutation-image step: the swap bijection.}
+All clone placements are now fixed. Suppose the next image to
+be revealed is \(\sigma_w(u)\). Let \(R\) be the set of unused
+images at \(w\), and choose distinct \(z,z'\in R\). Conditional
+on the previous images and on \(\sigma_w(u)=z\), the remaining
+assignment is a uniform bijection onto \(R\setminus\{z\}\).
+Given such a completed permutation, let
+\(u'=\sigma_w^{-1}(z')\). The neighbor \(u'\) is unexposed and
+different from \(u\). Swap the images at \(u,u'\), obtaining
+\[
+ \sigma'_w(u)=z',\qquad \sigma'_w(u')=z,\qquad
+ \sigma'_w(a)=\sigma_w(a)\quad(a\notin\{u,u'\}).
+\]
+No previously exposed image changes, because neither \(z\) nor
+\(z'\) was used in the history. The same swap is its inverse.
+It is therefore a bijection from the completions with next
+image \(z\) to those with next image \(z'\), and sends the
+uniform law on the first set to the uniform law on the second.
+Couple every other local permutation identically.
+
+The corresponding state permutations differ only at
+\((u,w)\) and \((u',w)\). Since all \(A_s,B_s\) are fixed,
+at most these two summands in \(Z\) change, each by at most one.
+If \(Z'\) is the value in the paired completion, it follows that
+\[
+ |h_i(z)-h_i(z')|
+ =|\mathbb E[Z-Z'\mid\text{the fixed history and next image }z]|
+ \le\mathbb E[|Z-Z'|\mid\text{the same data}]\le2.
+\]
+If only one image is available, the revelation is deterministic
+and has conditional range zero.
+
+\emph{Conditional ranges and the tail constant.}
+At any step, let \(m_i,M_i\) be the minimum and maximum of
+\(h_i(q)\) over its compatible next values. The preceding
+couplings give \(M_i-m_i\le2\). Conditional on
+\(\mathcal F_{i-1}\), the martingale difference
+\(D_i=Y_i-Y_{i-1}\) has mean zero and lies in the interval
+\[
+ [m_i-Y_{i-1},\,M_i-Y_{i-1}],
+\]
+whose length is at most two. Thus conditional Hoeffding's
+lemma, with the deterministic bounds \(c_i=2\), gives
+\[
+ \mathbb E[e^{\lambda D_i}\mid\mathcal F_{i-1}]
+ \le e^{\lambda^2c_i^2/8},\qquad
+ \sum_{i=1}^Jc_i^2=4\bigl(v+n(d-1)\bigr)\le8v.
+\]
+Iterating conditional expectations bounds
+\(\mathbb E e^{-\lambda(Z-\mathbb EZ)}\) by
+\(e^{\lambda^2v}\). Markov's inequality and the choice
+\(\lambda=t/(2v)\) consequently yield, for every \(t>0\),
+\[
+ \Pr[Z-\mathbb EZ\le-t]\le
+ \exp\!\left(-\frac{t^2}{4v}\right).
+\]
+Finally, \eqref{eq:14} gives \(\mathbb EZ\ge\eta v\).
+The event \(Z<\eta v/2\) is therefore contained in
+\(\{Z-\mathbb EZ\le-\eta v/2\}\). Taking \(t=\eta v/2\) gives
+
+\begin{equation}\label{eq:15}
+\Pr[Z<\eta v/2]
+       \le\exp\left(-\frac{2(\eta v/2)^2}{8v}\right)
+       =\exp(-\tau v),\qquad \tau:=1/640000.
+\end{equation}
+The bounds are on conditional ranges, not merely on absolute
+martingale increments. This accounts for the constant in \eqref{eq:15}.
+Exposing a local permutation as a single block would lose a factor
+\(d\) and would not justify the conditioning argument at this degree.
+
+The swap coupling was used only before conditioning on \(E\);
+it need not preserve the single-cycle event. We now use
+\(\Pr[A\mid E]\le\Pr[A]/\Pr[E]\), rather than assert the same
+coupling under the conditioned law. By \eqref{eq:9},
+\begin{equation}\label{eq:16}
+\Pr[Z<\eta v/2\mid E]
+       \le v\exp\left[-\left(\tau-\frac{27}{50d^2}\right)v\right].
+\end{equation}
+For every \(d\ge734\),
+\begin{equation}\label{eq:17}
+\frac{27}{50d^2}<\frac1{960000}
+                                      =\frac{2\tau}{3}.
+\end{equation}
+Thus \eqref{eq:16} is at most \(v e^{-\tau v/3}\).
+For \(v\ge2^{32}\), \(\log v\le v/3840000=\tau v/6\);
+this follows at the endpoint from \(2^{32}>32\cdot3840000\),
+and from the decrease of \(\log v/v\) thereafter. Consequently
+\begin{equation}\label{eq:18}
+\Pr[Z<\eta v/2\mid E]\le e^{-v/3840000}.
+\end{equation}
+No independence after conditioning on \(E\) is asserted.
+Removing the single root stage loses at most one term. For
+\(v\ge800\), \eqref{eq:18} leaves at least \(\eta v/4=v/800\)
+honoured active stages, except with the displayed failure probability.
+
+\subsection{Coefficient transfer and shared gates}\label{sub:transfer}
+\subsubsection*{Shared-gate decomposition}
+We give a first-principles proof of the balanced-product argument and
+its coefficient charge. These are the structural and rectangular
+decomposition tools used in \cite[Theorem~2 and Lemma~9]{CDGM2022};
+they are not claimed as new lower-bound methods.
+Write \(A\preceq B\) when every coefficient of \(A\) is at most the
+corresponding coefficient of \(B\).
+
+\begin{lemma}[Balanced products with shared gates]\label{lem:balanced}
+Let \(X_1,\ldots,X_g\) be disjoint nonempty finite variable groups,
+where \(g\ge4\). Suppose a monotone arithmetic circuit with \(s\)
+binary arithmetic gates computes a nonzero full-group set-multilinear
+polynomial \(p\). Then
+\[
+ p=\sum_{j=1}^t U_jV_j,\qquad t\le s,
+\]
+where \(U_j,V_j\) have nonnegative coefficients and are set-multilinear
+on complementary group sets \(S_j,[g]\setminus S_j\), with
+\(g/3\le |S_j|\le2g/3\). In particular, \(U_jV_j\preceq p\).
+Constants may be arbitrary nonnegative reals, and fan-out is unrestricted.
+No condition on the intermediate polynomials is assumed.
+\end{lemma}
+
+\begin{proof}
+\emph{Productive gates have fixed group sets.}
+First propagate zero values and discard branches that cannot contribute
+to the output. A multiplication with a zero child is zero; a zero
+summand can be discarded. This introduces no arithmetic gates.
+Every remaining gate has a nonzero polynomial and a path to the
+output whose sibling at each multiplication is nonzero. Call such a
+gate productive, and write \(P_u\) for its polynomial.
+
+Fix one such path from \(u\) to the output. At each multiplication
+on the path, choose a monomial of its sibling with positive
+coefficient. Addition preserves coefficientwise domination, and
+multiplication by a nonnegative polynomial preserves it as well.
+Induction along the path therefore gives
+\[
+ \lambda\,mP_u\preceq p
+\]
+for a monomial \(m\) and a real \(\lambda>0\). This remains true
+if a sibling also depends on \(u\): its chosen monomial is a
+monomial of its actual polynomial, and the same coefficientwise
+inequality applies.
+
+For every monomial \(a\) of \(P_u\), the monomial \(ma\) must thus
+use exactly one variable from every group, with exponent one.
+Consequently \(m\) uses a fixed subset of groups once, and every
+monomial of \(P_u\) uses exactly its complementary subset once.
+Denote the latter subset by \(S(u)\).
+At an addition gate the nonzero children have the same group set
+as the parent. At a multiplication gate the two group sets are
+disjoint and their union is the parent's: multiply any nonzero
+monomial of each child to obtain these assertions.
+
+\emph{A balanced arithmetic gate exists.}
+Start at the output, whose group set has size \(g\). While the
+current size exceeds \(2g/3\), at an addition choose a nonzero
+child; at a multiplication choose a child whose group set has
+size at least \(g/3\). Such a multiplication child exists because
+the two disjoint sizes sum to more than \(2g/3\).
+Continue if the chosen child still has size greater than \(2g/3\).
+Acyclicity and the fact that an input uses at most one group force
+this descent to encounter a gate \(u\) with
+\(g/3\le |S(u)|\le2g/3\). Since \(g\ge4\), this gate uses at
+least two groups and is therefore an arithmetic gate.
+
+\emph{Substitute at every use of that gate.}
+Write \(U=P_u\). Replace the value computed at node \(u\) by
+one fresh indeterminate \(z\), at all outgoing uses simultaneously.
+Evaluate the resulting DAG formally to obtain
+\[
+ Q(x,z)=\sum_{k\ge0}A_k(x)z^k,\qquad A_k\in\mathbb R_{\ge0}[X].
+\]
+Substituting \(z=U(x)\) restores the circuit, so \(Q(x,U)=p\).
+The polynomial depends on \(z\): the productive path from \(u\)
+propagates a monomial containing \(z\), since all multiplication
+siblings remain nonzero polynomials after the replacement.
+Their substitution at \(z=U\) gives their original nonzero values.
+
+If some \(A_k\ne0\) for \(k\ge2\), choose monomials \(a\) of
+\(A_k\) and \(b\) of \(U\) with positive coefficients.
+Then \(ab^k\) occurs in \(Q(x,U)=p\) with positive coefficient.
+It repeats every group of the nonempty set \(S(u)\), contradicting
+full-group set-multilinearity. Hence \(A_k=0\) for \(k\ge2\),
+and \(A_1\ne0\). We have the exact identity
+\[
+ p=UA_1+A_0,\qquad A_0=Q(x,0).
+\]
+For any monomial \(a\) of \(A_1\) and any fixed monomial \(b\)
+of \(U\), the product \(ab\) occurs in \(p\). Therefore \(A_1\)
+is set-multilinear on exactly \([g]\setminus S(u)\).
+Nonnegativity gives \(UA_1\preceq p\).
+
+\emph{Remove nodes permanently and telescope.}
+Apply the preceding argument to the current nonzero residual,
+starting with \(R_0=p\). At iteration \(j\), take \(U_j\) to
+be the selected node's value in that residual circuit, and take
+\(V_j\) to be the coefficient of \(z\) after global replacement.
+Permanently set the selected node to zero. The resulting circuit
+computes \(R_j\), with
+\[
+ R_{j-1}=U_jV_j+R_j,\qquad
+ 0\preceq R_j\preceq R_{j-1}\preceq p.
+\]
+Every nonzero residual is again full-group set-multilinear, so
+the argument can be repeated. Each iteration selects a different
+original arithmetic node: a node permanently set to zero cannot
+be productive again. Pruning does not add nodes. Thus there are
+at most \(s\) iterations, and the final residual is zero; otherwise
+the balanced descent would supply another eligible node.
+Telescoping proves the stated decomposition and coefficient domination.
+
+The count is of removed DAG nodes. No bound on the number of
+parse trees, paths, or uses of a node is needed. All their
+multiplicities are already included in the coefficient \(V_j=A_1\).
+Neither \(V_j\) nor the displayed decomposition is required to
+have a separate small-circuit representation.
+\end{proof}
+
+\begin{proposition}[Coefficient charge for a signed measure]\label{prop:charge}
+Let \(\Omega_i=X_i\) index the choices in group \(i\), and put
+\(\Omega=\prod_{i=1}^g\Omega_i\). Let \(\mu:\Omega\to\mathbb R\)
+be a signed weight function such that, for every balanced partition
+\(S,[g]\setminus S\) and every rectangle \(A\times B\) in that
+partition,
+\[
+ \left|\sum_{\nu\in A\times B}\mu(\nu)\right|\le\gamma.
+\]
+For a full-group polynomial define
+\(\mathcal M_\mu(p)=\sum_{\nu\in\Omega}\mu(\nu)[m_\nu]p\).
+If \(p\) satisfies Lemma~\ref{lem:balanced} and its coefficients
+are at most \(C\), then
+\[
+ |\mathcal M_\mu(p)|\le sC\gamma.
+\]
+No product-distribution assumption on \(\mu\) is made.
+\end{proposition}
+
+\begin{proof}
+Fix one product \(UV\) in the lemma, with complementary group
+sets \(S,T\). Let \(u_\alpha,v_\beta\) be its factors' coefficient
+vectors over \(\Omega_S,\Omega_T\), including zero coefficients.
+If \(UV=0\), its charge is zero, so assume both factors are nonzero.
+Disjoint groups give
+\[
+ [m_{(\alpha,\beta)}]UV=u_\alpha v_\beta.
+\]
+Because the domain is the full Cartesian product and \(UV\preceq p\),
+\[
+ \left(\max_\alpha u_\alpha\right)
+ \left(\max_\beta v_\beta\right)
+ =\max_{\alpha,\beta}u_\alpha v_\beta\le C.
+\]
+This bounds the product of the two maxima; neither individual
+maximum is assumed bounded by \(C\).
+
+List the distinct positive levels of \(u\) as
+\(0=a_0<a_1<\cdots<a_r\), and those of \(v\) as
+\(0=b_0<b_1<\cdots<b_\ell\). Define
+\[
+ A_i=\{\alpha:u_\alpha\ge a_i\},\qquad
+ B_j=\{\beta:v_\beta\ge b_j\},\qquad
+ \lambda_{ij}=(a_i-a_{i-1})(b_j-b_{j-1})>0.
+\]
+The identities
+\[
+ u_\alpha=\sum_{i=1}^r(a_i-a_{i-1})
+                  {\bf1}_{\{u_\alpha\ge a_i\}},\qquad
+ v_\beta=\sum_{j=1}^\ell(b_j-b_{j-1})
+                  {\bf1}_{\{v_\beta\ge b_j\}}
+\]
+give the following entrywise equality on the full Cartesian domain:
+\[
+ u_\alpha v_\beta
+ =\sum_{i=1}^r\sum_{j=1}^\ell
+       \lambda_{ij}{\bf1}_{A_i\times B_j}(\alpha,\beta).
+\]
+Each \(A_i\times B_j\) is a rectangle for the same balanced
+partition \(S,T\). Telescoping the level increments gives exactly
+\[
+ \sum_{i,j}\lambda_{ij}
+ =\left(\sum_i(a_i-a_{i-1})\right)
+  \left(\sum_j(b_j-b_{j-1})\right)
+ =a_rb_\ell=(\max u)(\max v)\le C.
+\]
+Thus it is the total scalar weight, regardless of how many
+rectangles occur, that controls the charge:
+\[
+ |\mathcal M_\mu(UV)|
+ =\left|\sum_{i,j}\lambda_{ij}
+                  \sum_{\nu\in A_i\times B_j}\mu(\nu)\right|
+ \le\gamma\sum_{i,j}\lambda_{ij}\le C\gamma.
+\]
+This is the rectangular decomposition of
+\cite[Lemma~9, pp.~39:10--39:11]{CDGM2022}, followed by the
+signed-measure estimate in its Lemma~7. The displayed proof
+allows arbitrary nonnegative real coefficients and an arbitrary
+signed weight function \(\mu\).
+Sum this inequality over the at most \(s\) products in
+Lemma~\ref{lem:balanced}.
+\end{proof}
+
+\subsubsection*{Discrepancy and coefficient transfer}
+
+Fix a balanced partition, condition on the layout, and fix all
+unhonoured bits. By locality, the pullback of any communication
+rectangle is an inner-product rectangle in the remaining bits.
+For the \(2^z\)-by-\(2^z\) inner-product sign matrix \(A\),
+the identity \(AA^\top=2^z I\) gives norm \(2^{z/2}\).
+For rectangle indicator vectors, Cauchy--Schwarz after normalization
+by \(2^{2z}\) bounds the signed mass by \(2^{-z/2}\).
+Using \eqref{eq:18} and \(z\ge v/800\), the original distribution has
+\begin{equation}\label{eq:19}
+\gamma_0\le e^{-v/3840000}+2^{-v/1600}.
+\end{equation}
+This is the same distribution for every balanced partition.
+No union bound over partitions or simultaneously good layout
+is needed.
+
+Every layout has \(k=v-1\) bits of inner product. Its two answer
+masses are \((1-2^{-k})/2\) and \((1+2^{-k})/2\).
+Balance them exactly, changing total variation by \(2^{-k-1}\).
+Explicitly, if \(p_i=\Pr_\Delta[g_H=i]\), set
+\(\Delta_b(\nu)=\Delta(\nu)/(2p_{g_H(\nu)})\).
+Then both answers have mass \(1/2\).
+Every rectangle's signed expectation changes by at most \(2^{-k}\).
+For \(v\ge2^{32}\), the centered maximum discrepancy is therefore
+\begin{equation}\label{eq:20}
+\gamma\le 2^{-cv},\qquad
+                         c:=1/7680000.
+\end{equation}
+Indeed the left side is at most \(3\cdot2^{-v/3840000}\),
+and the factor three is absorbed by half the exponent.
+
+Define \(M(m_\nu)=\Delta_b(\nu)(2g_H(\nu)-1)\). Then
+\[
+             M(F_H)=0,\qquad M(P_H)=1/2,\qquad
+             |M(F_H\pm\epsilon P_H)|=\epsilon/2.
+\]
+To make the coefficient bound in Proposition~\ref{prop:charge}
+explicit here, put
+\(\mu(\nu)=\Delta_b(\nu)(2g_H(\nu)-1)\) and
+\(p=F_H\pm\epsilon P_H\). For each balanced product
+\(U_jV_j\preceq p\) supplied by Lemma~\ref{lem:balanced},
+every coefficient satisfies
+\[
+ 0\le u_\alpha v_\beta
+ \le [m_{(\alpha,\beta)}]p
+ \le 1+\epsilon\le\frac32.
+\]
+The level-set rectangles in Proposition~\ref{prop:charge} therefore
+have total weight
+\[
+ \sum_{i,k}\lambda_{ik}
+ =(\max_\alpha u_\alpha)(\max_\beta v_\beta)
+ =\max_{\alpha,\beta}u_\alpha v_\beta\le\frac32.
+\]
+Each rectangle has signed mass at most \(\gamma\) in absolute
+value by \eqref{eq:20}, so \(|M(U_jV_j)|\le(3/2)\gamma\).
+The bound holds even if one factor has very large coefficients:
+only the product of the two maxima is used. Summing over
+\(t\le s\) products gives
+\[
+ \frac{\epsilon}{2}=|M(p)|
+ \le\sum_{j=1}^t|M(U_jV_j)|
+ \le\frac32\,t\gamma\le\frac32\,s\gamma,
+\]
+and hence
+\begin{equation}\label{eq:21}
+s\ge\frac{\epsilon}{3\gamma}.
+\end{equation}
+Since \(N<Kv\), \(\epsilon\ge2^{-aN}\) with \(a=c/(2K)\)
+implies \(\epsilon\ge2^{-cv/2}\). Thus
+\[
+                  s\ge2^{cv/2}/3\ge2^{cv/3}\ge2^{bN}
+\]
+with \(b=c/(3K)\); the middle inequality is already valid under
+the stated cutoff. This proves Theorem~\ref{thm:finite}.
+
+
+\section{Explicit families and actual variable counts}\label{sec:explicit}
+
+\subsection{An explicit LPS family}\label{sub:lps}
+Fix the prime \(p=733\). For every field prime
+\[
+                     q\equiv1\pmod{2932},\qquad q>1466,
+\]
+the standard LPS graph \cite{LPS1988} \(B_q\) is the nonbipartite Cayley graph
+on \(\operatorname{PSL}_2(\mathbb F_q)\) of degree \(d=p+1=734\).
+It has
+\[
+ n=\frac{q(q^2-1)}2,\qquad v=367q(q^2-1).
+\]
+Indeed \(p,q\equiv1\pmod4\), and quadratic reciprocity plus
+\(q\equiv1\pmod p\) gives \((p/q)=1\).
+The LPS spectral theorem gives
+\[
+ \max_{i\ge2}|\theta_i|\le\frac{2\sqrt{733}}{734}<\frac2{27}.
+\]
+Connectivity and nonbipartiteness hold on this PSL component.
+The conservative bound \(q>2p\) ensures the standard generators
+remain nonidentity and distinct modulo \(q\), so the graph is simple.
+No girth theorem is used.
+
+One can construct the fixed generator list from integer
+quaternions \((a_0,a_1,a_2,a_3)\) of norm \(733\), where \(a_0\)
+is positive and odd and the other coordinates are even. With
+\(i^2=-1\) modulo \(q\), send it to the projective matrix
+\[
+ \begin{pmatrix}
+   a_0+i a_1&a_2+i a_3\\
+   -a_2+i a_3&a_0-i a_1
+ \end{pmatrix}.
+\]
+Its determinant is \(733\), a square modulo \(q\); normalizing
+to determinant one gives a PSL element independent of the sign
+of the square root. This is the conventional LPS construction.
+For the fixed \(p\), exhaustive enumeration of the generator
+list and of determinant-one matrices modulo \(\{\pm I\}\)
+takes time polynomial in the graph size.
+
+For clarity, simplicity can also be checked directly in this
+single-prime construction. Normalize every matrix by the same
+square root of \(733\). Equality in PSL then means equality
+or negated equality of the two normalized matrices. The quaternion
+matrix map is invertible over \(\mathbb F_q\), so the coordinate
+vectors are congruent up to the same sign. Since every coordinate
+has absolute value at most \(\sqrt{733}\) and \(q>2\cdot733\),
+the congruence is an integer equality. The positive \(a_0\)
+convention eliminates the minus case. An identity generator
+would require \(a_1=a_2=a_3=0\), contradicting \(a_0^2=733\).
+Quaternion conjugation gives inverse closure of the generator list.
+
+Take \(L=32\). The exact host degree and variable factor are
+\[
+ D_H=17263679,\qquad K=LD_H=552437728.
+\]
+With \(c=1/7680000\), the constants in the theorem can be
+chosen as the positive rationals
+\[
+ a=\frac1{8485443502080000},\qquad
+ b=\frac1{12728165253120000}.
+\]
+The cutoff \(v\ge2^{32}\) is already implied by \(q>1466\).
+All these constants are deliberately conservative.
+
+
+\subsection{Every sufficiently large variable count}\label{sub:padding}
+The core graph theorem gives an explicit infinite subsequence.
+We give a padding argument for all sufficiently large
+actual variable counts. It uses only the prime number theorem in
+the fixed progression \(1\pmod{2932}\), in addition to the core
+graph result.
+
+Set \(m=D_H\), \(A=367L\). The core number of groups is
+\[
+                    g_q=Aq(q^2-1)-1.
+\]
+For any sufficiently large integer \(N\), let
+\(g=\lfloor N/m\rfloor\) and \(x=(g/A)^{1/3}\).
+The prime number theorem in this fixed progression gives
+an admissible prime \(q\in(x/2,x]\) once \(x\) is large enough;
+for a stronger quantitative statement see \cite{ThornerZaman2021}. Then \(g_q\le g\). Since \(q\ge2\) and \(q^2-1\ge3q^2/4\),
+\[
+            g_q\ge\frac{3g}{32}-1\ge\frac g{16}
+                     \qquad(g\ge32).
+\]
+The core variable count \(N_0=mg_q\) is therefore at least
+\(N/32\), using \(mg\ge N/2\) for \(N\ge2m\).
+
+Append \(g-g_q\) fresh groups of size \(m\), and, if \(N-mg>0\),
+one final fresh group of size \(N-mg\). Let \(G\) be the product
+of all appended group sums, with \(G=1\) if none are needed.
+Define
+\[
+             F_N=F_{H_q}G,\qquad P_N=P_{H_q}G.
+\]
+These are explicit polynomials on exactly \(N\) variables.
+Fixing one variable in each appended group to one and the
+others to zero restricts \(F_N\pm\epsilon P_N\) to the core
+target without increasing monotone circuit size.
+
+For \(a'=a/32\) and \(b'=b/32\), the conditions
+\[
+                       2^{-a'N}\le\epsilon\le1/2
+\]
+imply \(\epsilon\ge2^{-aN_0}\), since \(N_0\ge N/32\).
+The core theorem therefore gives size at least
+\(2^{bN_0}\ge2^{b'N}\).
+The finitely many smaller indices may be filled arbitrarily.
+Primality testing or direct enumeration in this fixed progression
+is polynomial in \(N\); the determinant construction stays uniform.
+
+This does not assert a universal discrepancy estimate for every
+balanced partition of the padded variables. The lower bound is
+transferred by an arithmetic restriction after the shared-gate
+theorem has already been proved on the core.
+
+This completes the proof of Theorem~\ref{thm:asymptotic},
+with its constants taken to be \(a',b'\).
+
+
+\section{Full support and sharp approximation}\label{sec:approx}
+
+\subsection{Two coefficient values}\label{sub:twolevels}
+The polynomial \(R_H=2F_H-P_H\) has every full-group monomial,
+each with coefficient one or two. It is in uniform VP over the
+integers. A monotone circuit of size \(s\) for \(R_H\), followed
+by one multiplication by \(1/2\), computes
+\(F_H-\tfrac12P_H\). Thus \(s+1\ge2^{bN}\), implying
+\(s=2^{\Omega(N)}\). The padded family has the same conclusion.
+
+More generally, let \(Q=F_H\pm\epsilon P_H\). Suppose
+\(\widetilde Q\) is a nonnegative set-multilinear polynomial
+on exactly the full set of tail groups and
+\[
+ \big|[m_\nu]\widetilde Q-[m_\nu]Q\big|\le\epsilon/4
+                         \quad\text{for every neighbor map }\nu.
+\]
+The centered coefficient functional has total absolute weight
+one, so \(|M(\widetilde Q)|\ge\epsilon/4\).
+Its coefficients are at most \(1+\epsilon+\epsilon/4<2\).
+The same balanced-product argument gives
+\[
+            \operatorname{monSIZE}(\widetilde Q)
+                      \ge\frac{\epsilon}{8\gamma}.
+\]
+This is a strongly exponential coefficient-approximation lower
+bound in the same perturbation range, after decreasing the
+exponent constant if needed. The requirement that the output
+be set-multilinear on exactly these groups excludes uncontrolled
+extra monomials; it is not an approximation claim for arbitrary
+nonhomogeneous output.
+
+Conversely, the number of full-group monomials is
+\(D_H^{Lv-1}=2^{O(N)}\). Listing them gives a monotone upper
+bound \(2^{O(N)}\) for the exact targets. The size scale is
+therefore \(2^{\Theta(N)}\) with fixed, different constants.
+\subsection{Exact coefficient-approximation tradeoff}
+
+Use the same host, full product \(F_H\), arborescence polynomial
+\(P_H\), and exactly centered distribution \(\Delta_b\).
+Let \(\gamma\) bound its rectangle discrepancy for every balanced
+partition. The Eulerian theorem gives \(\gamma\le2^{-cv}\).
+The signed coefficient functional
+\[
+ M(Q)=\sum_\nu\Delta_b(\nu)(2g_H(\nu)-1)[m_\nu]Q
+\]
+assigns total positive weight \(1/2\) and total negative weight
+\(-1/2\).
+
+Fix \(0<\ell<u\). Consider either assignment of the two
+coefficient levels to the two answers:
+\[
+ R_{\ell,u}=\ell P_H+u(F_H-P_H)
+ \quad\text{or}\quad
+ R_{\ell,u}=uP_H+\ell(F_H-P_H).
+\]
+Let \(1\le\kappa<\sqrt{u/\ell}\). Suppose a monotone circuit
+computes a full-group set-multilinear polynomial \(\widetilde R\)
+whose coefficients satisfy
+\begin{equation}\label{eq:A1}
+\frac{[m_\nu]R_{\ell,u}}{\kappa}
+       \le [m_\nu]\widetilde R
+       \le \kappa[m_\nu]R_{\ell,u}
+                          \qquad\text{for every }\nu.
+\end{equation}
+Then its size satisfies the explicit bound
+\begin{equation}\label{eq:A2}
+\boxed{\quad
+    s\ge\frac{u-\kappa^2\ell}{2\kappa^2u\,\gamma}.
+       \quad}
+\end{equation}
+
+\emph{Proof.} First take the assignment with level \(\ell\) on
+\(g_H=1\) and level \(u\) on \(g_H=0\). Exact centering and
+\eqref{eq:A1} give
+\[
+ \begin{aligned}
+ M(\widetilde R)
+ &\le \frac{\kappa\ell}{2}-\frac{u}{2\kappa}\\
+ &=-\frac{u-\kappa^2\ell}{2\kappa}<0.
+ \end{aligned}
+\]
+The other assignment reverses the sign and gives the same
+lower bound on \(|M(\widetilde R)|\).
+Every output coefficient is at most \(\kappa u\).
+The shared-gate balanced-product decomposition therefore writes
+the output as at most \(s\) terms, each having rectangle-mixture
+mass at most \(\kappa u\). Each term's functional magnitude is
+at most \(\kappa u\gamma\). Comparing the two bounds yields
+\eqref{eq:A2}. No precision restriction on the constants is used. \(\square\)
+
+For fixed \(\ell,u,\kappa\) with \(\kappa<\sqrt{u/\ell}\), the
+factor preceding \(1/\gamma\) is a positive constant.
+Consequently \eqref{eq:A2} is \(2^{\Omega(N)}\) in actual variables.
+If \(\kappa\) depends on \(N\) and approaches the threshold,
+only the explicit tradeoff \eqref{eq:A2}, rather than a uniform exponent,
+is being asserted.
+
+\subsection{Matching easy approximation at the threshold}
+
+At \(\kappa_0=\sqrt{u/\ell}\), the easy polynomial
+\begin{equation}\label{eq:A3}
+\sqrt{\ell u}\,F_H
+\end{equation}
+satisfies \eqref{eq:A1} for both coefficient levels. For the lower level,
+\(\sqrt{\ell u}=\kappa_0\ell\); for the higher level,
+\(\sqrt{\ell u}=u/\kappa_0\).
+Thus \eqref{eq:A3} has an \(O(N)\)-size monotone circuit and reaches
+the threshold exactly in the real-constant model.
+
+In particular, for
+\[
+                              R_H=2F_H-P_H,
+\]
+the symmetric multiplicative coefficient-approximation threshold
+is \(\sqrt2\): for every fixed \(1\le\kappa<\sqrt2\),
+\begin{equation}\label{eq:A4}
+s\ge\frac{2-\kappa^2}{4\kappa^2\gamma}
+                         =2^{\Omega(N)},
+\end{equation}
+whereas \(\sqrt2 F_H\) is an \(O(N)\)-size \(\sqrt2\)-approximation.
+The lower bound is for unrestricted monotone circuits with
+shared gates, not just sums of products.
+
+\subsection{Uniform pointwise approximation needs no group-structure assumption}
+
+The same sharp threshold holds if an arbitrary monotone circuit
+is required to approximate \(R_{\ell,u}\) pointwise even on the
+bounded cube:
+\begin{equation}\label{eq:A5}
+\frac{R_{\ell,u}(x)}{\kappa}\le \widetilde R(x)
+                   \le\kappa R_{\ell,u}(x)
+                       \qquad\text{for every }x\in[0,1]^N.
+\end{equation}
+No degree or set-multilinearity assumption on the circuit's output
+or intermediate gates is needed. The following standard extraction argument
+\cite{JerrumSnir1982,Jukna2016} preserves size even when gates are shared.
+
+\begin{lemma}[Least homogeneous component]\label{lem:least} If a nonzero polynomial \(Q\) is
+computed by a size-\(s\) monotone circuit, its nonzero homogeneous
+component of least total degree has a monotone circuit of size
+at most \(s\).
+\end{lemma}
+
+\begin{proof} Prune zero and unused gates. Assign each remaining gate
+its least monomial degree. At addition this is the minimum of
+the children's degrees; at multiplication it is their sum,
+because no cancellation is possible.
+Build one corresponding gate for each original gate. At an
+addition with unequal least degrees retain only the child of
+smaller degree; at equal degrees retain their addition.
+At multiplication retain the product of the two least components.
+Inputs remain variables or nonnegative constants.
+Induction computes each gate's least homogeneous component.
+Each original gate contributes at most one arithmetic gate,
+and all of its uses share that same constructed gate.
+Thus size does not increase.\end{proof}
+
+Let \(g\) be the number of tail groups, so the target
+\(R_{\ell,u}\) is homogeneous of degree \(g\) and positive
+at \(\mathbf1\). Let \(d\) be the least degree of
+\(\widetilde R\). Substitute \(x=t\mathbf1\) in \eqref{eq:A5},
+divide by \(t^g\), and let \(t\) decrease to zero.
+If \(d<g\), the upper bound fails; if \(d>g\), the lower
+bound fails. Hence \(d=g\).
+
+Let \(Q_g\) be that least homogeneous component. It has
+monotone size at most the size of the original approximator.
+For every fixed \(x\in[0,1]^N\), the points \(tx\) remain
+in the cube for \(0<t\le1\). Dividing \eqref{eq:A5} at \(tx\) by
+\(t^g\) and taking the limit gives
+\[
+          R_{\ell,u}(x)/\kappa\le Q_g(x)\le\kappa R_{\ell,u}(x).
+\]
+On a face where every variable of one tail group is zero,
+the target vanishes. Nonnegativity therefore forces every
+monomial of \(Q_g\) to meet every tail group. Its degree is
+exactly \(g\), so it uses each group exactly once.
+Thus \(Q_g\) is full-group set-multilinear.
+
+Evaluate at the one-hot point for each neighbor map: set
+its selected variable in every group to one and all others
+to zero. This isolates the corresponding coefficient of
+\(Q_g\), proving \eqref{eq:A1} for \(Q_g\). Applying \eqref{eq:A2} to its
+no-larger circuit proves the same bound for the original
+arbitrary monotone approximator.
+
+Conversely, a full-group polynomial satisfying \eqref{eq:A1} satisfies
+the pointwise inequalities on the whole nonnegative orthant
+by summing termwise. In particular \eqref{eq:A3} attains the threshold
+on the cube and on the orthant. The optimal monotone size
+for coefficient approximation equals that for uniform cube
+approximation, with no size loss in either direction.
+The latter assertion compares the optimal circuit sizes;
+it does not say that every cube approximator itself is
+set-multilinear.
+
+For example \(xy+(xy)^2\) is a factor-two approximation to
+\(xy\) on \([0,1]^2\) and is not multilinear. The least-component
+operation extracts \(xy\). This explains why forcing the
+original output to be multilinear would have been too strong,
+while the size lower bound still transfers.
+
+The same conclusion holds if approximation is required on the
+open positive cube, since polynomial continuity supplies its
+boundary. It also holds on the entire nonnegative orthant.
+The argument uses the continuum of scales tending to zero;
+it does not give an approximation theorem on Boolean inputs alone.
+
+\subsection{Padding and scope}
+
+The all-size padding in Section~\ref{sub:padding} preserves this
+corollary. Choosing one variable in each added group to be one
+and the others zero isolates one padded extension of each core
+monomial. Coefficient approximation restricts to coefficient
+approximation on the core; pointwise approximation restricts
+directly. A constant fraction of the actual variables remains.
+
+The two-level target has a polynomial-size general arithmetic
+circuit because \(P_H\) is a rooted determinant. At levels one
+and two, no growing coefficient precision is needed even in
+the exact target. This is a sensitive monotone arithmetic
+separation and its sharp approximation corollary.
+
+The Boolean support function of \(R_H\) is the same easy support
+function as \(F_H\). This result does not imply a monotone Boolean
+circuit lower bound through a support conversion. It also does
+not supply Hrube\v{s}'s additional hypotheses for general arithmetic
+lower bounds. 
+
+
+\section{Exact counting on the Boolean cube}\label{sec:counting}
+
+Exact counting requires equality with the target on every Boolean
+assignment, in the sense of \cite{Jukna2016}. The full-group normalization
+below is related to the consistent-to-decomposable normalization
+of sum-product networks \cite{Peharz2015,MartensMedabalimi2015}.
+We include its proof to specify the hypotheses, arbitrary-real-constant
+model, and cost in shared arithmetic gates.
+
+\subsection{Counting normalization statement}
+
+Partition the variables into \(g\ge1\) nonempty groups
+\(X_1,\ldots,X_g\). Let \(p\ne0\) be a polynomial with nonnegative
+coefficients whose every monomial uses exactly one variable from
+each group, with exponent one. Suppose a size-\(s\) monotone
+arithmetic circuit computes some polynomial \(Q\) satisfying
+\begin{equation}\label{eq:CN1}
+Q(x)=p(x)\quad(x\in\{0,1\}^N).
+\end{equation}
+The circuit has binary \(+\) and \(\times\) gates, arbitrary
+nonnegative real constants, and unrestricted reuse; \(Q\) need
+not be multilinear or homogeneous.
+
+\begin{theorem}[Full-group counting normalization]\label{thm:counting} There is a monotone circuit computing
+\(p\) as a formal polynomial, of size at most
+\begin{equation}\label{eq:CN2}
+(2g+1)s+g.
+\end{equation}
+The transformation preserves shared subcircuits and takes
+polynomial time in the original circuit and variable count.
+It does not depend polynomially on the potentially huge formal
+degree of \(Q\).
+\end{theorem}
+
+\subsection{Profiles of productive gates}
+
+For a polynomial \(U\), write \(\operatorname{lin}(U)\) for
+the result of replacing each positive exponent by one and
+combining like terms. A multilinear polynomial is uniquely
+determined by its values on the Boolean cube; this follows
+inductively by writing it as \(A+x_NB\) and evaluating at
+\(x_N=0,1\). Thus \eqref{eq:CN1} implies
+\begin{equation}\label{eq:CN3}
+\operatorname{lin}(Q)=p.
+\end{equation}
+Nonnegativity then implies that every monomial of \(Q\) has
+exactly one distinct variable from each group, although that
+variable may have a higher exponent.
+
+Prune zero and unused gates. For each productive gate \(v\),
+let \(S_i(v)\subseteq X_i\) be the set of variables from group
+\(i\) appearing in any monomial at \(v\). Call \(i\) flexible
+at \(v\) if \(|S_i(v)|\ge2\), and fixed at \(v\) if
+\(|S_i(v)|=1\). Empty profiles are allowed.
+
+Every monomial at \(v\) is a partial choice: it cannot contain
+two distinct variables from a group. Indeed choose a nonzero
+output parse context containing an occurrence of \(v\), and
+fix monomials in all its other factors and occurrences.
+Every monomial at the designated occurrence, times this
+fixed context, occurs at the output with a positive coefficient.
+Two different variables of a group could not disappear.
+
+Moreover, every flexible group at \(v\) occurs in every
+monomial at \(v\). For the same fixed context, if it contained
+a variable from such a group, some monomial at \(v\) with a
+different variable would create an invalid output support.
+Hence the context contains no variable from that group.
+The full-group output condition then forces every monomial
+at \(v\) to supply it.
+
+At a multiplication gate \(v=u t\), if both children have a
+nonempty profile in a group, both profiles must be the same
+singleton. Otherwise a cross-product of monomials would
+contain two different variables from that group. Consequently
+the flexible groups at \(v\) are the disjoint union of the
+flexible groups at its two children.
+
+At an addition gate \(v=u+t\), profiles are their unions.
+If a group is flexible at \(v\) but not flexible at a
+nonzero child, that child has a singleton profile there,
+and its variable occurs in every child monomial. An empty
+profile or an omitting monomial would contradict the
+mandatory presence of every flexible group at \(v\).
+
+\subsection{Constructing the normalized circuit}
+
+Define \(J_v\) by setting all variables of fixed groups at
+\(v\) to one, then linearizing the remaining polynomial.
+The preceding facts show that \(J_v\) is set-multilinear on
+exactly the flexible groups at \(v\).
+
+For an input variable, \(J_v=1\). For a constant input,
+\(J_v\) is that constant.
+
+At a multiplication gate the flexible group sets are disjoint,
+and every other present group is fixed at both relevant
+children and parent. Hence
+\begin{equation}\label{eq:CN4}
+J_v=J_uJ_t.
+\end{equation}
+This uses one multiplication gate.
+
+At an addition gate, let \(M_u\) be the product of the unique
+child variables from groups that are flexible at \(v\) and
+fixed at \(u\); define \(M_t\) analogously. Each is a product
+of at most \(g\) distinct variables. The mandatory-presence
+property shows that restoring one copy of each such variable
+exactly reverses its removal under linearization. Therefore
+\begin{equation}\label{eq:CN5}
+J_v=M_uJ_u+M_tJ_t.
+\end{equation}
+Each restored product can be formed by multiplying its
+variables into the already computed child output. This costs
+at most \(2g\) multiplications and one addition per original
+addition gate.
+
+Construct one normalized output for each original gate and
+reuse it at every parent. Finally, at the output, restore
+one copy of the unique variable from each globally fixed
+group. All these groups are mandatory by \eqref{eq:CN3}. The result
+is exactly \(p\), at cost at most \(g\) more multiplications.
+The total size is bounded by \eqref{eq:CN2}.
+
+Profiles are computed from the input variables by set union
+at both addition and multiplication. The latter union rule
+uses the fact that all productive polynomials are nonzero
+and no cancellation occurs. All other operations of the
+construction are explicit. This proves the theorem.
+\(\square\)
+
+\subsection{Consequence for the sensitive VP family}
+
+Let \(C_{01}(T)\) denote monotone circuit size required only
+to agree with \(T\) on the entire Boolean cube. Apply the
+normalization theorem to the full-group target
+\(T=F_H\pm\epsilon P_H\). The coefficient discrepancy bound
+in the Eulerian proof gives
+\begin{equation}\label{eq:CN6}
+C_{01}(T)\ \ge\
+ \frac{\epsilon/(3\gamma)-g}{2g+1},\qquad
+ g=|V(H)|-1,\qquad \gamma\le2^{-cv}.
+\end{equation}
+In particular, for the same fixed host parameters and
+\(2^{-aN}\le\epsilon\le1/2\),
+\begin{equation}\label{eq:CN7}
+C_{01}(T)=2^{\Omega(N)}
+\end{equation}
+for sufficiently large \(N\). The polynomial normalization
+factor is absorbed into the exponent. This statement does
+not claim the identical numerical exponent at the original
+finite cutoff for arbitrary fixed clone counts.
+
+At \(\epsilon=1/2\), the two-coefficient target \(2F_H-P_H\)
+has the same strongly exponential exact counting lower
+bound. Its values on Boolean inputs count weighted full-group
+monomials. This is stronger than requiring the competing
+circuit to compute the formal polynomial, while still being
+an arithmetic counting model, not a Boolean decision model.
+
+The normalizer uses \eqref{eq:CN3}, which follows from exact equality
+on all Boolean assignments. Approximation, or equality only
+on one-hot assignments, does not supply \eqref{eq:CN3}. In particular,
+an approximator may contain monomials using two distinct
+variables from one group. No Boolean approximation theorem
+is inferred here.
+
+
+\section{Scope and further questions}\label{sec:scope}
+
+The host polynomial has full support within its full-group monomial
+basis. Replacing arithmetic addition and multiplication by Boolean OR
+and AND therefore produces the same easy support predicate as for
+\(F_H\). The lower bound concerns arithmetic coefficients and does
+not give a Boolean circuit lower bound by a support conversion.
+
+The distinction between complete input domains and promises is also
+substantive. On the promise of exactly one selected variable in every
+outgoing group, the targets have polynomial-size monotone arithmetic
+circuits. To see this, represent the complement of \(x_{z,w}\) on
+the promise by the sum of the other variables in its group.
+Prefix and suffix sums produce all these complements in \(O(N)\) gates.
+A Boolean reachability circuit can now be simulated with two
+nonnegative arithmetic outputs \(a,\bar a\) for each Boolean gate.
+The identities
+\[
+\begin{array}{lll}
+\text{AND:}&ab,&\bar a+a\bar b,\\
+\text{OR:}&a+\bar a b,&\bar a\bar b
+\end{array}
+\]
+compute a gate and its complement whenever the incoming pairs are
+complementary bits; NOT merely exchanges the outputs.
+Reachability for every vertex uses polynomially many Boolean gates.
+If \(A,\bar A\) are the resulting arborescence-indicator pair, then
+\(1+\bar A\), \(1+\epsilon A\), and
+\((1-\epsilon)+\epsilon\bar A\) compute respectively
+\(2F_H-P_H\), \(F_H+\epsilon P_H\), and \(F_H-\epsilon P_H\)
+on the promise, since \(F_H=1\) there.
+These circuits need not compute the formal polynomials or their values
+on the entire Boolean cube. Multiplying by \(F_H\) can enforce vanishing
+on all group-zero faces without changing the promised values.
+
+Division is another distinct model. Subtraction-free rational algorithms
+for arborescence polynomials are known \cite{FGK2013}. Our lower bound
+is for division-free circuits and does not preclude such algorithms.
+Similarly, the perturbation interval in Theorem~\ref{thm:finite} does
+not supply the additional hypotheses in Hrube\v{s}'s criteria for
+general arithmetic lower bounds \cite{Hrubes2020}. In particular,
+we do not obtain a separation of VP from VNP or of P from NP.
+
+Several questions remain. Can the required base degree and clone count
+be substantially reduced? Can the sensitive size bound be extended to
+smaller perturbations? Does a corresponding approximation bound hold
+when the domain is only the Boolean cube? Finally, can strongly
+exponential sensitive hardness be achieved for a family with
+polynomial-size general arithmetic formulas? The determinant upper
+bound here supplies polynomial-size circuits, not that stronger
+formula upper bound.
+
+\section*{Acknowledgment}
+\addcontentsline{toc}{section}{Acknowledgment}
+The author acknowledges OpenAI GPT-6 for assistance with research
+exploration, proof development, verification code, and manuscript
+preparation. The finite computations are supplementary checks;
+the asymptotic claims rest on the written arguments.
+
+
+
+\appendix
+
+
+\section{Direct BEST counting and sampling}\label{app:best}
+The following standard last-exit-tree proof \cite{FarrellLevine2015} is included to
+fix the counting convention. Replace every base edge by its two
+directed arcs. Fix a base start vertex \(o\).
+Choose a directed spanning tree toward \(o\). At each \(u\ne o\),
+order its outgoing arcs with the tree arc last, and order the
+other \(d-1\) arcs arbitrarily. At \(o\), choose any order of its
+\(d\) outgoing arcs. Starting at \(o\), always take the next unused
+outgoing arc in that vertex's order.
+
+The walk cannot stop away from \(o\), by balance of indegree and
+outdegree. If it stops at \(o\) with an unused outgoing arc
+somewhere, follow unused last-exit tree arcs toward \(o\).
+The first fully exhausted vertex on that tree path would have an
+unused incoming arc, contradicting balance for the closed walk.
+Thus all arcs are used, and the walk is an Eulerian tour.
+
+Conversely, the last outgoing arcs of nonroot vertices in an
+Eulerian tour form a tree toward \(o\). A directed cycle of these
+last exits would force their exit times to increase strictly
+around the cycle, which is impossible. The outgoing orders and
+last-exit tree are uniquely recovered from the tour.
+
+There are therefore
+\[
+                     t_o(B)\,d!\,((d-1)!)^{n-1}
+\]
+linear Eulerian tours starting at \(o\). Each cyclic transition
+configuration is represented by exactly \(d\) such tours, one
+for each possible first outgoing arc at \(o\). Dividing by \(d\)
+gives \(t_o(B)((d-1)!)^n\), proving \eqref{eq:5}.
+
+This also gives an efficient uniform sampler: choose a uniform
+spanning tree of \(B\), orient it toward \(o\), choose all the
+allowed outgoing orders uniformly, run the tour, and forget its
+initial position. Every single-cycle transition configuration
+has the same number \(d\) of preimages.
+A uniform spanning tree can, for example, be sampled in expected
+polynomial time by successive
+edge inclusion decisions using exact matrix-tree counts and
+deletion/contraction. Those counts have polynomial bit length
+and require polynomially many determinant computations.
+Sampling the exact rational branch probabilities takes expected
+polynomially many random bits. No rejection sampling with
+exponentially small acceptance is needed.
+
+
+\section{A smaller physical host}\label{app:thin}
+Let \(S\) be the oriented base edges and define a simple
+undirected graph \(T_B\) on \(S\) by
+\[
+ \{(u,w),(x,z)\}\in E(T_B)
+                 \quad\Longleftrightarrow\quad w=x\ \text{or}\ z=u.
+\]
+There are no loops because \(B\) is simple.
+For \(s=(u,w)\), there are \(d\) successor states \((w,z)\)
+and \(d\) predecessor states \((z,u)\). Their intersection
+is exactly \(\{(w,u)\}\), so \(T_B\) has degree \(2d-1\).
+It is connected, for example because any Euler tour of the
+bidirected connected base traces a spanning cycle in \(T_B\).
+
+The host
+\[
+                         H^\circ=T_B[K_L]
+\]
+has \(Lv\) physical vertices and constant degree
+\[
+                         D^\circ=2dL-1.
+\]
+Every intercluster arc in the direct gadget goes from an oriented
+edge state to one of its successor states, and every other arc
+stays in a state cluster. Consequently every possible gadget
+assignment lies in \(H^\circ\).
+
+The entire proof of Sections~\ref{sec:distribution} and \ref{sec:discrepancy} therefore applies
+verbatim to this smaller host: its probability space, fractional
+partition calculation, exposure concentration, parity identity,
+total-domain rectangle argument, and shared-gate coefficient
+transfer do not use any additional host edges. In particular,
+with actual variable count
+\[
+                 N^\circ=(Lv-1)D^\circ,
+\]
+one may take the same \(c=1/7680000\) and
+\[
+ a^\circ=\frac{c}{2LD^\circ},\qquad
+ b^\circ=\frac{c}{3LD^\circ}.
+\]
+For \(v\ge2^{32}\) and
+\(2^{-a^\circ N^\circ}\le\epsilon\le1/2\),
+\[
+ \operatorname{monSIZE}
+       (F_{H^\circ}\pm\epsilon P_{H^\circ})\ge2^{b^\circ N^\circ}.
+\]
+
+This is a direct adaptation of the proved discrepancy argument,
+not a claim that deleting edges from an arbitrary hard polynomial
+preserves hardness. The same hard distribution is supported in
+the smaller total Cartesian domain, and that fact is what allows
+the transfer to be repeated.
+
+For \(d=734,L=32\), the degree drops from \(17263679\)
+to \(46975\), while the number of physical vertices is unchanged.
+The main statement keeps the simpler notation \(B[K_{dL}]\);
+this optional host gives better fixed constants. Neither change
+alters the asymptotic \(2^{\Theta(N)}\) scale.
+
+
+
+\section{General conditioning and fixed-gap expanders}\label{app:general}
+\subsection{The finite conditioning criterion}
+
+Let \(B\) be a connected simple \(d\)-regular graph with \(n\)
+vertices and normalized second eigenvalue at most
+\(0\le\rho<1\). Put \(v=dn\), fix \(L\ge5\), and use
+the direct gadget on \(H=B[K_{dL}]\). Write
+\[
+ \delta=\frac{1-\rho}{2},\qquad
+ q_v=\frac{Lv-1}{3Lv},\qquad
+ w_v=\left(\delta q_v(1-q_v)-\frac1L\right)_+^2-\frac2v,
+ \qquad
+ \beta=\frac1{2(1-\rho)d^2}.
+\]
+
+For every real \(t\) satisfying \(0<t<w_v\), the exactly
+centered distribution of the Eulerian construction obeys
+\begin{equation}\label{eq:G1}
+\boxed{\quad
+ \max_{\text{balanced }A}
+    \operatorname{disc}_{\Delta_b,A}(g_H)
+ \le
+ v\exp\!\left[-\left(\frac{(w_v-t)^2}{4}-\beta\right)v\right]
+       +2^{-(tv-1)/2}+2^{1-v}.
+ \quad}
+\end{equation}
+The maximum is over partitions of whole outgoing-choice groups
+with each side between one third and two thirds of the groups.
+The predicate and rectangles are on the full Cartesian product
+of all neighbor choices.
+
+\emph{Proof.} Fix any such partition and assign the root either
+analysis color. Its mean Alice density lies in
+\([q_v,1-q_v]\). The state-transition gap is at least
+\(\delta\), with \(0<\delta\le1/2\). The pair estimate in Section~\ref{sub:mean}
+therefore gives
+\[
+                         \mathbb E Z\ge w_v v.
+\]
+The subtraction of two is solely the expectation loss at
+the root cluster's incoming and outgoing transition.
+Clones remain independent across clusters before conditioning.
+
+Expose the \(v\) clone choices, then the local permutation
+images individually. The sum of squared conditional range
+lengths is at most \(8v\). Hence
+\[
+ \Pr[Z<tv]\le
+       \exp\!\left[-\frac{(w_v-t)^2}{4}v\right].
+\]
+This use of the mean lower bound is valid because \(t<w_v\).
+The BEST count and logarithmic trace estimate give
+\[
+                   \Pr[E]\ge v^{-1}e^{-\beta v}.
+\]
+Dividing the preceding tail by this probability proves
+the first term of \eqref{eq:G1}. On a remaining layout there are
+at least \(tv-1\) honoured active stages, after removing
+the root stage. Fixing all other bits pulls every rectangle
+back to an inner-product rectangle, proving the second term.
+There are exactly \(v-1\) inner-product stages on every
+layout. Exact answer centering changes signed rectangle
+expectation by at most \(2^{1-v}\), giving the final term.
+
+All these estimates hold for each fixed partition under
+the same distribution. No union bound over partitions,
+post-conditioning independence, or promised input domain
+has been introduced. \(\square\)
+
+As \(v\) tends to infinity with fixed parameters,
+\[
+            w_v\longrightarrow
+            w_\infty=
+             \left(\frac{1-\rho}{9}-\frac1L\right)_+^2.
+\]
+Thus a sufficient asymptotic condition is
+\begin{equation}\label{eq:G2}
+\boxed{\qquad
+       \frac1{2(1-\rho)d^2}
+         <\frac14
+            \left(\frac{1-\rho}{9}-\frac1L\right)_+^4 .
+       \qquad}
+\end{equation}
+Indeed choose a fixed \(t\) with
+\(0<t<w_\infty-2\sqrt\beta\). Then the first exponent
+in \eqref{eq:G1} is bounded away from zero for all sufficiently
+large \(v\), as are the other exponential rates. Therefore
+the centered discrepancy is \(2^{-\Omega(v)}\).
+This is a sufficient criterion, not a converse or an optimal
+degree threshold.
+
+\subsection{Any fixed expander gap can meet the criterion}
+
+It is useful to give a deliberately loose closed-form choice.
+Write \(\kappa=1-\rho\), where \(0<\kappa\le1\). It suffices
+to choose fixed integers satisfying
+\begin{equation}\label{eq:G3}
+L\ge\frac{18}{\kappa},\qquad
+              d\ge2592\,\kappa^{-5/2}.
+\end{equation}
+Then \(w_\infty\ge\kappa^2/324\), so eventually
+\(\mathbb E Z\ge\eta v\), where
+\[
+       \eta=\frac{\kappa^2}{648},\qquad
+       \tau=\frac{\eta^2}{16}
+            =\frac{\kappa^4}{6718464}.
+\]
+The degree choice gives
+\[
+                  \beta=\frac1{2\kappa d^2}\le\frac{\tau}{2}.
+\]
+Using the threshold \(\eta v/2\) in the concentration argument
+therefore gives
+\[
+ \Pr[Z<\eta v/2\mid E]\le v e^{-\tau v/2}
+                                  \le e^{-\tau v/4}
+\]
+for sufficiently large \(v\). The same construction has at
+least \(\eta v/4\) honoured active stages outside this mass.
+Consequently its centered discrepancy is at most
+\begin{equation}\label{eq:G4}
+e^{-\tau v/4}
+                     +2^{-\eta v/8}+2^{1-v}
+                     =2^{-\Omega(v)}.
+\end{equation}
+The implicit constants depend only on the fixed gap and
+chosen degree and clone count.
+
+\subsection{A fixed clique blow-up makes an arbitrary expander eligible}
+
+\begin{theorem}[Fixed-gap expander families]\label{thm:general} Fix an integer \(\Delta\ge2\) and a real
+\(0<\kappa_0\le1\). There is an integer \(M\), depending only
+on these fixed parameters, with the following property.
+For every sufficiently large connected simple
+\(\Delta\)-regular graph \(G\) satisfying
+\[
+                      \lambda_2(A_G/\Delta)\le1-\kappa_0,
+\]
+the host \(H=G[K_M]\) has fixed degree and admits constants
+\(a,b>0\), independent of \(|V(G)|\), such that
+\begin{equation}\label{eq:G5}
+\operatorname{monSIZE}(F_H\pm\epsilon P_H)\ge2^{bN}
+                \qquad(2^{-aN}\le\epsilon\le1/2),
+\end{equation}
+where \(N=(|V(H)|-1)\deg(H)\) is its actual directed-arc
+variable count. The circuit model, total communication
+predicate, and coefficient definitions are exactly those
+of the Theorem~\ref{thm:finite}. If \(G\) is a uniform explicit
+family, the determinant upper bound is uniform as well,
+with the same convention on the epsilon parameter.
+\end{theorem}
+
+\begin{proof} Put
+\[
+                  \kappa=\frac{\Delta\kappa_0}{\Delta+1}.
+\]
+Choose a fixed integer \(s\) so large that
+\[
+        d=s(\Delta+1)-1\ge2592\,\kappa^{-5/2},
+\]
+and put \(B=G[K_s]\). This is connected, simple, and
+\(d\)-regular. Its adjacency matrix is
+\[
+                  A_B=(A_G+I)\otimes J_s-I.
+\]
+The subspace constant within each \(s\)-clique has normalized
+eigenvalues
+\[
+                 \frac{s(\Delta\theta+1)-1}{d},
+\]
+where \(\theta\) runs over the normalized eigenvalues of \(G\).
+The orthogonal subspace has normalized eigenvalue \(-1/d\).
+For every nonconstant lifted eigenvector,
+\[
+ \frac{s(\Delta\theta+1)-1}{d}
+       \le1-\frac{s\Delta\kappa_0}{d}
+       \le1-\kappa.
+\]
+Also \(-1/d\le1-\kappa\), since \(0<\kappa<1\).
+Thus \(B\) satisfies the second-eigenvalue hypothesis with
+\(\rho=1-\kappa\).
+
+Choose \(L\ge18/\kappa\). The preceding estimates provide
+centered discrepancy \(2^{-cv}\) for some fixed \(c>0\),
+where \(v=d|V(B)|=ds|V(G)|\), on
+\[
+                  H=B[K_{dL}]\cong G[K_{sdL}].
+\]
+Set \(M=sdL\). The blow-up factor is a fixed integer.
+With \(K=L((d+1)dL-1)\), the actual count satisfies \(N<Kv\).
+The shared-gate and coefficient transfer gives
+\(s_{\rm circ}\ge\epsilon/(3\gamma)\).
+For sufficiently large graphs, take
+\(a=c/(2K)\), \(b=c/(3K)\), and absorb the constant three
+exactly as in the Theorem~\ref{thm:finite} to obtain \eqref{eq:G5}.
+
+The graph transformation is a fixed local blow-up. Its
+polynomial and determinant are uniform whenever the original
+graph family is uniform.\end{proof}
+
+The same two-level coefficient and sharp uniform approximation
+corollaries hold. This theorem does not assert hardness on
+the original \(G\) without the clique blow-up, nor constants
+uniform in a gap that shrinks with the graph size.
+
+\section{Finite verification and reproducibility}\label{app:verification}
+
+The proofs above do not depend on experimental extrapolation.
+Dedicated computations check the counting conventions, local
+gadgets, and circuit transformations on finite examples.
+The parity identity \eqref{eq:12} is proved in
+Section~\ref{sub:gadget} for every admissible layout and every
+bit assignment; the gadget checks below test its implementation
+and are not premises of that proof.
+Table~\ref{tab:checks} summarizes the principal checks. The accompanying
+ancillary files contain the Python implementations, exact result
+records, and a manifest of the files used.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.33\linewidth}>{\raggedright\arraybackslash}p{0.58\linewidth}}
+\toprule
+Check & Finite coverage\\
+\midrule
+BEST counting and sampling &
+47,976 local covers and 16,334 last-exit descriptions on
+\(C_3,C_4,K_4,K_{3,3}\); exact multiplicities and matrix-tree counts\\
+Permutation exposure &
+666,600 exact conditional-mean configurations\\
+Direct parity gadget &
+26,624 bit inputs on 46 layouts; all arcs checked in the physical host\\
+Smaller-host implementation &
+48 layouts, 12,288 bit inputs, 1,728 locality checks, and
+eight exact state-spectrum identities\\
+Pair-margin estimate &
+2,016 cluster colorings and 93,610 discrete density pairs\\
+Balanced shared-gate removal &
+2,468 products from 120 DAGs; 6,588 exact output coefficients\\
+Shared-gate coefficient charge &
+10 global-replacement fixtures, including \(2^{256}\) path multiplicity
+and reciprocal \(2^{512}\) rescaling; 20,480 rectangles for
+80 signed measures\\
+Least-degree component &
+12,800 gate-component comparisons in 400 DAGs\\
+Counting normalization &
+20,789 gate profiles and exact polynomials in 400 DAGs;
+10,240 Boolean input points\\
+\bottomrule
+\end{tabular}
+\caption{Finite checks completed for the source arguments.}\label{tab:checks}
+\end{table}
+
+The counting check includes a circuit of formal degree
+\(4\cdot2^{256}\), whose normalized output has 16 monomials.
+The shared-gate check allows multiple productive uses of the selected
+gate, and tests the global substitution at all uses.
+Incorrect first-exit samplers, root-exit modifications, single-use
+charges, and omitted variable-restoration steps were rejected.
+The additional charge check distinguishes different DAG nodes that
+compute the same polynomial and verifies the level-set decomposition
+with exact rational arithmetic. These finite checks supplement
+Lemma~\ref{lem:balanced} and Proposition~\ref{prop:charge}.
+
+The toy graphs do not meet the large-degree and spectral hypotheses
+of Theorem~\ref{thm:finite}. These computations check finite identities
+and implementations, not the universal spectral estimates, concentration
+inequalities, or asymptotic circuit lower bound. Reproducibility of a
+finite check is also distinct from independent mathematical review.
+
+\begin{thebibliography}{99}
+\small
+\raggedright
+
+\bibitem{CDM2021}
+Arkadev Chattopadhyay, Rajit Datta, and Partha Mukhopadhyay.
+Lower bounds for monotone arithmetic circuits via communication complexity.
+In \emph{Proceedings of STOC 2021}, pages 786--799, 2021.
+\href{https://doi.org/10.1145/3406325.3451069}{doi:10.1145/3406325.3451069}.
+
+\bibitem{CDGM2022}
+Arkadev Chattopadhyay, Rajit Datta, Utsab Ghosal, and Partha Mukhopadhyay.
+Monotone complexity of spanning tree polynomial re-visited.
+In \emph{13th Innovations in Theoretical Computer Science Conference},
+volume 215 of \emph{LIPIcs}, pages 39:1--39:21, 2022.
+\href{https://doi.org/10.4230/LIPIcs.ITCS.2022.39}{doi:10.4230/LIPIcs.ITCS.2022.39}.
+
+\bibitem{CGM2022}
+Arkadev Chattopadhyay, Utsab Ghosal, and Partha Mukhopadhyay.
+Robustly separating the arithmetic monotone hierarchy via graph inner-product.
+In \emph{42nd IARCS Annual Conference on Foundations of Software
+Technology and Theoretical Computer Science},
+volume 250 of \emph{LIPIcs}, pages 12:1--12:20, 2022.
+\href{https://doi.org/10.4230/LIPIcs.FSTTCS.2022.12}{doi:10.4230/LIPIcs.FSTTCS.2022.12}.
+
+\bibitem{FarrellLevine2015}
+Matthew Farrell and Lionel Levine.
+Multi-Eulerian tours of directed graphs.
+Preprint, 2015.
+\href{https://arxiv.org/abs/1509.06237}{arXiv:1509.06237}.
+
+\bibitem{FGK2013}
+Sergey Fomin, Dima Grigoriev, and Gleb Koshevoy.
+Subtraction-free complexity, cluster transformations, and spanning trees.
+Max-Planck-Institut f\"ur Mathematik, Preprint 2013 (36), 2013.
+\url{https://webdoc.sub.gwdg.de/ebook/serien/e/mpi_mathematik/2013/36.pdf}.
+
+\bibitem{Hrubes2020}
+Pavel Hrube\v{s}.
+On \(\epsilon\)-sensitive monotone computations.
+\emph{Computational Complexity}, 29, article 6, 2020.
+\href{https://doi.org/10.1007/s00037-020-00196-6}{doi:10.1007/s00037-020-00196-6}.
+
+\bibitem{JerrumSnir1982}
+Mark Jerrum and Marc Snir.
+Some exact complexity results for straight-line computations over semirings.
+\emph{Journal of the ACM}, 29(3):874--897, 1982.
+\href{https://doi.org/10.1145/322326.322341}{doi:10.1145/322326.322341}.
+
+\bibitem{Jukna2016}
+Stasys Jukna.
+Lower bounds for monotone counting circuits.
+\emph{Discrete Applied Mathematics}, 213:139--152, 2016.
+\href{https://doi.org/10.1016/j.dam.2016.04.024}{doi:10.1016/j.dam.2016.04.024}.
+
+\bibitem{LPS1988}
+Alexander Lubotzky, Ralph Phillips, and Peter Sarnak.
+Ramanujan graphs.
+\emph{Combinatorica}, 8(3):261--277, 1988.
+\url{https://math.huji.ac.il/~alexlub/PAPERS/ramanujan%20graphs/ramanujanGraphs.pdf}.
+
+\bibitem{MartensMedabalimi2015}
+James Martens and Venkatesh Medabalimi.
+On the expressive efficiency of sum product networks.
+Preprint, version 3, 2015.
+\href{https://arxiv.org/abs/1411.7717v3}{arXiv:1411.7717v3}.
+
+\bibitem{Peharz2015}
+Robert Peharz, Sebastian Tschiatschek, Franz Pernkopf, and Pedro Domingos.
+On theoretical properties of sum-product networks.
+In \emph{Proceedings of the Eighteenth International Conference on
+Artificial Intelligence and Statistics},
+volume 38 of \emph{PMLR}, pages 744--752, 2015.
+\url{https://proceedings.mlr.press/v38/peharz15.html}.
+
+\bibitem{ThornerZaman2021}
+Jesse Thorner and Asif Zaman.
+Refinements to the prime number theorem for arithmetic progressions.
+\emph{Mathematische Zeitschrift}, 306(3), article 54, 2024.
+\href{https://doi.org/10.1007/s00209-023-03414-3}{doi:10.1007/s00209-023-03414-3}.
+
+\end{thebibliography}
+
+
+\end{document}

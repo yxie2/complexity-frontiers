@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "seed": 202609151538,
+  "script_sha256": "5be0b8b9ffda8f4fc1771c82fa3f6f70799d7c2028b11b0523c78a4bb46a2a9d",
+  "helper_sha256": "a2c63267a3fcf91c81be38fc1c3b496390452cf1133196c0c8c6b1b99dd1a582",
+  "global_replacement": {
+    "valid_global_replacement_fixtures": 10,
+    "diamond_depths": [
+      0,
+      1,
+      8,
+      64,
+      256
+    ],
+    "maximum_context_multiplicity": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+    "same_polynomial_distinct_node_fixture": "PASS",
+    "nonlinear_zero_branch_fixture": "PASS",
+    "reciprocal_rescaling_bits": [
+      64,
+      256,
+      512
+    ],
+    "nonmultilinear_generalization_rejected": true
+  },
+  "rectangle_charge": {
+    "signed_measure_cases": 80,
+    "rectangles_enumerated": 20480,
+    "exact_level_decomposition_and_charge": "PASS"
+  },
+  "scope": "Exact finite stress checks, supplementary to the first-principles proof of Lemma 4.1 and Proposition 4.2. These finite computations do not establish the asymptotic theorem.",
+  "elapsed_seconds": 0.14100000000325963,
+  "checked_at_utc": "2026-09-15T17:05:17.012436+00:00"
+}

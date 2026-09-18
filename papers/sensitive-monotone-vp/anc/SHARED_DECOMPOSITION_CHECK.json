@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-15T17:05:44.563387+00:00",
+  "seed": 202609151344,
+  "script_sha256": "a2c63267a3fcf91c81be38fc1c3b496390452cf1133196c0c8c6b1b99dd1a582",
+  "manuscript_sha256": "fda4cc184b88d8b8129131c4bf999b20e73dc88624dee954a68a3c2f2ba30807",
+  "circuits": 120,
+  "groups": 6,
+  "binary_choices_per_group": 2,
+  "balanced_products_extracted": 2468,
+  "output_coefficients_reconstructed": 6588,
+  "extra_direct_parent_uses_of_selected_gates": 785,
+  "maximum_terms_in_one_decomposition": 26,
+  "maximum_distinct_cuts_in_one_decomposition": 23,
+  "zero_branches_with_invalid_group_monomials_ignored": 120,
+  "incorrect_single_use_charge_rejected": true,
+  "elapsed_seconds": 28.078000000008615,
+  "scope": "Exact finite circuit identities test global substitution, balanced complementary groups, coefficient domination, and one charge per removed shared gate. The asymptotic theorem uses the analytic lemma."
+}

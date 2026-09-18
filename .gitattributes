@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.pdf binary
+*.zip binary
+# Preserve the original source-package bytes and their recorded hashes.
+papers/sensitive-monotone-vp/main.tex -text -whitespace
+papers/sensitive-monotone-vp/anc/** -text -whitespace

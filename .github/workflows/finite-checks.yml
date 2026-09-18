@@ -1,0 +1,35 @@
+name: Finite checks
+
+on:
+  push:
+    paths:
+      - 'papers/sensitive-monotone-vp/**'
+      - 'scripts/verify_sensitive_monotone.py'
+      - '.github/workflows/finite-checks.yml'
+  pull_request:
+    paths:
+      - 'papers/sensitive-monotone-vp/**'
+      - 'scripts/verify_sensitive_monotone.py'
+      - '.github/workflows/finite-checks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: papers/sensitive-monotone-vp/anc/requirements.txt
+      - name: Install checker dependencies
+        run: python -m pip install -r papers/sensitive-monotone-vp/anc/requirements.txt
+      - name: Verify artifacts and reproduce finite results
+        run: python scripts/verify_sensitive_monotone.py
