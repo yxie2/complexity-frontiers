@@ -52,7 +52,6 @@ def main():
         rows = list(pool.map(run_one, CHECKS.items()))
     report = {
         "status": "PASS",
-        "checked_at_utc": datetime.now(timezone.utc).isoformat(),
         "python": platform.python_version(),
         "dependencies": {name: importlib.metadata.version(name)
                          for name in ("networkx", "numpy", "sympy")},

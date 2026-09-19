@@ -179,8 +179,7 @@ def main():
     wrong_coefficient=b
     assert times(a,wrong_coefficient)!=target
     result={
-        'status':'PASS','checked_at_utc':datetime.now(timezone.utc).isoformat(),
-        'seed':SEED,
+        'status':'PASS','seed':SEED,
         'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'manuscript_sha256':hashlib.sha256((ROOT.parent/'main.tex').read_bytes()).hexdigest(),
         'circuits':120,'groups':G,'binary_choices_per_group':2,

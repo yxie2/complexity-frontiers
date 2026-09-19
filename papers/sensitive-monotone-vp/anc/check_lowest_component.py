@@ -116,8 +116,7 @@ def main():
             grid+=1
     assert F(1,10)**4 < F(1,10)**2/2
     result={
-        'status':'PASS','checked_at_utc':datetime.now(timezone.utc).isoformat(),
-        'seed':SEED,
+        'status':'PASS','seed':SEED,
         'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'manuscript_sha256':hashlib.sha256((ROOT.parent/'main.tex').read_bytes()).hexdigest(),
         'circuits':400,'gate_components_checked':checked,

@@ -185,7 +185,7 @@ def main():
         "scope": "Exact finite stress checks, supplementary to the first-principles proof of Lemma 4.1 and Proposition 4.2. These finite computations do not establish the asymptotic theorem.",
     }
     result["elapsed_seconds"] = time.monotonic()-start
-    result["checked_at_utc"] = datetime.now(timezone.utc).isoformat()
+
     (ROOT/"SHARED_CHARGE_CHECK.json").write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8")
     print(json.dumps(result, indent=2))
 

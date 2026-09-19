@@ -1,19 +1,19 @@
 {
   "status": "PASS",
   "seed": 202609151126,
-  "script_sha256": "b0e895309165082b013d719ac3bea68e8305f64c19067e5ae29088f6da8ea107",
+  "script_sha256": "b8f9a4028ed0ede8a5e4d3789fb19547acf4b6ad241ae0fdc31d16bc786e5feb",
   "imported_sources": [
     {
       "path": "verify.py",
-      "sha256": "f7bd9e07875f71c736e71036982dd6564ff9a5db5c948d6c88f116df6d0955df"
+      "sha256": "bb843984a9f74d095f283244f65d8d1be1f38b8231cbe001bbde02db6642d07e"
     },
     {
       "path": "check_inactive_forest.py",
-      "sha256": "e6acf6903e9724a6b161cbd89aaa43fae1e3cbdc0a3ad484477c804ee1875ad9"
+      "sha256": "ed1ac9dda199d5f204641dac2ac1dfb131f3c135bde2a8327444211a0a0df863"
     },
     {
       "path": "check_all_step_cover.py",
-      "sha256": "457cb4ac0faa704111b2040574d5fc48eed943c3ea4eb1b5f48e6268b3256131"
+      "sha256": "68b156d967a52a4b6e24e05b01b6fbda2904227b984bf64c2ef5ea22527d4d3b"
     }
   ],
   "exact_BEST_checks": [
@@ -656,6 +656,5 @@
     "The toy bases do not satisfy the asymptotic spectral hypothesis.",
     "The general theorem is established by the written proof, not these finite tests."
   ],
-  "elapsed_seconds": 5.359000000025844,
-  "checked_at_utc": "2026-09-15T17:05:25.891471+00:00"
+  "elapsed_seconds": 5.98399999999674
 }

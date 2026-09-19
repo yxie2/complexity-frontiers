@@ -10,7 +10,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "papers" / "sensitive-monotone-vp"
-VOLATILE_FIELDS = {"checked_at_utc", "elapsed_seconds"}
+VOLATILE_FIELDS = {"elapsed_seconds"}
 
 
 def digest(path):
@@ -23,7 +23,7 @@ def require(condition, message):
 
 
 def substantive(record):
-    # Only top-level run timestamps and elapsed times may differ.
+    # Only top-level elapsed times may differ.
     return {key: value for key, value in record.items()
             if key not in VOLATILE_FIELDS}
 

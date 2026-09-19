@@ -213,8 +213,7 @@ def main():
             "Finite verification does not certify novelty or replace human review.",
         ],
         "elapsed_seconds": time.monotonic()-started,
-        "checked_at_utc": datetime.now(timezone.utc).isoformat(),
-    }
+        }
     (ROOT/"ALL_STEP_COVER_CHECK.json").write_text(
         json.dumps(result, indent=2)+"\n", encoding="utf-8")
     short = {k: value for k, value in result.items()

@@ -38,8 +38,7 @@ called by the listed checks are needed here.
 MANIFEST.json records the names, sizes, and SHA-256 hashes of the supplied
 ancillary files. The result records identify the checker and helper source
 hashes; where a written argument is referenced, its hash identifies ../main.tex.
-No exploratory notes or external workspace files are needed. Result timestamps
-and elapsed times change on a rerun; the exact finite counts and identities
+No exploratory notes or external workspace files are needed. Elapsed times change on a rerun; the exact finite counts and identities
 are the relevant comparisons.
 
 The toy graphs do not satisfy the large-degree spectral hypotheses of the

@@ -14,7 +14,7 @@ and algebraic geometry, motivated by P versus NP and VP versus VNP.
 
 | Paper | Materials | Status |
 | --- | --- | --- |
-| **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | Zenodo preprint, September 15, 2026. Submitted to arXiv; announcement pending as of September 18, 2026. |
+| **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | Zenodo preprint. Submitted to arXiv; announcement pending. |
 
 The first paper studies sensitive lower bounds for **monotone arithmetic
 circuits**, for targets that have small general arithmetic circuits. The result

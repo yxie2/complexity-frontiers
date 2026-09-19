@@ -1,8 +1,8 @@
 {
   "status": "PASS",
   "seed": 202609151538,
-  "script_sha256": "5be0b8b9ffda8f4fc1771c82fa3f6f70799d7c2028b11b0523c78a4bb46a2a9d",
-  "helper_sha256": "a2c63267a3fcf91c81be38fc1c3b496390452cf1133196c0c8c6b1b99dd1a582",
+  "script_sha256": "bc7a04687ff1b504e0af4820f018c6df7459d2a7f6f9903da6e70973274e2e16",
+  "helper_sha256": "f022520a23d2df2ed424c16f740fbf0e0c68370287a9980bfaf70a4cd69d230f",
   "global_replacement": {
     "valid_global_replacement_fixtures": 10,
     "diamond_depths": [
@@ -28,6 +28,5 @@
     "exact_level_decomposition_and_charge": "PASS"
   },
   "scope": "Exact finite stress checks, supplementary to the first-principles proof of Lemma 4.1 and Proposition 4.2. These finite computations do not establish the asymptotic theorem.",
-  "elapsed_seconds": 0.14100000000325963,
-  "checked_at_utc": "2026-09-15T17:05:17.012436+00:00"
+  "elapsed_seconds": 0.23499999998603016
 }

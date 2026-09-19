@@ -240,8 +240,7 @@ def main():
             "The general theorem is established by the written proof, not these finite tests.",
         ],
         "elapsed_seconds": time.monotonic()-started,
-        "checked_at_utc": datetime.now(timezone.utc).isoformat(),
-    }
+        }
     (ROOT/"EULER_CONDITIONING_CHECK.json").write_text(
         json.dumps(result, indent=2)+"\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in result.items() if k != "direct_physical_gadgets"}, indent=2))

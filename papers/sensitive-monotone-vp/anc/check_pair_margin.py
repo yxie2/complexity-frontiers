@@ -64,7 +64,6 @@ def main():
                      "b":str(F(1,7680000)/(3*K))})
     result={
         "status":"PASS",
-        "checked_at_utc":datetime.now(timezone.utc).isoformat(),
         "script_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "manuscript_sha256":hashlib.sha256((ROOT.parent/"main.tex").read_bytes()).hexdigest(),
         "symbolic_factorization_checked":True,

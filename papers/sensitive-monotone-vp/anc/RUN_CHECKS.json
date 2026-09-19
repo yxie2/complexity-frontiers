@@ -1,6 +1,5 @@
 {
   "status": "PASS",
-  "checked_at_utc": "2026-09-15T17:05:44.593114+00:00",
   "python": "3.11.9",
   "dependencies": {
     "networkx": "3.5",
@@ -12,57 +11,57 @@
       "script": "check_euler_conditioning.py",
       "result": "EULER_CONDITIONING_CHECK.json",
       "status": "PASS",
-      "script_sha256": "b0e895309165082b013d719ac3bea68e8305f64c19067e5ae29088f6da8ea107",
-      "result_sha256": "c9d731abe1e12dd008472c3a76636e9911fdc5d752e8eb4b6f3d5c9008464271",
-      "elapsed_seconds": 9.938
+      "script_sha256": "b8f9a4028ed0ede8a5e4d3789fb19547acf4b6ad241ae0fdc31d16bc786e5feb",
+      "result_sha256": "1c17f2e91a2b6eac44c32a975d26f450fd898762c77ad791501d9ea8b8c70559",
+      "elapsed_seconds": 8.64
     },
     {
       "script": "check_euler_refinements.py",
       "result": "EULER_REFINEMENTS_CHECK.json",
       "status": "PASS",
-      "script_sha256": "4df2cdab278f742206f7ac41d38c4bafb458757dac66b194d4eeddce902a5433",
-      "result_sha256": "d67964a32764718eb483f1ec1c6139fa2273294dde04d5fa9107c7a9044f04c4",
-      "elapsed_seconds": 5.594
+      "script_sha256": "b21fc6276e624785f6bfed467e15bafd1923558bcbd975db35a74f32e12777ad",
+      "result_sha256": "19d4c69022c5d0db577ec2be1feb5d40c73903ec1bb63c841deaa9bb6e824027",
+      "elapsed_seconds": 3.843
     },
     {
       "script": "check_pair_margin.py",
       "result": "PAIR_MARGIN_CHECK.json",
       "status": "PASS",
-      "script_sha256": "6002aeeffafcbfbb1756196e9c09af9d18a171dc11280088da9de041dcc33342",
-      "result_sha256": "6881a7b07d9b365cd00386c2579df1b8f8a92e309cffa2ee2c82ca2aa91c4d21",
-      "elapsed_seconds": 1.782
+      "script_sha256": "6dc621d3c3fe2dccf63a1b6905ca809c5104d241af524411989e2b1616d93304",
+      "result_sha256": "6e2866dd8e5884c65f4b0ea312b4f24009fd3beabbd8dc02bb390306c4a10b25",
+      "elapsed_seconds": 1.734
     },
     {
       "script": "check_shared_decomposition.py",
       "result": "SHARED_DECOMPOSITION_CHECK.json",
       "status": "PASS",
-      "script_sha256": "a2c63267a3fcf91c81be38fc1c3b496390452cf1133196c0c8c6b1b99dd1a582",
-      "result_sha256": "cce766fcf22e6aa82d9a12b901b37558b9e697f9609c21886294f0d603a4a16b",
-      "elapsed_seconds": 28.516
+      "script_sha256": "f022520a23d2df2ed424c16f740fbf0e0c68370287a9980bfaf70a4cd69d230f",
+      "result_sha256": "d565eca506098292162439365f4d68dd5589b4017fef77664e01d5a9f504298d",
+      "elapsed_seconds": 31.375
     },
     {
       "script": "check_lowest_component.py",
       "result": "LOWEST_COMPONENT_CHECK.json",
       "status": "PASS",
-      "script_sha256": "4f44cbcdc9b99dda38026ae841de0c52b6ee3adde2c8b53c3e3ceac1693218ca",
-      "result_sha256": "f9c1131415574b701ecc4bd7ce8f2395dccfe5f80a6f348ab2539ad82b29b2f9",
-      "elapsed_seconds": 0.547
+      "script_sha256": "8c768df5e098eeefdefd9f2450b2a7315dea020a4ba25b2e7792cdcdb09851d0",
+      "result_sha256": "14e6fa112b07887f3ab57a96265090007a7356f821965e97ea941b9968622533",
+      "elapsed_seconds": 0.219
     },
     {
       "script": "check_counting_normalization.py",
       "result": "COUNTING_NORMALIZATION_CHECK.json",
       "status": "PASS",
-      "script_sha256": "109d3315b78e5d6675ef14ea32d120f31fc7ff90143aeef69c67c53f5db32669",
-      "result_sha256": "7abe5e8a57c2736a740edef12b00ee8fd45d919f447b21b11029bb9f12066b39",
-      "elapsed_seconds": 0.688
+      "script_sha256": "a9c4d8a89a36db7f86057a13c0b49dab0604a8671a22f55e00710b4fcd32a9a3",
+      "result_sha256": "5c11b903c80104eb46184b4f1d629372951e814846fac0c4c90832c050e56877",
+      "elapsed_seconds": 0.938
     },
     {
       "script": "check_shared_charge.py",
       "result": "SHARED_CHARGE_CHECK.json",
       "status": "PASS",
-      "script_sha256": "5be0b8b9ffda8f4fc1771c82fa3f6f70799d7c2028b11b0523c78a4bb46a2a9d",
-      "result_sha256": "49cfd5b483db730eeb77b5ec703164bd839b6b99f279aef9bf5661bbfa67d08f",
-      "elapsed_seconds": 0.421
+      "script_sha256": "bc7a04687ff1b504e0af4820f018c6df7459d2a7f6f9903da6e70973274e2e16",
+      "result_sha256": "c7e490283d1ba975740b60483fb2d15aa95b1f6aae5dfa9d99988c9c7b90c6c9",
+      "elapsed_seconds": 0.406
     }
   ],
   "scope": "Finite identities and implementations only; the asymptotic theorems require the written proofs."

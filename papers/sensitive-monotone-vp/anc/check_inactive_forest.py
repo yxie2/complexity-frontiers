@@ -275,8 +275,7 @@ def main():
             "Finite checks do not establish the asymptotic lower bound or novelty.",
         ],
         "elapsed_seconds": time.monotonic()-started,
-        "checked_at_utc": datetime.now(timezone.utc).isoformat(),
-    }
+        }
     (ROOT/"INACTIVE_FOREST_CHECK.json").write_text(
         json.dumps(result, indent=2)+"\n", encoding="utf-8")
     print(json.dumps({k: value for k, value in result.items() if k != "instances"}, indent=2))

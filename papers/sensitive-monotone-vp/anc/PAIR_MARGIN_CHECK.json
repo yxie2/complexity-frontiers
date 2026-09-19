@@ -1,8 +1,7 @@
 {
   "status": "PASS",
-  "checked_at_utc": "2026-09-15T17:05:17.749178+00:00",
-  "script_sha256": "6002aeeffafcbfbb1756196e9c09af9d18a171dc11280088da9de041dcc33342",
-  "manuscript_sha256": "fda4cc184b88d8b8129131c4bf999b20e73dc88624dee954a68a3c2f2ba30807",
+  "script_sha256": "6dc621d3c3fe2dccf63a1b6905ca809c5104d241af524411989e2b1616d93304",
+  "manuscript_sha256": "872ce6de2b6e376d740c4763364ffaa3d7a94d4841b812291396acb19cfa6345",
   "symbolic_factorization_checked": true,
   "direct_colorings_checked": 2016,
   "density_pairs_checked": 93610,

@@ -1,11 +1,10 @@
 {
   "status": "PASS",
-  "checked_at_utc": "2026-09-15T17:05:21.403616+00:00",
   "seed": 202609151145,
-  "script_sha256": "4df2cdab278f742206f7ac41d38c4bafb458757dac66b194d4eeddce902a5433",
+  "script_sha256": "b21fc6276e624785f6bfed467e15bafd1923558bcbd975db35a74f32e12777ad",
   "imported_source": {
     "path": "check_euler_conditioning.py",
-    "sha256": "b0e895309165082b013d719ac3bea68e8305f64c19067e5ae29088f6da8ea107"
+    "sha256": "b8f9a4028ed0ede8a5e4d3789fb19547acf4b6ad241ae0fdc31d16bc786e5feb"
   },
   "rows": [
     {
@@ -156,7 +155,7 @@
   "total_layouts": 48,
   "total_bit_inputs": 12288,
   "total_locality_checks": 1728,
-  "elapsed_seconds": 1.0,
+  "elapsed_seconds": 1.125,
   "scope": [
     "The direct physical gadget and root predicate are independently reimplemented.",
     "Toy Euler covers use a fixed BFS tree and random local orders, not uniform trees.",

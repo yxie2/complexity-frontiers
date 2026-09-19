@@ -1,9 +1,8 @@
 {
   "status": "PASS",
-  "checked_at_utc": "2026-09-15T17:05:16.760559+00:00",
   "seed": 202609151330,
-  "script_sha256": "109d3315b78e5d6675ef14ea32d120f31fc7ff90143aeef69c67c53f5db32669",
-  "manuscript_sha256": "fda4cc184b88d8b8129131c4bf999b20e73dc88624dee954a68a3c2f2ba30807",
+  "script_sha256": "a9c4d8a89a36db7f86057a13c0b49dab0604a8671a22f55e00710b4fcd32a9a3",
+  "manuscript_sha256": "872ce6de2b6e376d740c4763364ffaa3d7a94d4841b812291396acb19cfa6345",
   "random_dags": 400,
   "gate_profiles_and_exact_normalized_polynomials": 20789,
   "self_shared_random_products": 2653,
@@ -16,6 +15,6 @@
     "normalized_gates": 2063
   },
   "one_hot_only_generalization_rejected": true,
-  "elapsed_seconds": 0.5160000000032596,
+  "elapsed_seconds": 0.7649999999557622,
   "scope": "Finite exact expansions audit the profile-only construction and reuse accounting. The universal normalization and lower bound are analytic proofs."
 }

@@ -449,8 +449,7 @@ def main():
                   "The concentration and discrepancy lower bounds require the written proof.",
                   "These computations do not establish novelty or replace independent human review."
               ],
-              "elapsed_seconds": time.monotonic()-started,
-              "completed_at_utc": datetime.now(timezone.utc).isoformat()}
+              "elapsed_seconds": time.monotonic()-started}
     (ROOT/"VERIFICATION.json").write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8")
     print(json.dumps(result, indent=2))
 

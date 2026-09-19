@@ -8,10 +8,9 @@
 
 ## Publication status
 
-- Preprint dated September 15, 2026; 28 pages.
+- Preprint; 28 pages.
 - DOI: [10.5281/zenodo.22783087](https://doi.org/10.5281/zenodo.22783087).
-- Submitted to arXiv on September 15, 2026; announcement pending as of
-  September 18, 2026. No arXiv identifier is assigned here.
+- Submitted to arXiv; announcement pending. No arXiv identifier is assigned here.
 - This repository makes no claim of acceptance by a peer-reviewed venue.
 
 ## Main theorem
@@ -59,7 +58,7 @@ then runs the archived checker suite in a temporary copy. The seven checks
 cover BEST counting and parity gadgets, spectral and conditioning identities,
 pair-density inequalities, shared-gate decomposition, lowest homogeneous
 components, counting normalization, and the shared-gate coefficient charge.
-Only recorded timestamps and elapsed times are ignored in result comparisons.
+Only elapsed times are ignored in result comparisons.
 See [anc/README.md](anc/README.md) for the exact coverage of each checker.
 
 The finite tests support the constructions and calculations. The asymptotic
@@ -75,12 +74,15 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 The bibliography is included in `main.tex`; no BibTeX step is needed. The
-committed `paper.pdf` is the archived preprint; `main.pdf` is the local rebuild.
+committed `paper.pdf` omits the manuscript date; `main.pdf` is the local rebuild.
 
 ## Version and citation
 
-The PDF matches the file in the linked Zenodo record. The LaTeX and ancillary
-files are preserved byte-for-byte from the accompanying source package.
+This is a presentation revision of the linked Zenodo preprint: the manuscript
+date and release timestamps have been omitted. The mathematical text and
+acknowledgment are unchanged. The Zenodo record retains the original PDF;
+the PDF here therefore has a different checksum. The LaTeX and ancillary
+files match the accompanying source archive byte-for-byte.
 [ARTIFACTS.json](ARTIFACTS.json) records their SHA-256 hashes and public provenance.
 
 ```bibtex

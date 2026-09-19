@@ -202,8 +202,7 @@ def main():
         rows.append(row)
     assert sum(r["backtracking_transitions_used"] for r in rows) > 0
     result = {
-        "status": "PASS", "checked_at_utc": datetime.now(timezone.utc).isoformat(),
-        "seed": SEED, "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "status": "PASS", "seed": SEED, "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "imported_source": {"path": "check_euler_conditioning.py",
                             "sha256": hashlib.sha256((ROOT/"check_euler_conditioning.py").read_bytes()).hexdigest()},
         "rows": rows, "log_and_constants": logarithmic_inequality(),
