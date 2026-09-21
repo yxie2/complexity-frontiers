@@ -32,9 +32,14 @@ references:
     given-names: Ying
     affiliation: Kennesaw State University
     email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
   year: 2026
-  url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/three-by-four-permanents
-  notes: Research manuscript for expert review; not peer reviewed.
+  url: https://doi.org/10.5281/zenodo.22879129
+  notes: Preprint; not peer reviewed.
+  doi: 10.5281/zenodo.22879129
+  date-published: '2026-09-21'
+  publisher:
+    name: Zenodo
 - type: article
   title: Frobenius splitting and singular loci of prime-size permanents
   authors:

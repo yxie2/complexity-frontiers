@@ -1,6 +1,6 @@
 {
   "paper_title": "F-purity of the maximal permanental ideal of a generic three-by-four matrix",
-  "status": "Research manuscript for expert review.",
+  "status": "Zenodo preprint; not peer reviewed.",
   "files": [
     {
       "path": "anc/verification_results.json",
@@ -65,5 +65,9 @@
       "sha256": "f1b9c8ca16ad322b6e8040e90abbdd0b8a3b3ec6cb8b2a9de04cec24625ede5f"
     }
   ],
-  "archive_root": "three_by_four"
+  "archive_root": "three_by_four",
+  "doi": "10.5281/zenodo.22879129",
+  "zenodo_record": "https://zenodo.org/records/22879129",
+  "pdf_matches_zenodo_checksum": true,
+  "original_zenodo_pdf_sha256": "f1b9c8ca16ad322b6e8040e90abbdd0b8a3b3ec6cb8b2a9de04cec24625ede5f"
 }

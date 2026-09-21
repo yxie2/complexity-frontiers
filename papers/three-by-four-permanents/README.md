@@ -4,11 +4,15 @@
 
 [PDF](paper.pdf) · [LaTeX](main.tex) · [Verification code](anc/)
 · [Recorded results](anc/verification_results.json) · [Review package](review_package.zip)
+· [Zenodo preprint](https://zenodo.org/records/22879129)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22879129.svg)](https://doi.org/10.5281/zenodo.22879129)
 
 ## Status and results
 
-Research manuscript for expert review; eight pages. This version has not been
-peer reviewed. No journal acceptance, DOI, or arXiv identifier is claimed.
+Zenodo preprint; eight pages. DOI: [10.5281/zenodo.22879129](https://doi.org/10.5281/zenodo.22879129).
+This version has not been peer reviewed. The repository PDF is identical to
+`three_by_four.pdf` in [Zenodo record 22879129](https://zenodo.org/records/22879129).
 
 For a generic three-by-four matrix over a field of odd characteristic $p$,
 the manuscript proves that the quotient by its four maximal permanents is
@@ -16,6 +20,25 @@ $F$-pure exactly when $p\equiv1\pmod6$. It gives an explicit formula for the
 associated coefficient by reducing it to a Domb-number sum. Appendix A
 contains polynomial certificates for the finite transformation used in the
 calculation. See the manuscript for the hypotheses and proofs.
+
+## Cite this preprint
+
+> Ying Xie. *F-purity of the maximal permanental ideal of a generic
+> three-by-four matrix*. Zenodo, 2026. https://doi.org/10.5281/zenodo.22879129.
+
+```bibtex
+@misc{xie2026threebyfourpermanents,
+  author = {Xie, Ying},
+  title = {{F}-purity of the maximal permanental ideal of a generic three-by-four matrix},
+  year = {2026},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.22879129},
+  url = {https://doi.org/10.5281/zenodo.22879129},
+  note = {Preprint}
+}
+```
+
+Machine-readable citation metadata is in [CITATION.cff](CITATION.cff).
 
 ## Reproduce the checks
 
@@ -51,3 +74,9 @@ The review ZIP contains a standalone copy of the paper, source, instructions,
 verification programs, and recorded results. [ARTIFACTS.json](ARTIFACTS.json)
 records SHA-256 hashes. Citation metadata is in [CITATION.cff](CITATION.cff).
 The manuscript retains its acknowledgment.
+
+## License
+
+The manuscript is licensed under [CC BY 4.0](LICENSE.md), as listed in its
+Zenodo record. Verification code, result records, and repository documentation
+are licensed under the repository's [MIT License](../../LICENSE).
