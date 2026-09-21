@@ -84,6 +84,7 @@ acknowledgment are unchanged. The Zenodo record retains the original PDF;
 the PDF here therefore has a different checksum. The LaTeX and ancillary
 files match the accompanying source archive byte-for-byte.
 [ARTIFACTS.json](ARTIFACTS.json) records their SHA-256 hashes and public provenance.
+Machine-readable citation information is in [CITATION.cff](CITATION.cff).
 
 ```bibtex
 @misc{xie2026sensitive,

@@ -1,26 +1,47 @@
 cff-version: 1.2.0
-message: "Please cite the individual paper when using its results or verification code."
-title: "Complexity Frontiers: Circuits, Proofs, and Algebra"
+message: This file describes the collection. Cite the individual paper listed in references
+  when using its results or verification code.
+title: 'Complexity Frontiers: Circuits, Proofs, and Algebra'
 type: software
 authors:
+- family-names: Xie
+  given-names: Ying
+  affiliation: Kennesaw State University
+  orcid: https://orcid.org/0000-0002-8661-8877
+repository-code: https://github.com/yxie2/complexity-frontiers
+url: https://github.com/yxie2/complexity-frontiers
+license: MIT
+references:
+- type: article
+  authors:
   - family-names: Xie
     given-names: Ying
     affiliation: Kennesaw State University
-    orcid: "https://orcid.org/0000-0002-8661-8877"
-repository-code: "https://github.com/yxie2/complexity-frontiers"
-url: "https://github.com/yxie2/complexity-frontiers"
-license: MIT
-preferred-citation:
-  type: article
-  authors:
-    - family-names: Xie
-      given-names: Ying
-      affiliation: Kennesaw State University
-      orcid: "https://orcid.org/0000-0002-8661-8877"
-  title: "Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning"
+    orcid: https://orcid.org/0000-0002-8661-8877
+  title: Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning
   year: 2026
-  doi: "10.5281/zenodo.22783087"
-  url: "https://doi.org/10.5281/zenodo.22783087"
+  doi: 10.5281/zenodo.22783087
+  url: https://doi.org/10.5281/zenodo.22783087
   publisher:
     name: Zenodo
-  notes: "Preprint."
+  notes: Preprint.
+- type: article
+  title: F-purity of the maximal permanental ideal of a generic three-by-four matrix
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+  year: 2026
+  url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/three-by-four-permanents
+  notes: Research manuscript for expert review; not peer reviewed.
+- type: article
+  title: Frobenius splitting and singular loci of prime-size permanents
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+  year: 2026
+  url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/prime-size-permanents
+  notes: Research manuscript for expert review; not peer reviewed.
