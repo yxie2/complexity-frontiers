@@ -4,11 +4,15 @@
 
 [PDF](paper.pdf) · [LaTeX](main.tex) · [Verification code](anc/)
 · [Recorded results](anc/verification_results.json) · [Review package](review_package.zip)
+· [Zenodo preprint](https://zenodo.org/records/22878451)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22878451.svg)](https://doi.org/10.5281/zenodo.22878451)
 
 ## Status and results
 
-Research manuscript for expert review; ten pages. This version has not been
-peer reviewed. No journal acceptance, DOI, or arXiv identifier is claimed.
+Zenodo preprint; ten pages. DOI: [10.5281/zenodo.22878451](https://doi.org/10.5281/zenodo.22878451).
+This version has not been peer reviewed. The repository PDF is identical to
+`prime_permanent.pdf` in [Zenodo record 22878451](https://zenodo.org/records/22878451).
 
 For a prime $p$, the manuscript proves that the maximal permanents of a generic
 $(p-1)\times p$ matrix form a geometrically reduced complete intersection of
@@ -18,6 +22,25 @@ In characteristic zero, propagation gives $2q\le s(n)\le2n$, where $q$ is
 the largest prime at most $n$, and hence an asymptotically sharp bound.
 The paper also treats partial row expansions and strength. These geometric
 invariants alone do not establish an unrestricted circuit lower bound.
+
+## Cite this preprint
+
+> Ying Xie. *Frobenius splitting and singular loci of prime-size permanents*.
+> Zenodo, 2026. https://doi.org/10.5281/zenodo.22878451.
+
+```bibtex
+@misc{xie2026primesizepermanents,
+  author = {Xie, Ying},
+  title = {Frobenius splitting and singular loci of prime-size permanents},
+  year = {2026},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.22878451},
+  url = {https://doi.org/10.5281/zenodo.22878451},
+  note = {Preprint}
+}
+```
+
+Machine-readable citation metadata is in [CITATION.cff](CITATION.cff).
 
 ## Reproduce the checks
 
@@ -55,3 +78,9 @@ The review ZIP contains a standalone copy of the paper, source, instructions,
 verification program, and recorded results. [ARTIFACTS.json](ARTIFACTS.json)
 records SHA-256 hashes. Citation metadata is in [CITATION.cff](CITATION.cff).
 The manuscript retains its acknowledgment.
+
+## License
+
+The manuscript is licensed under [CC BY 4.0](LICENSE.md), as listed in its
+Zenodo record. Verification code, result records, and repository documentation
+are licensed under the repository's [MIT License](../../LICENSE).

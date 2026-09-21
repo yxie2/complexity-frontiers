@@ -16,7 +16,7 @@ and algebraic geometry, motivated by P versus NP and VP versus VNP.
 | --- | --- | --- |
 | **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | Zenodo preprint. Submitted to arXiv; announcement pending. |
 | **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | Research manuscript for expert review. |
-| **Frobenius splitting and singular loci of prime-size permanents** | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | Research manuscript for expert review. |
+| **Frobenius splitting and singular loci of prime-size permanents** | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22878451). |
 
 The first paper studies sensitive lower bounds for **monotone arithmetic
 circuits**, for targets that have small general arithmetic circuits. The result
@@ -110,15 +110,15 @@ No DOI or arXiv identifier has been assigned in this repository.
 ### Prime-size permanents
 
 > Ying Xie. *Frobenius splitting and singular loci of prime-size permanents*.
-> Research manuscript, 2026.
-> [Manuscript and code](papers/prime-size-permanents/README.md).
+> Zenodo, 2026. https://doi.org/10.5281/zenodo.22878451.
 
-[Citation metadata](papers/prime-size-permanents/CITATION.cff).
-No DOI or arXiv identifier has been assigned in this repository.
+[Citation metadata](papers/prime-size-permanents/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22878451)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22878451.svg)](https://doi.org/10.5281/zenodo.22878451)
 
 The root [CITATION.cff](CITATION.cff) describes the collection and lists all
-three papers as references. The Zenodo DOI above belongs only to the
-sensitive-monotone paper.
+three papers as references. Each Zenodo DOI identifies the individual
+preprint listed with it.
 
 ## Feedback
 
@@ -143,7 +143,7 @@ Manuscript-specific license notices are listed separately:
 | --- | --- |
 | Sensitive monotone bounds in VP | [CC BY 4.0 notice](papers/sensitive-monotone-vp/LICENSE.md), consistent with its Zenodo record. |
 | Three-by-four permanents | No separate manuscript-specific license notice is included in the paper package. |
-| Prime-size permanents | No separate manuscript-specific license notice is included in the paper package. |
+| Prime-size permanents | [CC BY 4.0 notice](papers/prime-size-permanents/LICENSE.md), consistent with its Zenodo record. |
 
 Archives contain both manuscripts and code; the corresponding license terms
 apply to each file. Dependencies retain their respective licenses.

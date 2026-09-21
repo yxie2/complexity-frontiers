@@ -1,6 +1,6 @@
 {
   "paper_title": "Frobenius splitting and singular loci of prime-size permanents",
-  "status": "Research manuscript for expert review.",
+  "status": "Zenodo preprint; not peer reviewed.",
   "files": [
     {
       "path": "anc/verification_results.json",
@@ -55,5 +55,9 @@
       "sha256": "3b4367aa9d8963f13d934dc7fe50e90c2813ebabdd784e7d4f5df0d5993c27d5"
     }
   ],
-  "archive_root": "prime_permanent"
+  "archive_root": "prime_permanent",
+  "doi": "10.5281/zenodo.22878451",
+  "zenodo_record": "https://zenodo.org/records/22878451",
+  "pdf_matches_zenodo_checksum": true,
+  "original_zenodo_pdf_sha256": "3b4367aa9d8963f13d934dc7fe50e90c2813ebabdd784e7d4f5df0d5993c27d5"
 }
