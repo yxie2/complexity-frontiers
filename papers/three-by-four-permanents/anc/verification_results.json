@@ -1,0 +1,258 @@
+{
+  "status": "PASS",
+  "quartic_integer_identity": true,
+  "constant_term_degrees": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "telescoping_checks": {
+    "polynomial_identities": 2,
+    "summand_checks": 2847,
+    "maximum_degree": 60
+  },
+  "prime_coefficient_checks": [
+    {
+      "prime": 3,
+      "coefficient": 0
+    },
+    {
+      "prime": 5,
+      "coefficient": 0
+    },
+    {
+      "prime": 7,
+      "coefficient": 2
+    },
+    {
+      "prime": 11,
+      "coefficient": 0
+    },
+    {
+      "prime": 13,
+      "coefficient": 4
+    },
+    {
+      "prime": 17,
+      "coefficient": 0
+    },
+    {
+      "prime": 19,
+      "coefficient": 7
+    },
+    {
+      "prime": 23,
+      "coefficient": 0
+    },
+    {
+      "prime": 29,
+      "coefficient": 0
+    },
+    {
+      "prime": 31,
+      "coefficient": 16
+    },
+    {
+      "prime": 37,
+      "coefficient": 26
+    },
+    {
+      "prime": 41,
+      "coefficient": 0
+    },
+    {
+      "prime": 43,
+      "coefficient": 21
+    },
+    {
+      "prime": 47,
+      "coefficient": 0
+    },
+    {
+      "prime": 53,
+      "coefficient": 0
+    },
+    {
+      "prime": 59,
+      "coefficient": 0
+    },
+    {
+      "prime": 61,
+      "coefficient": 13
+    },
+    {
+      "prime": 67,
+      "coefficient": 55
+    },
+    {
+      "prime": 71,
+      "coefficient": 0
+    },
+    {
+      "prime": 73,
+      "coefficient": 27
+    },
+    {
+      "prime": 79,
+      "coefficient": 16
+    },
+    {
+      "prime": 83,
+      "coefficient": 0
+    },
+    {
+      "prime": 89,
+      "coefficient": 0
+    },
+    {
+      "prime": 97,
+      "coefficient": 2
+    },
+    {
+      "prime": 101,
+      "coefficient": 0
+    },
+    {
+      "prime": 103,
+      "coefficient": 91
+    },
+    {
+      "prime": 107,
+      "coefficient": 0
+    },
+    {
+      "prime": 109,
+      "coefficient": 4
+    },
+    {
+      "prime": 113,
+      "coefficient": 0
+    },
+    {
+      "prime": 127,
+      "coefficient": 19
+    },
+    {
+      "prime": 131,
+      "coefficient": 0
+    },
+    {
+      "prime": 137,
+      "coefficient": 0
+    },
+    {
+      "prime": 139,
+      "coefficient": 117
+    },
+    {
+      "prime": 149,
+      "coefficient": 0
+    },
+    {
+      "prime": 151,
+      "coefficient": 16
+    },
+    {
+      "prime": 157,
+      "coefficient": 39
+    },
+    {
+      "prime": 163,
+      "coefficient": 64
+    },
+    {
+      "prime": 167,
+      "coefficient": 0
+    },
+    {
+      "prime": 173,
+      "coefficient": 0
+    },
+    {
+      "prime": 179,
+      "coefficient": 0
+    },
+    {
+      "prime": 181,
+      "coefficient": 133
+    },
+    {
+      "prime": 191,
+      "coefficient": 0
+    },
+    {
+      "prime": 193,
+      "coefficient": 4
+    },
+    {
+      "prime": 197,
+      "coefficient": 0
+    },
+    {
+      "prime": 199,
+      "coefficient": 187
+    }
+  ],
+  "independent_projective_column_counts": [
+    {
+      "prime": 3,
+      "projective_columns": 13,
+      "ordered_good_column_tuples": 6924,
+      "coefficient": 0,
+      "good_sorted_triples": 285
+    },
+    {
+      "prime": 5,
+      "projective_columns": 31,
+      "ordered_good_column_tuples": 399520,
+      "coefficient": 0,
+      "good_sorted_triples": 4297
+    },
+    {
+      "prime": 7,
+      "projective_columns": 57,
+      "ordered_good_column_tuples": 5824800,
+      "coefficient": 2,
+      "good_sorted_triples": 27697
+    },
+    {
+      "prime": 11,
+      "projective_columns": 133,
+      "ordered_good_column_tuples": 215056600,
+      "coefficient": 0,
+      "good_sorted_triples": 363961
+    },
+    {
+      "prime": 13,
+      "projective_columns": 183,
+      "ordered_good_column_tuples": 817420608,
+      "coefficient": 4,
+      "good_sorted_triples": 957433
+    },
+    {
+      "prime": 17,
+      "projective_columns": 307,
+      "ordered_good_column_tuples": 6982670848,
+      "coefficient": 0,
+      "good_sorted_triples": 4581217
+    },
+    {
+      "prime": 19,
+      "projective_columns": 381,
+      "ordered_good_column_tuples": 16995899520,
+      "coefficient": 7,
+      "good_sorted_triples": 8798761
+    }
+  ],
+  "scope": "Exact finite coefficient controls and two complete polynomial-identity expansions. Geometric and general proof steps remain in the manuscript."
+}

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: Please cite this manuscript when using its results or verification code.
+type: software
+title: Frobenius splitting and singular loci of prime-size permanents
+authors: &id001
+- family-names: Xie
+  given-names: Ying
+  affiliation: Kennesaw State University
+  email: yxie2@kennesaw.edu
+url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/prime-size-permanents
+preferred-citation:
+  type: article
+  title: Frobenius splitting and singular loci of prime-size permanents
+  authors: *id001
+  year: 2026
+  url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/prime-size-permanents
+  notes: Research manuscript for expert review; not peer reviewed.

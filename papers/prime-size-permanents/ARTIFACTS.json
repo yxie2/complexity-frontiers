@@ -1,0 +1,59 @@
+{
+  "paper_title": "Frobenius splitting and singular loci of prime-size permanents",
+  "status": "Research manuscript for expert review.",
+  "files": [
+    {
+      "path": "anc/verification_results.json",
+      "bytes": 18814,
+      "sha256": "6e8f94c52091f4dd1c1d1561fb237a93799884bb13dd5e271e3593d13eb09066"
+    },
+    {
+      "path": "anc/verify.py",
+      "bytes": 8751,
+      "sha256": "d80085bffbe0a457d99a72db235fdd57f187e0f9b60f2633bbce7b97dc974469"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 30781,
+      "sha256": "bdac740922072a7b65e57ddfc02db0a9f944a848982ff9c7d52688eeedb3052d"
+    },
+    {
+      "path": "paper.pdf",
+      "bytes": 400115,
+      "sha256": "3b4367aa9d8963f13d934dc7fe50e90c2813ebabdd784e7d4f5df0d5993c27d5"
+    },
+    {
+      "path": "review_package.zip",
+      "bytes": 375426,
+      "sha256": "39121cbf17342ce06eb7353b9de526133fe633d0a68b19fd4f2b90ecbb3cf9c6"
+    }
+  ],
+  "review_archive_members": [
+    {
+      "path": "prime_permanent/main.tex",
+      "bytes": 30781,
+      "sha256": "bdac740922072a7b65e57ddfc02db0a9f944a848982ff9c7d52688eeedb3052d"
+    },
+    {
+      "path": "prime_permanent/README.md",
+      "bytes": 1361,
+      "sha256": "a525f94eace8b351d3a226ac210ad363cc61a2e76ae68084efe629a8570dd37e"
+    },
+    {
+      "path": "prime_permanent/verify.py",
+      "bytes": 8751,
+      "sha256": "d80085bffbe0a457d99a72db235fdd57f187e0f9b60f2633bbce7b97dc974469"
+    },
+    {
+      "path": "prime_permanent/verification_results.json",
+      "bytes": 18814,
+      "sha256": "6e8f94c52091f4dd1c1d1561fb237a93799884bb13dd5e271e3593d13eb09066"
+    },
+    {
+      "path": "prime_permanent/main.pdf",
+      "bytes": 400115,
+      "sha256": "3b4367aa9d8963f13d934dc7fe50e90c2813ebabdd784e7d4f5df0d5993c27d5"
+    }
+  ],
+  "archive_root": "prime_permanent"
+}

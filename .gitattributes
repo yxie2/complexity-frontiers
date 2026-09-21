@@ -4,3 +4,7 @@
 # Preserve the original source-package bytes and their recorded hashes.
 papers/sensitive-monotone-vp/main.tex -text -whitespace
 papers/sensitive-monotone-vp/anc/** -text -whitespace
+papers/three-by-four-permanents/main.tex -text -whitespace
+papers/three-by-four-permanents/anc/** -text -whitespace
+papers/prime-size-permanents/main.tex -text -whitespace
+papers/prime-size-permanents/anc/** -text -whitespace

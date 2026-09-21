@@ -1,0 +1,1103 @@
+{
+  "coefficient_orbit_checks": [
+    {
+      "prime": 2,
+      "coefficient": 1,
+      "fixed_families": 1,
+      "orbit_sizes": {
+        "1": 1
+      }
+    },
+    {
+      "prime": 3,
+      "coefficient": 10,
+      "fixed_families": 4,
+      "orbit_sizes": {
+        "1": 4,
+        "3": 2
+      }
+    }
+  ],
+  "generator_change_checks": [
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 0,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 3,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 4,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 5,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 0,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 2,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 3,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 6,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 2,
+      "trial": 7,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 0,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 2,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 3,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 4,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 6,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 3,
+      "trial": 7,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 3,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 5,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 6,
+      "invertible": false
+    },
+    {
+      "p": 2,
+      "r": 4,
+      "trial": 7,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 0,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 3,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 4,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 6,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 2,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 3,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 4,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 5,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 0,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 2,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 4,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "trial": 7,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 0,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 2,
+      "invertible": false
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 4,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 0,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 6,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "trial": 7,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 1,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 4,
+      "invertible": false
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 5,
+      "r": 4,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 3,
+      "invertible": false
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 5,
+      "invertible": false
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 6,
+      "invertible": false
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "trial": 7,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 0,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 1,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 2,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 3,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 4,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 5,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 6,
+      "invertible": true
+    },
+    {
+      "p": 7,
+      "r": 4,
+      "trial": 7,
+      "invertible": true
+    }
+  ],
+  "critical_fiber_checks": [
+    {
+      "prime": 2,
+      "base_matrices_examined": 4,
+      "square_matrices_examined": 16,
+      "base_points": 1,
+      "base_jacobian_rank_counts": {
+        "2": 1
+      },
+      "critical_points": 1,
+      "warning": "These are finite-field counts, not geometric dimension calculations."
+    },
+    {
+      "prime": 3,
+      "base_matrices_examined": 729,
+      "square_matrices_examined": 19683,
+      "base_points": 89,
+      "base_jacobian_rank_counts": {
+        "0": 1,
+        "2": 48,
+        "3": 40
+      },
+      "critical_points": 211,
+      "warning": "These are finite-field counts, not geometric dimension calculations."
+    }
+  ],
+  "fixed_point_checks": [
+    {
+      "prime": 2,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 3,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 5,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 7,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 11,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 13,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 17,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 19,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 23,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 29,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 31,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 37,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 41,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 43,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 47,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 53,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 59,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 61,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 67,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 71,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 73,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 79,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 83,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 89,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 97,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 101,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 103,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 107,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 109,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 113,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 127,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 131,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 137,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 139,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 149,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 151,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 157,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 163,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 167,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 173,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 179,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 181,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 191,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 193,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 197,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    },
+    {
+      "prime": 199,
+      "fixed_matrix_residue": 1,
+      "fixed_family_residue": 1
+    }
+  ],
+  "border_cofactor_checks": [
+    {
+      "size": 3,
+      "selected_cofactors": 4,
+      "terms_per_cofactor_by_Y_degree": {
+        "0": 1,
+        "1": 1
+      },
+      "complete_expansion_equal": true,
+      "leading_forms_equal": true
+    },
+    {
+      "size": 4,
+      "selected_cofactors": 9,
+      "terms_per_cofactor_by_Y_degree": {
+        "1": 4,
+        "2": 2
+      },
+      "complete_expansion_equal": true,
+      "leading_forms_equal": true
+    },
+    {
+      "size": 5,
+      "selected_cofactors": 16,
+      "terms_per_cofactor_by_Y_degree": {
+        "2": 18,
+        "3": 6
+      },
+      "complete_expansion_equal": true,
+      "leading_forms_equal": true
+    },
+    {
+      "size": 6,
+      "selected_cofactors": 25,
+      "terms_per_cofactor_by_Y_degree": {
+        "3": 96,
+        "4": 24
+      },
+      "complete_expansion_equal": true,
+      "leading_forms_equal": true
+    },
+    {
+      "size": 7,
+      "selected_cofactors": 36,
+      "terms_per_cofactor_by_Y_degree": {
+        "4": 600,
+        "5": 120
+      },
+      "complete_expansion_equal": true,
+      "leading_forms_equal": true
+    }
+  ],
+  "scope": "Finite implementation checks only. All-prime claims and characteristic-zero deductions depend on the written proofs and cited theorems.",
+  "canonical_sha256": "5238889d07397e54f654c32dae3cc6ef594ebd7e70142870f2462053dc2de56f"
+}

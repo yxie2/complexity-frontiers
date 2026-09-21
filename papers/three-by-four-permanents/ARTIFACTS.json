@@ -1,0 +1,69 @@
+{
+  "paper_title": "F-purity of the maximal permanental ideal of a generic three-by-four matrix",
+  "status": "Research manuscript for expert review.",
+  "files": [
+    {
+      "path": "anc/verification_results.json",
+      "bytes": 4499,
+      "sha256": "b888fa2326b05a064a2c74138e4aaf73b86b7ed10769a50b32948f33345424d1"
+    },
+    {
+      "path": "anc/verification_support.py",
+      "bytes": 4411,
+      "sha256": "ac0dfdfd4c977ac1d61e3592d9ba79613a2fd25c079bb927fa240aba8a72a990"
+    },
+    {
+      "path": "anc/verify.py",
+      "bytes": 3452,
+      "sha256": "8d242a71a055b6b0b4337ed53e35f7178f6ff48dff2eb694705b91636ffebbd4"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 22408,
+      "sha256": "347f26a2a33e1cd312c47974604bccb6d6c4763fce83d18541f130ca1870f182"
+    },
+    {
+      "path": "paper.pdf",
+      "bytes": 411997,
+      "sha256": "f1b9c8ca16ad322b6e8040e90abbdd0b8a3b3ec6cb8b2a9de04cec24625ede5f"
+    },
+    {
+      "path": "review_package.zip",
+      "bytes": 383998,
+      "sha256": "8de0b760d509306e0c0f88db37db9d7ad999d4e0bb1b84ac650b99d35845295d"
+    }
+  ],
+  "review_archive_members": [
+    {
+      "path": "three_by_four/main.tex",
+      "bytes": 22408,
+      "sha256": "347f26a2a33e1cd312c47974604bccb6d6c4763fce83d18541f130ca1870f182"
+    },
+    {
+      "path": "three_by_four/README.md",
+      "bytes": 1209,
+      "sha256": "051db918ee98bd25763b90c59509d452a24f6413c1f1a0d63acdf5852bdac909"
+    },
+    {
+      "path": "three_by_four/verify.py",
+      "bytes": 3452,
+      "sha256": "8d242a71a055b6b0b4337ed53e35f7178f6ff48dff2eb694705b91636ffebbd4"
+    },
+    {
+      "path": "three_by_four/verification_results.json",
+      "bytes": 4499,
+      "sha256": "b888fa2326b05a064a2c74138e4aaf73b86b7ed10769a50b32948f33345424d1"
+    },
+    {
+      "path": "three_by_four/verification_support.py",
+      "bytes": 4411,
+      "sha256": "ac0dfdfd4c977ac1d61e3592d9ba79613a2fd25c079bb927fa240aba8a72a990"
+    },
+    {
+      "path": "three_by_four/main.pdf",
+      "bytes": 411997,
+      "sha256": "f1b9c8ca16ad322b6e8040e90abbdd0b8a3b3ec6cb8b2a9de04cec24625ede5f"
+    }
+  ],
+  "archive_root": "three_by_four"
+}

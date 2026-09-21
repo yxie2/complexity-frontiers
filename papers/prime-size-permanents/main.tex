@@ -1,0 +1,740 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Frobenius splitting and singular loci of prime-size permanents},pdfauthor={Ying Xie},pdfcreator={},pdfproducer={}}
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=15\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\Crit}{Crit}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\htop}{ht}
+\DeclareMathOperator{\str}{str}
+\newcommand{\F}{\mathbb F}
+\newcommand{\A}{\mathbb A}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\m}{\mathfrak m}
+\newcommand{\pp}{\mathfrak p}
+\numberwithin{equation}{section}
+\title{Frobenius splitting and singular loci\\of prime-size permanents}
+\author{Ying Xie\\Kennesaw State University\\\texttt{yxie2@kennesaw.edu}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+For each prime $p$, we compute a Frobenius trace coefficient associated
+with the maximal permanents of a generic $(p-1)\times p$ matrix.
+A cyclic permutation of the columns makes this coefficient equal to
+one in characteristic $p$. We prove that the maximal permanents form
+a radical complete intersection of height $p$ in characteristic $p$
+and in characteristic zero. A local differential argument bounds every
+Jacobian-rank stratum and gives ambient codimension exactly $2p$ for
+the singular locus of the $p\times p$ permanent in both
+characteristics. A dimension estimate obtained by fixing a nonzero
+border entry propagates the bound to arbitrary matrix sizes. In
+characteristic zero, if $q$ is the largest prime at most $n$, the
+singular codimension lies between $2q$ and $2n$, and hence is
+asymptotic to $2n$. We also obtain exact critical codimensions for
+partial row expansions and exact strength at prime sizes.
+\end{abstract}
+
+\section{Introduction and main results}
+Let $X=(x_{ij})$ be a generic $n\times n$ matrix over a field $k$.
+Its permanent is
+\[
+ \per_n(X)=\sum_{\sigma\in S_n}\prod_{i=1}^n x_{i,\sigma(i)}.
+\]
+The first partial derivatives of $\per_n$ are its permanental
+cofactors. Thus the geometry of the singular locus of the permanent
+is closely related to the codimension of rectangular permanental
+ideals.
+
+For an $r\times n$ generic matrix $A$, with $r\le n$, let $P_r(A)$
+denote the ideal of its maximal permanents. Boralevi, Carlini,
+Micha\l{}ek, and Ventura conjecture that the maximal permanents of
+a generic $r\times(r+1)$ matrix form a complete intersection
+\cite[Conjecture~3.4]{BCMV}. Their work establishes several small
+cases and gives a uniform lower bound of six for the ambient singular
+codimension of $\per_n$ when $n\ge6$
+\cite[Theorem~4.23]{BCMV}. We treat all row sizes one less than a
+prime, and obtain asymptotically sharp bounds for square permanents
+of arbitrary size.
+
+Throughout, dimensions are geometric dimensions: they may be
+computed after extension to an algebraic closure. The critical locus
+of a polynomial is the common zero set of all its first derivatives.
+For the permanent it lies on the hypersurface, in every
+characteristic, by expansion along a row. We write
+\[
+ s_k(n)=\codim_{\A^{n^2}_k}\Crit(\per_n),\qquad
+ c_k(r,n)=\htop P_r(A).
+\]
+All codimensions in this paper are measured in matrix space, rather
+than inside the permanental hypersurface.
+
+\begin{theorem}\label{thm:prime}
+Let $p$ be prime, and let $A$ be a generic $(p-1)\times p$ matrix.
+Over every field of characteristic $p$ or zero, the ideal $P_{p-1}(A)$
+is a geometrically reduced complete intersection of height $p$.
+Its Hilbert series is
+\begin{equation}\label{eq:hilbert}
+ \frac{(1-z^{p-1})^p}{(1-z)^{p(p-1)}}.
+\end{equation}
+In characteristic $p$, its quotient is Frobenius split. In these
+same two characteristics,
+\begin{equation}\label{eq:primecodim}
+ s_k(p)=2p.
+\end{equation}
+\end{theorem}
+
+The splitting in this theorem uses the prime equal to the number of
+columns. The assertion is not a statement of splitting in every
+positive characteristic for a fixed matrix size. Characteristic
+dependence of permanental $F$-singularities is studied in \cite{Chau}.
+
+\begin{theorem}\label{thm:alln}
+Suppose $k$ has characteristic zero and $n\ge2$. If $q$ is the
+largest prime at most $n$, then
+\begin{equation}\label{eq:alln}
+ 2q\le s_k(n)\le2n,\qquad q\le c_k(n-1,n)\le n.
+\end{equation}
+Consequently,
+\[
+ \lim_{n\to\infty}\frac{s_k(n)}{2n}=1,
+ \qquad
+ \lim_{n\to\infty}\frac{c_k(n-1,n)}{n}=1.
+\]
+\end{theorem}
+
+The proof begins with a coefficient identity. If $f_j$ is the
+maximal permanent of $A$ omitting column $j$ and $H=\prod_jf_j$,
+then
+\begin{equation}\label{eq:introtrace}
+ \left[\prod_{i=1}^{p-1}\prod_{j=1}^{p}a_{ij}^{p-1}\right]
+ H^{p-1}=1\quad\text{in }\F_p.
+\end{equation}
+This is a specific instance of the relation between finite-field
+point counting and Frobenius splitting developed by Knutson
+\cite{Knutson}. We give two direct cyclic proofs. We then derive a
+local rank estimate from the nonzero coefficient, without assuming a
+complete intersection in advance. This separates the dimension
+argument from the later splitting and reducedness assertions.
+
+\begin{theorem}\label{thm:partial}
+Use the maximal permanents $f_1,\ldots,f_p$ above, and let
+$S\subseteq\{1,\ldots,p\}$ have cardinality $s\ge1$. Over a field
+of characteristic $p$ or zero, put
+\[
+ g_S(A,u)=\sum_{j\in S}u_jf_j(A).
+\]
+In the affine space with coordinates $A$ and $(u_j)_{j\in S}$,
+\[
+ \codim\Crit(g_S)=2s.
+\]
+Its strength, counted as the minimum number of products of
+positive-degree homogeneous polynomials, is exactly $s$.
+\end{theorem}
+
+The strength consequence for arbitrary square size is
+\begin{equation}\label{eq:introstrength}
+ q\le\str(\per_n)\le n\qquad(\operatorname{char}k=0).
+\end{equation}
+This convention for strength counts products, with no subtraction of
+one. Neither this invariant nor the singular codimension alone
+establishes an unrestricted arithmetic-circuit lower bound.
+
+\section{The cyclic trace coefficient}
+Let $N=p(p-1)$, let $A=(a_{ij})$ be a generic $(p-1)\times p$
+matrix, and set
+\[
+ f_j=\per(A_{\widehat j}),\qquad
+ H=\prod_{j=1}^{p}f_j,\qquad M=\prod_{i,j}a_{ij}.
+\]
+Both $H$ and $M$ have degree $N$.
+
+\begin{proposition}\label{prop:cyclic}
+For every prime $p$, the integer coefficient $[M^{p-1}]H^{p-1}$
+is congruent to one modulo $p$.
+\end{proposition}
+\begin{proof}
+For a nonnegative integer $e$,
+\[
+ \sum_{a\in\F_p}a^e=
+ \begin{cases}-1,&e>0\text{ and }p-1\mid e,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\]
+In a monomial of total degree $N(p-1)$, a nonzero sum over
+$\F_p^N$ requires every exponent to be a positive multiple of
+$p-1$. Thus each exponent must be exactly $p-1$. Since $N$ is
+even, we obtain
+\begin{equation}\label{eq:pointsum}
+ [M^{p-1}]H^{p-1}=\sum_{A\in\operatorname{Mat}_{p-1,p}(\F_p)}H(A)^{p-1}
+ \quad\text{in }\F_p.
+\end{equation}
+Cyclic permutation of the $p$ columns preserves the summand.
+Every orbit has size one or $p$, so only fixed matrices contribute
+modulo $p$. A fixed matrix has all columns equal to a vector
+$a=(a_1,\ldots,a_{p-1})^{\mathsf t}$. Its maximal permanents all
+equal $(p-1)!\prod_i a_i$. Hence its contribution is one exactly
+when every $a_i$ is nonzero, and is zero otherwise. The sum is
+therefore $(p-1)^{p-1}=1$ in $\F_p$. The argument also applies when
+$p=2$.
+\end{proof}
+
+There is also a coefficient-level proof, which makes the expansion
+multiplicities explicit. It will be useful as an independent check
+on the point-counting argument.
+
+\begin{proof}[A second proof of Proposition~\ref{prop:cyclic}]
+Index columns by $\F_p$ and label the $p-1$ occurrences of each
+$f_j$ by $h\in\{1,\ldots,p-1\}$. A term in the product is a
+family of bijections
+\[
+ \sigma_{j,h}:\{1,\ldots,p-1\}\longrightarrow\F_p\setminus\{j\}.
+\]
+It contributes to the required coefficient if, for each row $i$ and
+column $a$, exactly $p-1$ pairs $(j,h)$ satisfy
+$\sigma_{j,h}(i)=a$. Call this the balance condition. The transformation
+\[
+ (T\sigma)_{j,h}(i)=\sigma_{j-1,h}(i)+1
+\]
+preserves balance and has order $p$. A fixed family is precisely
+one of the form $\sigma_{j,h}(i)=\tau_h(i)+j$, where each $\tau_h$
+is a bijection from $\{1,\ldots,p-1\}$ to $\F_p^*$.
+Every such family is balanced, since varying $j$ visits each column
+once for fixed $i,h$. There are $((p-1)!)^{p-1}$ fixed families.
+Wilson's congruence shows that this count is one modulo $p$,
+including the immediate case $p=2$. All other orbits have size $p$.
+\end{proof}
+
+\section{A local consequence of a nonzero coefficient}
+The next statements apply to a general product of homogeneous
+polynomials whose degrees sum to the number of variables.
+
+\subsection{Differential nonmembership}
+Let $R=k[x_1,\ldots,x_N]$ in characteristic $p$, and let
+$f_1,\ldots,f_t$ be positive-degree homogeneous polynomials with
+$\sum_i\deg f_i=N$. Put $H=\prod_i f_i$ and assume
+\begin{equation}\label{eq:nonzero}
+ c=[x_1^{p-1}\cdots x_N^{p-1}]H^{p-1}\ne0.
+\end{equation}
+For an ideal $J$, write $J^{[p]}=(a^p:a\in J)$.
+
+\begin{lemma}\label{lem:diff}
+For every prime $\pp$ of $R$, writing
+$\m=\pp R_{\pp}$, one has $H^{p-1}\notin\m^{[p]}$.
+The same statement holds for the product of any subset of the $f_i$,
+raised to the power $p-1$.
+\end{lemma}
+\begin{proof}
+Consider the composition of ordinary differential operators
+\[
+ D=\prod_{i=1}^{N}\left(\frac{\partial}{\partial x_i}\right)^{p-1}.
+\]
+Any monomial with an exponent below $p-1$ is annihilated, and the
+total degree $N(p-1)$ leaves only the indicated monomial. Therefore
+\begin{equation}\label{eq:D}
+ D(H^{p-1})=((p-1)!)^N c\in k^*.
+\end{equation}
+Each derivation extends to $R_{\pp}$ and preserves $\m^{[p]}$:
+for $a\in\m$ and $b\in R_{\pp}$,
+$\partial(a^pb)=a^p\partial b$ in characteristic $p$.
+This also holds for fractions. Thus their composition preserves
+$\m^{[p]}$, and \eqref{eq:D} rules out membership of $H^{p-1}$.
+If a subproduct belonged to $\m^{[p]}$, multiplying by the remaining
+factors would give the forbidden membership for $H^{p-1}$.
+\end{proof}
+
+\subsection{Two elementary local identities}
+\begin{lemma}\label{lem:pigeonhole}
+If $(S,\m)$ is a regular local ring of dimension $h$ and
+characteristic $p$, then
+\begin{equation}\label{eq:pigeonhole}
+ \m^{h(p-1)+1}\subseteq\m^{[p]}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The maximal ideal has $h$ generators. In every monomial of degree
+$h(p-1)+1$ in those generators, one exponent is at least $p$.
+\end{proof}
+
+\begin{lemma}\label{lem:change}
+Let $S$ be a local ring of characteristic $p$, let
+$I=(h_1,\ldots,h_s)$, and let $g=Uh$ for $U\in\operatorname{GL}_s(S)$.
+Then
+\begin{equation}\label{eq:change}
+ \prod_{i=1}^{s}g_i^{p-1}
+ \equiv\det(U)^{p-1}\prod_{i=1}^{s}h_i^{p-1}\pmod{I^{[p]}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Work first in $S[y_1,\ldots,y_s]/(y_1^p,\ldots,y_s^p)$.
+Its top homogeneous component is free of rank one, generated by
+$\prod_i y_i^{p-1}$. A scaling $y_i\mapsto ay_i$ by a unit acts
+on this component by $a^{p-1}$. A permutation acts trivially, in
+agreement with its determinant to the power $p-1$, also when $p=2$.
+An elementary shear $y_i\mapsto y_i+ay_j$ fixes the component:
+every term other than $y_i^{p-1}$ in the expansion has exponent at
+least $p$ on $y_j$ after multiplication by $y_j^{p-1}$.
+These operations generate the invertible matrices over a local
+ring, by elimination using a unit entry. They therefore prove the
+determinant character asserted in \eqref{eq:change}. Substitution
+$y_i=h_i$ gives the result. Entries of $U$ need not be constants.
+\end{proof}
+
+\subsection{Height and Jacobian-rank strata}
+Assume now that $k$ is perfect. Choose a subset of $s$ of the
+polynomials in \eqref{eq:nonzero}, relabel it $h_1,\ldots,h_s$, and
+put $I_S=(h_1,\ldots,h_s)$. Let $J_h$ be their $s\times N$
+Jacobian matrix. For $0\le r\le s$, define the locally closed set
+\[
+ Z_r=\{x\in V(I_S):\rank J_h(x)=r\}.
+\]
+
+\begin{proposition}\label{prop:rank}
+Under \eqref{eq:nonzero}, one has
+\begin{equation}\label{eq:rankstrata}
+ \htop I_S=s,\qquad \codim_{\A^N} Z_r\ge2s-r
+\end{equation}
+for every nonempty rank stratum. The generators of $I_S$ form a
+regular sequence.
+\end{proposition}
+\begin{proof}
+At any prime $\pp\supseteq I_S$, set $S_0=R_{\pp}$,
+$\m=\pp S_0$, and $h=\htop\pp$. If $h<s$, then
+\[
+ \prod_{i=1}^{s}h_i^{p-1}\in\m^{s(p-1)}
+ \subseteq\m^{h(p-1)+1}\subseteq\m^{[p]},
+\]
+contradicting Lemma~\ref{lem:diff}. The height theorem gives the
+opposite bound, so $\htop I_S=s$. Cohen--Macaulayness of the
+polynomial ring gives the regular-sequence assertion.
+
+For the refined estimate, take the generic point $\pp$ of the
+closure of an irreducible component of $Z_r$. Let
+$K=\operatorname{Frac}(R/\pp)$ and $h=\htop\pp$.
+The span of the classes of the $h_i$ in $\m/\m^2$ has dimension
+$r$. To justify this point, use the conormal sequence
+\begin{equation}\label{eq:conormal}
+ \m/\m^2\longrightarrow\Omega_{R/k}\otimes_R K
+       \longrightarrow\Omega_{K/k}\longrightarrow0.
+\end{equation}
+The first space has dimension $h$ because $R_{\pp}$ is regular;
+the middle one has dimension $N$. Since $k$ is perfect and $K/k$
+is a finitely generated field extension,
+$\dim_K\Omega_{K/k}=\operatorname{trdeg}_kK=N-h$.
+Exactness of \eqref{eq:conormal} therefore makes its first map
+injective. Its values on the generator classes are exactly the
+Jacobian rows evaluated over $K$.
+
+Row reduction over $K$, lifted to an invertible matrix over
+$R_{\pp}$, replaces the $h_i$ by $g_i$ with
+\[
+ g_1,\ldots,g_r\in\m,\qquad
+ g_{r+1},\ldots,g_s\in\m^2.
+\]
+Lemma~\ref{lem:change}, together with $I_S^{[p]}\subseteq\m^{[p]}$,
+shows that $\prod_i g_i^{p-1}\notin\m^{[p]}$.
+But this product belongs to $\m^{(2s-r)(p-1)}$.
+If $h<2s-r$, Lemma~\ref{lem:pigeonhole} would force membership
+in $\m^{[p]}$, a contradiction. Thus $h\ge2s-r$, as required.
+\end{proof}
+
+The rank estimate did not use reducedness or a splitting on the
+quotient. Its only coefficient input was \eqref{eq:nonzero}. We
+will use this separation when applying it to critical loci.
+
+\section{Compatible splitting and characteristic-zero transfer}
+\subsection{The prime characteristic}
+Apply Proposition~\ref{prop:cyclic} to the maximal permanents
+$f_1,\ldots,f_p$. Proposition~\ref{prop:rank} proves the height
+and regular-sequence statements over an algebraic closure of $\F_p$,
+and hence over every field of characteristic $p$ by faithfully flat
+descent. We next establish reducedness and the claimed splitting.
+
+Choose an additive coefficient map $\lambda:k\to k$ with
+$\lambda(a^pb)=a\lambda(b)$ and $\lambda(1)=1$. It exists over
+any field: project $k$ onto its $1$-coordinate in a $k^p$-basis
+containing $1$, and then take the $p$th root. For the $N$ entries
+of $A$, define
+\[
+ T(bx^{\alpha})=
+ \begin{cases}
+ \lambda(b)x^{(\alpha-(p-1)\boldsymbol1)/p},
+    &\alpha_i\equiv p-1\pmod p\text{ for all }i,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\]
+This is additive and satisfies $T(a^pg)=aT(g)$. Since $H^{p-1}$
+has degree $N(p-1)$, Proposition~\ref{prop:cyclic} implies
+$T(H^{p-1})=1$. Thus
+\begin{equation}\label{eq:splitting}
+ \phi(g)=T(H^{p-1}g)
+\end{equation}
+is a Frobenius splitting. For each $j$,
+\[
+ H^{p-1}f_jg=f_j^p\left(\prod_{i\ne j}f_i^{p-1}\right)g,
+\]
+so $\phi$ preserves $(f_j)$. It therefore preserves the ideal
+generated by any subset of the maximal permanents. The induced
+quotient splitting proves reducedness: if $a^p$ is zero in the
+quotient, applying the splitting gives $a=0$, and iteration eliminates
+every nilpotent. The same argument works after arbitrary field
+extension, so these quotients are geometrically reduced.
+
+\subsection{Homogeneous specialization}
+The next elementary fact will transfer both complete-intersection
+and critical-locus bounds from one characteristic to zero.
+
+\begin{lemma}\label{lem:specialization}
+Let $J\subseteq\Z[x_1,\ldots,x_N]$ be generated by homogeneous
+polynomials, and denote their generated ideals over $\Q$ and
+$\F_p$ by $J_{\Q}$ and $J_p$. In every degree $d$,
+\[
+ \dim_{\Q}(\Q[x]/J_{\Q})_d
+ \le\dim_{\F_p}(\F_p[x]/J_p)_d.
+\]
+In particular, the Krull dimension of the characteristic-zero
+quotient is at most that of the characteristic-$p$ quotient.
+\end{lemma}
+\begin{proof}
+For a fixed $d$, form the integer matrix whose columns are the
+coefficient vectors of all products of a generator of $J$ with a
+monomial of complementary degree. Its images over the two fields
+are precisely the degree-$d$ parts of the generated ideals. Its rank
+over $\Q$ is at least its rank modulo $p$, proving the Hilbert-function
+inequality. The dimension assertion follows from the eventual
+polynomial growth of the cumulative Hilbert function. This also
+handles zero-dimensional graded quotients.
+\end{proof}
+
+\begin{proposition}\label{prop:lift}
+Let $f_1,\ldots,f_s$ be positive-degree homogeneous polynomials over
+$\Z$. Suppose their reductions modulo $p$ form a regular sequence
+and generate a radical ideal. Then their characteristic-zero ideal
+is a geometrically reduced complete intersection of height $s$.
+\end{proposition}
+\begin{proof}
+Write $N$ for the number of variables and $d_i=\deg f_i$.
+Lemma~\ref{lem:specialization} bounds the generic-fiber dimension
+by $N-s$. The height theorem gives the reverse inequality, so the
+characteristic-zero generators form a regular sequence. Both
+quotients have Hilbert series
+$\prod_i(1-z^{d_i})/(1-z)^N$.
+
+Set $V=\Z_{(p)}$ and $B=V[x]/(f_1,\ldots,f_s)$.
+Each graded piece $B_d$ is a finite $V$-module. Its rank is the
+dimension of the corresponding generic-fiber piece; the dimension
+of $B_d/pB_d$ is that of the special-fiber piece. The equality of
+the Hilbert series makes these numbers equal. The structure theorem
+for finite modules over the discrete valuation ring $V$ therefore
+shows that each $B_d$ is free. In particular, $B$ is torsion-free.
+
+Suppose $B\otimes_V\Q$ had a nonzero homogeneous nilpotent.
+Choose a representative in some $B_d$ by clearing a power of $p$,
+then divide out its maximal common power of $p$ in a $V$-basis.
+The resulting element $a\in B_d$ has nonzero reduction modulo $p$.
+A power of $a$ vanishes in the generic fiber, and torsion-freeness
+of the appropriate graded piece makes that power zero already in
+$B$. This contradicts reducedness of $B/pB$. The nilradical of a
+graded ring is homogeneous, so the generic fiber is reduced.
+A reduced finite-type algebra over the perfect field $\Q$ is
+geometrically reduced. Extension to any characteristic-zero field
+finishes the proof.
+\end{proof}
+
+Apply Proposition~\ref{prop:lift} to the full set of maximal
+permanents, or to any subset, using the splitting and height
+arguments above. This proves the complete-intersection and
+reducedness assertions of Theorem~\ref{thm:prime}, including
+\eqref{eq:hilbert}.
+
+\section{Critical loci of row expansions}
+\subsection{The full permanent}
+Append a row $u=(u_1,\ldots,u_p)$ to $A$. Expansion along that
+row gives
+\begin{equation}\label{eq:rowexpansion}
+ \per_p(A,u)=\sum_{j=1}^{p}u_jf_j(A).
+\end{equation}
+Over an algebraically closed field of characteristic $p$, its
+critical equations are
+\begin{equation}\label{eq:critical}
+ f_1(A)=\cdots=f_p(A)=0,\qquad J_f(A)^{\mathsf t}u=0.
+\end{equation}
+For the rank-$r$ stratum of the base zero set,
+Proposition~\ref{prop:rank} gives dimension at most
+$N-(2p-r)$. The fiber in the $u$-variables has dimension $p-r$.
+Hence the corresponding part of the critical locus has dimension
+at most
+\[
+ N-(2p-r)+(p-r)=p^2-2p.
+\]
+There are finitely many ranks, so this bounds the entire critical
+locus. The subspace consisting of matrices with two prescribed
+zero rows has dimension $p^2-2p$ and satisfies all the cofactor
+equations. Thus the codimension is exactly $2p$.
+
+The critical equations are homogeneous with integer coefficients.
+Lemma~\ref{lem:specialization} gives the same lower bound on
+codimension in characteristic zero, and the two-zero-row subspace
+again gives equality. This argument covers $p=2$ as well: the
+critical locus of $x_{11}x_{22}+x_{12}x_{21}$ is the origin.
+
+The permanent is a nonzero squarefree polynomial over every field.
+Indeed, its degree in each variable is one; a repeated nonconstant
+factor would depend on some variable and give degree at least two
+in that variable. The hypersurface Jacobian criterion therefore
+identifies its singular set with its gradient zero set after
+extension to an algebraic closure. Equation~\eqref{eq:rowexpansion}
+places the gradient zero set on the hypersurface even when the
+characteristic divides the degree. This completes the proof of
+\eqref{eq:primecodim} and Theorem~\ref{thm:prime}.
+
+\subsection{Partial row expansions}
+Fix $S\subseteq\{1,\ldots,p\}$ with $|S|=s\ge1$ and retain only
+the variables $u_j$ with $j\in S$. The critical equations of $g_S$
+are $f_j(A)=0$ for $j\in S$ and $J_{f_S}(A)^{\mathsf t}u=0$.
+The subset version of Proposition~\ref{prop:rank} gives, at
+Jacobian rank $r$, base dimension at most $N-(2s-r)$ and fiber
+dimension $s-r$. Thus
+\[
+ \dim\Crit(g_S)\le N-s,
+\]
+or codimension at least $2s$ in $\A^{N+s}$.
+Conversely the locus $u=0$, $f_j(A)=0$ for $j\in S$, has dimension
+$N-s$, by the height statement. It lies in the critical locus.
+Equality follows in characteristic $p$.
+
+Lemma~\ref{lem:specialization} transfers the lower codimension
+bound to characteristic zero. Proposition~\ref{prop:lift} gives
+height $s$ for the subset ideal in that characteristic, so the
+same $u=0$ locus attains equality there. The strength assertion
+will follow in Section~\ref{sec:strength}.
+
+\section{Propagation to arbitrary matrix sizes}
+We require a dimension comparison for polynomial equations whose
+highest-degree parts are known.
+
+\begin{lemma}\label{lem:leading}
+Let $h_1,\ldots,h_t$ be nonconstant polynomials over an algebraically
+closed field, and let $h_i^{\mathrm{top}}$ be their highest
+total-degree homogeneous parts. Then
+\begin{equation}\label{eq:leading}
+ \dim V(h_1,\ldots,h_t)
+ \le\dim V(h_1^{\mathrm{top}},\ldots,h_t^{\mathrm{top}}).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $J=(h_1,\ldots,h_t)$, and give $k[x]/J$ the total-degree
+filtration. The associated graded quotient is
+$k[x]/\operatorname{in}_{\deg}(J)$, where the initial ideal is
+generated by the highest-degree parts of all elements of $J$.
+The filtered algebra and its associated graded algebra have the
+same Krull dimension, as follows from the growth of the degree
+filtration. Since
+\[
+ (h_1^{\mathrm{top}},\ldots,h_t^{\mathrm{top}})
+   \subseteq\operatorname{in}_{\deg}(J),
+\]
+the dimension inequality follows. The initial ideal may strictly
+contain the ideal of the displayed leading parts; the inclusion in
+this direction is all that is needed.
+\end{proof}
+
+\begin{proposition}\label{prop:border}
+Over any field, the geometric codimensions satisfy
+\begin{align}
+ c_k(r,n)&\ge c_k(r-1,n-1)&& (2\le r\le n),\label{eq:borderrect}\\
+ s_k(n)&\ge s_k(n-1)&& (n\ge3).\label{eq:bordersquare}
+\end{align}
+\end{proposition}
+\begin{proof}
+Work over an algebraic closure. Cover the nonzero matrices by the
+finitely many open subsets on which a specified entry is nonzero.
+By row and column permutations, it suffices to work with the entry
+in position $(1,1)$. Fix the first row and the first column as
+parameters, including $a=x_{11}\ne0$, and denote the free lower
+block by $Y$.
+
+First consider an $r\times n$ matrix. For each set $J$ of $r-1$
+columns of $Y$, the maximal permanent using these columns and
+column one has the form
+\begin{equation}\label{eq:leadingrect}
+ a\per(Y_J)+\text{terms of degree at most }r-2\text{ in }Y.
+\end{equation}
+To obtain $r-1$ free entries, all bottom rows must use free
+columns, so the top row must use column one. This proves the
+leading-term assertion. On every fixed-border fiber,
+Lemma~\ref{lem:leading} bounds the dimension of the common zero
+set of these selected equations by
+\[
+ (r-1)(n-1)-c_k(r-1,n-1).
+\]
+The full permanental zero set in the fiber is a subset of this
+zero set. There are $r+n-1$ border parameters. The dimension of
+the full zero set on the open chart is therefore at most
+$rn-c_k(r-1,n-1)$. This proves \eqref{eq:borderrect} on each
+nonzero chart. The omitted origin has dimension zero and does
+not enlarge this bound.
+
+For square critical loci, write the fixed-border matrix as
+\[
+ X=\begin{pmatrix}a&b^{\mathsf t}\\ c&Y\end{pmatrix},
+ \qquad a\ne0,
+\]
+where $Y$ has row and column indices $1,\ldots,n-1$. Among the
+gradient equations choose
+$C_{ij}=\per(X_{\widehat{i+1},\widehat{j+1}})$ for all
+$1\le i,j\le n-1$. Expanding according to the entries selected
+in the first row and column gives
+\begin{equation}\label{eq:leadingcofactor}
+ C_{ij}=a\per(Y_{\widehat i,\widehat j})
+ +\sum_{\substack{u\ne i\\v\ne j}}c_u b_v
+       \per(Y_{\widehat{\{i,u\}},\widehat{\{j,v\}}}).
+\end{equation}
+Here a hat indicates deletion of the specified rows or columns,
+and the permanent of the empty matrix is one. Each matching in
+$C_{ij}$ has $n-1$ entries. If it uses $a$, the remaining $n-2$
+entries lie in $Y$. If it avoids $a$, it must use two distinct
+border entries, one in the first row and one in the first column;
+only $n-3$ entries then lie in $Y$. Since the border is fixed,
+the summands in the second term of \eqref{eq:leadingcofactor}
+have degree at most $n-3$ in $Y$. Consequently
+\[
+ C_{ij}^{\mathrm{top}}
+   =a\per(Y_{\widehat i,\widehat j}).
+\]
+These are $a$ times all the gradient coordinates of $\per_{n-1}(Y)$.
+Lemma~\ref{lem:leading} bounds the common zero set of the selected
+equations in each fixed-border fiber by
+$(n-1)^2-s_k(n-1)$. The full critical fiber is a subset of that
+zero set. Adding the $2n-1$ border parameters gives
+$n^2-s_k(n-1)$. The nonzero charts and the origin cover the
+critical locus, proving \eqref{eq:bordersquare}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:alln}]
+Iterate \eqref{eq:bordersquare} from $n$ down to $q$ and apply
+Theorem~\ref{thm:prime} in characteristic zero. This gives
+$s_k(n)\ge2q$. Two prescribed zero rows give the upper bound
+$s_k(n)\le2n$ for every $n\ge2$.
+
+Iterating \eqref{eq:borderrect} gives
+$c_k(n-1,n)\ge c_k(q-1,q)=q$. There are $n$ maximal permanent
+generators, so the height theorem gives $c_k(n-1,n)\le n$.
+Finally, the prime number theorem implies $q/n\to1$. The two
+limits follow by squeezing between the displayed bounds.
+\end{proof}
+
+\begin{remark}
+The same propagation proves $s_k(n)\ge2p$ for every $n\ge p$
+in a fixed positive characteristic $p$. It does not justify
+using the largest prime below $n$ in that fixed characteristic:
+the coefficient proof at order $q$ uses characteristic $q$.
+\end{remark}
+
+\section{Strength and scope}\label{sec:strength}
+For clarity, all strength statements use the following convention.
+
+\begin{definition}
+For a nonzero homogeneous polynomial $f$ of degree at least two,
+$\str(f)$ is the least $t$ such that
+\[
+ f=\sum_{i=1}^{t}a_ib_i,
+\]
+where $a_i,b_i$ are positive-degree homogeneous polynomials and
+$\deg a_i+\deg b_i=\deg f$ for each $i$.
+\end{definition}
+
+\begin{lemma}\label{lem:strength}
+Over any field,
+\[
+ \codim\Crit(f)\le2\str(f).
+\]
+\end{lemma}
+\begin{proof}
+For a decomposition into $t$ products, every first derivative
+vanishes wherever all $2t$ factors vanish. Their common zero set
+is nonempty, since the factors are homogeneous of positive degree,
+and has codimension at most $2t$ by the height theorem. The
+critical locus contains it, proving the claim.
+\end{proof}
+
+Expansion along one row expresses $\per_n$ as a sum of $n$
+products, so its strength is at most $n$. Theorem~\ref{thm:alln}
+and Lemma~\ref{lem:strength} give the lower bound $q$ in
+characteristic zero. At prime order, Theorem~\ref{thm:prime}
+gives exact strength $p$ in characteristic $p$ and zero.
+Similarly, $g_S$ is a sum of $s$ displayed products and has
+critical codimension $2s$, so its strength is $s$. This completes
+Theorem~\ref{thm:partial}.
+
+These results determine dimensions, rather than irreducible
+components. They also do not determine the exact singular
+codimension $2n$ at every composite size, or reducedness of the
+corresponding maximal-permanent ideal at every composite number
+of columns. Both questions remain natural extensions of the
+prime-size argument.
+
+The bounds concern specific algebraic invariants. Critical
+codimension $2n$, by itself, does not imply a large arithmetic
+circuit. For example,
+\[
+ h(z)=\sum_{i=1}^{n}\prod_{j=1}^{n}z_{ij}
+\]
+has a circuit with $O(n^2)$ arithmetic operations. Its critical
+locus requires at least two zero entries in each row and hence
+has codimension $2n$. Thus a circuit application of the
+permanental geometry would require an additional argument.
+
+\section{Exact finite checks}
+The supplementary verification program uses integer arithmetic and
+finite-field arithmetic. It checks the trace coefficient in the
+small cases $p=2,3$, verifies instances of the generator-change
+congruence in a truncated polynomial ring, and compares the
+row-expansion critical equations with the full cofactor equations
+on every $2\times2$ matrix over $\F_2$ and every $3\times3$
+matrix over $\F_3$. A separate finite-field calculation checks
+the cyclic fixed-point counts for additional primes. The program also
+compares complete monomial expansions on both sides of
+\eqref{eq:leadingcofactor} for every selected cofactor at sizes
+$3\le n\le7$, including their degrees in the free block. These checks
+are reproducible controls on the formulas. The all-prime assertions,
+the geometric rank-stratum estimate, and the specialization and
+border arguments are established by the proofs above.
+
+\paragraph{Acknowledgment.}
+The author acknowledges OpenAI GPT-6 for assistance with mathematical
+exploration, exact computations, proof organization, and manuscript
+preparation.
+
+\begin{thebibliography}{3}\raggedright
+\bibitem{BCMV}
+A.~Boralevi, E.~Carlini, M.~Micha\l{}ek, and E.~Ventura,
+\emph{On the codimension of permanental varieties},
+Advances in Mathematics \textbf{461} (2025), article 110079.
+\href{https://doi.org/10.1016/j.aim.2024.110079}{doi:10.1016/j.aim.2024.110079}.
+
+\bibitem{Chau}
+T.~Chau, \emph{The $F$-singularities of algebras defined by permanents},
+Collectanea Mathematica \textbf{77} (2026), 843--859.
+\href{https://doi.org/10.1007/s13348-025-00494-8}{doi:10.1007/s13348-025-00494-8}.
+
+\bibitem{Knutson}
+A.~Knutson, \emph{Frobenius splitting, point-counting, and degeneration},
+preprint (2009).
+\href{https://arxiv.org/abs/0911.4941v1}{arXiv:0911.4941v1}.
+\end{thebibliography}
+\end{document}
