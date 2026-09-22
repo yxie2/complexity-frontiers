@@ -1,0 +1,68 @@
+{
+  "arithmetic": "exact integers; literal permutation expansion",
+  "identity_sizes": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "polynomial_checks": {
+    "border_expansion": 54,
+    "border_highest_part": 584,
+    "cubic_identity": 28,
+    "cubic_interior_homogeneity": 28,
+    "interior_highest_part": 54,
+    "near_square_highest_part": 65,
+    "near_square_identity": 4
+  },
+  "scope": "Finite identities and supports only; not a proof of the all-size theorems.",
+  "status": "passed",
+  "support_checks": {
+    "cases": [
+      {
+        "accepted_support_pairs": 11,
+        "k": 2,
+        "maximum_dimension": 2,
+        "support_pairs": 16
+      },
+      {
+        "accepted_support_pairs": 24,
+        "k": 3,
+        "maximum_dimension": 3,
+        "support_pairs": 64
+      },
+      {
+        "accepted_support_pairs": 47,
+        "k": 4,
+        "maximum_dimension": 4,
+        "support_pairs": 256
+      },
+      {
+        "accepted_support_pairs": 88,
+        "k": 5,
+        "maximum_dimension": 5,
+        "support_pairs": 1024
+      },
+      {
+        "accepted_support_pairs": 163,
+        "k": 6,
+        "maximum_dimension": 6,
+        "support_pairs": 4096
+      },
+      {
+        "accepted_support_pairs": 304,
+        "k": 7,
+        "maximum_dimension": 7,
+        "support_pairs": 16384
+      },
+      {
+        "accepted_support_pairs": 575,
+        "k": 8,
+        "maximum_dimension": 8,
+        "support_pairs": 65536
+      }
+    ],
+    "total_support_pairs": 87376
+  },
+  "total_polynomial_checks": 817
+}

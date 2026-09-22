@@ -13,3 +13,4 @@ check_logs/
 papers/*/main.pdf
 .DS_Store
 Thumbs.db
+papers/*/build/

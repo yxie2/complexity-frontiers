@@ -21,6 +21,11 @@ associated coefficient by reducing it to a Domb-number sum. Appendix A
 contains polynomial certificates for the finite transformation used in the
 calculation. See the manuscript for the hypotheses and proofs.
 
+The companion [arbitrary-size paper](../all-size-permanents/README.md),
+[Zenodo 22901136](https://zenodo.org/records/22901136), treats dimensions and
+reducedness in characteristic different from two. The Frobenius-purity questions
+studied here provide arithmetic information beyond those geometric conclusions.
+
 ## Cite this preprint
 
 > Ying Xie. *F-purity of the maximal permanental ideal of a generic

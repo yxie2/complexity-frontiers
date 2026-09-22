@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: This file describes the collection. Cite the individual paper listed in references
-  when using its results or verification code.
+message: This file describes the collection. Cite the individual paper listed in references when using
+  its results or verification code.
 title: 'Complexity Frontiers: Circuits, Proofs, and Algebra'
 type: software
 authors:
@@ -25,6 +25,21 @@ references:
   publisher:
     name: Zenodo
   notes: Preprint.
+- type: article
+  title: Dimensions of permanental varieties in arbitrary size
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+  year: 2026
+  doi: 10.5281/zenodo.22901136
+  url: https://doi.org/10.5281/zenodo.22901136
+  date-published: '2026-09-22'
+  publisher:
+    name: Zenodo
+  notes: Preprint; not peer reviewed.
 - type: article
   title: F-purity of the maximal permanental ideal of a generic three-by-four matrix
   authors:

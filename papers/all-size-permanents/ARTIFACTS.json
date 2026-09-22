@@ -1,0 +1,187 @@
+{
+  "paper_title": "Dimensions of permanental varieties in arbitrary size",
+  "status": "Zenodo preprint; not peer reviewed.",
+  "doi": "10.5281/zenodo.22901136",
+  "zenodo_record": "https://zenodo.org/records/22901136",
+  "pdf_matches_zenodo_checksum": true,
+  "original_zenodo_pdf_sha256": "0924a0321829c56ac50354d27d6b5b225a535d8b50268c3c922bafe5c7f0b050",
+  "files": [
+    {
+      "path": "anc/verification_results.json",
+      "bytes": 1600,
+      "sha256": "6f99ebee963cddc98de56c3d61e9cf2cb05d1c7905997f58ccb5e050b07b5f40"
+    },
+    {
+      "path": "anc/verify.py",
+      "bytes": 10533,
+      "sha256": "5f04386fbe5a149f395ad1eb085647311dfbafb71fcd9191b71ec550a9217e58"
+    },
+    {
+      "path": "build.py",
+      "bytes": 1628,
+      "sha256": "bb932e964f6df8610a7e8daf5bbc7a781062d0e377132a34b666220dce0dbf52"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 979,
+      "sha256": "6d3ce66f3e73e1a42b841564e38b7919879b67ceae44a67e10f13983beaf2d11"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 651,
+      "sha256": "2eabac34bc07722a75163c7862cacaf0bdd558bb195037832b238d3304b90b09"
+    },
+    {
+      "path": "LICENSE_CODE",
+      "bytes": 1065,
+      "sha256": "50613cb1eeb23cc26b6679b7a4d86ae3ecbabf2f87fb5a6619a037e7f9c44d34"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 27777,
+      "sha256": "1b29d060040913400e21bfb6edf433c4cae694b4bf045e1fa2c778c3c15f7a90"
+    },
+    {
+      "path": "paper.pdf",
+      "bytes": 362595,
+      "sha256": "0924a0321829c56ac50354d27d6b5b225a535d8b50268c3c922bafe5c7f0b050"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4022,
+      "sha256": "9b79ebb42b0b9096bbf5073c7110cfbfeb60f20675d1b3b96b9820ef1f6898db"
+    },
+    {
+      "path": "source_package.zip",
+      "bytes": 17979,
+      "sha256": "d6256f822c200e7655101d24740c4210567e58b7fe4861ab09638f88d0ba6a03"
+    },
+    {
+      "path": "submission_package.zip",
+      "bytes": 344430,
+      "sha256": "74f4285a3283009edf7c59f9ea63e6e8986ed0314e0722d02bf127b3ed41b0bb"
+    }
+  ],
+  "archives": [
+    {
+      "path": "source_package.zip",
+      "members": [
+        {
+          "path": "CITATION.cff",
+          "bytes": 979,
+          "sha256": "6d3ce66f3e73e1a42b841564e38b7919879b67ceae44a67e10f13983beaf2d11",
+          "repository_path": "CITATION.cff"
+        },
+        {
+          "path": "LICENSE.md",
+          "bytes": 651,
+          "sha256": "2eabac34bc07722a75163c7862cacaf0bdd558bb195037832b238d3304b90b09",
+          "repository_path": "LICENSE.md"
+        },
+        {
+          "path": "LICENSE_CODE",
+          "bytes": 1065,
+          "sha256": "50613cb1eeb23cc26b6679b7a4d86ae3ecbabf2f87fb5a6619a037e7f9c44d34",
+          "repository_path": "LICENSE_CODE"
+        },
+        {
+          "path": "MANIFEST.json",
+          "bytes": 1000,
+          "sha256": "4e9efb4fd46ca3224c42111bbc568c1ab1d8f78aa6867c18d5e1dcebbbb9c616"
+        },
+        {
+          "path": "README.md",
+          "bytes": 1593,
+          "sha256": "dd64cf53d9c2127f3a1a96ced07865e958701320d46bcc7bf67e4a55ea70eb62"
+        },
+        {
+          "path": "build.py",
+          "bytes": 1628,
+          "sha256": "bb932e964f6df8610a7e8daf5bbc7a781062d0e377132a34b666220dce0dbf52",
+          "repository_path": "build.py"
+        },
+        {
+          "path": "main.tex",
+          "bytes": 27777,
+          "sha256": "1b29d060040913400e21bfb6edf433c4cae694b4bf045e1fa2c778c3c15f7a90",
+          "repository_path": "main.tex"
+        },
+        {
+          "path": "verification_results.json",
+          "bytes": 1600,
+          "sha256": "6f99ebee963cddc98de56c3d61e9cf2cb05d1c7905997f58ccb5e050b07b5f40",
+          "repository_path": "anc/verification_results.json"
+        },
+        {
+          "path": "verify.py",
+          "bytes": 10533,
+          "sha256": "5f04386fbe5a149f395ad1eb085647311dfbafb71fcd9191b71ec550a9217e58",
+          "repository_path": "anc/verify.py"
+        }
+      ]
+    },
+    {
+      "path": "submission_package.zip",
+      "members": [
+        {
+          "path": "CITATION.cff",
+          "bytes": 979,
+          "sha256": "6d3ce66f3e73e1a42b841564e38b7919879b67ceae44a67e10f13983beaf2d11",
+          "repository_path": "CITATION.cff"
+        },
+        {
+          "path": "LICENSE.md",
+          "bytes": 651,
+          "sha256": "2eabac34bc07722a75163c7862cacaf0bdd558bb195037832b238d3304b90b09",
+          "repository_path": "LICENSE.md"
+        },
+        {
+          "path": "LICENSE_CODE",
+          "bytes": 1065,
+          "sha256": "50613cb1eeb23cc26b6679b7a4d86ae3ecbabf2f87fb5a6619a037e7f9c44d34",
+          "repository_path": "LICENSE_CODE"
+        },
+        {
+          "path": "MANIFEST.json",
+          "bytes": 1124,
+          "sha256": "5a396ee2bfef9e785c64beee468d6857a8f30b5be0f73f198aad6ccc308903f1"
+        },
+        {
+          "path": "README.md",
+          "bytes": 1593,
+          "sha256": "dd64cf53d9c2127f3a1a96ced07865e958701320d46bcc7bf67e4a55ea70eb62"
+        },
+        {
+          "path": "build.py",
+          "bytes": 1628,
+          "sha256": "bb932e964f6df8610a7e8daf5bbc7a781062d0e377132a34b666220dce0dbf52",
+          "repository_path": "build.py"
+        },
+        {
+          "path": "main.tex",
+          "bytes": 27777,
+          "sha256": "1b29d060040913400e21bfb6edf433c4cae694b4bf045e1fa2c778c3c15f7a90",
+          "repository_path": "main.tex"
+        },
+        {
+          "path": "paper.pdf",
+          "bytes": 362595,
+          "sha256": "0924a0321829c56ac50354d27d6b5b225a535d8b50268c3c922bafe5c7f0b050",
+          "repository_path": "paper.pdf"
+        },
+        {
+          "path": "verification_results.json",
+          "bytes": 1600,
+          "sha256": "6f99ebee963cddc98de56c3d61e9cf2cb05d1c7905997f58ccb5e050b07b5f40",
+          "repository_path": "anc/verification_results.json"
+        },
+        {
+          "path": "verify.py",
+          "bytes": 10533,
+          "sha256": "5f04386fbe5a149f395ad1eb085647311dfbafb71fcd9191b71ec550a9217e58",
+          "repository_path": "anc/verify.py"
+        }
+      ]
+    }
+  ]
+}

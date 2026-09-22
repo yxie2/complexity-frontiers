@@ -15,6 +15,7 @@ and algebraic geometry, motivated by P versus NP and VP versus VNP.
 | Paper | Materials | Status |
 | --- | --- | --- |
 | **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
+| **Dimensions of permanental varieties in arbitrary size** | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
 | **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22879129). |
 | **Frobenius splitting and singular loci of prime-size permanents** | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22878451). |
 
@@ -23,9 +24,10 @@ circuits**, for targets that have small general arithmetic circuits. The result
 does not separate VP from VNP or P from NP. Its precise hypotheses, proofs,
 and limitations are in the manuscript.
 
-The permanent papers study maximal-permanent ideals, Frobenius splitting,
-and singular codimensions. Their algebraic conclusions do not by themselves
-give an unrestricted circuit separation. Each paper has its own statements,
+The permanent papers study dimensions of proper permanental varieties,
+reduced complete intersections, Frobenius splitting, and singular codimensions.
+Their algebraic conclusions do not by themselves give an unrestricted circuit
+separation. Each paper has its own statements,
 sources, reproduction instructions, and review status.
 
 ## Reproduce the finite checks
@@ -45,6 +47,17 @@ python scripts/verify_sensitive_monotone.py
 The seven checks cover counting, conditioning, spectral estimates, and the
 shared-gate coefficient argument. See the [reproduction guide](papers/sensitive-monotone-vp/README.md#verification)
 and [recorded results](papers/sensitive-monotone-vp/anc/RUN_CHECKS.json).
+
+### Permanental dimensions in arbitrary size
+
+```sh
+python scripts/verify_permanents.py all-size-permanents
+```
+
+No additional Python packages are required. The checks cover 817 exact polynomial
+equalities for sizes two through five and 87,376 coordinate-support pairs for
+sizes two through eight. See the [reproduction guide](papers/all-size-permanents/README.md#reproduce-the-checks)
+and [recorded results](papers/all-size-permanents/anc/verification_results.json).
 
 ### Three-by-four permanents
 
@@ -76,7 +89,7 @@ python scripts/verify_sensitive_monotone.py
 python scripts/verify_permanents.py
 ```
 
-The final command runs both permanent suites. GitHub Actions runs the
+The final command runs all three permanent suites. GitHub Actions runs the
 [sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml)
 and the [permanent checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml)
 in separate workflows.
@@ -98,6 +111,15 @@ separate citation below and its own machine-readable citation file.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22783087.svg)](https://doi.org/10.5281/zenodo.22783087)
 
+### Permanental dimensions in arbitrary size
+
+> Ying Xie. *Dimensions of permanental varieties in arbitrary size*.
+> Zenodo, 2026. https://doi.org/10.5281/zenodo.22901136.
+
+[Citation metadata](papers/all-size-permanents/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22901136)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22901136.svg)](https://doi.org/10.5281/zenodo.22901136)
+
 ### Three-by-four permanents
 
 > Ying Xie. *F-purity of the maximal permanental ideal of a generic
@@ -117,7 +139,7 @@ separate citation below and its own machine-readable citation file.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22878451.svg)](https://doi.org/10.5281/zenodo.22878451)
 
 The root [CITATION.cff](CITATION.cff) describes the collection and lists all
-three papers as references. Each Zenodo DOI identifies the individual
+four papers as references. Each Zenodo DOI identifies the individual
 preprint listed with it.
 
 ## Feedback
@@ -129,7 +151,7 @@ reports, include the command and relevant software versions.
 
 ## Acknowledgment
 
-All three manuscripts retain their acknowledgments to OpenAI GPT-6.
+All four manuscripts retain their acknowledgments to OpenAI GPT-6.
 Each manuscript states the assistance acknowledged for that work.
 
 ## Licenses
@@ -142,6 +164,7 @@ Manuscript-specific license notices are listed separately:
 | Paper | Manuscript license information |
 | --- | --- |
 | Sensitive monotone bounds in VP | [CC BY 4.0 notice](papers/sensitive-monotone-vp/LICENSE.md), consistent with its Zenodo record. |
+| Permanental dimensions in arbitrary size | [CC BY 4.0 notice](papers/all-size-permanents/LICENSE.md), consistent with its Zenodo record. |
 | Three-by-four permanents | [CC BY 4.0 notice](papers/three-by-four-permanents/LICENSE.md), consistent with its Zenodo record. |
 | Prime-size permanents | [CC BY 4.0 notice](papers/prime-size-permanents/LICENSE.md), consistent with its Zenodo record. |
 

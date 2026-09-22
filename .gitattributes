@@ -8,3 +8,4 @@ papers/three-by-four-permanents/main.tex -text -whitespace
 papers/three-by-four-permanents/anc/** -text -whitespace
 papers/prime-size-permanents/main.tex -text -whitespace
 papers/prime-size-permanents/anc/** -text -whitespace
+papers/all-size-permanents/** -text -whitespace

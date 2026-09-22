@@ -3,6 +3,7 @@ name: Permanent paper checks
 on:
   push:
     paths:
+      - 'papers/all-size-permanents/**'
       - 'papers/three-by-four-permanents/**'
       - 'papers/prime-size-permanents/**'
       - 'scripts/verify_permanents.py'
@@ -10,6 +11,7 @@ on:
       - '.github/workflows/permanent-checks.yml'
   pull_request:
     paths:
+      - 'papers/all-size-permanents/**'
       - 'papers/three-by-four-permanents/**'
       - 'papers/prime-size-permanents/**'
       - 'scripts/verify_permanents.py'

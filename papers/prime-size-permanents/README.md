@@ -23,6 +23,12 @@ the largest prime at most $n$, and hence an asymptotically sharp bound.
 The paper also treats partial row expansions and strength. These geometric
 invariants alone do not establish an unrestricted circuit lower bound.
 
+The companion [arbitrary-size paper](../all-size-permanents/README.md),
+[Zenodo 22901136](https://zenodo.org/records/22901136), gives exact permanental
+dimensions and reducedness for maximal near-square ideals in every characteristic
+other than two. Its geometric argument is separate from the Frobenius-splitting
+argument of this paper.
+
 ## Cite this preprint
 
 > Ying Xie. *Frobenius splitting and singular loci of prime-size permanents*.
