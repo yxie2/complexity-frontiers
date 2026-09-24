@@ -1,0 +1,647 @@
+{
+  "status": "PASS",
+  "exact_ideal_checks": [
+    {
+      "p": 2,
+      "n": 2,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 3,
+      "d": 2,
+      "valuation_power": 2,
+      "finite_length": 2
+    },
+    {
+      "p": 2,
+      "n": 3,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 3,
+      "valuation_power": 2,
+      "finite_length": 2
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 2,
+      "valuation_power": 4,
+      "finite_length": null
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 4,
+      "valuation_power": 2,
+      "finite_length": 2
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 3,
+      "valuation_power": 4,
+      "finite_length": null
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 5,
+      "valuation_power": 2,
+      "finite_length": 2
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 6,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 7,
+      "d": 2,
+      "valuation_power": 2,
+      "finite_length": 2
+    },
+    {
+      "p": 2,
+      "n": 7,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 7,
+      "d": 4,
+      "valuation_power": 4,
+      "finite_length": 4
+    },
+    {
+      "p": 2,
+      "n": 7,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 2,
+      "n": 7,
+      "d": 6,
+      "valuation_power": 2,
+      "finite_length": 2
+    },
+    {
+      "p": 2,
+      "n": 7,
+      "d": 7,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 2,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 3,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 3,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 2,
+      "valuation_power": 3,
+      "finite_length": null
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 3,
+      "valuation_power": 3,
+      "finite_length": 3
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 4,
+      "valuation_power": 3,
+      "finite_length": 3
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 6,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 7,
+      "d": 2,
+      "valuation_power": 3,
+      "finite_length": null
+    },
+    {
+      "p": 3,
+      "n": 7,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 7,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 7,
+      "d": 5,
+      "valuation_power": 3,
+      "finite_length": 3
+    },
+    {
+      "p": 3,
+      "n": 7,
+      "d": 6,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 3,
+      "n": 7,
+      "d": 7,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 2,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 3,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 3,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 2,
+      "valuation_power": 5,
+      "finite_length": null
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 6,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 7,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 7,
+      "d": 3,
+      "valuation_power": 5,
+      "finite_length": null
+    },
+    {
+      "p": 5,
+      "n": 7,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 7,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 7,
+      "d": 6,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 5,
+      "n": 7,
+      "d": 7,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 2,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 3,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 3,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 4,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 4,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 4,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 5,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 5,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 5,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 5,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 6,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 6,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 6,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 6,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 6,
+      "d": 6,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 7,
+      "d": 2,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 7,
+      "d": 3,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 7,
+      "d": 4,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 7,
+      "d": 5,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 7,
+      "d": 6,
+      "valuation_power": 1,
+      "finite_length": 1
+    },
+    {
+      "p": 7,
+      "n": 7,
+      "d": 7,
+      "valuation_power": 1,
+      "finite_length": 1
+    }
+  ],
+  "direct_normal_form_checks": [
+    {
+      "p": 2,
+      "n": 3,
+      "d": 2,
+      "valuation_power": 2
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 2,
+      "valuation_power": 4
+    },
+    {
+      "p": 2,
+      "n": 7,
+      "d": 4,
+      "valuation_power": 4
+    },
+    {
+      "p": 2,
+      "n": 8,
+      "d": 5,
+      "valuation_power": 4
+    },
+    {
+      "p": 2,
+      "n": 9,
+      "d": 6,
+      "valuation_power": 4
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 3,
+      "valuation_power": 3
+    },
+    {
+      "p": 3,
+      "n": 11,
+      "d": 3,
+      "valuation_power": 9
+    },
+    {
+      "p": 5,
+      "n": 9,
+      "d": 5,
+      "valuation_power": 5
+    }
+  ],
+  "binomial_threshold_controls": 55875,
+  "seconds": 2.875,
+  "script_sha256": "8312f8c695161e6cc77444ae7a7451f2c10178ae3add7ae5e339716c7c381616",
+  "scope": "Exact finite ideal equality and polynomial identity controls; the general scheme proof is separate."
+}

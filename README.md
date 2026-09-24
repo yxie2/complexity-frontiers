@@ -9,6 +9,7 @@ and algebraic geometry, motivated by P versus NP and VP versus VNP.
 
 [![Sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml)
 [![Permanent paper checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml)
+[![Elementary symmetric checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/elementary-symmetric-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/elementary-symmetric-checks.yml)
 
 ## Papers
 
@@ -16,6 +17,7 @@ and algebraic geometry, motivated by P versus NP and VP versus VNP.
 | --- | --- | --- |
 | **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
 | **Dimensions of permanental varieties in arbitrary size** | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
+| **Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic** | [Paper and reproduction guide](papers/elementary-symmetric-loci/README.md) · [PDF](papers/elementary-symmetric-loci/paper.pdf) · [LaTeX](papers/elementary-symmetric-loci/main.tex) · [Code](papers/elementary-symmetric-loci/anc/) | [Zenodo preprint](https://zenodo.org/records/22929810). |
 | **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22879129). |
 | **Frobenius splitting and singular loci of prime-size permanents** | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22878451). |
 
@@ -29,6 +31,10 @@ reduced complete intersections, Frobenius splitting, and singular codimensions.
 Their algebraic conclusions do not by themselves give an unrestricted circuit
 separation. Each paper has its own statements,
 sources, reproduction instructions, and review status.
+
+The elementary-symmetric paper determines derivative and multiplicity loci,
+including their characteristic-dependent dimensions, generic multiplicities,
+and translation stabilizers.
 
 ## Reproduce the finite checks
 
@@ -59,6 +65,18 @@ equalities for sizes two through five and 87,376 coordinate-support pairs for
 sizes two through eight. See the [reproduction guide](papers/all-size-permanents/README.md#reproduce-the-checks)
 and [recorded results](papers/all-size-permanents/anc/verification_results.json).
 
+### Elementary-symmetric derivative and multiplicity loci
+
+```sh
+python -m pip install -r papers/elementary-symmetric-loci/anc/requirements.txt
+python scripts/verify_elementary_symmetric.py
+```
+
+The four programs check partition coefficients, 210 Groebner dimensions,
+translation ideals and normal forms, local orders, and Jacobian ranks. See the
+[reproduction guide](papers/elementary-symmetric-loci/README.md#reproduce-the-checks)
+and [recorded results](papers/elementary-symmetric-loci/anc/).
+
 ### Three-by-four permanents
 
 ```sh
@@ -85,13 +103,16 @@ and [recorded results](papers/prime-size-permanents/anc/verification_results.jso
 
 ```sh
 python -m pip install -r papers/sensitive-monotone-vp/anc/requirements.txt
+python -m pip install -r papers/elementary-symmetric-loci/anc/requirements.txt
 python scripts/verify_sensitive_monotone.py
 python scripts/verify_permanents.py
+python scripts/verify_elementary_symmetric.py
 ```
 
-The final command runs all three permanent suites. GitHub Actions runs the
-[sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml)
-and the [permanent checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml)
+The permanent command runs all three permanent suites. GitHub Actions runs the
+[sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml),
+the [permanent checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml),
+and the [elementary symmetric checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/elementary-symmetric-checks.yml)
 in separate workflows.
 
 These checks test finite identities and circuit constructions. They do not
@@ -120,6 +141,15 @@ separate citation below and its own machine-readable citation file.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22901136.svg)](https://doi.org/10.5281/zenodo.22901136)
 
+### Elementary-symmetric derivative and multiplicity loci
+
+> Ying Xie. *Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic*.
+> Zenodo, 2026. https://doi.org/10.5281/zenodo.22929810.
+
+[Citation metadata](papers/elementary-symmetric-loci/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22929810)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22929810.svg)](https://doi.org/10.5281/zenodo.22929810)
+
 ### Three-by-four permanents
 
 > Ying Xie. *F-purity of the maximal permanental ideal of a generic
@@ -139,7 +169,7 @@ separate citation below and its own machine-readable citation file.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22878451.svg)](https://doi.org/10.5281/zenodo.22878451)
 
 The root [CITATION.cff](CITATION.cff) describes the collection and lists all
-four papers as references. Each Zenodo DOI identifies the individual
+five papers as references. Each Zenodo DOI identifies the individual
 preprint listed with it.
 
 ## Feedback
@@ -151,7 +181,7 @@ reports, include the command and relevant software versions.
 
 ## Acknowledgment
 
-All four manuscripts retain their acknowledgments to OpenAI GPT-6.
+All five manuscripts retain their acknowledgments to OpenAI GPT-6.
 Each manuscript states the assistance acknowledged for that work.
 
 ## Licenses
@@ -165,6 +195,7 @@ Manuscript-specific license notices are listed separately:
 | --- | --- |
 | Sensitive monotone bounds in VP | [CC BY 4.0 notice](papers/sensitive-monotone-vp/LICENSE.md), consistent with its Zenodo record. |
 | Permanental dimensions in arbitrary size | [CC BY 4.0 notice](papers/all-size-permanents/LICENSE.md), consistent with its Zenodo record. |
+| Elementary-symmetric derivative and multiplicity loci | [CC BY 4.0 notice](papers/elementary-symmetric-loci/LICENSE.md), consistent with its Zenodo record. |
 | Three-by-four permanents | [CC BY 4.0 notice](papers/three-by-four-permanents/LICENSE.md), consistent with its Zenodo record. |
 | Prime-size permanents | [CC BY 4.0 notice](papers/prime-size-permanents/LICENSE.md), consistent with its Zenodo record. |
 

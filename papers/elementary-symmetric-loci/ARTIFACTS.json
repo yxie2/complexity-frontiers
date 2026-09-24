@@ -1,0 +1,92 @@
+{
+  "files": [
+    {
+      "path": "anc/check_elementary_local_structure.py",
+      "bytes": 4877,
+      "sha256": "de4781be8baa88858fb23c00a66f362ee2eec3953e81b967bc5850e5de7b5711"
+    },
+    {
+      "path": "anc/check_elementary_modular_dimensions.py",
+      "bytes": 6966,
+      "sha256": "14a8bc25a86cfbdcd8a07b198f32aea94b52d814fd5b9e30234c9c2547473f13"
+    },
+    {
+      "path": "anc/check_elementary_translation.py",
+      "bytes": 3724,
+      "sha256": "8312f8c695161e6cc77444ae7a7451f2c10178ae3add7ae5e339716c7c381616"
+    },
+    {
+      "path": "anc/ELEMENTARY_HIGHER_ORDER_CHECKS.json",
+      "bytes": 10842,
+      "sha256": "66b8b44da58ac2bf77978921ede11bf301e1bce0236a1f0de2a75673aadbe70c"
+    },
+    {
+      "path": "anc/ELEMENTARY_LOCAL_STRUCTURE_CHECKS.json",
+      "bytes": 465,
+      "sha256": "4703d77b3e66106184557283a1d7d628bf6a5d0487aa85d0ed1a308a4bc1418e"
+    },
+    {
+      "path": "anc/ELEMENTARY_MODULAR_DIMENSION_CHECKS.json",
+      "bytes": 10631,
+      "sha256": "7bd2315fadd7af072a1fe8233a03cb69bf9cf03e65a5d60a35f9faef3cce88e1"
+    },
+    {
+      "path": "anc/ELEMENTARY_TRANSLATION_CHECKS.json",
+      "bytes": 10745,
+      "sha256": "8db56462f825e5db17bfafc45b24deb40b79917bdf70ce2ae976109c70616cb5"
+    },
+    {
+      "path": "anc/probe_elementary_higher_orders.py",
+      "bytes": 4891,
+      "sha256": "ffb3f0163cc4064e8fffd3495a3deef6b68f9ec92e261cb59ee8057cf3b8e8a8"
+    },
+    {
+      "path": "anc/requirements.txt",
+      "bytes": 15,
+      "sha256": "92b624b3acd276481f084c401d2515225422ef0e9fa5488de7e58530483a1997"
+    },
+    {
+      "path": "arxiv_submission.zip",
+      "bytes": 11640,
+      "sha256": "3f857998803780aa9da6dc64887cf06dffa758cc67b3b28a0446faf67fcb3fb3"
+    },
+    {
+      "path": "build.py",
+      "bytes": 1628,
+      "sha256": "bb932e964f6df8610a7e8daf5bbc7a781062d0e377132a34b666220dce0dbf52"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1038,
+      "sha256": "cb5d358a319ea6e6e33c0a433ba775ae47d8b77d3110837b9868d8c8203938ed"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 552,
+      "sha256": "6a6d8108b1e22d6ee9ac4985b0fa7609401e584bdfaefaf29baef71014cf0241"
+    },
+    {
+      "path": "LICENSE_CODE",
+      "bytes": 1065,
+      "sha256": "50613cb1eeb23cc26b6679b7a4d86ae3ecbabf2f87fb5a6619a037e7f9c44d34"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 32342,
+      "sha256": "4e1b9d596cc7eae213c410bd118e4c1acf97e16f0b7f237631c0df5947fd581d"
+    },
+    {
+      "path": "paper.pdf",
+      "bytes": 399860,
+      "sha256": "7b9adb995a37d155a261dd029bb5aef535733783be3502055c2cbc46ff15994e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4712,
+      "sha256": "7606ce5ff51fc9542b130e2f60d9e2a44c361e7553d352478e1e7cb4df8054e8"
+    }
+  ],
+  "zenodo_record": "https://zenodo.org/records/22929810",
+  "doi": "10.5281/zenodo.22929810",
+  "pdf_identical_to_zenodo": true
+}

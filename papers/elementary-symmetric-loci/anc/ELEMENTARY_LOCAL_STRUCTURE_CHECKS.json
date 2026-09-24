@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "integer_polynomial_identities": 1716,
+  "local_orders": {
+    "controls": 21340,
+    "nonreduced_controls": 3121
+  },
+  "tangent_ranks": 660,
+  "seconds": 0.2190000000409782,
+  "script_sha256": "de4781be8baa88858fb23c00a66f362ee2eec3953e81b967bc5850e5de7b5711",
+  "scope": "Finite direct polynomial identities, binomial restrictions and full Jacobian ranks. The all-size localization argument is the proof, not these checks."
+}

@@ -1,0 +1,573 @@
+{
+  "status": "PASS",
+  "coefficient_checks": {
+    "partition_controls": 75475,
+    "dimension_controls": 2420,
+    "exceptional_partitions": [
+      215,
+      148
+    ],
+    "large_boundary_controls": [
+      {
+        "p": 2,
+        "d": 2,
+        "n": 3,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 2,
+        "d": 2,
+        "n": 5,
+        "quotient": 2,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 2,
+        "d": 2,
+        "n": 7,
+        "quotient": 3,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 2,
+        "d": 4,
+        "n": 7,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 2,
+        "d": 4,
+        "n": 11,
+        "quotient": 2,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 2,
+        "d": 4,
+        "n": 15,
+        "quotient": 3,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 3,
+        "d": 3,
+        "n": 5,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 3,
+        "d": 3,
+        "n": 11,
+        "quotient": 3,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 3,
+        "d": 3,
+        "n": 14,
+        "quotient": 4,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 3,
+        "d": 9,
+        "n": 17,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 3,
+        "d": 9,
+        "n": 35,
+        "quotient": 3,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 3,
+        "d": 9,
+        "n": 44,
+        "quotient": 4,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 5,
+        "d": 5,
+        "n": 9,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 5,
+        "d": 5,
+        "n": 29,
+        "quotient": 5,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 5,
+        "d": 5,
+        "n": 34,
+        "quotient": 6,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 5,
+        "d": 25,
+        "n": 49,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 5,
+        "d": 25,
+        "n": 149,
+        "quotient": 5,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 5,
+        "d": 25,
+        "n": 174,
+        "quotient": 6,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 7,
+        "d": 7,
+        "n": 13,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 7,
+        "d": 7,
+        "n": 55,
+        "quotient": 7,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 7,
+        "d": 7,
+        "n": 62,
+        "quotient": 8,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 7,
+        "d": 49,
+        "n": 97,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 7,
+        "d": 49,
+        "n": 391,
+        "quotient": 7,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 7,
+        "d": 49,
+        "n": 440,
+        "quotient": 8,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 11,
+        "d": 11,
+        "n": 21,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 11,
+        "d": 11,
+        "n": 131,
+        "quotient": 11,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 11,
+        "d": 11,
+        "n": 142,
+        "quotient": 12,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 11,
+        "d": 121,
+        "n": 241,
+        "quotient": 1,
+        "critical": true,
+        "order_two": false
+      },
+      {
+        "p": 11,
+        "d": 121,
+        "n": 1451,
+        "quotient": 11,
+        "critical": true,
+        "order_two": true
+      },
+      {
+        "p": 11,
+        "d": 121,
+        "n": 1572,
+        "quotient": 12,
+        "critical": true,
+        "order_two": false
+      }
+    ]
+  },
+  "groebner_checks": [
+    {
+      "p": 2,
+      "n": 2,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 3,
+      "d": 2,
+      "critical_dimension": 1,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 3,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 2,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 5,
+      "critical_dimension": 3,
+      "order_two_dimension": 3
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 3,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 5,
+      "critical_dimension": 3,
+      "order_two_dimension": 3
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 6,
+      "critical_dimension": 4,
+      "order_two_dimension": 4
+    },
+    {
+      "p": 3,
+      "n": 2,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 3,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 3,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 2,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 3,
+      "critical_dimension": 2,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 5,
+      "critical_dimension": 3,
+      "order_two_dimension": 3
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 5,
+      "critical_dimension": 3,
+      "order_two_dimension": 3
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 6,
+      "critical_dimension": 4,
+      "order_two_dimension": 4
+    },
+    {
+      "p": 5,
+      "n": 2,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 3,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 3,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 2,
+      "critical_dimension": 0,
+      "order_two_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 5,
+      "critical_dimension": 3,
+      "order_two_dimension": 3
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 2,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 3,
+      "critical_dimension": 1,
+      "order_two_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 4,
+      "critical_dimension": 2,
+      "order_two_dimension": 2
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 5,
+      "critical_dimension": 3,
+      "order_two_dimension": 3
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 6,
+      "critical_dimension": 4,
+      "order_two_dimension": 4
+    }
+  ],
+  "seconds": 6.672000000020489,
+  "script_sha256": "14a8bc25a86cfbdcd8a07b198f32aea94b52d814fd5b9e30234c9c2547473f13",
+  "scope": "Finite exact coefficient controls and, when requested, independent Groebner dimensions; the general theorem requires the written proof."
+}

@@ -1,0 +1,501 @@
+{
+  "status": "PASS",
+  "coefficients": {
+    "partition_controls": 58820,
+    "dimension_controls": 5280
+  },
+  "groebner": [
+    {
+      "p": 2,
+      "n": 3,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 4,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 3,
+      "multiplicity_locus_dimension": 3
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 2,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 5,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 3,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 4,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 3,
+      "multiplicity_locus_dimension": 3
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 3,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 5,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 3,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 4,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 5,
+      "d": 5,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 3,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 4,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 4,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 5,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 2,
+      "derivative_locus_dimension": 3,
+      "multiplicity_locus_dimension": 3
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 3,
+      "derivative_locus_dimension": 2,
+      "multiplicity_locus_dimension": 2
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 4,
+      "derivative_locus_dimension": 1,
+      "multiplicity_locus_dimension": 1
+    },
+    {
+      "p": 5,
+      "n": 6,
+      "d": 6,
+      "derivative_order": 5,
+      "derivative_locus_dimension": 0,
+      "multiplicity_locus_dimension": 0
+    }
+  ],
+  "seconds": 3.359000000054948,
+  "sources": [
+    {
+      "path": "probe_elementary_higher_orders.py",
+      "sha256": "ffb3f0163cc4064e8fffd3495a3deef6b68f9ec92e261cb59ee8057cf3b8e8a8"
+    },
+    {
+      "path": "check_elementary_modular_dimensions.py",
+      "sha256": "14a8bc25a86cfbdcd8a07b198f32aea94b52d814fd5b9e30234c9c2547473f13"
+    }
+  ],
+  "scope": "Exact finite controls, not a replacement for the all-size proof."
+}
