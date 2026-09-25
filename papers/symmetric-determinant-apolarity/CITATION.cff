@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: Please cite the manuscript in preferred-citation when using its results.
+type: software
+title: Symmetric-determinant apolarity in odd characteristic
+authors:
+- family-names: Xie
+  given-names: Ying
+  affiliation: Kennesaw State University
+  email: yxie2@kennesaw.edu
+  orcid: https://orcid.org/0000-0002-8661-8877
+url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/symmetric-determinant-apolarity
+repository-code: https://github.com/yxie2/complexity-frontiers
+preferred-citation:
+  type: article
+  title: Symmetric-determinant apolarity in odd characteristic
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+  year: 2026
+  url: https://zenodo.org/records/22950380
+  publisher:
+    name: Zenodo
+  notes: Preprint; not peer reviewed.

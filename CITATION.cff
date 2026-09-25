@@ -41,6 +41,19 @@ references:
     name: Zenodo
   notes: Preprint; not peer reviewed.
 - type: article
+  title: Symmetric-determinant apolarity in odd characteristic
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+  year: 2026
+  url: https://zenodo.org/records/22950380
+  publisher:
+    name: Zenodo
+  notes: Preprint; not peer reviewed.
+- type: article
   title: Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic
   authors:
     - family-names: Xie

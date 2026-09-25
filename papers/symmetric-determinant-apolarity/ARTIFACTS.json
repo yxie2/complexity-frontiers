@@ -1,0 +1,18 @@
+{
+  "title": "Symmetric-determinant apolarity in odd characteristic",
+  "zenodo_record": "https://zenodo.org/records/22950380",
+  "files": {
+    "paper.pdf": {
+      "sha256": "b792d459ab6e88030c9b711e3c7d3e4f3628191800a534b7cf2eda9ce503b28f",
+      "bytes": 441031
+    },
+    "main.tex": {
+      "sha256": "6f40ad0344087f967804c7c3105eebca52857b97d6d8f83d3441e88b86961d9f",
+      "bytes": 40283
+    },
+    "arxiv_submission.zip": {
+      "sha256": "6c6888ed2f16cad1611f173e4d9e54a5b52abd3b85eef0e0d3a2fd6786d05bef",
+      "bytes": 14794
+    }
+  }
+}

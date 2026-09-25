@@ -10,3 +10,4 @@ papers/prime-size-permanents/main.tex -text -whitespace
 papers/prime-size-permanents/anc/** -text -whitespace
 papers/all-size-permanents/** -text -whitespace
 papers/elementary-symmetric-loci/** -text -whitespace
+papers/symmetric-determinant-apolarity/main.tex -text -whitespace
