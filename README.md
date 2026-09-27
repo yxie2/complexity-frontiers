@@ -14,44 +14,64 @@ the paper and the relevant theorem, section, or page.
 
 **Ying Xie** · Kennesaw State University · [yxie2@kennesaw.edu](mailto:yxie2@kennesaw.edu)
 
-[![Sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml)
 [![Permanent paper checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml)
+[![Sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml)
 [![Elementary symmetric checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/elementary-symmetric-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/elementary-symmetric-checks.yml)
 
 ## Papers
 
+The order reflects an editorial assessment of the breadth of the results,
+depth of the methods, and potential usefulness for further research.
+
 | Paper | Materials | Status |
 | --- | --- | --- |
-| **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
 | **Dimensions of permanental varieties in arbitrary size** | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
-| **Principal components and singularities of orthogonal frame varieties** | [Paper and reproduction guide](papers/orthogonal-frame-varieties/README.md) · [PDF](papers/orthogonal-frame-varieties/paper.pdf) · [LaTeX](papers/orthogonal-frame-varieties/main.tex) · [Code](papers/orthogonal-frame-varieties/anc/) | [Zenodo record](https://zenodo.org/records/22985617). |
 | **Symmetric-determinant apolarity in odd characteristic** | [Paper and reproduction guide](papers/symmetric-determinant-apolarity/README.md) · [PDF](papers/symmetric-determinant-apolarity/paper.pdf) · [LaTeX](papers/symmetric-determinant-apolarity/main.tex) · [Code](papers/symmetric-determinant-apolarity/anc/) | [Zenodo record](https://zenodo.org/records/22950380). |
+| **Principal components and singularities of orthogonal frame varieties** | [Paper and reproduction guide](papers/orthogonal-frame-varieties/README.md) · [PDF](papers/orthogonal-frame-varieties/paper.pdf) · [LaTeX](papers/orthogonal-frame-varieties/main.tex) · [Code](papers/orthogonal-frame-varieties/anc/) | [Zenodo record](https://zenodo.org/records/22985617). |
+| **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
 | **Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic** | [Paper and reproduction guide](papers/elementary-symmetric-loci/README.md) · [PDF](papers/elementary-symmetric-loci/paper.pdf) · [LaTeX](papers/elementary-symmetric-loci/main.tex) · [Code](papers/elementary-symmetric-loci/anc/) | [Zenodo preprint](https://zenodo.org/records/22929810). |
 | **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22879129). |
 | **Frobenius splitting and singular loci of prime-size permanents** | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22878451). |
 
-The first paper studies sensitive lower bounds for **monotone arithmetic
-circuits**, for targets that have small general arithmetic circuits. The result
-does not separate VP from VNP or P from NP. Its precise hypotheses, proofs,
-and limitations are in the manuscript.
+**Permanental dimensions in arbitrary size.** This paper determines the
+dimensions of proper permanental varieties in characteristic different from
+two. It gives exact critical-locus codimension for the permanent in every
+size and proves that maximal permanents of a generic near-square matrix
+generate a geometrically reduced complete intersection.
 
-The permanent papers study dimensions of proper permanental varieties,
-reduced complete intersections, Frobenius splitting, and singular codimensions.
-Their algebraic conclusions do not by themselves give an unrestricted circuit
-separation. Each paper has its own statements,
-sources, reproduction instructions, and review status.
+**Symmetric-determinant apolarity.** This paper determines the ordinary apolar
+ideal of the generic symmetric determinant in every size over a field of
+odd characteristic. It gives explicit additional generators, the Hilbert
+series, and the exact weak and strong Lefschetz thresholds.
 
-The orthogonal-frame paper gives defining equations, normality and depth
-results for a triangular family of principal components, and counterexamples
-to rationality at the prime threshold. It also classifies the generic
-transverse cones in the stated parameter range.
+**Orthogonal frame varieties.** This paper gives defining equations,
+normality and depth results for a triangular family of principal components,
+and counterexamples to rationality at the prime threshold. It also classifies
+the generic transverse cones in the stated parameter range.
 
-The symmetric-determinant paper determines the ordinary apolar ideal in odd
-characteristic, its Hilbert series, and the weak and strong Lefschetz thresholds.
+**Sensitive monotone bounds in VP.** This paper establishes strongly
+exponential sensitive lower bounds for monotone arithmetic circuits, for
+explicit targets that have small general arithmetic circuits. Its
+consequences concern monotone approximation and counting.
 
-The elementary-symmetric paper determines derivative and multiplicity loci,
-including their characteristic-dependent dimensions, generic multiplicities,
-and translation stabilizers.
+**Elementary-symmetric derivative and multiplicity loci.** This paper
+determines derivative and multiplicity loci in positive characteristic,
+including their dimensions, components attaining the larger dimension,
+generic multiplicities, and translation stabilizers.
+
+**Three-by-four permanents.** This paper characterizes exactly which odd
+characteristics give an F-pure quotient by the maximal permanents of a generic
+three-by-four matrix, using an explicit Frobenius coefficient calculation.
+
+**Prime-size permanents.** This paper gives a Frobenius-splitting argument
+for maximal near-square permanents at prime sizes, with consequences for
+reducedness, singular codimension, and strength. The arbitrary-size paper
+extends its principal dimension and reducedness conclusions by a separate
+geometric method.
+
+Each manuscript states its hypotheses, proofs, and limitations. These
+results do not establish an unrestricted circuit separation, VP versus VNP,
+or P versus NP.
 
 ## Reproduce the finite checks
 
@@ -59,17 +79,6 @@ Use Python 3.11 and run the commands below from the repository root.
 The suites listed below have archived results. The verifiers check file hashes,
 run the code in temporary copies, and compare the new results with those
 records without overwriting them.
-
-### Sensitive monotone bounds in VP
-
-```sh
-python -m pip install -r papers/sensitive-monotone-vp/anc/requirements.txt
-python scripts/verify_sensitive_monotone.py
-```
-
-The seven checks cover counting, conditioning, spectral estimates, and the
-shared-gate coefficient argument. See the [reproduction guide](papers/sensitive-monotone-vp/README.md#verification)
-and [recorded results](papers/sensitive-monotone-vp/anc/RUN_CHECKS.json).
 
 ### Permanental dimensions in arbitrary size
 
@@ -82,18 +91,39 @@ equalities for sizes two through five and 87,376 coordinate-support pairs for
 sizes two through eight. See the [reproduction guide](papers/all-size-permanents/README.md#reproduce-the-checks)
 and [recorded results](papers/all-size-permanents/anc/verification_results.json).
 
-### Orthogonal frames and symmetric-determinant apolarity
+### Symmetric-determinant apolarity
+
+```sh
+python scripts/verify_paper_code.py symmetric-determinant-apolarity
+```
+
+Only the Python standard library is required. The checker covers exact
+derivative ranks, Hilbert functions, generator spans, and Lefschetz maps.
+See the [code guide](papers/symmetric-determinant-apolarity/anc/README.md)
+for scope and provenance.
+
+### Orthogonal frame varieties
 
 ```sh
 python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
-python scripts/verify_paper_code.py
+python scripts/verify_paper_code.py orthogonal-frame-varieties
 ```
 
-This runs the five orthogonal-frame programs and the symmetric-determinant
-checker against their archived exact results. The latter requires only the
-Python standard library. See the [orthogonal-frame code guide](papers/orthogonal-frame-varieties/anc/README.md)
-and [apolarity code guide](papers/symmetric-determinant-apolarity/anc/README.md)
+The five programs check Veronese and Gale equations, Hilbert-series
+calculations, transverse chart identities, and threshold parameters.
+See the [code guide](papers/orthogonal-frame-varieties/anc/README.md)
 for scope and provenance.
+
+### Sensitive monotone bounds in VP
+
+```sh
+python -m pip install -r papers/sensitive-monotone-vp/anc/requirements.txt
+python scripts/verify_sensitive_monotone.py
+```
+
+The seven checks cover counting, conditioning, spectral estimates, and the
+shared-gate coefficient argument. See the [reproduction guide](papers/sensitive-monotone-vp/README.md#verification)
+and [recorded results](papers/sensitive-monotone-vp/anc/RUN_CHECKS.json).
 
 ### Elementary-symmetric derivative and multiplicity loci
 
@@ -132,16 +162,19 @@ and [recorded results](papers/prime-size-permanents/anc/verification_results.jso
 ### Run all available check suites
 
 ```sh
+python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
 python -m pip install -r papers/sensitive-monotone-vp/anc/requirements.txt
 python -m pip install -r papers/elementary-symmetric-loci/anc/requirements.txt
+python scripts/verify_permanents.py all-size-permanents
+python scripts/verify_paper_code.py symmetric-determinant-apolarity
+python scripts/verify_paper_code.py orthogonal-frame-varieties
 python scripts/verify_sensitive_monotone.py
-python scripts/verify_permanents.py
 python scripts/verify_elementary_symmetric.py
-python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
-python scripts/verify_paper_code.py
+python scripts/verify_permanents.py three-by-four-permanents
+python scripts/verify_permanents.py prime-size-permanents
 ```
 
-The permanent command runs all three permanent suites. GitHub Actions runs the
+GitHub Actions runs the
 [sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml),
 the [permanent checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml),
 and the [elementary symmetric checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/elementary-symmetric-checks.yml)
@@ -155,15 +188,6 @@ prove the asymptotic theorems or establish independent peer review or novelty.
 Please cite the individual paper whose results or code you use. Each has a
 separate citation below and its own machine-readable citation file.
 
-### Sensitive monotone bounds in VP
-
-> Ying Xie. *Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian
-> Conditioning*. Zenodo, 2026. https://doi.org/10.5281/zenodo.22783087.
-
-[Citation metadata](papers/sensitive-monotone-vp/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22783087)
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22783087.svg)](https://doi.org/10.5281/zenodo.22783087)
-
 ### Permanental dimensions in arbitrary size
 
 > Ying Xie. *Dimensions of permanental varieties in arbitrary size*.
@@ -173,6 +197,13 @@ separate citation below and its own machine-readable citation file.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22901136.svg)](https://doi.org/10.5281/zenodo.22901136)
 
+### Symmetric-determinant apolarity
+
+> Ying Xie. *Symmetric-determinant apolarity in odd characteristic*.
+> Zenodo, 2026. https://zenodo.org/records/22950380.
+
+[Citation metadata](papers/symmetric-determinant-apolarity/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22950380)
+
 ### Orthogonal frame varieties
 
 > Ying Xie. *Principal components and singularities of orthogonal frame varieties*.
@@ -180,12 +211,14 @@ separate citation below and its own machine-readable citation file.
 
 [Citation metadata](papers/orthogonal-frame-varieties/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22985617)
 
-### Symmetric-determinant apolarity
+### Sensitive monotone bounds in VP
 
-> Ying Xie. *Symmetric-determinant apolarity in odd characteristic*.
-> Zenodo, 2026. https://zenodo.org/records/22950380.
+> Ying Xie. *Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian
+> Conditioning*. Zenodo, 2026. https://doi.org/10.5281/zenodo.22783087.
 
-[Citation metadata](papers/symmetric-determinant-apolarity/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22950380)
+[Citation metadata](papers/sensitive-monotone-vp/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22783087)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22783087.svg)](https://doi.org/10.5281/zenodo.22783087)
 
 ### Elementary-symmetric derivative and multiplicity loci
 
@@ -239,10 +272,10 @@ Manuscript-specific license notices are listed separately:
 
 | Paper | Manuscript license information |
 | --- | --- |
-| Sensitive monotone bounds in VP | [CC BY 4.0 notice](papers/sensitive-monotone-vp/LICENSE.md), consistent with its Zenodo record. |
 | Permanental dimensions in arbitrary size | [CC BY 4.0 notice](papers/all-size-permanents/LICENSE.md), consistent with its Zenodo record. |
-| Orthogonal frame varieties | Consult the [Zenodo record](https://zenodo.org/records/22985617) for manuscript license information. |
 | Symmetric-determinant apolarity | Consult the [Zenodo record](https://zenodo.org/records/22950380) for manuscript license information. |
+| Orthogonal frame varieties | Consult the [Zenodo record](https://zenodo.org/records/22985617) for manuscript license information. |
+| Sensitive monotone bounds in VP | [CC BY 4.0 notice](papers/sensitive-monotone-vp/LICENSE.md), consistent with its Zenodo record. |
 | Elementary-symmetric derivative and multiplicity loci | [CC BY 4.0 notice](papers/elementary-symmetric-loci/LICENSE.md), consistent with its Zenodo record. |
 | Three-by-four permanents | [CC BY 4.0 notice](papers/three-by-four-permanents/LICENSE.md), consistent with its Zenodo record. |
 | Prime-size permanents | [CC BY 4.0 notice](papers/prime-size-permanents/LICENSE.md), consistent with its Zenodo record. |

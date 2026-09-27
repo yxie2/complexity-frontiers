@@ -13,19 +13,6 @@ url: https://github.com/yxie2/complexity-frontiers
 license: MIT
 references:
 - type: article
-  authors:
-  - family-names: Xie
-    given-names: Ying
-    affiliation: Kennesaw State University
-    orcid: https://orcid.org/0000-0002-8661-8877
-  title: Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning
-  year: 2026
-  doi: 10.5281/zenodo.22783087
-  url: https://doi.org/10.5281/zenodo.22783087
-  publisher:
-    name: Zenodo
-  notes: Preprint.
-- type: article
   title: Dimensions of permanental varieties in arbitrary size
   authors:
   - family-names: Xie
@@ -37,6 +24,19 @@ references:
   doi: 10.5281/zenodo.22901136
   url: https://doi.org/10.5281/zenodo.22901136
   date-published: '2026-09-22'
+  publisher:
+    name: Zenodo
+  notes: Preprint; not peer reviewed.
+- type: article
+  title: Symmetric-determinant apolarity in odd characteristic
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+  year: 2026
+  url: https://zenodo.org/records/22950380
   publisher:
     name: Zenodo
   notes: Preprint; not peer reviewed.
@@ -54,18 +54,18 @@ references:
     name: Zenodo
   notes: Preprint; not peer reviewed.
 - type: article
-  title: Symmetric-determinant apolarity in odd characteristic
   authors:
   - family-names: Xie
     given-names: Ying
     affiliation: Kennesaw State University
-    email: yxie2@kennesaw.edu
     orcid: https://orcid.org/0000-0002-8661-8877
+  title: Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning
   year: 2026
-  url: https://zenodo.org/records/22950380
+  doi: 10.5281/zenodo.22783087
+  url: https://doi.org/10.5281/zenodo.22783087
   publisher:
     name: Zenodo
-  notes: Preprint; not peer reviewed.
+  notes: Preprint.
 - type: article
   title: Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic
   authors:
