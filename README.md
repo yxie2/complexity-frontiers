@@ -5,6 +5,12 @@
 Research papers and reproducible code on circuit lower bounds, proof complexity,
 and algebraic geometry, motivated by P versus NP and VP versus VNP.
 
+**Purpose.** The goal of this repository is to help the research community make
+progress on difficult problems in algebra and computational complexity. By
+openly sharing draft arguments and reproducible computations, it aims to help
+researchers check results, identify and correct gaps, and build on useful ideas
+together.
+
 **Draft status.** The papers in this repository are research drafts and have not
 undergone peer review. Scrutiny from mathematicians and other researchers is
 warmly welcomed. Please report suspected errors, gaps in proofs, unclear
