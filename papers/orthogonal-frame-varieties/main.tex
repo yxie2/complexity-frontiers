@@ -1,0 +1,1423 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,microtype}
+\usepackage[hidelinks]{hyperref}
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=15\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\hypersetup{pdftitle={Principal components and singularities of orthogonal frame varieties},
+pdfauthor={Ying Xie},pdfsubject={Commutative algebra and algebraic geometry},
+pdfkeywords={orthogonal frames, defining ideals, canonical modules, linkage, rational singularities},
+pdfcreator={},pdfproducer={},pdfstartview={}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\OGr}{OGr}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Tot}{Tot}
+\DeclareMathOperator{\depth}{depth}
+\DeclareMathOperator{\pd}{pd}
+\DeclareMathOperator{\reg}{reg}
+\DeclareMathOperator{\indeg}{indeg}
+\DeclareMathOperator{\codim}{codim}
+\newcommand{\kk}{K}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\UU}{\mathcal U}
+\newcommand{\XX}{\mathsf X}
+\newcommand{\II}{\mathsf I}
+\newcommand{\Dpr}{D_{\mathrm{prime}}}
+\newcommand{\DCI}{D_{\mathrm{CI}}}
+\newcommand{\DUFD}{D_{\mathrm{UFD}}}
+\newcommand{\T}{\mathsf T}
+\newcommand{\Schur}{\mathbf S}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+\setlength{\emergencystretch}{1.5em}
+\title{Principal components and singularities\\of orthogonal frame varieties}
+\author{Ying Xie\\[3pt]\small Kennesaw State University\\
+\small\texttt{yxie2@kennesaw.edu}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the defining ideals and singularities of varieties of pairwise
+orthogonal vectors. For $q=\binom{k}{2}$ and $h=q+k$, we determine the
+ideal of the principal component of the variety of $h$ orthogonal vectors
+in dimension $2q$ over $\CC$. Besides the Gram quadrics, the ideal has
+generators in the single degree $q(k+1)$, constructed by Gale duality
+from a Veronese determinant and indexed by two orthogonal-group
+representations. In the first case, six vectors in dimension six, this
+gives fifteen quadrics and $330$ explicit equations of degree twelve.
+In every characteristic different from two, the principal components
+in this family are normal, satisfy $S_k$ but not $S_{k+1}$, and have
+depth one below their dimension. We determine their deficiency modules
+and regularity. We also construct normal, and frequently factorial,
+orthogonal frame varieties at the prime threshold that fail to have
+rational singularities in characteristic zero and fail to be $F$-rational
+in every odd characteristic. The corresponding numbers of columns form
+a set of natural density one half. An exact local chart identifies the
+generic transverse singularities with cones over smooth complete
+intersections of quadrics and gives their classification. These results
+answer the first defining-ideal case and the rationality question posed
+by Casabella and Sammartano, and give normal but non-Cohen--Macaulay
+principal components.
+\end{abstract}
+
+\section{Introduction}
+
+Let $E$ be a nondegenerate quadratic space of dimension $M$ over an
+algebraically closed field $K$ of characteristic different from two.
+For a generic matrix $V=[v_1\ \cdots\ v_h]\in\Mat_{M,h}$, set
+\[
+ S=K[v_{ai}],\qquad
+ \II(M,h)=(\langle v_i,v_j\rangle:1\leq i<j\leq h),\qquad
+ \XX(M,h)=\Spec S/\II(M,h).
+\]
+When $M\geq h$, the closure of the locus on which all column norms are
+nonzero is an irreducible component. We denote it by $C(M,h)$ and call
+it the \emph{principal component}; its prime ideal is $P(M,h)$.
+
+Casabella and Sammartano determine the irreducible components of
+orthogonal frame varieties and the thresholds for complete intersection,
+primality, and normality \cite{CS}. Their Questions 8.1, 8.3, and 8.4 ask,
+respectively, about rational singularities at the prime threshold,
+defining equations of the principal component, and its normality and
+Cohen--Macaulayness. The first unresolved defining-ideal case identified
+there is $(M,h)=(6,6)$.
+
+Our results concern two families adjacent to these thresholds. The first
+lies at a complete-intersection threshold where the full scheme has
+three components. The second lies at a prime threshold. Both are governed
+by the matrix of evaluations of the monomials $z_i z_j$, $i<j$, at a
+collection of points. In the first family its determinant describes the
+boundary of the principal component; in the second its kernel gives
+the transverse quadrics.
+
+\subsection{The principal component}
+
+For the first family fix
+\begin{equation}\label{eq:triangular}
+ k\geq3,\qquad q=\binom{k}{2},\qquad
+ h=q+k=\binom{k+1}{2},\qquad M=2q,
+ \qquad d_0=q(k+1)=h(k-1).
+\end{equation}
+The symbol $d_0$ denotes a degree, not an ambient dimension. Put
+\begin{equation}\label{eq:generator-number}
+ b_k=\prod_{1\leq i<j\leq q}
+       \frac{2(k+1)+2q-i-j}{2q-i-j}.
+\end{equation}
+
+\begin{theorem}\label{thm:ideal-intro}
+Work over $\CC$, with the parameters in \eqref{eq:triangular}.
+The module $P(2q,h)/\II(2q,h)$ is generated by its degree-$d_0$ part,
+which has dimension $2b_k$, and it has no nonzero element of smaller
+degree. Its generators are obtained as follows. Let $G_k$ be the
+Gale-dual Veronese polynomial of Definition~\ref{def:Gale}. As $U$ ranges
+over the maximal-isotropic $q$-dimensional row spaces in $K^{2q}$, the
+polynomials $G_k(UV)$ span two spaces of dimension $b_k$, one for each
+component of $\OGr(q,2q)$. Their images are independent modulo
+$\II(2q,h)$ and minimally generate $P(2q,h)/\II(2q,h)$.
+\end{theorem}
+
+The construction is finite and explicit: one takes coefficients on a
+dense skew-matrix chart in each orthogonal Grassmannian and extracts
+a basis. The first numerical cases are
+\[
+\begin{array}{c|r|r|r|r}
+ k&M&h&d_0&2b_k\\\hline
+ 3&6&6&12&330\\
+ 4&12&10&30&163324304\\
+ 5&20&15&60&9627912669442441500
+\end{array}
+\]
+For $(6,6)$, Section~\ref{sec:six} gives all $330$ equations directly
+as the coefficients of two determinants, without a basis-extraction step.
+
+For the homological statements write
+\begin{equation}\label{eq:homological-notation}
+ L=2qh,\qquad e=\binom h2,\qquad N=L-e,
+ \qquad a_R=2e-L.
+\end{equation}
+All polynomial variables have degree one, and $T(s)_j=T_{j+s}$.
+
+\begin{theorem}\label{thm:depth-intro}
+In every characteristic different from two, $C=C(2q,h)$ is normal
+and satisfies $S_k$ but not $S_{k+1}$. Its non-Cohen--Macaulay locus is
+\[
+ Z=\{V:V^{\mathsf t}BV=0,\ \rank V\leq q-1\},
+\]
+where $B$ is a matrix of the quadratic form. This locus has codimension
+$k+1$ in $C$, and
+\[
+ \depth\OO_{C,x}=\dim\OO_{C,x}-1\qquad(x\in Z).
+\]
+Let $Q_+$ and $Q_-$ be the primes of the two maximal-isotropic
+components, set $J=Q_+\cap Q_-$, and put $A=S/P$ and
+$Z_0=S/(Q_++Q_-)$. Then
+\begin{align*}
+ \Ext^e_S(A,S(-L))&=(J/\II)(a_R),\\
+ \Ext^{e+1}_S(A,S(-L))&=Z_0(a_R),
+\end{align*}
+and all other Ext modules vanish. Consequently
+\[
+ \depth A=N-1,\qquad \pd_S A=e+1,\qquad \reg A=e-1.
+\]
+The last nonzero module in its minimal graded free resolution is
+$S(-2e)$.
+\end{theorem}
+
+Thus the principal components in this family are normal but do not have
+rational singularities in characteristic zero and are not $F$-rational
+in odd characteristic: both properties imply Cohen--Macaulayness.
+The defining-ideal theorem is restricted to characteristic zero because
+its proof uses semisimplicity of the relevant representations. The
+depth and normality assertions have no such restriction.
+
+\subsection{Counterexamples at the prime threshold}
+
+The prime threshold of \cite{CS} is
+\begin{equation}\label{eq:prime-threshold}
+ \Dpr(h)=\min\left\{
+ 2\left\lfloor\frac{2h+1-\sqrt{8h+1}}2\right\rfloor+2,
+ 2\left\lfloor\frac{2h+1-\sqrt{8h-7}}2\right\rfloor+1
+ \right\}.
+\end{equation}
+
+\begin{theorem}\label{thm:negative-intro}
+For $k\geq4$, let
+\begin{equation}\label{eq:bad-range}
+ \binom k2+2\leq h\leq\left\lfloor\frac{k^2}{2}\right\rfloor,
+ \qquad M=2h-2k+1.
+\end{equation}
+Then $M=\Dpr(h)$ and $\XX(M,h)$ is a normal integral complete
+intersection. It does not have rational singularities over $\CC$ and
+is not $F$-rational in any odd characteristic. If $h<k^2/2$, it is
+not log canonical over $\CC$ and is not $F$-pure in any odd
+characteristic. The set of integers $h$ in \eqref{eq:bad-range} has
+natural density $1/2$. The same density is obtained by imposing
+$h-\binom k2\geq4$, in which case the coordinate rings are factorial.
+\end{theorem}
+
+This gives a negative answer to \cite[Question 8.1]{CS}. The first
+example is $\XX(9,8)$. At a generic maximal-isotropic frame it has a
+transverse cone over a smooth elliptic quartic. The next example,
+$\XX(15,12)$, is already not log canonical. The generic transverse
+classification, including the positive cases, is given in
+Theorem~\ref{thm:transverse}. Those positive assertions concern the
+generic point of one stratum, rather than all points of the frame
+variety.
+
+Theorem~\ref{thm:ideal-intro} answers \cite[Question 8.3]{CS} for the
+entire family \eqref{eq:triangular}, including the stated first case.
+Theorem~\ref{thm:depth-intro} gives negative answers to the universal
+Cohen--Macaulay and rationality assertions in Question 8.4 and proves
+normality for the same family. It does not classify principal components
+for arbitrary $(M,h)$.
+
+\section{Components, canonical modules, and a local chart}\label{sec:prelim}
+
+\subsection{The three-component decomposition}
+
+For the parameters \eqref{eq:triangular}, the component and
+complete-intersection theorems of Casabella--Sammartano
+\cite[Theorems 1 and 5.8]{CS} give
+\begin{equation}\label{eq:three-components}
+ \II=P\cap Q_+\cap Q_-,\qquad
+ \XX(2q,h)=C\cup Y_+\cup Y_-.
+\end{equation}
+Here $Y_\pm$ are the closures of frames spanning maximal isotropic
+$q$-planes of the two types. The ideal $\II$ is a radical complete
+intersection of $e$ quadrics; all three components have dimension
+\begin{equation}\label{eq:dimension-N}
+ N=qh+\frac{q(q-1)}2=L-e.
+\end{equation}
+Indeed, substitution of $8h+1=(2k+1)^2$ into the threshold formulas
+gives $\DCI(h)=2q$ and $\Dpr(h)=2q+1$.
+
+We use the following additional input from
+Hochster--Jeffries--Pandey--Singh \cite[Theorem 7.13]{HJPS}:
+the rings $S/Q_+$, $S/Q_-$, and $Z_0=S/(Q_++Q_-)$ are
+Cohen--Macaulay domains, and
+\begin{equation}\label{eq:intersection}
+ Q_++Q_-=(V^{\mathsf t}BV)+I_q(V),\qquad
+ \dim Z_0=N-k-1.
+\end{equation}
+The parentheses in \eqref{eq:intersection} denote all Gram entries,
+including the diagonal; $I_q(V)$ denotes the ideal of $q$-minors.
+Thus $\Spec Z_0$ is the rank-at-most-$(q-1)$ isotropic locus.
+
+Canonical modules and graded local duality are used with the conventions
+of \cite{BH}. In particular, for an equidimensional quotient $D$ of
+$S$ of codimension $e$, we write
+$\omega_D=\Ext^e_S(D,S(-L))$, without requiring $D$ to be
+Cohen--Macaulay. With $R=S/\II$, one has $\omega_R=R(a_R)$.
+
+\begin{lemma}\label{lem:linkage-canonical}
+Let $J=Q_+\cap Q_-$. There are graded isomorphisms
+\begin{equation}\label{eq:canonical-linkage}
+ \omega_{S/J}=\omega_{S/Q_+}\oplus\omega_{S/Q_-},\qquad
+ P/\II=\omega_{S/J}(-a_R).
+\end{equation}
+In particular $P/\II$ is a Cohen--Macaulay $S$-module of dimension $N$.
+\end{lemma}
+
+\begin{proof}
+Apply $\Ext_S^\bullet(-,S(-L))$ to
+\begin{equation}\label{eq:union}
+ 0\longrightarrow S/J\longrightarrow
+ S/Q_+\oplus S/Q_-\longrightarrow Z_0\longrightarrow0.
+\end{equation}
+The codimension of $Z_0$ in $S$ is $e+k+1$, so its Ext modules
+vanish in degrees $e$ and $e+1$. This proves the first isomorphism.
+The radical decomposition gives $\II:J=P$. Change of rings for the
+complete intersection yields
+\[
+ \omega_{S/J}=\Hom_R(S/J,\omega_R)=(P/\II)(a_R).
+\]
+This is the canonical-module form of complete-intersection linkage
+\cite{PS}. Each summand in the first isomorphism is Cohen--Macaulay
+of dimension $N$, proving the last assertion.
+\end{proof}
+
+\subsection{An exact chart at an isotropic frame}
+
+The next chart will be used in both families. Write a split quadratic
+space as $K^q\oplus K^q\oplus K^m$ with pairing
+\[
+ \langle(u,v,z),(u',v',z')\rangle
+ =u^{\mathsf t}v'+v^{\mathsf t}u'+z^{\mathsf t}z'.
+\]
+For $m=0$ or $1$, the rank-$q$ isotropic stratum is maximal isotropic.
+
+\begin{lemma}\label{lem:chart}
+Let $h=q+k$ and $M=2q+m$. On a chart meeting the rank-$q$ isotropic
+stratum, the orthogonality equations are, after an invertible change
+of coordinates and elimination of variables,
+\begin{equation}\label{eq:chart}
+ \sum_{a=1}^m z_{ai}z_{aj}
+ -\sum_{r=1}^q\lambda_r y_{ri}y_{rj}=0
+ \qquad(1\leq i<j\leq k).
+\end{equation}
+The coordinates $Y=(y_{ri})$ are unrestricted. In addition there are
+$q^2+\binom q2+mq$ free coordinates, with a $q\times q$ determinant
+inverted. The isotropic stratum in this chart is $\lambda=z=0$.
+\end{lemma}
+
+\begin{proof}
+Choose $q$ independent columns whose projection onto the first summand
+is invertible, and denote this top block by $D$. The orthogonal change
+$\diag(D^{-1},D^{\mathsf t},I_m)$ makes it the identity and retains
+the entries of $D$ as independent chart coordinates. Write the columns
+in blocks
+\[
+ A=\begin{bmatrix}I_q\\H\\C\end{bmatrix},\qquad
+ B'=\begin{bmatrix}Y\\T\\W\end{bmatrix}.
+\]
+The first set of equations is
+$H+H^{\mathsf t}+C^{\mathsf t}C=\diag(\lambda)$.
+It eliminates the symmetric part of $H$. The equations
+$A^{\mathsf t}BB'=0$ for the ambient form, equivalently the pairings
+between columns of $A$ and $B'$, give
+$T=-H^{\mathsf t}Y-C^{\mathsf t}W$.
+With $z=W-CY$, direct substitution in the Gram matrix of $B'$ gives
+\[
+ (B')^{\mathsf t}BB'=z^{\mathsf t}z-Y^{\mathsf t}\diag(\lambda)Y.
+\]
+Its off-diagonal entries are \eqref{eq:chart}. The changes used are
+invertible on the chosen chart, so this describes the local scheme,
+including its transverse parameters. If $\lambda=0$, the columns of
+$A$ are isotropic; $z=0$ says that the remaining columns belong to
+their span. This proves the last assertion.
+\end{proof}
+
+For a $q\times k$ matrix $Y$, define its hollow-quadratic evaluation
+matrix by
+\begin{equation}\label{eq:E}
+ E(Y)_{(ij),r}=y_{ri}y_{rj},\qquad i<j.
+\end{equation}
+It has $\binom k2$ rows and $q$ columns. The case $m=0$ of
+\eqref{eq:chart} is $E(Y)\lambda=0$; when $m=1$, it is
+$E(Y)\lambda=(z_i z_j)_{i<j}$.
+
+\section{The defining ideal in the triangular family}\label{sec:ideal}
+
+Throughout this section the field is $\CC$ and the parameters are
+\eqref{eq:triangular}. Use the split form
+$B=\left[\begin{smallmatrix}0&I_q\\I_q&0\end{smallmatrix}\right]$.
+
+\subsection{The Gale-dual Veronese polynomial}
+
+Let $\nu_2$ list the $h=\binom{k+1}{2}$ quadratic monomials in $k$
+variables, in a fixed order. For an $h\times k$ matrix $K_0$ with
+rows $\kappa_i$, put
+\begin{equation}\label{eq:Psi}
+ \Psi_k(K_0)=\det[\nu_2(\kappa_i)]_{i=1}^h.
+\end{equation}
+The vectors in the determinant may be taken as columns; an overall
+sign from the ordering will be immaterial. Since
+$\det\Sym^2(g)=\det(g)^{k+1}$,
+\begin{equation}\label{eq:Psi-character}
+ \Psi_k(K_0g)=\det(g)^{k+1}\Psi_k(K_0).
+\end{equation}
+The first fundamental theorem for $\SL_k$ expresses this polynomial
+in the maximal minors of $K_0$; see the invariant-theoretic discussion
+in \cite{HJPS}. Its degree in these minors is $k+1$.
+
+\begin{definition}\label{def:Gale}
+Apply the complementary-minor identification between the Pl\"ucker
+coordinate rings of $\Gr(k,h)$ and $\Gr(q,h)$ to \eqref{eq:Psi}.
+Evaluating the resulting brackets on a $q\times h$ matrix $Z$ gives
+the \emph{Gale-dual Veronese polynomial} $G_k(Z)$.
+\end{definition}
+
+The definition is independent of a chosen bracket expression: the
+complementary-minor map respects the Pl\"ucker relations. Fixing volume
+forms fixes its overall sign. It gives a polynomial of degree $d_0$ with
+\begin{equation}\label{eq:G-character}
+ G_k(gZ)=\det(g)^{k+1}G_k(Z).
+\end{equation}
+It vanishes on matrices of rank less than $q$.
+
+\begin{lemma}\label{lem:G-chart}
+On the chart $Z=A[I_q\mid Y]$, with $A$ invertible,
+\begin{equation}\label{eq:G-chart}
+ G_k(Z)=\det(A)^{k+1}\det E(Y),
+\end{equation}
+after fixing the sign in Definition~\ref{def:Gale}. In particular
+$G_k$ is nonzero.
+\end{lemma}
+
+\begin{proof}
+A basis matrix for the kernel of $[I_q\mid Y]$ is
+$[-Y^{\mathsf t}\mid I_k]^{\mathsf t}=[-Y;I_k]$.
+In its Veronese determinant the last $k$ rows evaluate the squares at
+the coordinate points. Eliminating the square columns leaves the
+matrix of the mixed monomials on the first $q$ rows, namely $E(Y)$
+up to transpose and sign. Equation~\eqref{eq:G-character} gives the
+factor $\det(A)^{k+1}$. If the rows of $Y$ are the vectors
+$e_i+e_j$, one for each pair $i<j$, then $E(Y)$ is a permutation
+matrix. This proves nonvanishing.
+\end{proof}
+
+\begin{proposition}\label{prop:equations}
+For every rank-$q$ matrix $U$ satisfying $UB^{-1}U^{\mathsf t}=0$,
+the polynomial $G_k(UV)$ belongs to $P$.
+\end{proposition}
+
+\begin{proof}
+Complete $U$ to hyperbolic coordinates. In these coordinates write
+$V=[Z^{\mathsf t}\ W^{\mathsf t}]^{\mathsf t}$ with $Z=UV$.
+On the dense open subset defining the principal component,
+\[
+ D=V^{\mathsf t}BV=Z^{\mathsf t}W+W^{\mathsf t}Z
+\]
+is invertible and diagonal. If $\rank Z=q$, let $K_0$ be a basis
+matrix for $\ker Z$. Then $K_0^{\mathsf t}DK_0=0$ gives a linear
+relation among the $h$ vectors $\nu_2(\kappa_i)$, with nonzero
+coefficients $D_{ii}$. Hence $\Psi_k(K_0)=0$, and complementary
+minors give $G_k(Z)=0$. If $\rank Z<q$, the same vanishing follows
+from the bracket definition. Taking closures proves the assertion.
+\end{proof}
+
+\subsection{Canonical generators of the isotropic components}
+
+Let $X_\pm=\OGr(q,2q)^\pm$ and let $\UU$ be the tautological
+rank-$q$ bundle on either component. There is a proper birational map
+\begin{equation}\label{eq:isotropic-resolution}
+ \pi:\Tot(\UU\otimes(\CC^h)^*)\longrightarrow Y_\pm.
+\end{equation}
+It is an isomorphism over the rank-$q$ locus. The rank-at-most-$(q-1)$
+locus in the total space has codimension $h-q+1=k+1$; its image has
+the same codimension by \eqref{eq:intersection}. Since $Y_\pm$ is
+Cohen--Macaulay and smooth on the rank-$q$ locus, it is normal.
+The complement of this common open set has codimension at least two
+on both sides of \eqref{eq:isotropic-resolution}. Extension of
+functions and of sections of reflexive canonical sheaves therefore gives
+\begin{equation}\label{eq:Hartogs}
+ \CC[Y_\pm]=\Gamma(\Tot(\UU\otimes(\CC^h)^*),\OO),\qquad
+ \omega_{\CC[Y_\pm]}=
+ \Gamma(\Tot(\UU\otimes(\CC^h)^*),\omega).
+\end{equation}
+No rational-singularity assertion is needed for this step.
+
+The tangent bundle of $X_\pm$ is $\bigwedge^2\UU^*$, so
+\begin{equation}\label{eq:canonical-total}
+ \omega_{X_\pm}=(\det\UU)^{q-1},\qquad
+ \omega_{\Tot(\UU\otimes(\CC^h)^*)}
+ =\pi^*(\det\UU^*)^{k+1}.
+\end{equation}
+For the grading there is also a shift by the fiber dimension $qh$:
+the differential of each fiber coordinate has degree one. Thus, with
+$A_\pm=S/Q_\pm$ and $a=k+1$,
+\begin{align}
+ (A_\pm)_m&=H^0(X_\pm,\Sym^m(\UU^*\otimes\CC^h)),\label{eq:sections-ring}\\
+ (\omega_{A_\pm})_{m+qh}
+ &=H^0(X_\pm,\Sym^m(\UU^*\otimes\CC^h)\otimes(\det\UU^*)^a),
+ \quad m\geq0.\label{eq:sections-canonical}
+\end{align}
+There are no canonical sections in degrees below $qh$.
+
+For a partition $\lambda$ of $m$ of length at most $q$, the Cauchy
+decomposition and the dominant-weight Borel--Weil formula give
+\begin{align}
+ (A_\pm)_m
+ &=\bigoplus_{\lambda\vdash m}\Schur_\lambda\CC^h\otimes V_{\lambda,\pm},
+ \label{eq:BW-ring}\\
+ (\omega_{A_\pm})_{m+qh}
+ &=\bigoplus_{\lambda\vdash m}\Schur_\lambda\CC^h
+        \otimes V_{\lambda+(a^q),\pm}.\label{eq:BW-canonical}
+\end{align}
+Here the type-$D_q$ weights are
+$(\lambda_1,\ldots,\lambda_q)$ and
+$(\lambda_1,\ldots,\lambda_{q-1},-\lambda_q)$ on the two components,
+with the same sign convention after the shift. The last-coordinate
+convention can interchange the labels $+$ and $-$, which has no effect
+on the arguments. The homogeneous-bundle formulas and the spinor
+line-bundle convention are reviewed in \cite[Sections 2.2, 3.3, and 4.1]{SW}.
+All the displayed weights are dominant. The formulas apply to each
+Cauchy summand and do not impose an upper bound on the number $h$ of
+frame columns.
+
+\begin{lemma}\label{lem:canonical-generators}
+The module $\omega_{A_\pm}$ is generated in degree $qh$, by $b_k$
+elements.
+\end{lemma}
+
+\begin{proof}
+Multiply sections in \eqref{eq:BW-ring} by
+$H^0(X_\pm,(\det\UU^*)^a)$. On the orthogonal-group factor for a
+fixed $\lambda$ this is an equivariant map to the irreducible module
+$V_{\lambda+(a^q),\pm}$. It is nonzero: multiplication of a nonzero
+bundle section by a nonzero scalar section on the integral variety
+$X_\pm$ is nonzero. Hence it is surjective. The $\GL_h$ factors
+separate the different partitions, proving generation in the initial
+degree. The number of generators is
+$\dim H^0(X_\pm,(\det\UU^*)^a)$. In the Weyl dimension formula for
+the weight $(a,\ldots,a)$ the factors from roots $e_i-e_j$ are one,
+whereas the factors from $e_i+e_j$ are
+$(2a+2q-i-j)/(2q-i-j)$. This is \eqref{eq:generator-number}.
+\end{proof}
+
+Lemma~\ref{lem:linkage-canonical} now shows that $P/\II$ is generated
+in degree
+\[
+ qh+a_R=h(k-1)=d_0
+\]
+and that its initial component has dimension $2b_k$.
+
+\subsection{The explicit equations span the generators}
+
+For fixed $V$, the function $U\mapsto G_k(UV)$ transforms by
+$\det(g)^{k+1}$ under a change of row basis $U\mapsto gU$.
+It therefore defines a section of $(\det\UU^*)^{k+1}$ on each
+$X_\pm$. Its coefficient polynomials in $V$ induce equivariant maps
+\begin{equation}\label{eq:coefficient-map}
+ H^0(X_\pm,(\det\UU^*)^{k+1})^*\longrightarrow(P/\II)_{d_0}.
+\end{equation}
+Each source is irreducible of dimension $b_k$. The map is nonzero:
+take $U=[I_q\mid0]$ and $V=[Z^{\mathsf t}\ 0]^{\mathsf t}$, where
+$G_k(Z)=1$ as in Lemma~\ref{lem:G-chart}. All Gram entries of $V$
+vanish, but $G_k(UV)=1$. The orthogonal symmetry interchanging the
+two Grassmannian components supplies the same witness for the other
+map. Thus both maps are injective.
+
+Their images are independent modulo $\II$. Fix a maximal isotropic
+column space $S_0$. Exactly one component of maximal isotropic kernels
+contains planes transverse to $S_0$; every plane in the other component
+meets $S_0$ nontrivially. On the latter component $\rank(U|_{S_0})<q$,
+so $G_k(UV)=0$ for every frame in $S_0$. As $S_0$ ranges through its
+entire Grassmannian component, this says that one coefficient module
+vanishes on the corresponding $Y_\pm$. The other has a nonzero
+restriction there, by the preceding witness. Restriction to the whole
+$Y_\pm$ is $\SO_{2q}$-equivariant, so irreducibility makes that
+restriction injective. Interchanging the two types proves independence.
+The two modules consequently fill the $2b_k$-dimensional initial
+component of $P/\II$, completing the proof of
+Theorem~\ref{thm:ideal-intro}.
+
+\begin{remark}
+The use of the whole isotropic frame component in this argument is
+essential: restriction to frames in one fixed plane is not equivariant
+for the full orthogonal group. The generation statement follows from
+canonical modules, rather than from a finite calculation of equations
+that happen to vanish on orthogonal frames.
+\end{remark}
+
+\section{The six-by-six ideal}\label{sec:six}
+
+For $a=(a_1,a_2,a_3)$, let
+\[
+ A(a)=\begin{bmatrix}
+ 0&-a_3&a_2\\a_3&0&-a_1\\-a_2&a_1&0
+ \end{bmatrix},\qquad
+ \nu(z)=(z_1^2,z_2^2,z_3^2,z_1z_2,z_1z_3,z_2z_3)^{\mathsf t}.
+\]
+Use the split form $B=\left[\begin{smallmatrix}0&I_3\\I_3&0\end{smallmatrix}\right]$.
+For a $6\times6$ matrix $V=[v_1\ \cdots\ v_6]$, define
+\begin{align}
+ F_+(a,V)&=\det[\nu([I_3\mid A(a)]v_i)]_{i=1}^6,\label{eq:sixplus}\\
+ F_-(a,V)&=\det[\nu([A(a)\mid I_3]v_i)]_{i=1}^6.\label{eq:sixminus}
+\end{align}
+
+\begin{theorem}\label{thm:six-explicit}
+Each polynomial $F_\pm$ has degree at most eight in $a$. Write
+\[
+ F_\pm(a,V)=\sum_{|\alpha|\leq8}a^\alpha f_{\pm,\alpha}(V).
+\]
+Then $P(6,6)$ is minimally generated by the fifteen off-diagonal Gram
+quadrics and the $330$ polynomials $f_{\pm,\alpha}$, each of degree twelve.
+\end{theorem}
+
+\begin{proof}
+First, the polynomials vanish on the principal component. On an
+orthogonal basis let $D=V^{\mathsf t}BV$; then
+$VD^{-1}V^{\mathsf t}=B^{-1}$. For either isotropic matrix $U$ in
+\eqref{eq:sixplus}--\eqref{eq:sixminus}, this gives
+\[
+ \sum_i D_{ii}^{-1}(Uv_i)(Uv_i)^{\mathsf t}=0.
+\]
+The six Veronese columns are therefore dependent.
+
+To check the parameter degree, homogenize the first matrix to
+$[a_0I_3\mid A(a)]$. The determinant is homogeneous of degree twelve
+in $(a_0,a)$. Over $\CC(a_1,a_2,a_3)$, choose an invertible row change
+that makes the third row of $A(a)$ zero. The third output coordinate
+is then divisible by $a_0$, so the rows corresponding to
+$z_3^2,z_1z_3,z_2z_3$ contribute a factor $a_0^4$. The determinant
+of the row change on quadratic coordinates is the fourth power of
+its determinant and does not involve $a_0$. Divisibility by $a_0^4$
+over the fraction field implies divisibility in the polynomial ring.
+Dehomogenizing proves the degree bound. The other family is obtained
+by interchanging the two coordinate blocks. There are
+$\binom{11}{3}=165$ possible coefficients in each family.
+
+For independence, set
+\[
+ Z=\begin{bmatrix}
+ 1&0&0&1&1&0\\0&1&0&1&0&1\\0&0&1&0&1&1
+ \end{bmatrix},\qquad
+ V_+(t)=\begin{bmatrix}Z\\A(t)Z\end{bmatrix},\qquad
+ V_-(t)=\begin{bmatrix}A(t)Z\\Z\end{bmatrix}.
+\]
+These are isotropic frames, and the Veronese determinant of $Z$ is
+one. The identity
+$A(a)A(t)=ta^{\mathsf t}-(a\cdot t)I_3$ gives
+$\det(I_3+A(a)A(t))=(1-a\cdot t)^2$. Since
+$\det\Sym^2(g)=\det(g)^4$, one obtains
+\begin{align*}
+ F_+(a,V_+(t))&=(1-a\cdot t)^8,&F_-(a,V_+(t))&=0,\\
+ F_-(a,V_-(t))&=(1-a\cdot t)^8,&F_+(a,V_-(t))&=0.
+\end{align*}
+The zero entries follow from $\rank(A(a)+A(t))\leq2$.
+For $|\alpha|\leq8$, the coefficient of $a^\alpha$ in the nonzero
+expression is
+\[
+ (-1)^{|\alpha|}\frac{8!}{(8-|\alpha|)!\alpha_1!\alpha_2!\alpha_3!}
+ t^\alpha.
+\]
+These are nonzero multiples of distinct monomials over $\CC$.
+Evaluation on the two frame families proves that all $330$ classes
+are independent modulo $\II(6,6)$. Theorem~\ref{thm:ideal-intro}
+gives $d_0=12$ and $2b_3=330$, so they form the entire initial
+generating space. This proves the assertion and minimality.
+\end{proof}
+
+\subsection{Hilbert series and the real vanishing ideal}
+
+The canonical-module calculation is particularly concrete here.
+One component of $\OGr(3,6)$ is $\PP^3$: identify the quadratic
+space with $\bigwedge^2\CC^4$ and parameterize its maximal isotropic
+planes by lines in $\CC^4$. If $\mathcal Q$ is the quotient bundle,
+then $\UU=\OO(-1)\otimes\mathcal Q$ and $\det\UU=\OO(-2)$.
+The total-space canonical bundle in \eqref{eq:canonical-total} is
+the pullback of $\OO(8)$, with fiber-degree shift eighteen. This
+also gives $h^0(\PP^3,\OO(8))=165$ canonical generators on each
+isotropic component.
+
+\begin{corollary}\label{cor:Hilbert}
+Over $\CC$, the Hilbert series of an isotropic component ring $A_\pm$
+and of the principal component ring $A=S/P(6,6)$ are
+\begin{align*}
+ H_{A_\pm}(t)&=\frac{1+15t+99t^2+165t^3}{(1-t)^{21}},\\
+ H_A(t)&=\frac{(1+t)^{15}-2t^{12}(165+99t+15t^2+t^3)}{(1-t)^{21}}.
+\end{align*}
+In particular, $\deg C(6,6)=32208$.
+\end{corollary}
+
+\begin{proof}
+The initial canonical degree is eighteen, so the Cohen--Macaulay ring
+$A_\pm$ has $a$-invariant $-18$ and regularity $21-18=3$. Its
+Hilbert numerator therefore has degree three. For completeness, on
+$\PP^3$ the summands in degree $m$ have dimensions
+\[
+ \dim\Schur_\lambda\CC^6\cdot
+ \dim\Schur_{(m,\lambda_1,\lambda_2,\lambda_3)}\CC^4,
+ \qquad\lambda\vdash m,\quad\ell(\lambda)\leq3.
+\]
+The Weyl dimension formula in degrees zero through three gives
+$1,36,645,7480$, respectively. Multiplication by $(1-t)^{21}$ gives
+the first numerator. Canonical duality reverses that numerator, with
+the canonical degree shift eighteen. Lemma~\ref{lem:linkage-canonical}
+then places the two reversed numerators in degree twelve inside
+$R$, whose Hilbert series is $(1+t)^{15}/(1-t)^{21}$. Subtracting
+gives the second formula. Its numerator at one is
+$2^{15}-2(165+99+15+1)=32208$.
+\end{proof}
+
+\begin{corollary}\label{cor:real}
+For the positive definite real quadratic form, the real vanishing ideal
+of pairwise orthogonal $h$-frames in the family \eqref{eq:triangular}
+is the real form of $P(2q,h)$. In particular, Theorem~\ref{thm:six-explicit},
+after a complex linear change of the ambient quadratic coordinates
+and real descent, determines all polynomial equations of orthogonal
+bases of $\RR^6$ and their closure.
+\end{corollary}
+
+\begin{proof}
+The nonzero columns of a real orthogonal frame are independent. Since
+$M\geq h$, any zero columns can be replaced by arbitrarily small
+nonzero vectors in independent orthogonal directions. Thus every real
+frame is a limit of the open locus defining the principal component.
+Conversely, that open real locus is Zariski dense in the complex
+principal component: a standard real orthogonal frame is a smooth
+point, and its real smooth neighborhood has real dimension equal to
+the complex dimension of the component. The analytic identity theorem
+gives the required density. The complex ideal is invariant under
+conjugation and therefore descends to the stated real ideal.
+\end{proof}
+
+\section{Depth, deficiency, and normality}\label{sec:depth}
+
+We return to an arbitrary algebraically closed field of characteristic
+different from two, retaining \eqref{eq:triangular} and
+\eqref{eq:homological-notation}. The arguments in this section do not
+use the characteristic-zero representation decomposition.
+
+\subsection{The deficiency module}
+
+\begin{proposition}\label{prop:Ext}
+For $A=S/P$, the only nonzero Ext modules into $S(-L)$ are
+\begin{equation}\label{eq:Ext}
+ \Ext^e_S(A,S(-L))=(J/\II)(a_R),\qquad
+ \Ext^{e+1}_S(A,S(-L))=Z_0(a_R).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Set $T=P/\II$. Lemma~\ref{lem:linkage-canonical} says that $T$ and
+$R=S/\II$ are Cohen--Macaulay modules of dimension $N$. Apply
+$\Ext_S^\bullet(-,S(-L))$ to
+\[
+ 0\longrightarrow T\longrightarrow R\longrightarrow A\longrightarrow0.
+\]
+Canonical duality on the two Cohen--Macaulay component rings gives
+\begin{equation}\label{eq:dual-sequence}
+ 0\longrightarrow\omega_A\longrightarrow R(a_R)
+ \longrightarrow(A_+\oplus A_-)(a_R)
+ \longrightarrow\Ext^{e+1}_S(A,S(-L))\longrightarrow0,
+\end{equation}
+and all other Ext modules vanish.
+
+After removing the common shift, each component of the middle map
+is a graded $R$-linear map $R\to A_\pm$. Its value on one is a
+scalar. The scalar is nonzero, since at the generic point of $Y_\pm$
+the inclusion $T\to R$ is an isomorphism. Normalize the two canonical
+identifications to make both scalars one. The middle map is then the
+pair of quotient maps. Its kernel is $J/\II$ and its cokernel is
+$Z_0$, by \eqref{eq:union}. This proves \eqref{eq:Ext}.
+\end{proof}
+
+\begin{corollary}\label{cor:local-depth}
+The locus $Z=\Spec Z_0$ is contained in $C$. The ring $A$ is
+Cohen--Macaulay away from $Z$, and at every $x\in Z$ it has local
+depth $\dim\OO_{C,x}-1$. It satisfies $S_k$ but not $S_{k+1}$.
+\end{corollary}
+
+\begin{proof}
+The support of an Ext module is contained in the support of its first
+argument. The second module in \eqref{eq:Ext} therefore proves
+$Z\subset C$. Localize in the regular ring $S$ at a prime lying
+on $C$. If it is not on $Z$, the projective dimension of $A$ there
+is $e$; if it is on $Z$, the nonzero last Ext module makes that
+projective dimension $e+1$. The codimension of the principal prime
+remains $e$ under this localization. Auslander--Buchsbaum gives the
+two asserted depths.
+
+The locus $Z$ has codimension $k+1$ by \eqref{eq:intersection}. Thus
+at points of $Z$ the local dimension is at least $k+1$, so the depth
+is at least $k$. Elsewhere the ring is Cohen--Macaulay. This proves
+$S_k$. At the generic point of $Z$, local dimension is $k+1$ and
+depth is $k$, proving failure of $S_{k+1}$.
+\end{proof}
+
+\begin{proposition}\label{prop:graded-endpoints}
+The global invariants and last free module are
+\[
+ \depth A=N-1,\qquad\pd_S A=e+1,\qquad\reg A=e-1,
+ \qquad F_{e+1}=S(-2e).
+\]
+Moreover, $\depth\omega_A=N-k+1$.
+\end{proposition}
+
+\begin{proof}
+The first two assertions follow from Proposition~\ref{prop:Ext}.
+The module $Z_0(a_R)$ is cyclic, with its generator in degree $-a_R$.
+Dualizing a minimal graded free resolution preserves minimality of
+the differentials. Thus the last free module has rank one. If its
+shift is $j$, its dual into $S(-L)$ has generator degree $L-j$.
+Equation~\eqref{eq:Ext} gives $L-j=-a_R$, hence $j=2e$.
+
+The initial degree of $J/\II$ is two. Indeed, the diagonal norm
+quadrics belong to $J$ and are independent of the off-diagonal
+quadrics by column multidegrees. There are no linear equations on
+the isotropic union: in split coordinates every coordinate matrix
+unit is an isotropic frame. Graded local duality therefore gives
+\[
+ \operatorname{end} H^{N-1}_{\mathfrak m}(A)=a_R,
+ \qquad
+ \operatorname{end} H^N_{\mathfrak m}(A)=a_R-2,
+\]
+and all other local cohomology modules vanish. Since $a_R+N=e$,
+their degree formula for regularity gives $\reg A=e-1$.
+
+From \eqref{eq:union} one has $\depth(S/J)=N-k$.
+The sequence $0\to J/\II\to R\to S/J\to0$ then gives
+$\depth(J/\II)=N-k+1$. Apply the first isomorphism in
+\eqref{eq:Ext} to obtain the last assertion.
+\end{proof}
+
+For $(M,h)=(6,6)$, these formulas give dimension $21$, depth $20$,
+regularity $14$, projective dimension $16$, and last free module
+$S(-30)$. Its canonical module has depth $19$.
+
+\subsection{The boundary determinant}
+
+Corollary~\ref{cor:local-depth} gives $S_2$. To prove normality it
+remains to prove regularity in codimension one.
+
+\begin{lemma}\label{lem:det-irreducible}
+Let $q=\binom k2$, $k\geq3$, and set $D_k(Y)=\det E(Y)$ for a
+$q\times k$ matrix $Y$. Then $D_k$ is irreducible and its generic
+zero has $\rank E(Y)=q-1$. At a general point of $D_k=0$, the
+relation $E(Y)\lambda=0$ has all $\lambda_r\ne0$, and
+\[
+ Y^{\mathsf t}\diag(\lambda)Y=\diag(\mu_1,\ldots,\mu_k)
+ \quad\text{has all }\mu_j\ne0.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $H$ be the $q$-dimensional space spanned by the hollow quadrics
+$x_i x_j$, $i<j$. Define the incidence scheme
+\[
+ \mathcal Z=
+ \{([Q],y_1,\ldots,y_q)\in\PP(H)\times(\mathbb A^k)^q:
+                         Q(y_r)=0\text{ for all }r\}.
+\]
+It is the $q$-fold fiber product of the universal affine quadric
+over $\PP(H)$. To check flatness, put
+$W_m=K[x_1,\ldots,x_k]_m$, with $W_m=0$ for $m<0$.
+Its degree-$m$ coordinate module is the cokernel of multiplication
+by the universal quadric,
+\[
+ \OO_{\PP(H)}(-1)\otimes_K W_{m-2}
+ \longrightarrow \OO_{\PP(H)}\otimes_K W_m.
+\]
+Every fiber map is injective, since its defining quadratic is nonzero.
+The map has constant rank, so its cokernel is locally free. Taking
+the direct sum over $m$ proves flatness of the universal affine
+quadric, and hence of $\mathcal Z$ over $\PP(H)$.
+
+The hollow quadric $x_1x_2+x_1x_3+x_2x_3$ has rank three in every
+characteristic different from two. Thus a general hollow quadric
+has rank at least three and is geometrically integral, as is its
+$q$-fold product. Flatness over the integral base makes the generic
+fiber dense and makes each affine coordinate ring inject into its
+generic-fiber algebra, which is a domain. It follows that
+$\mathcal Z$ is integral.
+
+Projection to $Y$ is proper because the other factor is projective.
+A point is in its image precisely when there is a nonzero hollow
+quadric vanishing at all its rows, or equivalently when
+$\ker E(Y)^{\mathsf t}\ne0$. The image is therefore exactly $D_k=0$,
+which is irreducible as a closed set. The choice $y_r=e_i+e_j$,
+one row for each pair, makes $E(Y)$ the identity. Thus $D_k$ is
+nonzero and is a scalar times a power of an irreducible polynomial.
+
+We show that this power is one. Fix a general integral quadric $Q$,
+with coefficient vector $a\in H$. Evaluations of $H$ on $Q$ span
+$a^\perp$: the only degree-two polynomial in $H$ vanishing on $Q$
+is a scalar multiple of $Q$. Choose $q$ smooth points of $Q$ such
+that every $q-1$ of their evaluation vectors are independent.
+Such tuples form a nonempty open subset of the irreducible product
+$V(Q)^q$, since each of the finitely many independence conditions
+holds on a nonempty open subset. At this tuple, $E$ has rank $q-1$.
+Its left kernel is spanned by $a$, and its right kernel is spanned
+by a vector $\lambda$ with every $\lambda_r\ne0$. Consequently
+\[
+ \operatorname{adj}(E)=\gamma\lambda a^{\mathsf t}
+ \qquad\text{for some }\gamma\ne0.
+\]
+If only the row $y_r$ moves, in the direction $v$, differentiation gives
+\[
+ dD_k(Y)(0,\ldots,v,\ldots,0)
+       =\gamma\lambda_r\,dQ_{y_r}(v).
+\]
+Choose $v$ transverse to $Q$ at $y_r$. The right side is nonzero,
+so $D_k$ is reduced at this point and cannot be a proper power.
+This proves irreducibility as a polynomial and also the generic
+rank and full-support assertions.
+
+For each $j$, the restrictions of $H+\langle x_j^2\rangle$ to $Q$
+have dimension $q$: their only relation is $Q$, and $x_j^2$ is
+not hollow. Evaluation at $q$ general points is an isomorphism
+on this restriction space. The relation $\lambda$ among the hollow
+evaluations therefore does not annihilate $x_j^2$, so
+\[
+ \mu_j=\sum_r\lambda_r y_{rj}^2\ne0.
+\]
+These finitely many evaluation conditions can be imposed together
+with the preceding independence conditions. They give a nonempty
+open subset of $D_k=0$ on which all the stated conclusions hold.
+\end{proof}
+
+\begin{proposition}\label{prop:boundary-R1}
+The principal component is smooth at the generic point of every
+divisor it has in the rank-$q$ isotropic stratum.
+\end{proposition}
+
+\begin{proof}
+Use Lemma~\ref{lem:chart} with $m=0$. The equations are
+$E(Y)\lambda=0$ and the isotropic component is $\lambda=0$.
+At a general point of $D_k=0$, invert a $(q-1)$-minor and eliminate
+$q-1$ of the $\lambda$ coordinates. The remaining equation is
+\[
+ D_k(Y)u=0
+\]
+up to a unit. The branch $u=0$ is isotropic. On the other branch,
+Lemma~\ref{lem:det-irreducible} gives points with $u\ne0$ for which
+all first $q$ norms $\lambda_r$ and all remaining norms $-\mu_j$
+are nonzero. Thus the branch $D_k=0$ is the principal component.
+Where $dD_k\ne0$, it is smooth also at $u=0$, its intersection with
+the isotropic branch.
+
+For completeness, this accounts for every divisor in the indicated
+stratum. If $D_k$ is a unit, the chart has only the isotropic
+component, so no point there belongs to $C$. On the isotropic
+stratum itself, where $\lambda=0$, the possible intersection with
+$C$ is therefore supported on $D_k=0$. The preceding calculation
+places the generic point of this irreducible hypersurface in $C$;
+closedness places its whole closure there. The locus where the
+rank, nonvanishing, or smoothness conditions used above fail is a
+proper closed subset of that hypersurface. Since the hypersurface
+has dimension $N-1$ after adjoining the free chart coordinates,
+the exceptional subset has dimension at most $N-2$. The column
+and Witt charts cover the rank-$q$ isotropic stratum, proving the
+assertion.
+\end{proof}
+
+\subsection{The remaining codimension-one strata}
+
+For a frame let $t$ be the number of columns of nonzero norm and $r$
+the rank of its isotropic columns. For a fixed choice of the $t$
+indices, the stratum has dimension
+\begin{equation}\label{eq:strata}
+ D(t,r)=Mt-\frac{t(t-1)}2
+       +r(M+h-2t-r)-\frac{r(r+1)}2,
+ \quad t+r\leq h,\quad t+2r\leq M.
+\end{equation}
+The first term chooses the nonisotropic orthogonal columns. In their
+nondegenerate orthogonal complement, the orthogonal Grassmannian of
+isotropic $r$-planes has dimension $r(M-t-r)-r(r+1)/2$.
+A spanning $(h-t)$-tuple in the chosen plane contributes $r(h-t)$
+parameters. These choices give \eqref{eq:strata}; every component
+of the stratum has this dimension.
+
+Suppose $k\geq4$, put $x=q-r$, and write $c_x(t)=N-D(t,q-x)$.
+At our parameters,
+\begin{equation}\label{eq:strata-codimension}
+ c_x(t)=\frac{2kx+t^2-4tx-t+3x^2-x}{2}.
+\end{equation}
+The constraints become $0\leq t\leq\min(2x,k+x)$, and
+\[
+ c_x(t+1)-c_x(t)=t-2x.
+\]
+Thus the codimension decreases through the allowed successive values.
+If $1\leq x\leq k$, set $t=2x-s$. Then
+\[
+ c_x(t)=\frac{x(2k-x-3)}2+\frac{s(s+1)}2.
+\]
+The first term is concave in $x$; its endpoint values are $k-2$
+and $k(k-3)/2$, both at least two. None of these strata can
+contribute a divisor.
+
+If $x\geq k$, set $t=k+x-s$ and $r=q-x$. Now
+\[
+ c_x(t)=r+\frac{s(2x-2k+s+1)}2.
+\]
+For $r\geq2$ this is at least two. For $r=1$, the value $s=0$
+gives the codimension-one stratum $t=h-1$, whose frames have
+rank $t+r=h$; if $s\geq1$, the codimension is at least
+$1+q-k\geq3$. For $r=0$, the value $s=0$ is the full-rank open
+stratum, whereas $s\geq1$ gives codimension at least $q-k+1\geq3$.
+Finally, $x=0$ forces $t=0$ and $r=q$, the maximal-isotropic
+stratum treated in Proposition~\ref{prop:boundary-R1}.
+
+A full-column-rank frame is smooth on $\XX$: a relation among the
+Jacobian rows is a hollow symmetric matrix $K_0$ with $VK_0=0$,
+which forces $K_0=0$. This treats all remaining divisors for $k\geq4$.
+
+For $k=3$, one has $q=3$, $h=6$, and $N=21$. Substitution in
+\eqref{eq:strata} gives the complete list of strata with
+$N-D(t,r)\leq1$:
+\begin{center}
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+$t$&$r$&$N-D(t,r)$&$\rank V=t+r$\\
+\midrule
+0&3&0&3\\
+2&2&1&4\\
+4&1&1&5\\
+5&0&1&5\\
+6&0&0&6\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first and last rows have already been treated. In the
+$(4,1)$ and $(5,0)$ cases, $\ker V$ is one-dimensional.
+Every symmetric Jacobian relation has image in this kernel and
+therefore has the form $b uu^{\mathsf t}$ for a generator $u$.
+Some coordinate $u_i$ is nonzero, and the zero diagonal gives
+$b u_i^2=0$, hence $b=0$.
+
+For $(t,r)=(2,2)$, split off the two nonisotropic columns.
+Write the remaining four columns in a basis of their isotropic
+two-plane. For an explicit rank-two coordinate matrix use
+\[
+ [I_2\mid Y],\qquad
+ Y=\begin{bmatrix}1&1\\1&-1\end{bmatrix}.
+\]
+The first two coordinates of any relation among all six columns
+are zero, because the nonisotropic span meets its orthogonal
+complement trivially. The residual kernel has basis matrix
+$W=[-Y;I_2]$, with rows
+\[
+ (-1,-1),\quad(-1,1),\quad(1,0),\quad(0,1).
+\]
+A symmetric relation on the residual four columns has the form
+$WTW^{\mathsf t}$, where
+$T=\left[\begin{smallmatrix}a&b\\b&c\end{smallmatrix}\right]$.
+Its last two diagonal entries force $a=c=0$, and its first
+diagonal entry then forces $2b=0$. Since the characteristic
+is different from two, $T=0$, so there is no nonzero Jacobian
+relation at this frame.
+
+This coordinate matrix can be placed in every isotropic two-plane.
+For each such plane, the spanning four-tuples form an irreducible
+open subset of $\Mat_{2,4}$, and full Jacobian rank is a nonempty
+open condition there. The argument applies to both isotropic-plane
+types in each fixed orthogonal complement. The bad locus has
+positive codimension in every family of spanning four-tuples, so
+it has dimension at most $N-2$ in the stratum. Thus it contributes
+no divisor of $C$.
+
+We have proved $R_1$ in all cases. Together with $S_2$ from
+Corollary~\ref{cor:local-depth}, Serre's criterion proves normality.
+Propositions~\ref{prop:Ext} and \ref{prop:graded-endpoints} now complete
+the proof of Theorem~\ref{thm:depth-intro}.
+
+\section{Generic transverse singularities in odd ambient dimension}\label{sec:transverse}
+
+We now use a different parameter range. Let
+\begin{equation}\label{eq:odd-parameters}
+ k\geq2,\qquad 2\leq c\leq k,\qquad
+ h=\binom k2+c,\qquad q=h-k,\qquad M=2q+1.
+\end{equation}
+Formula~\eqref{eq:prime-threshold} gives $M=\Dpr(h)$.
+Let $S_{\mathrm{iso}}$ be the stratum of frames spanning a maximal
+isotropic $q$-plane. It is irreducible, and its dimension and codimension
+in $\XX(M,h)$ are
+\begin{equation}\label{eq:odd-stratum}
+ \dim S_{\mathrm{iso}}=qh+\frac{q(q+1)}2,
+ \qquad\codim_{\XX(M,h)}S_{\mathrm{iso}}=c.
+\end{equation}
+The latter follows by subtracting from $Mh-\binom h2$.
+
+\begin{theorem}\label{thm:transverse}
+Let $L$ be the function field of $S_{\mathrm{iso}}$, and set
+\[
+ \delta=k-c,\qquad a=2\delta-k=k-2c=k^2-2h.
+\]
+At the generic point of $S_{\mathrm{iso}}$, the local ring of
+$\XX(M,h)$ is
+\begin{equation}\label{eq:transverse-ring}
+ \left(L[z_1,\ldots,z_k]/(Q_1,\ldots,Q_\delta)\right)_{(z)},
+\end{equation}
+where the $Q_i$ are hollow quadrics and their projective intersection
+is geometrically smooth. If $\delta=0$, this local ring is regular.
+For $\delta>0$ the classification is
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Condition & Characteristic zero & Odd characteristic\\
+\midrule
+$a<0$ & rational and canonical & strongly $F$-regular\\
+$a=0$ & log canonical, not rational & $F$-pure, not $F$-rational\\
+$a>0$ & not log canonical & not $F$-pure\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every assertion in this table concerns the generic transverse local ring.
+\end{theorem}
+
+\subsection{Elimination and dominance}
+
+Apply Lemma~\ref{lem:chart} with $m=1$ and write the last row of $z$
+as $(z_1,\ldots,z_k)$. The residual equations are
+\begin{equation}\label{eq:odd-residual}
+ z_i z_j-\sum_{r=1}^q\lambda_r y_{ri}y_{rj}=0,
+ \qquad i<j.
+\end{equation}
+Put $e'=\binom k2$, so $e'-q=\delta$. The matrix $E(Y)$ has
+generic rank $q$: choose its $q$ rows of $Y$ among distinct vectors
+$e_i+e_j$, so its columns are distinct coordinate vectors. At the
+generic point of the stratum, $q$ equations eliminate the $\lambda_r$.
+The remaining quadrics form the kernel of $E(Y)^{\mathsf t}$ in the
+$e'$-dimensional space
+\[
+ H=\langle z_i z_j:i<j\rangle.
+\]
+All chart parameters other than $\lambda,z$ become elements of $L$.
+Consequently this is the exact local presentation
+\eqref{eq:transverse-ring}, not only an associated graded ring.
+
+\begin{lemma}\label{lem:dominance}
+If $\delta>0$, the rational map
+\[
+ \Mat_{q,k}\dashrightarrow\Gr(\delta,H),\qquad
+ Y\longmapsto\ker E(Y)^{\mathsf t}
+\]
+is dominant. A general $\delta$-dimensional subspace of $H$ cuts
+out a geometrically smooth projective complete intersection of
+dimension $c-1$.
+\end{lemma}
+
+\begin{proof}
+We first show that the smooth locus in the indicated Grassmannian
+is nonempty. Choose $\delta$ diagonal quadrics
+$\sum_i b_{ji}z_i^2$ such that every maximal minor of the
+$\delta\times k$ matrix $(b_{ji})$ is nonzero. Vandermonde columns
+over the infinite field supply such a matrix. Any common projective
+zero has at least $\delta+1$ nonzero coordinates; otherwise a
+full-column-rank submatrix of $(b_{ji})$ would annihilate the nonzero
+vector of their squares. The Jacobian therefore has rank $\delta$
+at every common zero, because two is invertible. The intersection
+is a nonempty smooth complete intersection of dimension
+$k-1-\delta=c-1\geq1$.
+
+The Koszul resolution shows that it is connected and has no linear
+equations. Smoothness and connectedness make it integral. It contains
+$k$ linearly independent projective points. Send these points to the
+coordinate points by a projective change of coordinates. The resulting
+quadrics are hollow and still define a smooth complete intersection.
+Smoothness of such an intersection is an open condition on the
+Grassmannian, proving the required nonempty open subset.
+
+Now let $K_0\subset H$ lie in that open subset, and let $T$ be its
+projective zero set. Its degree-two ideal is exactly $K_0$, since
+it is a positive-dimensional complete intersection of those quadrics.
+It follows that the hollow evaluation vectors
+$(z_i z_j)_{i<j}$ at points of $T$ span $K_0^\perp$, a vector space
+of dimension $q$. Choose $q$ points with independent evaluations
+and use representatives as the rows of $Y$. Then $E(Y)$ has rank
+$q$ and $\ker E(Y)^{\mathsf t}=K_0$. The image contains the whole
+nonempty open subset, proving dominance. These arguments also apply
+after algebraically closed extensions, giving geometric smoothness.
+\end{proof}
+
+The quadrics in \eqref{eq:transverse-ring} are consequently a regular
+sequence, and their graded ring is a normal complete intersection
+of dimension $c\geq2$, singular only possibly at the vertex. Its
+$a$-invariant is $2\delta-k=a$.
+
+\subsection{Characteristic zero}
+
+Suppose $\delta>0$, and let $T\subset\PP^{k-1}_L$ be the smooth
+intersection from Lemma~\ref{lem:dominance}. Its cone is resolved by
+blowing up the vertex; the resolution is $\Tot(\OO_T(-1))$.
+Adjunction gives $\omega_T=\OO_T(a)$. If $E$ is the exceptional
+divisor, then $\OO_E(E)=\OO_T(-1)$, and the discrepancy is
+\begin{equation}\label{eq:discrepancy}
+ -a-1.
+\end{equation}
+For example, this follows by restricting
+$(K_{\Tot(\OO_T(-1))}+E)|_E=K_T$ and using that the cone is
+Gorenstein. The resolution has one smooth exceptional divisor.
+Thus the cone is log canonical exactly when $a\leq0$, and canonical
+exactly when $a<0$.
+
+Rationality can be read off directly. Since $T$ is an arithmetically
+Cohen--Macaulay complete intersection, its intermediate cohomology
+$H^i(T,\OO_T(m))$ vanishes for $m\geq0$ and
+$0<i<\dim T$. By Serre duality its top cohomology is
+\[
+ H^{c-1}(T,\OO_T(m))
+   =H^0(T,\OO_T(a-m))^*.
+\]
+All these groups vanish for $m\geq0$ exactly when $a<0$. If
+$a\geq0$, the group at $m=0$ is nonzero. The cohomology of the
+total-space resolution is the direct sum of these groups over
+$m\geq0$, which computes the higher direct images because the
+cone is affine. This proves rationality precisely for $a<0$ and
+establishes the characteristic-zero column of the table.
+
+\subsection{Odd characteristic}
+
+We recall the complete-intersection Frobenius criteria in the form
+needed here. Let
+$R=L[z]_{(z)}/(Q_1,\ldots,Q_\delta)$, where $L$ is $F$-finite,
+and put $F=Q_1\cdots Q_\delta$. Fedder's criterion \cite{Fedder}
+says that $R$ is $F$-pure if and only if
+\begin{equation}\label{eq:Fedder}
+ F^{p-1}\notin(z_1^p,\ldots,z_k^p).
+\end{equation}
+If $u$ is a nonzero element for which $R_u$ is strongly $F$-regular,
+Glassbrenner's criterion \cite[Theorem 4.1]{Glassbrenner} gives strong
+$F$-regularity from
+\begin{equation}\label{eq:Glassbrenner}
+ uF^{p^e-1}\notin(z_1^{p^e},\ldots,z_k^{p^e})
+ \quad\text{for some }e\geq1.
+\end{equation}
+Conversely, in a strongly $F$-regular ring this nonmembership occurs
+for every nonzero $u$ and a suitable $e$. These forms follow from
+the usual complete-intersection colon-ideal formula. Our residue
+field $L$ is finitely generated over the perfect field $K$, hence
+is $F$-finite. The cone is regular away from its vertex, so
+localization at a nonzero linear coordinate is regular.
+
+Suppose $2\delta<k$. Work first with arbitrary independent hollow
+quadrics as parameters. At the special system
+\[
+ Q_i=z_{2i}z_{2i+1},\qquad 1\leq i\leq\delta,
+\]
+the coefficient of
+$z_1\prod_{j=2}^{2\delta+1}z_j^{p-1}$ in $z_1F^{p-1}$ is one.
+It is a polynomial in the coefficients of the $Q_i$, so it is
+generically nonzero. Every exponent is below $p$. The nonvanishing
+locus meets the open locus of smooth projective complete intersections
+from Lemma~\ref{lem:dominance}. On this intersection, apply
+\eqref{eq:Glassbrenner} with $u=z_1$. Dominance then proves strong
+$F$-regularity of the generic transverse ring. The monomial system
+is only a witness that a coefficient polynomial is nonzero; no
+smoothness assertion about that special system is used.
+
+If $2\delta=k$, use the special system
+$Q_i=z_{2i-1}z_{2i}$. The coefficient of
+$\prod_j z_j^{p-1}$ in $F^{p-1}$ is one at that system and hence
+nonzero generically. This proves $F$-purity by \eqref{eq:Fedder}.
+For every $p$-power $Q$ and nonzero linear coordinate $u$,
+\[
+ \deg(uF^{Q-1})=1+k(Q-1)>k(Q-1).
+\]
+Every monomial therefore lies in $(z_1^Q,\ldots,z_k^Q)$, contradicting
+the necessary direction of \eqref{eq:Glassbrenner}. The ring is not
+strongly $F$-regular. An $F$-rational $F$-finite Gorenstein local
+ring is strongly $F$-regular \cite[Corollary 4.7 and Theorem 5.5]{HH};
+thus it is not $F$-rational.
+
+Finally, if $2\delta>k$, the same degree comparison already places
+$F^{p-1}$ in $(z_1^p,\ldots,z_k^p)$. It is not $F$-pure, and again
+cannot be $F$-rational. This proves the remaining column of
+Theorem~\ref{thm:transverse}. Changes of basis among the quadrics do
+not affect these criteria, so the nonempty open conditions used above
+descend from the space of ordered systems to the Grassmannian.
+
+\section{Density, factorial examples, and the questions answered}\label{sec:density}
+
+\subsection{The counterexample interval}
+
+Put $T_k=\binom k2$. A direct simplification of
+\eqref{eq:prime-threshold} gives
+\begin{equation}\label{eq:prime-blocks}
+ \begin{aligned}
+ \Dpr(h)&=2h-2k+1&&\text{if }T_k+2\leq h\leq T_{k+1},\\
+ \Dpr(T_{k+1}+1)&=2(T_{k+1}+1)-2k.
+ \end{aligned}
+\end{equation}
+These identities follow by bounding the square roots between consecutive
+integers; in the first interval
+$(2k-1)^2<8h-7<(2k+1)^2$, with the endpoints of the integer floors
+giving the displayed value.
+
+For $T_k+2\leq h\leq\lfloor k^2/2\rfloor$, write $c=h-T_k$.
+Then $2\leq c\leq\lfloor k/2\rfloor$, so
+Theorem~\ref{thm:transverse} applies and its invariant is
+\[
+ a=k-2c=k^2-2h\geq0.
+\]
+The variety at $M=\Dpr(h)$ is a normal integral complete intersection
+by \cite[Theorems 1 and 2]{CS}, but its indicated local ring is not
+rational in characteristic zero and not $F$-rational in odd
+characteristic. For strict inequality $h<k^2/2$, the invariant is
+positive and gives failure of log canonicity and of $F$-purity.
+
+The interval contains $\lfloor k/2\rfloor-1$ integers. Through the
+completed block ending at $T_{K+1}+1$, their total number is
+\[
+ \sum_{k=4}^K\left(\left\lfloor\frac k2\right\rfloor-1\right)
+ =\left\lfloor\frac{(K-2)^2}{4}\right\rfloor.
+\]
+The endpoint is $K^2/2+O(K)$; the ratio tends to $1/2$. An incomplete
+last block changes the count by $O(K)$, proving natural density.
+The equality cases $a=0$ occur only once for each even $k$, so
+removing them leaves density $1/2$ for the strict failures as well.
+
+\subsection{Factoriality}
+
+The UFD bound in \cite[Theorem 3]{CS}, for $h\geq4$, is the minimum
+of an even candidate and the odd candidate
+\begin{equation}\label{eq:UFD-odd}
+ 2\left\lceil\frac{2h-1-\sqrt{8h-31}}2\right\rceil+1.
+\end{equation}
+For $4\leq c\leq\lfloor k/2\rfloor$,
+\[
+ 8h-31=(2k-1)^2+8c-32,
+ \qquad 2k-1\leq\sqrt{8h-31}<2k+1.
+\]
+Expression~\eqref{eq:UFD-odd} is therefore $2h-2k+1=M$, so the
+frame ring is factorial. Removing $c=2,3$ from each block removes
+only $O(\sqrt H)$ integers up to $H$. The factorial subfamily, and
+its strict non-log-canonical and non-$F$-pure subfamily, still have
+natural density $1/2$. This completes the proof of
+Theorem~\ref{thm:negative-intro}.
+
+\subsection{Examples and scope}
+
+When $a=0$, write $k=2c$. Then
+\begin{equation}\label{eq:CY-boundary}
+ h=2c^2,\qquad M=(2c-1)^2,\qquad\delta=c.
+\end{equation}
+The generic transverse projective variety is a smooth intersection
+of $c$ quadrics in $\PP^{2c-1}$ with trivial canonical bundle.
+For $c=2$ it is an elliptic quartic curve; for $c=3$ it is a K3
+surface of degree eight; for $c=4$ it is a Calabi--Yau threefold.
+For $c\geq4$, the ambient frame ring is factorial. In odd
+characteristic these generic transverse cones are $F$-pure but
+not $F$-rational.
+
+\begin{center}
+\begin{tabular}{@{}r r c l@{}}
+\toprule
+$M$&$h$&$(k,c)$&Characteristic-zero conclusion\\
+\midrule
+9&8&$(4,2)$&not rational; elliptic transverse cone\\
+15&12&$(5,2)$&not log canonical\\
+25&18&$(6,3)$&not rational; K3 transverse cone\\
+49&32&$(8,4)$&factorial, not rational\\
+63&40&$(9,4)$&factorial, not log canonical\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The two families answer distinct questions. At the triangular
+complete-intersection parameters, the principal component has an
+explicit defining ideal and is normal with a controlled failure of
+Cohen--Macaulayness. At the prime parameters in
+\eqref{eq:bad-range}, the full frame variety is already normal and
+integral, yet its generic transverse cones obstruct rationality.
+Thus neither normality nor factoriality supplies the proposed
+rational-singularity conclusion.
+
+Several classification problems remain. The normality of all principal
+components is not decided by the triangular family, and their defining
+ideals outside that family remain to be determined. Likewise,
+$a<0$ in Theorem~\ref{thm:transverse} controls only the generic
+maximal-isotropic stratum; it gives no assertion about every special
+point or about other strata. Determining the exact rational-singularity
+threshold requires this additional local analysis.
+
+\paragraph{Acknowledgment.}
+The author acknowledges OpenAI GPT-6 for assistance with research
+exploration, proof development, verification code, and manuscript
+preparation.
+
+\begin{thebibliography}{8}
+
+\bibitem{BH}
+W.~Bruns and J.~Herzog,
+\emph{Cohen--Macaulay Rings}, revised ed.,
+Cambridge Studies in Advanced Mathematics, vol.~39,
+Cambridge University Press, Cambridge, 1998.
+\doi{10.1017/CBO9780511608681}.
+
+\bibitem{CS}
+L.~Casabella and A.~Sammartano,
+\emph{The variety of orthogonal frames},
+preprint, 2025.
+\href{https://arxiv.org/abs/2512.25058v1}{arXiv:2512.25058v1}.
+
+\bibitem{Fedder}
+R.~Fedder,
+\emph{$F$-purity and rational singularity},
+Trans. Amer. Math. Soc. \textbf{278} (1983), 461--480.
+\doi{10.1090/S0002-9947-1983-0701505-0}.
+
+\bibitem{Glassbrenner}
+D.~Glassbrenner,
+\emph{Strong $F$-regularity in images of regular rings},
+Proc. Amer. Math. Soc. \textbf{124} (1996), 345--353.
+\doi{10.1090/S0002-9939-96-03030-4}.
+
+\bibitem{HH}
+M.~Hochster and C.~Huneke,
+\emph{$F$-regularity, test elements, and smooth base change},
+Trans. Amer. Math. Soc. \textbf{346} (1994), 1--62.
+\doi{10.1090/S0002-9947-1994-1273534-X}.
+
+\bibitem{HJPS}
+M.~Hochster, J.~Jeffries, V.~Pandey, and A.~K.~Singh,
+\emph{When are the natural embeddings of classical invariant rings pure?},
+Forum Math. Sigma \textbf{11} (2023), e67, 43~pp.
+\doi{10.1017/fms.2023.67}.
+\href{https://arxiv.org/abs/2210.09351v3}{arXiv:2210.09351v3}.
+
+\bibitem{PS}
+C.~Peskine and L.~Szpiro,
+\emph{Liaison des vari\'et\'es alg\'ebriques. I},
+Invent. Math. \textbf{26} (1974), 271--302.
+\doi{10.1007/BF01425554}.
+
+\bibitem{SW}
+S.~V.~Sam and J.~Weyman,
+\emph{Littlewood complexes and analogues of determinantal varieties},
+Int. Math. Res. Not. IMRN (2015), 4663--4707.
+\doi{10.1093/imrn/rnu078}.
+\href{https://arxiv.org/abs/1303.0546v3}{arXiv:1303.0546v3}.
+
+\end{thebibliography}
+\end{document}

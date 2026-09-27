@@ -1,0 +1,18 @@
+{
+  "title": "Principal components and singularities of orthogonal frame varieties",
+  "zenodo_record": "https://zenodo.org/records/22985617",
+  "files": {
+    "paper.pdf": {
+      "sha256": "51a449658e00d110f3d4e3bbfd420cfde7af37509ded5fd70a45a161f02f875b",
+      "bytes": 516745
+    },
+    "main.tex": {
+      "sha256": "fdef93534de0d49576ffe93c2a2b0615c80f0a34e7de3c7b6ceac391a262fd91",
+      "bytes": 58989
+    },
+    "arxiv_submission.zip": {
+      "sha256": "4481ee69c262cbf855d57f7d449224b7897fc39614002381c5a35a36e639819b",
+      "bytes": 21145
+    }
+  }
+}

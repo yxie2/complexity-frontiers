@@ -17,6 +17,7 @@ and algebraic geometry, motivated by P versus NP and VP versus VNP.
 | --- | --- | --- |
 | **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
 | **Dimensions of permanental varieties in arbitrary size** | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
+| **Principal components and singularities of orthogonal frame varieties** | [Paper and build guide](papers/orthogonal-frame-varieties/README.md) · [PDF](papers/orthogonal-frame-varieties/paper.pdf) · [LaTeX](papers/orthogonal-frame-varieties/main.tex) · [arXiv package](papers/orthogonal-frame-varieties/arxiv_submission.zip) | [Zenodo record](https://zenodo.org/records/22985617). |
 | **Symmetric-determinant apolarity in odd characteristic** | [Paper and build guide](papers/symmetric-determinant-apolarity/README.md) · [PDF](papers/symmetric-determinant-apolarity/paper.pdf) · [LaTeX](papers/symmetric-determinant-apolarity/main.tex) · [arXiv package](papers/symmetric-determinant-apolarity/arxiv_submission.zip) | [Zenodo record](https://zenodo.org/records/22950380). |
 | **Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic** | [Paper and reproduction guide](papers/elementary-symmetric-loci/README.md) · [PDF](papers/elementary-symmetric-loci/paper.pdf) · [LaTeX](papers/elementary-symmetric-loci/main.tex) · [Code](papers/elementary-symmetric-loci/anc/) | [Zenodo preprint](https://zenodo.org/records/22929810). |
 | **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22879129). |
@@ -32,6 +33,11 @@ reduced complete intersections, Frobenius splitting, and singular codimensions.
 Their algebraic conclusions do not by themselves give an unrestricted circuit
 separation. Each paper has its own statements,
 sources, reproduction instructions, and review status.
+
+The orthogonal-frame paper gives defining equations, normality and depth
+results for a triangular family of principal components, and counterexamples
+to rationality at the prime threshold. It also classifies the generic
+transverse cones in the stated parameter range.
 
 The symmetric-determinant paper determines the ordinary apolar ideal in odd
 characteristic, its Hilbert series, and the weak and strong Lefschetz thresholds.
@@ -145,6 +151,13 @@ separate citation below and its own machine-readable citation file.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22901136.svg)](https://doi.org/10.5281/zenodo.22901136)
 
+### Orthogonal frame varieties
+
+> Ying Xie. *Principal components and singularities of orthogonal frame varieties*.
+> Zenodo, 2026. https://zenodo.org/records/22985617.
+
+[Citation metadata](papers/orthogonal-frame-varieties/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22985617)
+
 ### Symmetric-determinant apolarity
 
 > Ying Xie. *Symmetric-determinant apolarity in odd characteristic*.
@@ -180,7 +193,7 @@ separate citation below and its own machine-readable citation file.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22878451.svg)](https://doi.org/10.5281/zenodo.22878451)
 
 The root [CITATION.cff](CITATION.cff) describes the collection and lists all
-six papers as references. Each Zenodo link identifies the individual
+seven papers as references. Each Zenodo link identifies the individual
 record listed with it.
 
 ## Feedback
@@ -192,7 +205,7 @@ reports, include the command and relevant software versions.
 
 ## Acknowledgment
 
-All six manuscripts retain their acknowledgments to OpenAI GPT-6.
+All seven manuscripts retain their acknowledgments to OpenAI GPT-6.
 Each manuscript states the assistance acknowledged for that work.
 
 ## Licenses
@@ -206,6 +219,7 @@ Manuscript-specific license notices are listed separately:
 | --- | --- |
 | Sensitive monotone bounds in VP | [CC BY 4.0 notice](papers/sensitive-monotone-vp/LICENSE.md), consistent with its Zenodo record. |
 | Permanental dimensions in arbitrary size | [CC BY 4.0 notice](papers/all-size-permanents/LICENSE.md), consistent with its Zenodo record. |
+| Orthogonal frame varieties | Consult the [Zenodo record](https://zenodo.org/records/22985617) for manuscript license information. |
 | Symmetric-determinant apolarity | Consult the [Zenodo record](https://zenodo.org/records/22950380) for manuscript license information. |
 | Elementary-symmetric derivative and multiplicity loci | [CC BY 4.0 notice](papers/elementary-symmetric-loci/LICENSE.md), consistent with its Zenodo record. |
 | Three-by-four permanents | [CC BY 4.0 notice](papers/three-by-four-permanents/LICENSE.md), consistent with its Zenodo record. |
