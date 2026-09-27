@@ -5,6 +5,13 @@
 Research papers and reproducible code on circuit lower bounds, proof complexity,
 and algebraic geometry, motivated by P versus NP and VP versus VNP.
 
+**Draft status.** The papers in this repository are research drafts and have not
+undergone peer review. Scrutiny from mathematicians and other researchers is
+warmly welcomed. Please report suspected errors, gaps in proofs, unclear
+arguments, or reproducibility issues through
+[GitHub Issues](https://github.com/yxie2/complexity-frontiers/issues), identifying
+the paper and the relevant theorem, section, or page.
+
 **Ying Xie** · Kennesaw State University · [yxie2@kennesaw.edu](mailto:yxie2@kennesaw.edu)
 
 [![Sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml/badge.svg)](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml)
