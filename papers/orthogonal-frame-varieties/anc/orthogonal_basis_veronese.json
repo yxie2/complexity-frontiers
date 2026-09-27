@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "isotropic_nonmembership_controls": [
+    {
+      "N": 6,
+      "q": 3,
+      "gram_zero": true,
+      "veronese_minor": 1
+    },
+    {
+      "N": 8,
+      "q": 4,
+      "gram_zero": true,
+      "veronese_minor": 1
+    },
+    {
+      "N": 9,
+      "q": 4,
+      "gram_zero": true,
+      "veronese_minor": 1
+    },
+    {
+      "N": 10,
+      "q": 5,
+      "gram_zero": true,
+      "veronese_minor": 1
+    },
+    {
+      "N": 11,
+      "q": 5,
+      "gram_zero": true,
+      "veronese_minor": 1
+    },
+    {
+      "N": 12,
+      "q": 6,
+      "gram_zero": true,
+      "veronese_minor": 1
+    }
+  ],
+  "orthogonal_bases": [
+    {
+      "index": 0,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 1,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 2,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 3,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 4,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 5,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 6,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 7,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 8,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 9,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 10,
+      "kernel_verified": true,
+      "determinant_zero": true
+    },
+    {
+      "index": 11,
+      "kernel_verified": true,
+      "determinant_zero": true
+    }
+  ],
+  "standard_form": {
+    "P_minus": 4096,
+    "P_plus": 0,
+    "rational_equation_value": 2048
+  },
+  "seconds": 0.125,
+  "producer_sha256": "2e242bfbd88fce42fbcfe53f0adec9fed47cfd6fe28708d0bf97a2e99259e087",
+  "scope": "Exact arithmetic controls; the proof on all orthogonal bases is the inverse-Gram identity."
+}

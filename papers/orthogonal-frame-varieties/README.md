@@ -2,7 +2,7 @@
 
 **Ying Xie** · Kennesaw State University · yxie2@kennesaw.edu
 
-[PDF](paper.pdf) · [LaTeX](main.tex) · [arXiv source package](arxiv_submission.zip)
+[PDF](paper.pdf) · [LaTeX](main.tex) · [Verification code and results](anc/)
 · [Zenodo record](https://zenodo.org/records/22985617)
 
 ## Results
@@ -31,6 +31,20 @@ and give normal but non-Cohen--Macaulay principal components. The defining-ideal
 and principal-component conclusions concern the specified triangular family;
 the positive transverse classification concerns the generic point of the
 maximal-isotropic stratum. The manuscript states the full hypotheses and scope.
+
+## Reproduce the finite checks
+
+From the repository root, using Python 3.11 or later:
+
+```sh
+python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
+python scripts/verify_paper_code.py orthogonal-frame-varieties
+```
+
+The [code guide](anc/README.md) describes the exact scope, dependencies,
+and source provenance. The verifier runs in a temporary copy and compares
+the computed results with the archived records. Finite checks supplement
+the manuscript proofs and do not establish the all-size theorems.
 
 ## Build the paper
 

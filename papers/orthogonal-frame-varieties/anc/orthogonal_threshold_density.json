@@ -1,0 +1,156 @@
+{
+  "status": "passed",
+  "counterexample_parameter_checks": 249001,
+  "factorial_parameter_checks": 247009,
+  "prime_block_checks": 45149,
+  "k_max": 1000,
+  "examples": [
+    {
+      "k": 4,
+      "h": 8,
+      "M": 9,
+      "stratum_codim": 2,
+      "tangent_excess": 2,
+      "jet_excess": 0,
+      "factorial_certified": false
+    },
+    {
+      "k": 5,
+      "h": 12,
+      "M": 15,
+      "stratum_codim": 2,
+      "tangent_excess": 3,
+      "jet_excess": 1,
+      "factorial_certified": false
+    },
+    {
+      "k": 6,
+      "h": 17,
+      "M": 23,
+      "stratum_codim": 2,
+      "tangent_excess": 4,
+      "jet_excess": 2,
+      "factorial_certified": false
+    },
+    {
+      "k": 6,
+      "h": 18,
+      "M": 25,
+      "stratum_codim": 3,
+      "tangent_excess": 3,
+      "jet_excess": 0,
+      "factorial_certified": false
+    },
+    {
+      "k": 7,
+      "h": 23,
+      "M": 33,
+      "stratum_codim": 2,
+      "tangent_excess": 5,
+      "jet_excess": 3,
+      "factorial_certified": false
+    },
+    {
+      "k": 7,
+      "h": 24,
+      "M": 35,
+      "stratum_codim": 3,
+      "tangent_excess": 4,
+      "jet_excess": 1,
+      "factorial_certified": false
+    },
+    {
+      "k": 8,
+      "h": 30,
+      "M": 45,
+      "stratum_codim": 2,
+      "tangent_excess": 6,
+      "jet_excess": 4,
+      "factorial_certified": false
+    },
+    {
+      "k": 8,
+      "h": 31,
+      "M": 47,
+      "stratum_codim": 3,
+      "tangent_excess": 5,
+      "jet_excess": 2,
+      "factorial_certified": false
+    },
+    {
+      "k": 8,
+      "h": 32,
+      "M": 49,
+      "stratum_codim": 4,
+      "tangent_excess": 4,
+      "jet_excess": 0,
+      "factorial_certified": true
+    },
+    {
+      "k": 9,
+      "h": 38,
+      "M": 59,
+      "stratum_codim": 2,
+      "tangent_excess": 7,
+      "jet_excess": 5,
+      "factorial_certified": false
+    },
+    {
+      "k": 9,
+      "h": 39,
+      "M": 61,
+      "stratum_codim": 3,
+      "tangent_excess": 6,
+      "jet_excess": 3,
+      "factorial_certified": false
+    },
+    {
+      "k": 9,
+      "h": 40,
+      "M": 63,
+      "stratum_codim": 4,
+      "tangent_excess": 5,
+      "jet_excess": 1,
+      "factorial_certified": true
+    },
+    {
+      "k": 10,
+      "h": 47,
+      "M": 75,
+      "stratum_codim": 2,
+      "tangent_excess": 8,
+      "jet_excess": 6,
+      "factorial_certified": false
+    },
+    {
+      "k": 10,
+      "h": 48,
+      "M": 77,
+      "stratum_codim": 3,
+      "tangent_excess": 7,
+      "jet_excess": 4,
+      "factorial_certified": false
+    },
+    {
+      "k": 10,
+      "h": 49,
+      "M": 79,
+      "stratum_codim": 4,
+      "tangent_excess": 6,
+      "jet_excess": 2,
+      "factorial_certified": true
+    },
+    {
+      "k": 10,
+      "h": 50,
+      "M": 81,
+      "stratum_codim": 5,
+      "tangent_excess": 5,
+      "jet_excess": 0,
+      "factorial_certified": true
+    }
+  ],
+  "seconds": 0.5,
+  "producer_sha256": "28f1aff0e110510666ae3b283c7b27070dbbc14938644596f792bcf1f7bb1354",
+  "scope": "Exact arithmetic controls only; all-size proof is in the companion note."
+}

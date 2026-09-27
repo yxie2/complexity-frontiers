@@ -12,3 +12,5 @@ papers/all-size-permanents/** -text -whitespace
 papers/elementary-symmetric-loci/** -text -whitespace
 papers/symmetric-determinant-apolarity/main.tex -text -whitespace
 papers/orthogonal-frame-varieties/main.tex -text -whitespace
+papers/orthogonal-frame-varieties/anc/** -text -whitespace
+papers/symmetric-determinant-apolarity/anc/** -text -whitespace

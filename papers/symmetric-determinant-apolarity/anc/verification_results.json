@@ -1,0 +1,3114 @@
+{
+  "scope": "Finite exact arithmetic; not a proof of the all-size theorems.",
+  "integer_differentiation": [
+    {
+      "n": 4,
+      "operator_degree": 2,
+      "integer_factor": 6,
+      "determinant_term_count": 17,
+      "result_term_count": 2
+    },
+    {
+      "n": 8,
+      "operator_degree": 4,
+      "integer_factor": 120,
+      "determinant_term_count": 18155,
+      "result_term_count": 24
+    }
+  ],
+  "direct_derivative_and_lefschetz": [
+    {
+      "n": 1,
+      "p": 3,
+      "hilbert": [
+        1,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        }
+      ]
+    },
+    {
+      "n": 1,
+      "p": 5,
+      "hilbert": [
+        1,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        }
+      ]
+    },
+    {
+      "n": 1,
+      "p": 7,
+      "hilbert": [
+        1,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        }
+      ]
+    },
+    {
+      "n": 1,
+      "p": 101,
+      "hilbert": [
+        1,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "p": 3,
+      "hilbert": [
+        1,
+        3,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 2
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "p": 5,
+      "hilbert": [
+        1,
+        3,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 2
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "p": 7,
+      "hilbert": [
+        1,
+        3,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 2
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "p": 101,
+      "hilbert": [
+        1,
+        3,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 2
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "hilbert": [
+        1,
+        6,
+        6,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 6,
+          "maximal_rank": 6,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "p": 5,
+      "hilbert": [
+        1,
+        6,
+        6,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 6,
+          "maximal_rank": 6,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "p": 7,
+      "hilbert": [
+        1,
+        6,
+        6,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 6,
+          "maximal_rank": 6,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "p": 101,
+      "hilbert": [
+        1,
+        6,
+        6,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 6,
+          "maximal_rank": 6,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 5
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "p": 3,
+      "hilbert": [
+        1,
+        10,
+        19,
+        10,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 9,
+          "maximal_rank": 10,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 10
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 9
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 18
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 9
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "p": 5,
+      "hilbert": [
+        1,
+        10,
+        20,
+        10,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 9
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 10
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 19
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 9
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "p": 7,
+      "hilbert": [
+        1,
+        10,
+        20,
+        10,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 9
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 10
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 19
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 9
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "p": 101,
+      "hilbert": [
+        1,
+        10,
+        20,
+        10,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 9
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 10,
+          "maximal_rank": 10,
+          "kernel": 10
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 19
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 9
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "p": 3,
+      "hilbert": [
+        1,
+        15,
+        45,
+        45,
+        15,
+        1
+      ],
+      "weak_lefschetz": false,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 14,
+          "maximal_rank": 15,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 15,
+          "kernel": 15
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 15
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 44,
+          "maximal_rank": 45,
+          "kernel": 1
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 14,
+          "maximal_rank": 15,
+          "kernel": 31
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 45
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 30
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 44
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 14
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "p": 5,
+      "hilbert": [
+        1,
+        15,
+        50,
+        50,
+        15,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 14
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 50,
+          "maximal_rank": 50,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 35
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 49
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 35
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 49
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 14
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "p": 7,
+      "hilbert": [
+        1,
+        15,
+        50,
+        50,
+        15,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 14
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 50,
+          "maximal_rank": 50,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 35
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 49
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 35
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 49
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 14
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "p": 101,
+      "hilbert": [
+        1,
+        15,
+        50,
+        50,
+        15,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 14
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 50,
+          "maximal_rank": 50,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 35
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 49
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 15,
+          "maximal_rank": 15,
+          "kernel": 35
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 49
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 14
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "p": 3,
+      "hilbert": [
+        1,
+        21,
+        90,
+        141,
+        90,
+        21,
+        1
+      ],
+      "weak_lefschetz": false,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 20,
+          "maximal_rank": 21,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 21,
+          "kernel": 21
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 21,
+          "kernel": 21
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 21
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 89,
+          "maximal_rank": 90,
+          "kernel": 1
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 69,
+          "maximal_rank": 90,
+          "kernel": 21
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 21,
+          "kernel": 90
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 90
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 89,
+          "maximal_rank": 90,
+          "kernel": 52
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 20,
+          "maximal_rank": 21,
+          "kernel": 121
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 141
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 69
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 89
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 20
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "p": 5,
+      "hilbert": [
+        1,
+        21,
+        105,
+        175,
+        105,
+        21,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 20,
+          "maximal_rank": 21,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 21
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 84
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 104
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 70
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 154
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 174
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 84
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 104
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 20
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "p": 7,
+      "hilbert": [
+        1,
+        21,
+        105,
+        175,
+        105,
+        21,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 20
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 84
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 104
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 70
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 154
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 174
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 84
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 104
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 20
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "p": 101,
+      "hilbert": [
+        1,
+        21,
+        105,
+        175,
+        105,
+        21,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 20
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 84
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 104
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 105,
+          "maximal_rank": 105,
+          "kernel": 70
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 154
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 174
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 21,
+          "maximal_rank": 21,
+          "kernel": 84
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 104
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 20
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "p": 3,
+      "hilbert": [
+        1,
+        28,
+        161,
+        357,
+        357,
+        161,
+        28,
+        1
+      ],
+      "weak_lefschetz": false,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 7,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 27,
+          "maximal_rank": 28,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 28,
+          "kernel": 28
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 28,
+          "kernel": 28
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 28,
+          "kernel": 28
+        },
+        {
+          "degree": 1,
+          "power": 6,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 28
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 160,
+          "maximal_rank": 161,
+          "kernel": 1
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 133,
+          "maximal_rank": 161,
+          "kernel": 28
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 161,
+          "kernel": 161
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 28,
+          "kernel": 161
+        },
+        {
+          "degree": 2,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 161
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 330,
+          "maximal_rank": 357,
+          "kernel": 27
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 133,
+          "maximal_rank": 161,
+          "kernel": 224
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 28,
+          "kernel": 357
+        },
+        {
+          "degree": 3,
+          "power": 4,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 357
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 160,
+          "maximal_rank": 161,
+          "kernel": 197
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 27,
+          "maximal_rank": 28,
+          "kernel": 330
+        },
+        {
+          "degree": 4,
+          "power": 3,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 357
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 133
+        },
+        {
+          "degree": 5,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 160
+        },
+        {
+          "degree": 6,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 27
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "p": 5,
+      "hilbert": [
+        1,
+        28,
+        196,
+        490,
+        490,
+        196,
+        28,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 0,
+          "power": 7,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 27,
+          "maximal_rank": 28,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 28,
+          "kernel": 28
+        },
+        {
+          "degree": 1,
+          "power": 6,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 28
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 195,
+          "maximal_rank": 196,
+          "kernel": 1
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 27,
+          "maximal_rank": 28,
+          "kernel": 169
+        },
+        {
+          "degree": 2,
+          "power": 5,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 196
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 490,
+          "maximal_rank": 490,
+          "kernel": 0
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 294
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 462
+        },
+        {
+          "degree": 3,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 489
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 294
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 462
+        },
+        {
+          "degree": 4,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 489
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 168
+        },
+        {
+          "degree": 5,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 195
+        },
+        {
+          "degree": 6,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 27
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "p": 7,
+      "hilbert": [
+        1,
+        28,
+        196,
+        490,
+        490,
+        196,
+        28,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": false,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 7,
+          "rank": 0,
+          "maximal_rank": 1,
+          "kernel": 1
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 6,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 27
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 168
+        },
+        {
+          "degree": 2,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 195
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 490,
+          "maximal_rank": 490,
+          "kernel": 0
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 294
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 462
+        },
+        {
+          "degree": 3,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 489
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 294
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 462
+        },
+        {
+          "degree": 4,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 489
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 168
+        },
+        {
+          "degree": 5,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 195
+        },
+        {
+          "degree": 6,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 27
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "p": 101,
+      "hilbert": [
+        1,
+        28,
+        196,
+        490,
+        490,
+        196,
+        28,
+        1
+      ],
+      "weak_lefschetz": true,
+      "strong_lefschetz": true,
+      "maps": [
+        {
+          "degree": 0,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 6,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 0,
+          "power": 7,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 2,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 3,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 4,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 5,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 0
+        },
+        {
+          "degree": 1,
+          "power": 6,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 27
+        },
+        {
+          "degree": 2,
+          "power": 1,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 2,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 3,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 0
+        },
+        {
+          "degree": 2,
+          "power": 4,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 168
+        },
+        {
+          "degree": 2,
+          "power": 5,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 195
+        },
+        {
+          "degree": 3,
+          "power": 1,
+          "rank": 490,
+          "maximal_rank": 490,
+          "kernel": 0
+        },
+        {
+          "degree": 3,
+          "power": 2,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 294
+        },
+        {
+          "degree": 3,
+          "power": 3,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 462
+        },
+        {
+          "degree": 3,
+          "power": 4,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 489
+        },
+        {
+          "degree": 4,
+          "power": 1,
+          "rank": 196,
+          "maximal_rank": 196,
+          "kernel": 294
+        },
+        {
+          "degree": 4,
+          "power": 2,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 462
+        },
+        {
+          "degree": 4,
+          "power": 3,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 489
+        },
+        {
+          "degree": 5,
+          "power": 1,
+          "rank": 28,
+          "maximal_rank": 28,
+          "kernel": 168
+        },
+        {
+          "degree": 5,
+          "power": 2,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 195
+        },
+        {
+          "degree": 6,
+          "power": 1,
+          "rank": 1,
+          "maximal_rank": 1,
+          "kernel": 27
+        }
+      ]
+    }
+  ],
+  "size_four_exact_derivative_ranks": [
+    {
+      "n": 4,
+      "characteristic": 0,
+      "hilbert": [
+        1,
+        10,
+        20,
+        10,
+        1
+      ],
+      "length": 42
+    },
+    {
+      "n": 4,
+      "characteristic": 3,
+      "hilbert": [
+        1,
+        10,
+        19,
+        10,
+        1
+      ],
+      "length": 41
+    }
+  ],
+  "size_eight_exact_derivative_ranks": [
+    {
+      "n": 8,
+      "characteristic": 0,
+      "arithmetic": "rational",
+      "hilbert": [
+        1,
+        36,
+        336,
+        1176,
+        1764,
+        1176,
+        336,
+        36,
+        1
+      ],
+      "length": 4862
+    },
+    {
+      "n": 8,
+      "characteristic": 3,
+      "arithmetic": "prime field",
+      "hilbert": [
+        1,
+        36,
+        266,
+        784,
+        1107,
+        784,
+        266,
+        36,
+        1
+      ],
+      "length": 3281
+    },
+    {
+      "n": 8,
+      "characteristic": 5,
+      "arithmetic": "prime field",
+      "hilbert": [
+        1,
+        36,
+        336,
+        1176,
+        1763,
+        1176,
+        336,
+        36,
+        1
+      ],
+      "length": 4861
+    },
+    {
+      "n": 8,
+      "characteristic": 7,
+      "arithmetic": "prime field",
+      "hilbert": [
+        1,
+        36,
+        336,
+        1176,
+        1764,
+        1176,
+        336,
+        36,
+        1
+      ],
+      "length": 4862
+    },
+    {
+      "n": 8,
+      "characteristic": 101,
+      "arithmetic": "prime field",
+      "hilbert": [
+        1,
+        36,
+        336,
+        1176,
+        1764,
+        1176,
+        336,
+        36,
+        1
+      ],
+      "length": 4862
+    }
+  ],
+  "degree_p_minus_one_ideal_checks": [
+    {
+      "n": 4,
+      "p": 3,
+      "degree": 2,
+      "ambient_dimension": 55,
+      "annihilator_dimension": 36,
+      "quadratic_ideal_dimension": 35,
+      "augmented_ideal_dimension": 36,
+      "independent_extra_generators": 1,
+      "containment_verified_by_literal_differentiation_and_index_symmetry": true
+    },
+    {
+      "n": 5,
+      "p": 3,
+      "degree": 2,
+      "ambient_dimension": 120,
+      "annihilator_dimension": 75,
+      "quadratic_ideal_dimension": 70,
+      "augmented_ideal_dimension": 75,
+      "independent_extra_generators": 5,
+      "containment_verified_by_literal_differentiation_and_index_symmetry": true
+    },
+    {
+      "n": 6,
+      "p": 3,
+      "degree": 2,
+      "ambient_dimension": 231,
+      "annihilator_dimension": 141,
+      "quadratic_ideal_dimension": 126,
+      "augmented_ideal_dimension": 141,
+      "independent_extra_generators": 15,
+      "containment_verified_by_literal_differentiation_and_index_symmetry": true
+    },
+    {
+      "n": 7,
+      "p": 3,
+      "degree": 2,
+      "ambient_dimension": 406,
+      "annihilator_dimension": 245,
+      "quadratic_ideal_dimension": 210,
+      "augmented_ideal_dimension": 245,
+      "independent_extra_generators": 35,
+      "containment_verified_by_literal_differentiation_and_index_symmetry": true
+    },
+    {
+      "n": 8,
+      "p": 3,
+      "degree": 2,
+      "ambient_dimension": 666,
+      "annihilator_dimension": 400,
+      "quadratic_ideal_dimension": 330,
+      "augmented_ideal_dimension": 400,
+      "independent_extra_generators": 70,
+      "containment_verified_by_literal_differentiation_and_index_symmetry": true
+    },
+    {
+      "n": 8,
+      "p": 5,
+      "degree": 4,
+      "ambient_dimension": 82251,
+      "annihilator_dimension": 80488,
+      "quadratic_ideal_dimension": 80487,
+      "augmented_ideal_dimension": 80488,
+      "independent_extra_generators": 1,
+      "containment_verified_by_literal_differentiation_and_index_symmetry": true
+    }
+  ],
+  "boolean_boundary_checks": [
+    {
+      "n": 5,
+      "p": 3,
+      "method": "Literal subset-inclusion matrices, assembled using Proposition 6.2",
+      "middle_dimension": 45,
+      "middle_rank": 44,
+      "kernel": 1,
+      "blocks": [
+        {
+          "boolean_size": 5,
+          "degree": 2,
+          "dimension": 10,
+          "rank": 9,
+          "multiplicity": 1
+        },
+        {
+          "boolean_size": 3,
+          "degree": 1,
+          "dimension": 3,
+          "rank": 3,
+          "multiplicity": 10
+        },
+        {
+          "boolean_size": 1,
+          "degree": 0,
+          "dimension": 1,
+          "rank": 1,
+          "multiplicity": 5
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "p": 5,
+      "method": "Literal subset-inclusion matrices, assembled using Proposition 6.2",
+      "middle_dimension": 5283,
+      "middle_rank": 5282,
+      "kernel": 1,
+      "blocks": [
+        {
+          "boolean_size": 9,
+          "degree": 4,
+          "dimension": 126,
+          "rank": 125,
+          "multiplicity": 1
+        },
+        {
+          "boolean_size": 7,
+          "degree": 3,
+          "dimension": 35,
+          "rank": 35,
+          "multiplicity": 36
+        },
+        {
+          "boolean_size": 5,
+          "degree": 2,
+          "dimension": 10,
+          "rank": 10,
+          "multiplicity": 252
+        },
+        {
+          "boolean_size": 3,
+          "degree": 1,
+          "dimension": 3,
+          "rank": 3,
+          "multiplicity": 420
+        },
+        {
+          "boolean_size": 1,
+          "degree": 0,
+          "dimension": 1,
+          "rank": 1,
+          "multiplicity": 117
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "p": 7,
+      "method": "Literal subset-inclusion matrices, assembled using Proposition 6.2",
+      "middle_dimension": 736151,
+      "middle_rank": 736150,
+      "kernel": 1,
+      "blocks": [
+        {
+          "boolean_size": 13,
+          "degree": 6,
+          "dimension": 1716,
+          "rank": 1715,
+          "multiplicity": 1
+        },
+        {
+          "boolean_size": 11,
+          "degree": 5,
+          "dimension": 462,
+          "rank": 462,
+          "multiplicity": 78
+        },
+        {
+          "boolean_size": 9,
+          "degree": 4,
+          "dimension": 126,
+          "rank": 126,
+          "multiplicity": 1430
+        },
+        {
+          "boolean_size": 7,
+          "degree": 3,
+          "dimension": 35,
+          "rank": 35,
+          "multiplicity": 8580
+        },
+        {
+          "boolean_size": 5,
+          "degree": 2,
+          "dimension": 10,
+          "rank": 10,
+          "multiplicity": 18018
+        },
+        {
+          "boolean_size": 3,
+          "degree": 1,
+          "dimension": 3,
+          "rank": 3,
+          "multiplicity": 12012
+        },
+        {
+          "boolean_size": 1,
+          "degree": 0,
+          "dimension": 1,
+          "rank": 1,
+          "multiplicity": 1703
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "manuscript_source_sha256": "6f40ad0344087f967804c7c3105eebca52857b97d6d8f83d3441e88b86961d9f",
+  "checker_sha256": "bdbd2290cb5aba2bd8755e98aaf7c5adde924596fcd32423184d3539fadbc166"
+}

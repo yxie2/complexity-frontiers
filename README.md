@@ -17,8 +17,8 @@ and algebraic geometry, motivated by P versus NP and VP versus VNP.
 | --- | --- | --- |
 | **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
 | **Dimensions of permanental varieties in arbitrary size** | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
-| **Principal components and singularities of orthogonal frame varieties** | [Paper and build guide](papers/orthogonal-frame-varieties/README.md) · [PDF](papers/orthogonal-frame-varieties/paper.pdf) · [LaTeX](papers/orthogonal-frame-varieties/main.tex) · [arXiv package](papers/orthogonal-frame-varieties/arxiv_submission.zip) | [Zenodo record](https://zenodo.org/records/22985617). |
-| **Symmetric-determinant apolarity in odd characteristic** | [Paper and build guide](papers/symmetric-determinant-apolarity/README.md) · [PDF](papers/symmetric-determinant-apolarity/paper.pdf) · [LaTeX](papers/symmetric-determinant-apolarity/main.tex) · [arXiv package](papers/symmetric-determinant-apolarity/arxiv_submission.zip) | [Zenodo record](https://zenodo.org/records/22950380). |
+| **Principal components and singularities of orthogonal frame varieties** | [Paper and reproduction guide](papers/orthogonal-frame-varieties/README.md) · [PDF](papers/orthogonal-frame-varieties/paper.pdf) · [LaTeX](papers/orthogonal-frame-varieties/main.tex) · [Code](papers/orthogonal-frame-varieties/anc/) | [Zenodo record](https://zenodo.org/records/22985617). |
+| **Symmetric-determinant apolarity in odd characteristic** | [Paper and reproduction guide](papers/symmetric-determinant-apolarity/README.md) · [PDF](papers/symmetric-determinant-apolarity/paper.pdf) · [LaTeX](papers/symmetric-determinant-apolarity/main.tex) · [Code](papers/symmetric-determinant-apolarity/anc/) | [Zenodo record](https://zenodo.org/records/22950380). |
 | **Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic** | [Paper and reproduction guide](papers/elementary-symmetric-loci/README.md) · [PDF](papers/elementary-symmetric-loci/paper.pdf) · [LaTeX](papers/elementary-symmetric-loci/main.tex) · [Code](papers/elementary-symmetric-loci/anc/) | [Zenodo preprint](https://zenodo.org/records/22929810). |
 | **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22879129). |
 | **Frobenius splitting and singular loci of prime-size permanents** | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22878451). |
@@ -75,6 +75,19 @@ equalities for sizes two through five and 87,376 coordinate-support pairs for
 sizes two through eight. See the [reproduction guide](papers/all-size-permanents/README.md#reproduce-the-checks)
 and [recorded results](papers/all-size-permanents/anc/verification_results.json).
 
+### Orthogonal frames and symmetric-determinant apolarity
+
+```sh
+python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
+python scripts/verify_paper_code.py
+```
+
+This runs the five orthogonal-frame programs and the symmetric-determinant
+checker against their archived exact results. The latter requires only the
+Python standard library. See the [orthogonal-frame code guide](papers/orthogonal-frame-varieties/anc/README.md)
+and [apolarity code guide](papers/symmetric-determinant-apolarity/anc/README.md)
+for scope and provenance.
+
 ### Elementary-symmetric derivative and multiplicity loci
 
 ```sh
@@ -117,6 +130,8 @@ python -m pip install -r papers/elementary-symmetric-loci/anc/requirements.txt
 python scripts/verify_sensitive_monotone.py
 python scripts/verify_permanents.py
 python scripts/verify_elementary_symmetric.py
+python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
+python scripts/verify_paper_code.py
 ```
 
 The permanent command runs all three permanent suites. GitHub Actions runs the

@@ -1,0 +1,17 @@
+{
+  "scope": "Existing research checker and numerical results; publication-path adaptation only.",
+  "files": {
+    "verify_apolarity.py": {
+      "source_path": "pnp_progress/integration/symmetric_determinant_apolarity_paper_20260925/audit/verify_requested_spots.py",
+      "sha256": "d738941fd29a4c6e163178c2dd7d4b9d39daaf61df52dca313d556c5c892b150",
+      "bytes": 14649,
+      "adaptation": "Renamed checker; two manuscript/result paths adapted to the public paper directory. Mathematical code unchanged."
+    },
+    "verification_results.json": {
+      "source_path": "pnp_progress/integration/symmetric_determinant_apolarity_paper_20260925/audit/REQUESTED_SPOTS_CHECKS.json",
+      "sha256": "797c93de3d897b844b5255001f4f709ee33c8b134e193448745dcb76ba95c137",
+      "bytes": 63317,
+      "adaptation": "Numerical results unchanged. Checker and manuscript hashes identify the public files; original elapsed time omitted."
+    }
+  }
+}

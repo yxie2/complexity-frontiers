@@ -1,0 +1,227 @@
+{
+  "status": "passed",
+  "symbolic_chart_checks": [
+    {
+      "q": 1,
+      "k": 2,
+      "m": 0,
+      "entries_checked": 7
+    },
+    {
+      "q": 1,
+      "k": 3,
+      "m": 1,
+      "entries_checked": 13
+    },
+    {
+      "q": 2,
+      "k": 2,
+      "m": 1,
+      "entries_checked": 12
+    },
+    {
+      "q": 2,
+      "k": 3,
+      "m": 2,
+      "entries_checked": 19
+    },
+    {
+      "q": 3,
+      "k": 4,
+      "m": 1,
+      "entries_checked": 37
+    },
+    {
+      "q": 4,
+      "k": 4,
+      "m": 1,
+      "entries_checked": 48
+    }
+  ],
+  "unit_rank_controls": [
+    {
+      "k": 2,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 3,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 3,
+      "q": 2,
+      "unit_minor": true
+    },
+    {
+      "k": 3,
+      "q": 3,
+      "unit_minor": true
+    },
+    {
+      "k": 4,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 4,
+      "q": 4,
+      "unit_minor": true
+    },
+    {
+      "k": 4,
+      "q": 6,
+      "unit_minor": true
+    },
+    {
+      "k": 5,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 5,
+      "q": 5,
+      "unit_minor": true
+    },
+    {
+      "k": 5,
+      "q": 7,
+      "unit_minor": true
+    },
+    {
+      "k": 5,
+      "q": 10,
+      "unit_minor": true
+    },
+    {
+      "k": 6,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 6,
+      "q": 6,
+      "unit_minor": true
+    },
+    {
+      "k": 6,
+      "q": 11,
+      "unit_minor": true
+    },
+    {
+      "k": 6,
+      "q": 15,
+      "unit_minor": true
+    },
+    {
+      "k": 7,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 7,
+      "q": 7,
+      "unit_minor": true
+    },
+    {
+      "k": 7,
+      "q": 16,
+      "unit_minor": true
+    },
+    {
+      "k": 7,
+      "q": 21,
+      "unit_minor": true
+    },
+    {
+      "k": 8,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 8,
+      "q": 8,
+      "unit_minor": true
+    },
+    {
+      "k": 8,
+      "q": 22,
+      "unit_minor": true
+    },
+    {
+      "k": 8,
+      "q": 28,
+      "unit_minor": true
+    },
+    {
+      "k": 9,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 9,
+      "q": 9,
+      "unit_minor": true
+    },
+    {
+      "k": 9,
+      "q": 29,
+      "unit_minor": true
+    },
+    {
+      "k": 9,
+      "q": 36,
+      "unit_minor": true
+    },
+    {
+      "k": 10,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 10,
+      "q": 10,
+      "unit_minor": true
+    },
+    {
+      "k": 10,
+      "q": 37,
+      "unit_minor": true
+    },
+    {
+      "k": 10,
+      "q": 45,
+      "unit_minor": true
+    },
+    {
+      "k": 11,
+      "q": 1,
+      "unit_minor": true
+    },
+    {
+      "k": 11,
+      "q": 11,
+      "unit_minor": true
+    },
+    {
+      "k": 11,
+      "q": 46,
+      "unit_minor": true
+    },
+    {
+      "k": 11,
+      "q": 55,
+      "unit_minor": true
+    }
+  ],
+  "local_rank_h_minus_2": {
+    "M": 5,
+    "h": 4,
+    "jacobian_rank": 5,
+    "residual_tangent_quadratic": "a*b"
+  },
+  "seconds": 0.375,
+  "producer_sha256": "eda659f98632a4207770b0571cd9be030e107295ca6fa529573f7b15047164df",
+  "scope": "Exact chart identities, unit rank witnesses, and one tangent-plane control; the uniform proof is separate."
+}

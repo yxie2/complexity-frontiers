@@ -13,6 +13,22 @@
     "arxiv_submission.zip": {
       "sha256": "6c6888ed2f16cad1611f173e4d9e54a5b52abd3b85eef0e0d3a2fd6786d05bef",
       "bytes": 14794
+    },
+    "anc/PROVENANCE.json": {
+      "sha256": "6c87b16db75aa88e2d0db88e38d9a9a966d3dc5fb5cc32b93cf066f09feddfa3",
+      "bytes": 939
+    },
+    "anc/README.md": {
+      "sha256": "4fa436935be7c5228ea73da2d5247212ceb34fbc71fc7ea08d6bc857c4e95522",
+      "bytes": 1855
+    },
+    "anc/verification_results.json": {
+      "sha256": "e7a0291c6aa548640ce2c8b675dd70808247288396d382d6eee34af264215d9b",
+      "bytes": 60170
+    },
+    "anc/verify_apolarity.py": {
+      "sha256": "bdbd2290cb5aba2bd8755e98aaf7c5adde924596fcd32423184d3539fadbc166",
+      "bytes": 14639
     }
   }
 }

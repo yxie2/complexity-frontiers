@@ -1,0 +1,65 @@
+{
+  "scope": "Existing research checks packaged for reproduction; no new mathematical results.",
+  "files": {
+    "orthogonal_basis_veronese.py": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/orthogonal_basis_veronese.py",
+      "sha256": "2e242bfbd88fce42fbcfe53f0adec9fed47cfd6fe28708d0bf97a2e99259e087",
+      "bytes": 2664,
+      "adaptation": "Byte-identical copy."
+    },
+    "orthogonal_basis_veronese.json": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/orthogonal_basis_veronese.json",
+      "sha256": "3f3e69b395db8ae6a483e43379f43a6b330b932c122a6c38f3e809359d5fc2ca",
+      "bytes": 2195,
+      "adaptation": "Byte-identical copy."
+    },
+    "six_by_six_canonical_controls.py": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/six_by_six_canonical_controls.py",
+      "sha256": "3fa793492c39d56c3058356d126843d8ce7a26cba21241ba11e1d2305ba46b4a",
+      "bytes": 2726,
+      "adaptation": "Byte-identical copy."
+    },
+    "six_by_six_canonical_controls.json": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/six_by_six_canonical_controls.json",
+      "sha256": "860f80868ac16b636aeeaa9541fe9da5e01a8c2f6cc1956731989c109ad6d549",
+      "bytes": 23593,
+      "adaptation": "Byte-identical copy."
+    },
+    "triangular_frame_controls.py": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/triangular_frame_controls.py",
+      "sha256": "215d0ab96761003c6e853f052ab35c898dbdabc67ac1f0957a4e6b5c9eb558c8",
+      "bytes": 6797,
+      "adaptation": "Byte-identical copy."
+    },
+    "triangular_frame_controls.json": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/triangular_frame_controls.json",
+      "sha256": "08df4a3ea6d4e08f48f42be07eb8b4c52f7c29e2e1c14fed485146bb5a9ecd8b",
+      "bytes": 29198,
+      "adaptation": "Byte-identical copy."
+    },
+    "orthogonal_transverse_chart.py": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/orthogonal_transverse_chart.py",
+      "sha256": "eda659f98632a4207770b0571cd9be030e107295ca6fa529573f7b15047164df",
+      "bytes": 2953,
+      "adaptation": "Byte-identical copy."
+    },
+    "orthogonal_transverse_chart.json": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/orthogonal_transverse_chart.json",
+      "sha256": "a16fef9e3f3d454e0b59013754e2929934d5f6f25cc10af8a510f425d343231a",
+      "bytes": 3496,
+      "adaptation": "Byte-identical copy."
+    },
+    "orthogonal_threshold_density.py": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/orthogonal_threshold_density.py",
+      "sha256": "28f1aff0e110510666ae3b283c7b27070dbbc14938644596f792bcf1f7bb1354",
+      "bytes": 2116,
+      "adaptation": "Byte-identical copy."
+    },
+    "orthogonal_threshold_density.json": {
+      "source_path": "pnp_progress/integration/ten_hour_landmark_20260926/computations/orthogonal_threshold_density.json",
+      "sha256": "27da7c5622bc2d9f99ec82723f4f4cef2cf0309801619e7333e661d30e551167",
+      "bytes": 3214,
+      "adaptation": "Byte-identical copy."
+    }
+  }
+}

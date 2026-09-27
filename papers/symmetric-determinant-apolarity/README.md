@@ -2,7 +2,7 @@
 
 **Ying Xie** · Kennesaw State University · yxie2@kennesaw.edu
 
-[PDF](paper.pdf) · [LaTeX](main.tex) · [arXiv source package](arxiv_submission.zip)
+[PDF](paper.pdf) · [LaTeX](main.tex) · [Verification code and results](anc/)
 · [Zenodo record](https://zenodo.org/records/22950380)
 
 ## Results
@@ -20,6 +20,19 @@ for $\mathrm{SL}_2$ and obtains explicit generators from the Steinberg
 symmetrizer. Lemma 3.1 includes the coefficientwise polynomial argument;
 Proposition 4.2 gives the factorization maps, precise source citations,
 and the contraction argument for arbitrary $N$.
+
+## Reproduce the finite checks
+
+From the repository root, using Python 3.11 or later:
+
+```sh
+python scripts/verify_paper_code.py symmetric-determinant-apolarity
+```
+
+The [code guide](anc/README.md) describes the exact scope, dependencies,
+and source provenance. The verifier runs in a temporary copy and compares
+the computed results with the archived records. Finite checks supplement
+the manuscript proofs and do not establish the all-size theorems.
 
 ## Build the paper
 
