@@ -1,0 +1,492 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "ring": "Z/3",
+      "h": 2,
+      "p": 3,
+      "length": 1,
+      "matrices": 3,
+      "primitive_matrices": 2,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 2
+      },
+      "primitive_histogram": {
+        "2": 2
+      },
+      "fixed_pivot_histogram": {
+        "2": 2
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "2": 2
+        },
+        "1": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 2,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "Z/9",
+      "h": 2,
+      "p": 3,
+      "length": 2,
+      "matrices": 9,
+      "primitive_matrices": 6,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 2,
+        "4": 6
+      },
+      "primitive_histogram": {
+        "4": 6
+      },
+      "fixed_pivot_histogram": {
+        "4": 6
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "4": 6
+        },
+        "1": {
+          "2": 2
+        },
+        "2": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 6,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "Z/27",
+      "h": 2,
+      "p": 3,
+      "length": 3,
+      "matrices": 27,
+      "primitive_matrices": 18,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 2,
+        "4": 6,
+        "6": 18
+      },
+      "primitive_histogram": {
+        "6": 18
+      },
+      "fixed_pivot_histogram": {
+        "6": 18
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "6": 18
+        },
+        "1": {
+          "4": 6
+        },
+        "2": {
+          "2": 2
+        },
+        "3": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 18,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "Z/3",
+      "h": 3,
+      "p": 3,
+      "length": 1,
+      "matrices": 27,
+      "primitive_matrices": 26,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 18,
+        "3": 8
+      },
+      "primitive_histogram": {
+        "2": 18,
+        "3": 8
+      },
+      "fixed_pivot_histogram": {
+        "2": 10,
+        "3": 8
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "2": 18,
+          "3": 8
+        },
+        "1": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 6,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "Z/9",
+      "h": 3,
+      "p": 3,
+      "length": 2,
+      "matrices": 729,
+      "primitive_matrices": 702,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 18,
+        "3": 8,
+        "4": 270,
+        "5": 216,
+        "6": 216
+      },
+      "primitive_histogram": {
+        "4": 270,
+        "5": 216,
+        "6": 216
+      },
+      "fixed_pivot_histogram": {
+        "4": 126,
+        "5": 144,
+        "6": 216
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "4": 270,
+          "5": 216,
+          "6": 216
+        },
+        "1": {
+          "2": 18,
+          "3": 8
+        },
+        "2": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 54,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "Z/3",
+      "h": 4,
+      "p": 3,
+      "length": 1,
+      "matrices": 729,
+      "primitive_matrices": 728,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 116,
+        "3": 144,
+        "4": 468
+      },
+      "primitive_histogram": {
+        "2": 116,
+        "3": 144,
+        "4": 468
+      },
+      "fixed_pivot_histogram": {
+        "2": 50,
+        "3": 112,
+        "4": 324
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "2": 116,
+          "3": 144,
+          "4": 468
+        },
+        "1": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 54,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "F_3[t]/(t^1)",
+      "h": 2,
+      "p": 3,
+      "length": 1,
+      "matrices": 3,
+      "primitive_matrices": 2,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 2
+      },
+      "primitive_histogram": {
+        "2": 2
+      },
+      "fixed_pivot_histogram": {
+        "2": 2
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "2": 2
+        },
+        "1": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 2,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "F_3[t]/(t^2)",
+      "h": 2,
+      "p": 3,
+      "length": 2,
+      "matrices": 9,
+      "primitive_matrices": 6,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 2,
+        "4": 6
+      },
+      "primitive_histogram": {
+        "4": 6
+      },
+      "fixed_pivot_histogram": {
+        "4": 6
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "4": 6
+        },
+        "1": {
+          "2": 2
+        },
+        "2": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 6,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "F_3[t]/(t^3)",
+      "h": 2,
+      "p": 3,
+      "length": 3,
+      "matrices": 27,
+      "primitive_matrices": 18,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 2,
+        "4": 6,
+        "6": 18
+      },
+      "primitive_histogram": {
+        "6": 18
+      },
+      "fixed_pivot_histogram": {
+        "6": 18
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "6": 18
+        },
+        "1": {
+          "4": 6
+        },
+        "2": {
+          "2": 2
+        },
+        "3": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 18,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "F_3[t]/(t^1)",
+      "h": 3,
+      "p": 3,
+      "length": 1,
+      "matrices": 27,
+      "primitive_matrices": 26,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 18,
+        "3": 8
+      },
+      "primitive_histogram": {
+        "2": 18,
+        "3": 8
+      },
+      "fixed_pivot_histogram": {
+        "2": 10,
+        "3": 8
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "2": 18,
+          "3": 8
+        },
+        "1": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 6,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "F_3[t]/(t^2)",
+      "h": 3,
+      "p": 3,
+      "length": 2,
+      "matrices": 729,
+      "primitive_matrices": 702,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 18,
+        "3": 8,
+        "4": 270,
+        "5": 216,
+        "6": 216
+      },
+      "primitive_histogram": {
+        "4": 270,
+        "5": 216,
+        "6": 216
+      },
+      "fixed_pivot_histogram": {
+        "4": 126,
+        "5": 144,
+        "6": 216
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "4": 270,
+          "5": 216,
+          "6": 216
+        },
+        "1": {
+          "2": 18,
+          "3": 8
+        },
+        "2": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 54,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    },
+    {
+      "ring": "F_3[t]/(t^1)",
+      "h": 4,
+      "p": 3,
+      "length": 1,
+      "matrices": 729,
+      "primitive_matrices": 728,
+      "image_length_histogram": {
+        "0": 1,
+        "2": 116,
+        "3": 144,
+        "4": 468
+      },
+      "primitive_histogram": {
+        "2": 116,
+        "3": 144,
+        "4": 468
+      },
+      "fixed_pivot_histogram": {
+        "2": 50,
+        "3": 112,
+        "4": 324
+      },
+      "common_valuation_histograms": {
+        "0": {
+          "2": 116,
+          "3": 144,
+          "4": 468
+        },
+        "1": {
+          "0": 1
+        }
+      },
+      "exact_pivot_fibers_checked": 54,
+      "scalar_product_counts_exact": true,
+      "content_strata_exact": true,
+      "pivot_image_lengths_exact": true,
+      "pivot_fiber_counts_exact": true,
+      "coefficientwise_mass_bound": true
+    }
+  ],
+  "total_hollow_matrices": 3048,
+  "exact_pivot_fibers_checked": 280,
+  "mixed_valuation_example": {
+    "ring": "Z/27",
+    "matrix": [
+      [
+        0,
+        3,
+        3
+      ],
+      [
+        3,
+        0,
+        9
+      ],
+      [
+        3,
+        9,
+        0
+      ]
+    ],
+    "rho": 5,
+    "kernel_size": 81
+  },
+  "seconds": 0.14099999999962165,
+  "producer_sha256": "e2e08f0f870d601568354603ca0f3babc416137dcc80c838069aebc1367c928b",
+  "scope": "Finite exact kernel, content-stratum, scalar-product, and pivot-fiber counts."
+}

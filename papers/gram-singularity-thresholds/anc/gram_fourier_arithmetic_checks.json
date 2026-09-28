@@ -1,0 +1,522 @@
+{
+  "thresholds": {
+    "maximum_h": 20000,
+    "lct_pairs": 23095,
+    "examples": [
+      {
+        "h": 2,
+        "F": "1",
+        "maximizer": 2,
+        "prime_threshold": 2,
+        "rational_threshold": 2
+      },
+      {
+        "h": 3,
+        "F": "2",
+        "maximizer": 2,
+        "prime_threshold": 3,
+        "rational_threshold": 3
+      },
+      {
+        "h": 4,
+        "F": "10/3",
+        "maximizer": 3,
+        "prime_threshold": 4,
+        "rational_threshold": 4
+      },
+      {
+        "h": 5,
+        "F": "14/3",
+        "maximizer": 3,
+        "prime_threshold": 5,
+        "rational_threshold": 5
+      },
+      {
+        "h": 6,
+        "F": "6",
+        "maximizer": 3,
+        "prime_threshold": 7,
+        "rational_threshold": 7
+      },
+      {
+        "h": 7,
+        "F": "15/2",
+        "maximizer": 4,
+        "prime_threshold": 8,
+        "rational_threshold": 8
+      },
+      {
+        "h": 8,
+        "F": "9",
+        "maximizer": 4,
+        "prime_threshold": 9,
+        "rational_threshold": 10
+      },
+      {
+        "h": 9,
+        "F": "21/2",
+        "maximizer": 4,
+        "prime_threshold": 11,
+        "rational_threshold": 11
+      },
+      {
+        "h": 10,
+        "F": "12",
+        "maximizer": 4,
+        "prime_threshold": 13,
+        "rational_threshold": 13
+      },
+      {
+        "h": 11,
+        "F": "68/5",
+        "maximizer": 5,
+        "prime_threshold": 14,
+        "rational_threshold": 14
+      },
+      {
+        "h": 12,
+        "F": "76/5",
+        "maximizer": 5,
+        "prime_threshold": 15,
+        "rational_threshold": 16
+      },
+      {
+        "h": 13,
+        "F": "84/5",
+        "maximizer": 5,
+        "prime_threshold": 17,
+        "rational_threshold": 17
+      },
+      {
+        "h": 14,
+        "F": "92/5",
+        "maximizer": 5,
+        "prime_threshold": 19,
+        "rational_threshold": 19
+      },
+      {
+        "h": 15,
+        "F": "20",
+        "maximizer": 5,
+        "prime_threshold": 21,
+        "rational_threshold": 21
+      },
+      {
+        "h": 16,
+        "F": "65/3",
+        "maximizer": 6,
+        "prime_threshold": 22,
+        "rational_threshold": 22
+      },
+      {
+        "h": 17,
+        "F": "70/3",
+        "maximizer": 6,
+        "prime_threshold": 23,
+        "rational_threshold": 24
+      },
+      {
+        "h": 18,
+        "F": "25",
+        "maximizer": 6,
+        "prime_threshold": 25,
+        "rational_threshold": 26
+      },
+      {
+        "h": 19,
+        "F": "80/3",
+        "maximizer": 6,
+        "prime_threshold": 27,
+        "rational_threshold": 27
+      },
+      {
+        "h": 20,
+        "F": "85/3",
+        "maximizer": 6,
+        "prime_threshold": 29,
+        "rational_threshold": 29
+      },
+      {
+        "h": 21,
+        "F": "30",
+        "maximizer": 6,
+        "prime_threshold": 31,
+        "rational_threshold": 31
+      },
+      {
+        "h": 22,
+        "F": "222/7",
+        "maximizer": 7,
+        "prime_threshold": 32,
+        "rational_threshold": 32
+      },
+      {
+        "h": 23,
+        "F": "234/7",
+        "maximizer": 7,
+        "prime_threshold": 33,
+        "rational_threshold": 34
+      },
+      {
+        "h": 24,
+        "F": "246/7",
+        "maximizer": 7,
+        "prime_threshold": 35,
+        "rational_threshold": 36
+      },
+      {
+        "h": 25,
+        "F": "258/7",
+        "maximizer": 7,
+        "prime_threshold": 37,
+        "rational_threshold": 37
+      },
+      {
+        "h": 26,
+        "F": "270/7",
+        "maximizer": 7,
+        "prime_threshold": 39,
+        "rational_threshold": 39
+      },
+      {
+        "h": 27,
+        "F": "282/7",
+        "maximizer": 7,
+        "prime_threshold": 41,
+        "rational_threshold": 41
+      },
+      {
+        "h": 28,
+        "F": "42",
+        "maximizer": 7,
+        "prime_threshold": 43,
+        "rational_threshold": 43
+      },
+      {
+        "h": 29,
+        "F": "175/4",
+        "maximizer": 8,
+        "prime_threshold": 44,
+        "rational_threshold": 44
+      },
+      {
+        "h": 30,
+        "F": "91/2",
+        "maximizer": 8,
+        "prime_threshold": 45,
+        "rational_threshold": 46
+      }
+    ]
+  },
+  "necessity": {
+    "maximum_h": 600,
+    "pairs": 179101,
+    "even_obstructions": 76740,
+    "odd_obstructions": 76734,
+    "boundary_examples": [
+      {
+        "h": 6,
+        "M": 6,
+        "dimension": 21,
+        "stratum_dimension": 21,
+        "first_jet_lower_bound": null
+      },
+      {
+        "h": 8,
+        "M": 9,
+        "dimension": 44,
+        "stratum_dimension": 42,
+        "first_jet_lower_bound": 88
+      },
+      {
+        "h": 10,
+        "M": 12,
+        "dimension": 75,
+        "stratum_dimension": 75,
+        "first_jet_lower_bound": null
+      },
+      {
+        "h": 15,
+        "M": 20,
+        "dimension": 195,
+        "stratum_dimension": 195,
+        "first_jet_lower_bound": null
+      },
+      {
+        "h": 18,
+        "M": 25,
+        "dimension": 297,
+        "stratum_dimension": 294,
+        "first_jet_lower_bound": 594
+      },
+      {
+        "h": 21,
+        "M": 30,
+        "dimension": 420,
+        "stratum_dimension": 420,
+        "first_jet_lower_bound": null
+      },
+      {
+        "h": 28,
+        "M": 42,
+        "dimension": 798,
+        "stratum_dimension": 798,
+        "first_jet_lower_bound": null
+      },
+      {
+        "h": 32,
+        "M": 49,
+        "dimension": 1072,
+        "stratum_dimension": 1068,
+        "first_jet_lower_bound": 2144
+      },
+      {
+        "h": 36,
+        "M": 56,
+        "dimension": 1386,
+        "stratum_dimension": 1386,
+        "first_jet_lower_bound": null
+      },
+      {
+        "h": 45,
+        "M": 72,
+        "dimension": 2250,
+        "stratum_dimension": 2250,
+        "first_jet_lower_bound": null
+      },
+      {
+        "h": 50,
+        "M": 81,
+        "dimension": 2825,
+        "stratum_dimension": 2820,
+        "first_jet_lower_bound": 5650
+      },
+      {
+        "h": 55,
+        "M": 90,
+        "dimension": 3465,
+        "stratum_dimension": 3465,
+        "first_jet_lower_bound": null
+      }
+    ],
+    "prime_threshold_formula_used": false
+  },
+  "products_and_gauss": [
+    {
+      "p": 3,
+      "length": 1,
+      "product_max": 5,
+      "product_bound": 6,
+      "gauss_coefficients_checked": 5
+    },
+    {
+      "p": 3,
+      "length": 2,
+      "product_max": 21,
+      "product_bound": 27,
+      "gauss_coefficients_checked": 5
+    },
+    {
+      "p": 3,
+      "length": 3,
+      "product_max": 81,
+      "product_bound": 108,
+      "gauss_coefficients_checked": 5
+    },
+    {
+      "p": 3,
+      "length": 4,
+      "product_max": 297,
+      "product_bound": 405,
+      "gauss_coefficients_checked": 5
+    },
+    {
+      "p": 5,
+      "length": 1,
+      "product_max": 9,
+      "product_bound": 10,
+      "gauss_coefficients_checked": 5
+    },
+    {
+      "p": 5,
+      "length": 2,
+      "product_max": 65,
+      "product_bound": 75,
+      "gauss_coefficients_checked": 5
+    },
+    {
+      "p": 5,
+      "length": 3,
+      "product_max": 425,
+      "product_bound": 500,
+      "gauss_coefficients_checked": 5
+    },
+    {
+      "p": 7,
+      "length": 2,
+      "product_max": 133,
+      "product_bound": 147,
+      "gauss_coefficients_checked": 5
+    }
+  ],
+  "matrices": {
+    "records": [
+      {
+        "h": 2,
+        "p": 3,
+        "length": 3,
+        "matrices": 27,
+        "image_length_histogram": {
+          "0": 1,
+          "2": 2,
+          "4": 6,
+          "6": 18
+        },
+        "unit_mass_checks": [
+          {
+            "s": 1,
+            "actual": "2/81",
+            "pivot_bound": "1/27"
+          },
+          {
+            "s": 2,
+            "actual": "2/59049",
+            "pivot_bound": "1/19683"
+          },
+          {
+            "s": 3,
+            "actual": "2/43046721",
+            "pivot_bound": "1/14348907"
+          }
+        ]
+      },
+      {
+        "h": 3,
+        "p": 3,
+        "length": 2,
+        "matrices": 729,
+        "image_length_histogram": {
+          "0": 1,
+          "2": 18,
+          "3": 8,
+          "4": 270,
+          "5": 216,
+          "6": 216
+        },
+        "unit_mass_checks": [
+          {
+            "s": 1,
+            "actual": "122/27",
+            "pivot_bound": "21"
+          },
+          {
+            "s": 2,
+            "actual": "890/19683",
+            "pivot_bound": "35/243"
+          },
+          {
+            "s": 3,
+            "actual": "7514/14348907",
+            "pivot_bound": "263/177147"
+          }
+        ]
+      },
+      {
+        "h": 3,
+        "p": 5,
+        "length": 1,
+        "matrices": 125,
+        "image_length_histogram": {
+          "0": 1,
+          "2": 60,
+          "3": 64
+        },
+        "unit_mass_checks": [
+          {
+            "s": 1,
+            "actual": "364/125",
+            "pivot_bound": "54/5"
+          },
+          {
+            "s": 2,
+            "actual": "1564/15625",
+            "pivot_bound": "174/625"
+          },
+          {
+            "s": 3,
+            "actual": "7564/1953125",
+            "pivot_bound": "774/78125"
+          }
+        ]
+      },
+      {
+        "h": 4,
+        "p": 3,
+        "length": 1,
+        "matrices": 729,
+        "image_length_histogram": {
+          "0": 1,
+          "2": 116,
+          "3": 144,
+          "4": 468
+        },
+        "unit_mass_checks": [
+          {
+            "s": 1,
+            "actual": "24",
+            "pivot_bound": "408"
+          },
+          {
+            "s": 2,
+            "actual": "1240/729",
+            "pivot_bound": "152/9"
+          },
+          {
+            "s": 3,
+            "actual": "9880/59049",
+            "pivot_bound": "856/729"
+          }
+        ]
+      },
+      {
+        "h": 4,
+        "p": 3,
+        "length": 2,
+        "matrices": 531441,
+        "image_length_histogram": {
+          "0": 1,
+          "2": 116,
+          "3": 144,
+          "4": 8784,
+          "5": 19872,
+          "6": 106920,
+          "7": 54432,
+          "8": 341172
+        },
+        "unit_mass_checks": [
+          {
+            "s": 1,
+            "actual": "408",
+            "pivot_bound": "12150"
+          },
+          {
+            "s": 2,
+            "actual": "35912/19683",
+            "pivot_bound": "530/27"
+          },
+          {
+            "s": 3,
+            "actual": "248456/14348907",
+            "pivot_bound": "694/6561"
+          }
+        ]
+      }
+    ],
+    "kernel_checks": 44,
+    "hollow_pivot_checks": 355384
+  },
+  "status": "PASS",
+  "seconds": 15.375,
+  "producer_sha256": "de4066a5b794d34f3c06638f9149b07d67af7cfdace2060c66be6a3f0fb31afc",
+  "scope": "Exact threshold arithmetic, scalar identities, and finite-ring matrix counts."
+}

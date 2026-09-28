@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "title": "Sharp FRS and singularity thresholds for off-diagonal Gram maps",
+  "doi": "10.5281/zenodo.23005526",
+  "files": [
+    {
+      "path": "anc/check_direct_gram_counts.py",
+      "bytes": 5961,
+      "sha256": "bc270c9c0a0ac5874c005013c11f05042edd9497d374fad51b8625ade991d504"
+    },
+    {
+      "path": "anc/check_gram_fourier_arithmetic.py",
+      "bytes": 8934,
+      "sha256": "de4066a5b794d34f3c06638f9149b07d67af7cfdace2060c66be6a3f0fb31afc"
+    },
+    {
+      "path": "anc/check_odd_gram_first_jets.py",
+      "bytes": 5357,
+      "sha256": "ba843c8a08dbea5726d221a9df69bbbd0e0a9e5dbbf0fad29d0a497f8ffdbc69"
+    },
+    {
+      "path": "anc/check_valuation_strata.py",
+      "bytes": 8749,
+      "sha256": "e2e08f0f870d601568354603ca0f3babc416137dcc80c838069aebc1367c928b"
+    },
+    {
+      "path": "anc/direct_gram_count_checks.json",
+      "bytes": 4741,
+      "sha256": "e90c4c0261ed78c780ce565049766caab32f6cf622a501bd3b4ed061e700908e"
+    },
+    {
+      "path": "anc/gram_fourier_arithmetic_checks.json",
+      "bytes": 11293,
+      "sha256": "2be15654826aed426d9cb321ef88ba9203aff8dc4da6672a0726b50c7d7dbab9"
+    },
+    {
+      "path": "anc/odd_gram_first_jet_checks.json",
+      "bytes": 2214,
+      "sha256": "871743f1cab2b6eb76cbfd682dd328beec1d2fadefbcee16461e03777e085e94"
+    },
+    {
+      "path": "anc/README.md",
+      "bytes": 3489,
+      "sha256": "1672bde1a353b819f8b1b6964720d05fb09228a7605f204edb69413d2f05f8ef"
+    },
+    {
+      "path": "anc/SHA256SUMS.txt",
+      "bytes": 855,
+      "sha256": "e4822a3991e981e8457cbcfc540085ccd017afaff5c9f280c876c6456f16add5"
+    },
+    {
+      "path": "anc/valuation_strata_checks.json",
+      "bytes": 10783,
+      "sha256": "30d31a2a4724f831f53679a5f9b13e6a01667a758801ef8da9976d1f31b2aa7f"
+    },
+    {
+      "path": "arxiv_submission.zip",
+      "bytes": 42126,
+      "sha256": "0cdb9179d1617c03fa3b80323bdc7dac0eb7680ed07ae0354b7aa7fdd5bdd03c"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 997,
+      "sha256": "772fde156c76293170e1ebeb5b0755b784664f7b9646778a9fe20e2bfffe4379"
+    },
+    {
+      "path": "gram_verification_code.zip",
+      "bytes": 17502,
+      "sha256": "869022254709a2202b60d6749e990b64e25be64d894b57e044969722505c81ba"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 577,
+      "sha256": "883a46dc354dc8678549ecfd5dea89bdd777c83d5db1e99ce0372e5fa6e71cf0"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 69399,
+      "sha256": "d2605fe4285aef0d149a007ca84804f4cda42889c1dfa017c5a185d369347e2d"
+    },
+    {
+      "path": "paper.pdf",
+      "bytes": 642057,
+      "sha256": "5eb62116ec73b8afbb9fc805215da2e97c613caab1bc4295cc2aa6db6c85642a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4011,
+      "sha256": "12fc2ae834c99e476c99dae7316d2d303496878c8e6f2ba04d40f7014e3e2403"
+    },
+    {
+      "path": "review_bundle.zip",
+      "bytes": 563856,
+      "sha256": "9a42f04dfb19274e2a9e88e1fdc306fa846b142c104a0038e963e800cccd76c3"
+    }
+  ]
+}

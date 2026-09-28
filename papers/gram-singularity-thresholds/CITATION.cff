@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: Please cite this manuscript when using its results or verification code.
+type: software
+title: Sharp FRS and singularity thresholds for off-diagonal Gram maps
+authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/gram-singularity-thresholds
+repository-code: https://github.com/yxie2/complexity-frontiers
+preferred-citation:
+  type: article
+  title: Sharp FRS and singularity thresholds for off-diagonal Gram maps
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+  year: 2026
+  doi: 10.5281/zenodo.23005526
+  url: https://doi.org/10.5281/zenodo.23005526
+  date-published: '2026-09-28'
+  publisher:
+    name: Zenodo
+  notes: Preprint; not peer reviewed.

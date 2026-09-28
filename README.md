@@ -29,21 +29,33 @@ the paper and the relevant theorem, section, or page.
 The order reflects an editorial assessment of the breadth of the results,
 depth of the methods, and potential usefulness for further research.
 
-| Paper | Materials | Status |
-| --- | --- | --- |
-| **Dimensions of permanental varieties in arbitrary size** | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
-| **Symmetric-determinant apolarity in odd characteristic** | [Paper and reproduction guide](papers/symmetric-determinant-apolarity/README.md) · [PDF](papers/symmetric-determinant-apolarity/paper.pdf) · [LaTeX](papers/symmetric-determinant-apolarity/main.tex) · [Code](papers/symmetric-determinant-apolarity/anc/) | [Zenodo record](https://zenodo.org/records/22950380). |
-| **Principal components and singularities of orthogonal frame varieties** | [Paper and reproduction guide](papers/orthogonal-frame-varieties/README.md) · [PDF](papers/orthogonal-frame-varieties/paper.pdf) · [LaTeX](papers/orthogonal-frame-varieties/main.tex) · [Code](papers/orthogonal-frame-varieties/anc/) | [Zenodo record](https://zenodo.org/records/22985617). |
-| **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
-| **Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic** | [Paper and reproduction guide](papers/elementary-symmetric-loci/README.md) · [PDF](papers/elementary-symmetric-loci/paper.pdf) · [LaTeX](papers/elementary-symmetric-loci/main.tex) · [Code](papers/elementary-symmetric-loci/anc/) | [Zenodo preprint](https://zenodo.org/records/22929810). |
-| **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22879129). |
-| **Frobenius splitting and singular loci of prime-size permanents** | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22878451). |
+| Paper | Open problem addressed | Materials | Status |
+| --- | --- | --- | --- |
+| **Dimensions of permanental varieties in arbitrary size** | [Boralevi–Carlini–Michałek–Ventura, Conjecture 3.4](https://arxiv.org/html/2402.17839v2): complete intersections of maximal near-square permanents, in every size. | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
+| **Sharp FRS and singularity thresholds for off-diagonal Gram maps** | [Casabella–Sammartano, Question 8.1](https://arxiv.org/html/2512.25058v1#S8.SS1): the exact rational-singularity threshold in characteristic zero; sharp F-rational sufficiency remains open. | [Paper and reproduction guide](papers/gram-singularity-thresholds/README.md) · [PDF](papers/gram-singularity-thresholds/paper.pdf) · [LaTeX](papers/gram-singularity-thresholds/main.tex) · [Code](papers/gram-singularity-thresholds/anc/) | [Zenodo preprint](https://zenodo.org/records/23005526). |
+| **Symmetric-determinant apolarity in odd characteristic** | NA | [Paper and reproduction guide](papers/symmetric-determinant-apolarity/README.md) · [PDF](papers/symmetric-determinant-apolarity/paper.pdf) · [LaTeX](papers/symmetric-determinant-apolarity/main.tex) · [Code](papers/symmetric-determinant-apolarity/anc/) | [Zenodo record](https://zenodo.org/records/22950380). |
+| **Principal components and singularities of orthogonal frame varieties** | [Casabella–Sammartano, Questions 8.1, 8.3 and 8.4](https://arxiv.org/html/2512.25058v1#S8): rationality counterexamples, defining ideals (including the first open case), and principal-component singularities in the stated families. | [Paper and reproduction guide](papers/orthogonal-frame-varieties/README.md) · [PDF](papers/orthogonal-frame-varieties/paper.pdf) · [LaTeX](papers/orthogonal-frame-varieties/main.tex) · [Code](papers/orthogonal-frame-varieties/anc/) | [Zenodo record](https://zenodo.org/records/22985617). |
+| **Strongly Exponential Sensitive Monotone Bounds in VP via Eulerian Conditioning** | [Chattopadhyay–Datta–Ghosal–Mukhopadhyay, §7](https://doi.org/10.4230/LIPIcs.ITCS.2022.39): strongly exponential sensitive monotone lower bounds; the targets here lie in VP. | [Paper and reproduction guide](papers/sensitive-monotone-vp/README.md) · [PDF](papers/sensitive-monotone-vp/paper.pdf) · [LaTeX](papers/sensitive-monotone-vp/main.tex) · [Code](papers/sensitive-monotone-vp/anc/) | [Zenodo preprint](https://zenodo.org/records/22783087). |
+| **Derivative and multiplicity loci of elementary symmetric polynomials in positive characteristic** | [Orzel, Conjecture 2.11](https://arxiv.org/html/2509.05009v3): the order-two zero-locus dimension criterion, with a correction at prime-power degrees. | [Paper and reproduction guide](papers/elementary-symmetric-loci/README.md) · [PDF](papers/elementary-symmetric-loci/paper.pdf) · [LaTeX](papers/elementary-symmetric-loci/main.tex) · [Code](papers/elementary-symmetric-loci/anc/) | [Zenodo preprint](https://zenodo.org/records/22929810). |
+| **F-purity of the maximal permanental ideal of a generic three-by-four matrix** | [Chau, Conjecture 4.5 (preprint)](https://arxiv.org/html/2509.09980v1): F-purity of maximal 3 × 4 permanental rings exactly when p ≡ 1 mod 6. | [Paper and reproduction guide](papers/three-by-four-permanents/README.md) · [PDF](papers/three-by-four-permanents/paper.pdf) · [LaTeX](papers/three-by-four-permanents/main.tex) · [Code](papers/three-by-four-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22879129). |
+| **Frobenius splitting and singular loci of prime-size permanents** | [Boralevi–Carlini–Michałek–Ventura, Conjecture 3.4](https://arxiv.org/html/2402.17839v2): the (p−1) × p cases for prime p; a partial answer to the all-size question. | [Paper and reproduction guide](papers/prime-size-permanents/README.md) · [PDF](papers/prime-size-permanents/paper.pdf) · [LaTeX](papers/prime-size-permanents/main.tex) · [Code](papers/prime-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22878451). |
+
+The open-problem column identifies the cited question or conjecture and the
+scope addressed by each draft. “NA” means that the manuscript does not
+identify a specific previously stated open problem.
 
 **Permanental dimensions in arbitrary size.** This paper determines the
 dimensions of proper permanental varieties in characteristic different from
 two. It gives exact critical-locus codimension for the permanent in every
 size and proves that maximal permanents of a generic near-square matrix
 generate a geometrically reduced complete intersection.
+
+**Gram-map FRS and singularity thresholds.** This paper gives the exact
+characteristic-zero threshold for the Gram map to be flat with reduced fibers
+having rational singularities, and computes the log canonical threshold for
+every dimension and number of vectors. It also proves integral truncated
+coefficient fibers in a sharp range uniform over graphs, with quantitative
+local-field density estimates.
 
 **Symmetric-determinant apolarity.** This paper determines the ordinary apolar
 ideal of the generic symmetric determinant in every size over a field of
@@ -96,6 +108,18 @@ No additional Python packages are required. The checks cover 817 exact polynomia
 equalities for sizes two through five and 87,376 coordinate-support pairs for
 sizes two through eight. See the [reproduction guide](papers/all-size-permanents/README.md#reproduce-the-checks)
 and [recorded results](papers/all-size-permanents/anc/verification_results.json).
+
+### Gram-map FRS and singularity thresholds
+
+```sh
+python scripts/verify_gram_singularities.py
+```
+
+Only the Python standard library is required. The four programs check
+threshold arithmetic, finite-ring Fourier identities, direct Gram counts,
+first jets, and hollow valuation strata. See the
+[reproduction guide](papers/gram-singularity-thresholds/README.md#reproduce-the-finite-checks)
+and [code and recorded results](papers/gram-singularity-thresholds/anc/).
 
 ### Symmetric-determinant apolarity
 
@@ -172,6 +196,7 @@ python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
 python -m pip install -r papers/sensitive-monotone-vp/anc/requirements.txt
 python -m pip install -r papers/elementary-symmetric-loci/anc/requirements.txt
 python scripts/verify_permanents.py all-size-permanents
+python scripts/verify_gram_singularities.py
 python scripts/verify_paper_code.py symmetric-determinant-apolarity
 python scripts/verify_paper_code.py orthogonal-frame-varieties
 python scripts/verify_sensitive_monotone.py
@@ -181,6 +206,7 @@ python scripts/verify_permanents.py prime-size-permanents
 ```
 
 GitHub Actions runs the
+[Gram-map checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/gram-singularity-checks.yml),
 [sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml),
 the [permanent checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/permanent-checks.yml),
 and the [elementary symmetric checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/elementary-symmetric-checks.yml)
@@ -202,6 +228,13 @@ separate citation below and its own machine-readable citation file.
 [Citation metadata](papers/all-size-permanents/CITATION.cff) · [Zenodo record](https://zenodo.org/records/22901136)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22901136.svg)](https://doi.org/10.5281/zenodo.22901136)
+
+### Gram-map FRS and singularity thresholds
+
+> Ying Xie. *Sharp FRS and singularity thresholds for off-diagonal Gram maps*.
+> Zenodo, 2026. https://doi.org/10.5281/zenodo.23005526.
+
+[Citation metadata](papers/gram-singularity-thresholds/CITATION.cff) · [Zenodo record](https://zenodo.org/records/23005526)
 
 ### Symmetric-determinant apolarity
 
@@ -254,7 +287,7 @@ separate citation below and its own machine-readable citation file.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22878451.svg)](https://doi.org/10.5281/zenodo.22878451)
 
 The root [CITATION.cff](CITATION.cff) describes the collection and lists all
-seven papers as references. Each Zenodo link identifies the individual
+eight papers as references. Each Zenodo link identifies the individual
 record listed with it.
 
 ## Feedback
@@ -266,7 +299,7 @@ reports, include the command and relevant software versions.
 
 ## Acknowledgment
 
-All seven manuscripts retain their acknowledgments to OpenAI GPT-6.
+All eight manuscripts retain their acknowledgments to OpenAI GPT-6.
 Each manuscript states the assistance acknowledged for that work.
 
 ## Licenses
@@ -279,6 +312,7 @@ Manuscript-specific license notices are listed separately:
 | Paper | Manuscript license information |
 | --- | --- |
 | Permanental dimensions in arbitrary size | [CC BY 4.0 notice](papers/all-size-permanents/LICENSE.md), consistent with its Zenodo record. |
+| Gram-map FRS and singularity thresholds | [CC BY 4.0 notice](papers/gram-singularity-thresholds/LICENSE.md), consistent with its Zenodo record. |
 | Symmetric-determinant apolarity | Consult the [Zenodo record](https://zenodo.org/records/22950380) for manuscript license information. |
 | Orthogonal frame varieties | Consult the [Zenodo record](https://zenodo.org/records/22985617) for manuscript license information. |
 | Sensitive monotone bounds in VP | [CC BY 4.0 notice](papers/sensitive-monotone-vp/LICENSE.md), consistent with its Zenodo record. |

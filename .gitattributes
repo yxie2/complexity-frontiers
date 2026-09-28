@@ -14,3 +14,5 @@ papers/symmetric-determinant-apolarity/main.tex -text -whitespace
 papers/orthogonal-frame-varieties/main.tex -text -whitespace
 papers/orthogonal-frame-varieties/anc/** -text -whitespace
 papers/symmetric-determinant-apolarity/anc/** -text -whitespace
+papers/gram-singularity-thresholds/main.tex -text -whitespace
+papers/gram-singularity-thresholds/anc/** -text -whitespace
