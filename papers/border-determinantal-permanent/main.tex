@@ -1,0 +1,904 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\per}{per}
+\DeclareMathOperator{\Crit}{Crit}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\dc}{dc}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\adj}{adj}
+\newcommand{\bdc}{\overline{\dc}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\PP}{\mathbb P}
+\title{Smooth slices and superquadratic border determinantal\\
+complexity of the permanent}
+\author{Ying Xie\\Kennesaw State University\\
+\texttt{yxie2@kennesaw.edu}}
+\date{}
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=15\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\hypersetup{pdftitle={Smooth slices and superquadratic border determinantal complexity of the permanent},
+pdfauthor={Ying Xie},pdfsubject={Algebraic complexity and polar intersections}}
+\hypersetup{pdfcreator={},pdfproducer={},pdfcreationdate={},pdfmoddate={}}
+\ifdefined\XeTeXversion
+\AtBeginDocument{\special{pdf:docinfo << /CreationDate () /ModDate () /Creator () /Producer () >>}
+\special{pdf:trailerid [<00000000000000000000000000000000> <00000000000000000000000000000000>]}}
+\fi
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove that the border determinantal complexity of the $n\times n$
+permanent over $\mathbb C$ is $\Omega(n^2\log n)$. In particular, it is
+at least $n^2(\log_2 n-5)/(64e)$ for $n\ge64$, and at least
+$3n^2(\log_2 n-8)/(256eH_2(1/8))$ for $n\ge512$, where $H_2$ is
+binary entropy. The proof combines the matching-polynomial restrictions
+of OpenAI with Sheshadri's determinantal kernel incidence, using a
+general linear slice to obtain a smooth homogeneous target. A direct
+perturbation argument transfers its polar count to coefficient limits
+of arbitrary affine-linear determinants. We refine the shared matching
+coefficients by removing their constant block on the critical locus;
+the remaining coefficient compression also appears in work of Guo.
+The argument gives corresponding bounds for arbitrary acyclic algebraic
+branching programs and determines the order of border determinantal
+complexity of elementary symmetric polynomials. An algebraic transfer
+retains multiplicities and extends the permanent bounds to algebraically
+closed fields of characteristic $p>n$. Separate circuit-state bounds
+allow $O(n^2)$ non-skew products and nonscalar divisions. These restricted
+circuit consequences do not separate VP from VNP.
+\end{abstract}
+
+\section{Introduction and main results}
+
+For a polynomial $f$, its border determinantal complexity $\bdc(f)$
+is the least integer $m$ for which $f$ belongs to the Zariski closure of
+\[
+\mathcal D_m=\left\{\det\left(A_0+\sum_i x_i A_i\right):
+ A_i\in\C^{m\times m}\right\}
+\]
+in the space of polynomials of degree at most $m$. This agrees with
+coefficientwise approximation over $\C$: $\mathcal D_m$ is constructible,
+and a complex constructible set has the same Euclidean and Zariski
+closures. Exact determinantal complexity is denoted by $\dc$.
+
+Landsberg, Manivel, and Ressayre~\cite{LMR} proved the quadratic bound
+$\bdc(\per_n)\ge n^2/2$. We obtain an unbounded logarithmic
+improvement in the asymptotic lower bound.
+
+\begin{theorem}\label{thm:main}
+Over $\mathbb C$, for every integer $n\ge64$,
+\begin{equation}\label{eq:main-simple}
+ \bdc(\per_n)\ge\frac{n^2(\log_2 n-5)}{64e}.
+\end{equation}
+Writing $\gamma=H_2(1/8)$, for every $n\ge512$ one also has
+\begin{equation}\label{eq:main-compressed}
+ \bdc(\per_n)\ge\frac{3n^2(\log_2 n-8)}{256e\gamma}.
+\end{equation}
+In particular,
+\[
+ \liminf_{n\to\infty}\frac{\bdc(\per_n)}{n^2\log_2 n}
+ \ge\frac{3}{256eH_2(1/8)}.
+\]
+Here $H_2(x)=-x\log_2 x-(1-x)\log_2(1-x)$.
+The same bounds hold for exact determinantal complexity.
+\end{theorem}
+
+These explicit inequalities need not exceed $n^2/2$ throughout their
+stated finite ranges; either may always be combined with the quadratic
+bound. The first has a shorter parameter calculation, while the second
+has the larger asymptotic constant.
+
+The proof combines the matching-polynomial restriction and critical-locus
+bound of~\cite[Chapter 5, Proposition 5.1 and Lemma 6.1]{OAI} with the
+determinantal polar-incidence mechanism of~\cite[Theorem 1.3]{Sheshadri}.
+We include derivations of the needed matching identities and a direct
+smooth-target transfer proof, so the main argument does not depend on
+other claims in those works. Guo~\cite[Proposition 3.1]{Guo} obtains the
+same disjointness-matrix compression of the shared matching coefficients.
+We further use the vanishing of their constant block on the critical
+locus. Neither the matching selector nor the kernel incidence is claimed
+as a new construction here. The main result is their composition through
+a fixed smooth slice, with explicit finite-size estimates.
+
+The elementary-symmetric consequence is in Section~\ref{sec:elementary}.
+Appendix~\ref{app:algebraic} gives the multiplicity-preserving transfer
+and its large-characteristic consequence. Appendices~\ref{app:nonskew}
+and~\ref{app:rationalstate} concern circuits with a stated budget on
+non-skew products and nonscalar divisions. The latter statements keep
+that budget and are distinct from unrestricted circuit lower bounds,
+such as those in~\cite{OAI,Guo}.
+
+All critical loci in this note are affine zero sets of all first
+partial derivatives. A smooth projective hypersurface means a smooth
+hypersurface scheme, not merely a smooth reduced support. Every degree
+under consideration is at least two.
+
+\section{From critical codimension to a smooth slice}
+
+\begin{lemma}\label{lem:slice}
+Let $P$ be a nonzero homogeneous degree-$d$ form on $\C^a$, where
+$d\ge2$. Suppose $\codim\Crit(P)\ge k\ge3$. Then a general $k$-dimensional
+linear subspace $W\subseteq\C^a$ has the property that
+$V(P|_W)\subset\PP(W)$ is a smooth degree-$d$ hypersurface.
+\end{lemma}
+
+\begin{proof}
+If $k=a$, the critical locus is $\{0\}$ and there is nothing to prove.
+Suppose $k<a$. The Grassmannian $\Gr(k,a)$ has dimension $k(a-k)$.
+For a smooth point $[x]\in V(P)\subset\PP^{a-1}$, the restriction can
+be singular at $[x]$ only if
+\[
+ [x]\in\PP(W)\subseteq T_{[x]}V(P).
+\]
+For this fixed point, the choices of $W$ form a Grassmannian of
+dimension $(k-1)(a-k-1)$. Since the smooth locus of the hypersurface
+has dimension $a-2$, the incidence of these pairs has dimension
+\[
+ (a-2)+(k-1)(a-k-1)=k(a-k)-1.
+\]
+The projective singular locus has dimension at most $a-k-1$, by
+homogeneity and Euler's identity. For a fixed singular point, the
+subspaces containing it have dimension $(k-1)(a-k)$. Thus the other
+bad incidence also has dimension at most $k(a-k)-1$. Their images
+cannot fill the Grassmannian. A general $W$ avoids both and has nonzero
+restriction, proving the claim.
+\end{proof}
+
+\begin{remark}
+This argument is necessary: restricting the original gradient and
+projecting its output is not the same operation as taking the gradient
+of a restriction. The tangent incidence excludes singularities created
+by the latter operation. The subspace $W$ will be fixed before any
+border limit is taken.
+\end{remark}
+
+\section{A border bound for smooth homogeneous targets}
+
+We give the precise smooth-target consequence of the kernel-incidence
+method~\cite{Sheshadri} needed here. The proof uses persistence of simple
+affine polar points, avoiding a general assertion about specialization
+of conormal cycles.
+
+\begin{proposition}\label{prop:polar}
+Let $f$ be a homogeneous degree-$d$ form in $k\ge3$ variables, with
+$V(f)\subset\PP^{k-1}$ smooth. If $\bdc(f)\le m$, then
+\begin{align}
+ d(d-1)^{k-2}&\le B(m,k),\label{eq:polar}\\
+ B(m,k)&=\sum_{a=1}^{k-1}
+ \binom ma\binom{m-1}{k-1-a}\binom{k-2}{a-1}.
+ \label{eq:B}
+\end{align}
+Consequently,
+\begin{equation}\label{eq:bridge}
+ \bdc(f)\ge\frac{(k-1)(d-1)}{4e}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+\emph{Simple points on the target.}
+Euler's identity and smoothness imply that the first partials of $f$
+have no common projective zero. They define a morphism on
+$\PP^{k-1}$ whose pullback of $\mathcal O(1)$ is
+$\mathcal O(d-1)$. This morphism is finite: a positive-dimensional
+fiber would contain a curve on which an ample line bundle had degree
+zero. Its restriction to $V(f)$ is finite as well.
+
+Choose $k-2$ general constant-coefficient directional derivatives
+$D_1,\ldots,D_{k-2}$. In characteristic zero a general linear section
+of the image avoids the branch locus and pulls back transversely.
+The intersection on $V(f)$ therefore consists of
+\[
+ \delta=d(d-1)^{k-2}
+\]
+distinct points. Equivalently, this follows by successive general
+members of the basepoint-free polar system and Bezout. Choose a linear
+form $\ell$ nonzero at all these points and rescale each representative
+to satisfy $\ell=1$. The resulting points are simple zeros of the
+square affine system
+\begin{equation}\label{eq:affine}
+ f=0,\qquad \ell-1=0,\qquad D_jf=0\quad(1\le j\le k-2).
+\end{equation}
+
+\emph{Persistence under approximation.}
+Work in the coefficient space of polynomials of degree at most $m$.
+The implicit-function theorem at each of the finitely many simple
+zeros in~\eqref{eq:affine} gives a neighborhood of $f$ in which every
+polynomial $g$ has a distinct simple zero near each one for the system
+with $f$ replaced by $g$. Since $f\in\overline{\mathcal D_m}$, choose
+$g=\det A$ in this neighborhood, where $A$ is an affine-linear
+$m\times m$ matrix. At the retained zeros, $\nabla g\ne0$, so
+$\rank A=m-1$. No convergence of the coefficients of $A$ is required.
+
+\emph{A square kernel-incidence system.}
+Write $\widehat A(z,x)=zA_0+\sum_i x_iA_i$. For each retained point,
+choose its unique projective left and right kernel lines, represented
+by $u$ and $v$. Choose a linear map
+$\Lambda:\C^m\to\C^{m-1}$ injective on the image of $A$ at every
+one of these finitely many points. Each is a nonempty open condition
+on $\Lambda$, so a common choice exists. On
+\[
+ \PP^k_{[z:x]}\times\PP^{m-1}_{[u]}\times\PP^{m-1}_{[v]}
+\]
+consider the following system:
+\begin{equation}\label{eq:incidence}
+ u^{\mathsf T}\widehat A=0,\qquad
+ \Lambda\widehat A v=0,\qquad
+ u^{\mathsf T}(D_jA)v=0,\qquad
+ \ell(x)-z=0.
+\end{equation}
+There are respectively $m$, $m-1$, $k-2$, and one equations. Their
+multidegrees are $(1,1,0)$, $(1,0,1)$, $(0,1,1)$, and $(1,0,0)$.
+The number of equations equals the ambient dimension.
+
+\emph{Isolation is local, not a genericity assumption on $A$.}
+Fix a retained point and work in the affine chart $z=1$. After
+permuting rows and columns, write
+\[
+ A=\begin{pmatrix}B&c\\ r&s\end{pmatrix},\qquad \det B\ne0.
+\]
+In suitable kernel charts the full left equations solve
+$u^{\mathsf T}=(-rB^{-1},1)$ and impose $s-rB^{-1}c=0$.
+On this hypersurface, injectivity of $\Lambda$ on the matrix image
+persists locally. The reduced right equations thus solve
+$v=(-B^{-1}c,1)$. In particular, the kernel incidence is locally a
+graph over $g=0$. On that graph,
+\[
+ \adj(A)=(\det B)vu^{\mathsf T},\qquad
+ D_jg=(\det B)u^{\mathsf T}(D_jA)v.
+\]
+The factor $\det B$ is a unit. Thus the retained simple zeros of the
+affine polar system lift to reduced isolated solutions
+of~\eqref{eq:incidence}. Other components, including components at
+infinity or of higher corank, do not affect this assertion.
+
+\emph{Counting.}
+Multihomogeneous Bezout bounds the number of isolated solutions by
+\begin{equation}\label{eq:coefficient}
+ [H^kU^{m-1}V^{m-1}]
+ H(H+U)^m(H+V)^{m-1}(U+V)^{k-2}.
+\end{equation}
+This remains a bound when there are excess components: perturb the
+sections of the globally generated line bundles to a proper
+intersection; each reduced isolated solution persists. Expanding the
+coefficient in~\eqref{eq:coefficient} gives~\eqref{eq:B}, and proves
+\eqref{eq:polar}.
+
+Finally, Vandermonde's identity gives
+\[
+ B(m,k)\le 2^{k-2}\binom{2m-1}{k-1}
+ \le 2^{k-2}\left(\frac{e(2m-1)}{k-1}\right)^{k-1}.
+\]
+If the binomial coefficient vanishes,~\eqref{eq:polar} is impossible;
+otherwise the displayed estimates imply
+\[
+ m\ge\frac12+\frac{k-1}{4e}
+       \bigl(2d(d-1)^{k-2}\bigr)^{1/(k-1)}
+ \ge\frac{(k-1)(d-1)}{4e}.
+\]
+\end{proof}
+
+\begin{corollary}\label{cor:codim}
+If $P$ is homogeneous of degree $d\ge2$ and
+$\codim\Crit(P)\ge k\ge3$, then
+\[
+ \bdc(P)\ge\frac{(k-1)(d-1)}{4e}.
+\]
+The same lower bound holds for any polynomial having a nonzero scalar
+multiple of $P$ as an affine restriction.
+\end{corollary}
+\begin{proof}
+Apply Lemma~\ref{lem:slice} and Proposition~\ref{prop:polar}.
+Affine substitution preserves size-$m$ determinantal representations
+and commutes with coefficientwise limits. A nonzero scalar is absorbed
+by scaling one row of the representing matrix.
+\end{proof}
+
+\section{The permanent specialization and its parameters}
+
+We state the matching inputs and their coefficient refinement.
+Appendix~\ref{app:matching} supplies all the required identities.
+For a $t\times s$ matrix
+of variables $X$, let
+\[
+ M_{t,s,d}(X)=\sum_{\substack{I\subseteq[t],\ J\subseteq[s]\\
+                              |I|=|J|=d}}
+                 \per(X_{I,J}).
+\]
+Proposition 5.1 of~\cite[Chapter 5]{OAI} states, for
+$3\le d\le\min(t,s)$,
+\begin{equation}\label{eq:critical}
+ \dim\Crit(M_{t,s,d})\le 2^t-1+s(d-2).
+\end{equation}
+The refined estimate proved in Appendix~\ref{app:compression} is
+\begin{equation}\label{eq:critical-compressed}
+ \dim\Crit(M_{t,s,d})\le R_{\rm crit}(t,d)+s(d-2),\qquad
+ R_{\rm crit}(t,d)=\sum_{j=1}^{d-1}\binom{t}{\min(j,d-j)}-t.
+\end{equation}
+For $b$ disjoint blocks of variables $X^{(h)}$ and nonzero scalars
+$\lambda_h$, put
+\[
+P=\sum_{h=1}^b\lambda_h M_{t,s,d}(X^{(h)}).
+\]
+Its critical locus is the product of the
+individual critical loci. Consequently,
+\begin{equation}\label{eq:codimension}
+ \codim\Crit(P)\ge b\bigl(s(t-d+2)-2^t+1\bigr).
+\end{equation}
+
+Lemma 6.1 of the same chapter supplies suitable nonzero $\lambda_h$
+such that $P$ is a nonzero scalar multiple of an affine restriction
+of $\per_{bt+s-d}$. More explicitly, if $r=bt$, partition the $r$
+rows into blocks $R_1,\ldots,R_b$ of size $t$. For a primitive $d$th
+root $\zeta$, take the constant columns of $U$ to be $t-d$ copies of
+$\mathbf1_{R_h}$ for each $h$, and
+\[
+ \mathbf1_{R_1\cup\cdots\cup R_{h-1}}+2\zeta^j\mathbf1_{R_h}
+ \quad(2\le h\le b,\ 0\le j<d).
+\]
+Then $U$ has $r-d$ columns, and the required affine matrix is
+\[
+ \begin{pmatrix}X&U\\ \mathbf1&0\end{pmatrix},
+\]
+where the lower block has $s-d$ rows. The common nonzero scalar is
+$(s-d)!(t-d)!(t!)^{b-1}$. With
+$\theta=(-1)^{d+1}2^d$, the weights may be written
+\[
+ \lambda_1=\theta^{b-1},\qquad
+ \lambda_h=\theta^{b-h}(1+\theta)^{h-2}\quad(2\le h\le b).
+\]
+In particular no weight vanishes.
+
+\begin{proposition}[Parameter bound]\label{prop:parameters}
+Let $b\ge1$ and $3\le d\le\min(t,s)$ be integers, with
+$n_0=bt+s-d\le n$. Set
+\[
+ K=b\bigl(s(t-d+2)-R_{\rm crit}(t,d)\bigr).
+\]
+If $K\ge3$, then
+\[
+ \bdc(\per_n)\ge\frac{(K-1)(d-1)}{4e}.
+\]
+One may instead use $K=b(s(t-d+2)-2^t+1)$.
+\end{proposition}
+\begin{proof}
+The product description of the critical locus and
+\eqref{eq:critical-compressed} give codimension at least $K$.
+Use the selector above, Corollary~\ref{cor:codim}, and, when $n_0<n$,
+pad the permanent specialization with an identity block.
+\end{proof}
+
+\input{parameter_bounds.tex}
+
+\begin{corollary}[Unlayered algebraic branching programs]\label{cor:abp}
+Let an algebraic branching program mean an arbitrary finite directed
+acyclic graph with a designated source and sink and affine-linear
+edge labels over $\C$. Its output is the sum of the weights of all
+source-to-sink paths. If $\per_n$ is a coefficientwise limit of outputs
+of such programs with at most $v$ vertices, then
+\[
+ v+1\ge \frac{n^2(\log_2 n-5)}{64e}\quad(n\ge64),
+\]
+and
+\[
+ v+1\ge \frac{3n^2(\log_2 n-8)}{256eH_2(1/8)}\quad(n\ge512).
+\]
+The same bound holds for exact computation. No layering, homogeneity
+of intermediate computations, or variable-order restriction is assumed.
+\end{corollary}
+
+\begin{proof}
+In a topological ordering, let $A$ be the weighted adjacency matrix
+of the program; parallel-edge labels can be added. It is strictly
+upper triangular, and its path polynomial is
+\[
+ e_s^{\mathsf T}(I-A)^{-1}e_t
+   =\det\begin{pmatrix}I-A&e_t\\-e_s^{\mathsf T}&0\end{pmatrix}.
+\]
+This is an affine-linear determinant of size at most $v+1$. Pad with
+identity blocks if necessary and take coefficientwise limits.
+Theorem~\ref{thm:main} applies.
+\end{proof}
+
+The model distinction matters at polynomial scales. For example,
+Chatterjee, Kumar, She, and Volk~\cite[Theorems 1.2 and 1.3]{CKSV}
+obtain different bounds for layered and unlayered branching programs.
+Corollary~\ref{cor:abp} is stated directly for arbitrary acyclic graphs.
+It is an immediate consequence of the determinantal statement; it is
+not a simulation of arbitrary arithmetic circuits by these graphs.
+
+\section{An elementary-symmetric control family}\label{sec:elementary}
+
+The same bridge has a consequence independent of the matching
+specialization. It provides a useful check on both the degree dependence
+and the distinction between circuits and determinantal representations.
+Write $e_{N,d}$ for the elementary symmetric polynomial of degree $d$
+in $N$ variables.
+
+\begin{corollary}\label{cor:elementary}
+Uniformly for $2\le d\le N$, over $\C$,
+\[
+ \bdc(e_{N,d})=\Theta\bigl(d(N-d+1)\bigr),\qquad
+ \dc(e_{N,d})=\Theta\bigl(d(N-d+1)\bigr).
+\]
+For $d\le N-1$, a lower bound is
+$(N-d+1)(d-1)/(4e)$. An exact upper bound is
+$(d+1)(N-d+1)+1$.
+\end{corollary}
+
+\begin{proof}
+The critical locus of $e_{N,d}$ consists of vectors with at most
+$d-2$ nonzero coordinates; this is a known characteristic-zero
+fact, recalled in~\cite{Orzel}. Here is a direct proof.
+The identities
+\[
+ \sum_i\partial_i e_{N,d}=(N-d+1)e_{N,d-1},\qquad
+ \partial_i e_{N,d}=e_{N,d-1}-x_i\partial_i e_{N,d-1}
+\]
+imply that, at a critical point, all derivatives of $e_{d-1}$ on
+its nonzero support vanish. If the support has size $p\ge d-1$,
+repeat the argument on those $p$ coordinates. Each coefficient
+$p-j+1$ that must be cancelled is positive, hence nonzero in $\C$.
+Eventually all first derivatives of $e_{p,1}$ would vanish, an
+impossibility. The converse follows from the degree of each cofactor.
+Thus the critical codimension is $N-d+2$, and
+Corollary~\ref{cor:codim} proves the lower bound for $d\le N-1$.
+For $d=N$, degree gives $\bdc(e_{N,N})\ge N$ and the diagonal
+matrix gives equality.
+
+For the upper bound, use vertices $(j,k)$ with
+$0\le j\le d$ and $0\le k\le N-d$. The edge from $(j,k)$ to
+$(j+1,k)$ has weight $x_{j+k+1}$, and the edge to $(j,k+1)$ has
+weight $1$, whenever the indicated target exists. Source-to-sink
+paths correspond bijectively to $d$-subsets of $[N]$. Their weight
+sum is therefore $e_{N,d}$. Let $A$ be the weighted adjacency matrix
+in topological order, with rows indexing sources and columns indexing
+targets. It is strictly upper triangular. If $s,t$ denote the source
+and sink, the affine-linear matrix
+\[
+ \begin{pmatrix}I-A&e_t\\-e_s^{\mathsf T}&0\end{pmatrix}
+\]
+has determinant $e_s^{\mathsf T}(I-A)^{-1}e_t=e_{N,d}$, by the Schur
+complement and $\det(I-A)=1$. Its size is
+$(d+1)(N-d+1)+1$. These estimates give absolute constants in both
+Theta statements, including $d=N$.
+\end{proof}
+
+\section{Scope and limitations}
+
+The proof is symbolic; finite computation is not a substitute for
+any of its asymptotic steps. An accompanying exact checker verifies
+selector minors, complete specialized permanent identities, small
+instances of the partition identity behind~\eqref{eq:critical},
+multihomogeneous coefficient expansions, and the integer parameter
+estimates. It also verifies the Schur-complement kernel identities.
+For controls, a smooth four-variable quadric represented by $\det_2$
+has polar count $2=B(2,4)$; a smooth four-variable cubic section of
+$\det_3$ has count $12\le B(3,4)=16$.
+
+The full $n\times n$ determinant has critical codimension four, so
+Corollary~\ref{cor:codim} applied directly to it gives only a linear
+bound in $n$, consistent with its size-$n$ representation. In
+particular, the smoothness hypothesis must not be omitted.
+
+The result concerns determinantal representations, a model closely
+related to algebraic branching programs. It supplies no lower bound
+of the same order for unrestricted arithmetic circuits. For example,
+$\sum_{i=1}^N x_i^N$ has a circuit of size $O(N\log N)$, yet
+Proposition~\ref{prop:polar} gives border determinantal complexity
+$\Omega(N^2)$. This directly precludes charging the same measure
+linearly to arbitrary circuit gates.
+
+The obstruction persists for syntactically multilinear circuits, even
+without repeated squaring. For $N$ a power of two and $d=N/2$,
+the elementary-symmetric argument supplies a smooth-slice product
+$(N-d+1)(d-1)=\Theta(N^2)$. Yet $e_{N,d}$ has a division-free
+syntactically multilinear circuit of size $O(N\log^2 N)$. Recursively
+multiply the polynomials $1+x_i z$ by fast Fourier convolution on
+disjoint variable blocks. A block of $b$ variables costs $O(b\log b)$
+gates; summing over the balanced recursion proves the bound. Every
+nonconstant multiplication has disjoint input supports. This standard
+construction is recalled in~\cite[Section 5]{Shastri}. It rules out
+even a charge weakened by any fixed polylogarithmic factor. Its
+$O(N\log N)$ non-skew products lie outside the $O(N)$ budget of
+Appendix~\ref{app:nonskew}; its Fourier gates mix degrees, so this
+example alone makes no assertion about homogeneous internal gates.
+
+Paired variables remove that remaining distinction for the present
+\emph{affine} slice measure. Define
+\[
+ H_{N,d}(x,y)=[z^d]\prod_{i=1}^N(y_i+x_i z).
+\]
+The same FFT construction is now homogeneous and syntactically
+set-multilinear in the groups $\{x_i,y_i\}$. In a recursion block $I$,
+every coefficient and every Fourier value has degree $|I|$ and uses
+exactly the groups in $I$. Additions preserve that group set, while
+products combine disjoint child blocks. Zero padding may be removed
+by constant propagation. The size remains $O(N\log^2 N)$. Setting
+all $y_i=1$ gives $e_{N,d}$, so at $d=N/2$ the same quadratic
+smooth-slice product is obtained by an affine restriction. Thus
+homogeneity and syntactic set-multilinearity together still do not
+repair a linear or polylogarithmically weakened charge of this
+affine-slice measure to circuit size. A measure using only homogeneous
+linear restrictions would be different and would not automatically
+admit the degree-lowering permanent specialization used above.
+
+There is also an intrinsic limit to this particular slice method.
+An affine restriction of $\per_n$ has degree at most $n$. A smooth
+homogeneous restriction of degree at least two can have at most $n^2$
+variables: an extra kernel direction of the affine map would give a
+projective critical point. Thus the product of degree and smooth-slice
+dimension is at most cubic in $n$. The method cannot by itself prove
+superpolynomial determinantal complexity, let alone VP$\ne$VNP.
+Sheshadri~\cite{SheshadriReach} studies the broader degree-times-variables
+scale of conormal intersection bounds. Here the number of variables of
+the smooth target is $k=\Theta(n^2)$, while its degree is
+$d=\Theta(\log n)$. Thus the present $\Theta(kd)$ scale is compatible
+with that discussion; the quadratic scale for forms whose degree equals
+their number of variables is a different specialization.
+
+The supplementary verification code checks finite instances of the
+identities and parameter inequalities. The uniform statements follow
+from the proofs above and in the appendices.
+
+\paragraph{Acknowledgment.}
+The author thanks OpenAI's GPT-6 for assistance with exploratory
+calculations, proof development, code checks, and manuscript drafting.
+The author takes responsibility for the mathematical claims and the
+final manuscript.
+
+\appendix
+\section{Matching identities and coefficient compression}\label{app:matching}
+
+The finite-module argument and selector reproduce the ingredients
+of~\cite[Chapter 5]{OAI} used above. Between them we give the
+coefficient refinement, including its relation to~\cite{Guo}.
+
+\subsection{The critical-locus dimension bound}
+
+Put $q=d-1<t$. For each nonempty $B\subseteq[t]$, introduce a shared
+parameter $p_B$. For a column vector $u\in\C^t$, define
+\begin{equation}\label{eq:partitionQ}
+ Q_i(u;p)=\sum_{\substack{I\subseteq[t]\setminus\{i\}\\|I|=q}}
+       \ \sum_{\pi\vdash I}\mu(\pi)
+                  \prod_{B\in\pi}(p_B-u_B),
+ \quad
+ u_B=\prod_{j\in B}u_j,
+\end{equation}
+where
+$\mu(\pi)=\prod_{B\in\pi}(-1)^{|B|-1}(|B|-1)!$.
+At a matrix $X$, specialize
+$p_B=\sum_{a=1}^s\prod_{j\in B}x_{ja}$.
+Inclusion--exclusion over equalities among column choices gives
+\[
+ Q_i(X_{\bullet a};p(X))=\partial_{ia}M_{t,s,d}(X).
+\]
+Indeed, $p_B-u_B$ sums the products belonging to columns other than
+$a$, and the partition-lattice Mobius coefficient enforces that the
+$q$ selected rows use distinct such columns.
+
+When the $p_B$ are treated as coefficients, the highest $u$-degree
+part of $Q_i$ is
+\begin{equation}\label{eq:leadingQ}
+ \alpha\,e_q(u_1,\ldots,\widehat{u_i},\ldots,u_t),
+ \qquad \alpha=(-1)^q q!.
+\end{equation}
+To see the coefficient, choose $-u_B$ in every factor of
+\eqref{eq:partitionQ}. For each fixed $I$, the sum of
+$\prod_{B\in\pi}(|B|-1)!$ over partitions is $q!$: it counts
+permutations by their cycle partitions. Every other term has
+$u$-degree less than $q$.
+
+Take $s$ column variables $u^{(a)}$ and, for each column, base
+parameters $c_{j,a}$ for $1\le j<q$. Work over the polynomial ring
+\[
+ A=\C[p_B,\ c_{j,a}:\ \varnothing\ne B\subseteq[t],\
+                         1\le j<q,\ 1\le a\le s].
+\]
+Form the quotient of $A[u^{(1)},\ldots,u^{(s)}]$ by
+$Q_i(u^{(a)};p)=0$ and $e_j(u^{(a)})=c_{j,a}$ for $j<q$.
+We claim that this quotient is a finite $A$-module.
+
+Fix a column. Summing~\eqref{eq:leadingQ} over $i$ and using
+$\sum_i e_q(u_{\widehat i})=(t-q)e_q(u)$ expresses $e_q(u)$
+as a polynomial of $u$-degree below $q$, with coefficients in $A$.
+Here $\alpha(t-q)\ne0$. The identity
+\[
+ e_q(u_{\widehat i})=
+       \sum_{j=0}^q(-u_i)^j e_{q-j}(u)
+\]
+then turns each equation $Q_i=0$ into a monic relation
+$u_i^q=$ terms of total $u$-degree below $q$; the intermediate
+$e_{q-j}$ have been replaced by their base parameters.
+Reducing these powers strictly lowers total column degree.
+Doing this for every column proves that the finitely many monomials
+with all exponents less than $q$ generate the quotient over $A$.
+
+Its Krull dimension is consequently at most
+$\dim A=2^t-1+s(q-1)$. The coordinate ring of the critical locus
+is a quotient: substitute $u^{(a)}=X_{\bullet a}$,
+$p_B=p_B(X)$, and $c_{j,a}=e_j(X_{\bullet a})$. All defining
+relations hold, and the map is surjective because it includes every
+$x_{ia}$. Dimension cannot increase under this quotient. This proves
+\eqref{eq:critical}. In particular, the shared parameters need not
+be independent at a critical point; enlarging to independent base
+parameters only enlarges the ambient incidence.
+
+\input{coefficient_compression.tex}
+
+\subsection{The selector identity}
+
+Use the square-zero algebra
+$\C[z_1,\ldots,z_r]/(z_1^2,\ldots,z_r^2)$ and set
+$y_h=\sum_{i\in R_h}z_i$. Then $y_h^{t+1}=0$. The product of
+the linear forms associated with the constant columns of $U$ is
+\begin{equation}\label{eq:selectorproduct}
+ \mathcal S:=\prod_{h=1}^b y_h^{t-d}
+ \prod_{h=2}^b
+       \bigl((y_1+\cdots+y_{h-1})^d+\theta y_h^d\bigr),
+ \qquad \theta=(-1)^{d+1}2^d.
+\end{equation}
+This follows from
+$\prod_{j=0}^{d-1}(S+2\zeta^jY)=S^d+\theta Y^d$.
+
+In this truncated algebra, induction on the number of blocks gives
+\begin{equation}\label{eq:selectorcollapsed}
+ \mathcal S
+   =\sum_{h=1}^b\lambda_h y_h^{t-d}\prod_{j\ne h}y_j^t.
+\end{equation}
+For the induction, every term has exactly one block of exponent
+$t-d$, with all other old blocks of exponent $t$. In the next
+factor, $(y_1+\cdots+y_{h-1})^d$ can survive only by taking all
+$d$ powers from that one unsaturated block. It saturates the old
+block and leaves the new one unsaturated. The other term,
+$\theta y_h^d$, keeps the old unsaturated block and multiplies
+its coefficient by $\theta$. Thus old coefficients are multiplied
+by $\theta$, and the new coefficient is their previous sum.
+Starting from $1$, their sums are $(1+\theta)^{h-1}$, yielding
+the displayed formulas for $\lambda_h$ in the main text.
+
+For a set $I$ of $d$ omitted rows, the coefficient of
+$\prod_{i\notin I}z_i$ in the product of the column forms is
+$\per(U_{[r]\setminus I,\bullet})$. Equation~\eqref{eq:selectorcollapsed}
+makes this zero unless $I$ lies within one block $R_h$. In that case
+the coefficient is
+$\lambda_h(t-d)!(t!)^{b-1}$, independent of the particular $I$.
+Finally expand the full permanent along its $s-d$ all-ones bottom
+rows. Exactly $d$ columns from the $X$ block remain for the top rows,
+and the bottom contribution is $(s-d)!$. Summing the remaining
+size-$d$ matchings gives
+\[
+ \per\begin{pmatrix}X&U\\\mathbf1&0\end{pmatrix}
+  =(s-d)!(t-d)!(t!)^{b-1}
+      \sum_{h=1}^b\lambda_h M_{t,s,d}(X^{(h)}),
+\]
+as required. Both $\theta$ and $1+\theta$ are nonzero, so every
+weight used in the critical-locus product is nonzero.
+
+\section{Algebraic transfer with polar multiplicities}\label{app:algebraic}
+
+This appendix gives a second proof of the smooth-target transfer and
+records its characteristic restrictions. The determinantal incidence
+and its multidegree are still the credited mechanism of
+\cite{Sheshadri}. The additional argument below replaces persistence
+of reduced complex points by conservation of isolated
+complete-intersection length. In particular, it does not assume that
+the Gauss map is separable.
+
+\begin{lemma}[Local conservation]\label{lem:conservation}
+Let $R$ be a complete discrete valuation ring with algebraically
+closed residue field $K$ and uniformizer $t$. Let
+$F_1,\ldots,F_k\in R[x_1,\ldots,x_k]$. Suppose their special fiber
+has a finite set of isolated points $z$, with local lengths $\mu_z$.
+There are finite flat neighborhoods of these points in the common
+zero scheme, of combined rank $\sum_z\mu_z$ over $R$. Any function
+nonzero at a selected special point is a unit on its corresponding
+finite local factor.
+\end{lemma}
+
+\begin{proof}
+Take the quasi-finite open locus around the selected points.
+Zariski's Main Theorem embeds it into a finite $R$-scheme. Since
+$R$ is henselian, this finite scheme splits into factors indexed by
+its closed-fiber points. A factor whose closed point lies in the
+chosen open lies entirely in that open: every nonempty closed
+subset of a finite local factor contains its closed point. These
+factors give finite neighborhoods in the original zero scheme.
+
+At each selected point the ambient local ring is regular of
+dimension $k+1$. The $k$ equations followed by $t$ form a system
+of parameters, because their quotient has finite length. A system
+of parameters in a regular local ring is a regular sequence.
+Thus $t$ is a non-zero-divisor after imposing the $F_i$. Each
+finite local factor is torsion-free, hence free, over $R$, with
+rank equal to its special-fiber length. The unit assertion follows
+by reduction to the closed point. These are standard
+complete-intersection and henselian arguments; compare
+\cite[Sections 10.104, 10.153 and Lemma 93.17.4]{Stacks}.
+\end{proof}
+
+\begin{proposition}\label{prop:anychar}
+Let $K$ be algebraically closed, in any characteristic. If $f$ is
+a homogeneous degree-$d$ form in $k\ge3$ variables and
+$V(f)\subset\PP^{k-1}_K$ is smooth, then
+\[
+ \bdc_K(f)\le m\quad\Longrightarrow\quad
+ d(d-1)^{k-2}\le B(m,k).
+\]
+Consequently $\bdc_K(f)\ge(k-1)(d-1)/(4e)$.
+\end{proposition}
+
+\begin{proof}
+Set $X=V(f)$. Smoothness implies that the partial derivatives
+have no common zero on $X$. They define a morphism
+\[
+ \gamma:X\longrightarrow\PP^{k-1},\qquad
+ \gamma^*\mathcal O(1)=\mathcal O_X(d-1).
+\]
+This morphism is finite onto its image: a positive-dimensional
+fiber would contain a projective curve on which the ample bundle
+$\mathcal O_X(d-1)$ had degree zero. Hence $k-2$ general
+hyperplanes in the target pull back to a finite scheme of length
+\[
+ \delta=\int_X c_1(\mathcal O_X(d-1))^{k-2}
+        =d(d-1)^{k-2}.
+\]
+It is cut out by directional derivatives $D_1f,\ldots,D_{k-2}f$.
+Choose $\ell$ nonzero on its finite support. In the affine
+normalization $\ell=1$, the equations are
+\[
+ f=0,\quad \ell-1=0,\quad D_1f=\cdots=D_{k-2}f=0.
+\]
+This is a zero-dimensional complete intersection of length
+$\delta$. It can be nonreduced. At every point, however, some
+first partial of $f$ is nonzero. We have used the gradient only
+on $X$; no division by $d$ in Euler's identity is needed.
+
+The affine size-$m$ determinants form a constructible image in
+coefficient space. Algebraic curve selection at a point of its
+closure, followed by a finite function-field extension, normalization,
+and completion, gives a complete discrete valuation ring $R$ with
+residue field $K$ and a polynomial
+\[
+ g\in R[x_1,\ldots,x_k],\qquad g\bmod t=f,
+ \qquad g=\det A\text{ over }\operatorname{Frac}(R).
+\]
+The matrix entries may have poles; only the coefficients of $g$
+are required to be regular. A constant family suffices when $f$
+already has an exact representation.
+
+Apply Lemma~\ref{lem:conservation} to $g,\ell-1,D_1g,\ldots,D_{k-2}g$.
+It retains a generic-fiber scheme of length $\delta$. A first
+partial nonzero at each selected special point stays a unit on
+its finite factor. Thus every retained generic matrix value has
+corank one. Extend the generic field to an algebraic closure,
+which does not change length, and choose $\Lambda$ injective on
+all of the finitely many matrix images.
+
+The Schur-complement elimination from Section~3 is
+scheme-theoretic: it divides only by units and identifies the
+kernel incidence locally with $g=0$. The identity
+$\adj(A)=\det(B)vu^{\mathsf T}$ identifies the lifted polar
+equations with $D_jg/\det(B)$. Hence it preserves the complete
+local polar schemes, including their nilpotents and total length.
+
+Finally perturb the multihomogeneous incidence equations by a
+new formal parameter to general sections of the same globally
+generated line bundles. Their proper intersection has length
+\[
+ [H^k U^{m-1}V^{m-1}]
+ H(H+U)^m(H+V)^{m-1}(U+V)^{k-2}=B(m,k).
+\]
+Apply Lemma~\ref{lem:conservation} locally on affine charts of the
+smooth product of projective spaces. Every original isolated
+component retains its length. Thus $\delta\le B(m,k)$ even
+when the original incidence has excess components elsewhere.
+The numerical estimate in Section~3 is characteristic-independent.
+\end{proof}
+
+\begin{corollary}[Large characteristic]\label{cor:largechar}
+Let $K$ be algebraically closed of characteristic $p>n$.
+Both inequalities of Theorem~\ref{thm:main} hold over $K$ in their
+respective ranges $n\ge64$ and $n\ge512$.
+\end{corollary}
+\begin{proof}
+The matching finite-module proof divides by $(d-1)!$ and $t-d+1$.
+The compression additionally uses $s-d+1$ and the ranks of inclusion
+matrices on a $t$-element set. All these arguments apply for
+$p>\max(t,s)$, by Appendix~\ref{app:compression}.
+The selector uses roots of unity of order $d<p$ and the nonzero factor
+$(s-d)!(t-d)!(t!)^{b-1}$. For both parameter choices in the proof of
+Theorem~\ref{thm:main}, $t,s\le n$ and $2^d<n$; hence $\theta$ and
+$1+\theta$ are nonzero modulo $p$. The smooth-slice incidence argument
+applies because $p>d$, so Euler's identity identifies the critical
+cone with the hypersurface singular cone. Proposition~\ref{prop:anychar}
+and the same integer estimates prove the claim.
+\end{proof}
+
+This is not a superquadratic result in any fixed positive
+characteristic. In particular, removing the analytic transfer
+does not remove the selector's factorial obstruction.
+
+\paragraph{Multiplicity controls.}
+For $d=p+1$, the smooth Fermat form in $k$ variables has
+inseparable polar equations $x_i^p=0$ on a suitable affine chart.
+The polar length is $(p+1)p^{k-2}$, whereas its support has only
+$p+1$ points. The triangular deformation $x_i^p+t=0$ retains
+this length. A smooth characteristic-two conic also checks the
+case $p\mid d$, where the ambient gradient can have a base point
+outside the hypersurface. These exact finite controls test why
+length, rather than distinct-point count, is needed; the proof
+above supplies the general assertion.
+
+\input{non_skew_appendix.tex}
+\input{rational_state_appendix.tex}
+
+\begin{thebibliography}{99}\raggedright
+\bibitem{LMR}
+J. M. Landsberg, L. Manivel, and N. Ressayre,
+\emph{Hypersurfaces with degenerate duals and the geometric complexity
+theory program}, Comment. Math. Helv. 88, 469--484.
+\href{https://doi.org/10.4171/CMH/292}{doi:10.4171/CMH/292}.
+\href{https://arxiv.org/abs/1004.4802}{arXiv:1004.4802}.
+
+\bibitem{OAI}
+OpenAI, \emph{Ten Advances in Mathematics and Theoretical Computer
+Science}, Chapter 5, Proposition 5.1,
+Corollary 5.2, and Lemma 6.1.
+\url{https://cdn.openai.com/pdf/ten-proofs-oai.pdf}.
+
+\bibitem{Sheshadri}
+K. Sheshadri, \emph{A near-quadratic lower bound on the border
+determinantal complexity of $\sum_i x_i^n$ via conormal specialization}.
+\href{https://arxiv.org/abs/2606.13628}{arXiv:2606.13628v1}.
+
+\bibitem{SheshadriReach}
+K. Sheshadri, \emph{The Exact Reach of Conormal Invariants in
+Determinantal Complexity: a Quadratic No-Go Theorem}.
+\href{https://arxiv.org/abs/2606.15970v1}{arXiv:2606.15970v1}.
+
+\bibitem{Guo}
+J. Guo, \emph{An $n^2\log\log n$ Lower Bound for Permanent Circuits
+with Valid Division}.
+\href{https://arxiv.org/abs/2609.29568v1}{arXiv:2609.29568v1}.
+
+\bibitem{Orzel}
+I. Orzel, \emph{Computing the Elementary Symmetric Polynomials in
+Positive Characteristics}, version 3.
+\href{https://arxiv.org/abs/2509.05009v3}{arXiv:2509.05009v3}.
+
+\bibitem{CKSV}
+P. Chatterjee, M. Kumar, A. She, and B. L. Volk,
+\emph{Quadratic Lower Bounds for Algebraic Branching Programs and
+Formulas}, Computational Complexity 31, article 8.
+\href{https://doi.org/10.1007/s00037-022-00223-8}{doi:10.1007/s00037-022-00223-8}.
+\href{https://arxiv.org/abs/1911.11793}{arXiv:1911.11793}.
+
+\bibitem{Stacks}
+The Stacks Project Authors, \emph{The Stacks Project}.
+Sections \href{https://stacks.math.columbia.edu/tag/00N7}{10.104 (Cohen--Macaulay rings)},
+\href{https://stacks.math.columbia.edu/tag/04GE}{10.153 (Henselian local rings)},
+\href{https://stacks.math.columbia.edu/tag/01OA}{27.21 (Projective bundles)}, and
+\href{https://stacks.math.columbia.edu/tag/02TV}{42.36 (Projective space bundle formula)};
+Lemma \href{https://stacks.math.columbia.edu/tag/0E7W}{93.17.4 (finite flat smoothing)}.
+
+\bibitem{LMS}
+N. Limaye, G. Malod, and S. Srinivasan,
+\emph{Lower Bounds for Non-Commutative Skew Circuits},
+Theory of Computing 12, article 12, 1--38.
+\url{https://theoryofcomputing.org/articles/v012a012/}.
+
+\bibitem{Shastri}
+P. Shastri, \emph{Lower Bounds for Noncommutative Circuits with Low
+Syntactic Degree}, ITCS, LIPIcs 362, article 115.
+\url{https://doi.org/10.4230/LIPIcs.ITCS.2026.115}.
+\end{thebibliography}
+\end{document}

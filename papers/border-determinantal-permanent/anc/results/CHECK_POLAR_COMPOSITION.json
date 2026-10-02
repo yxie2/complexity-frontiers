@@ -1,0 +1,136 @@
+{
+  "scope": "Finite exact controls, not a proof or novelty certification.",
+  "selector": {
+    "prime": 1009,
+    "all_minor_checks": 1920,
+    "full_matrix_checks": 14,
+    "cases": [
+      {
+        "b": 1,
+        "t": 6,
+        "d": 3,
+        "s": 5,
+        "permanent_order": 8
+      },
+      {
+        "b": 2,
+        "t": 3,
+        "d": 2,
+        "s": 3,
+        "permanent_order": 7
+      },
+      {
+        "b": 3,
+        "t": 3,
+        "d": 2,
+        "s": 3,
+        "permanent_order": 10
+      },
+      {
+        "b": 3,
+        "t": 4,
+        "d": 3,
+        "s": 4,
+        "permanent_order": 13
+      },
+      {
+        "b": 2,
+        "t": 5,
+        "d": 4,
+        "s": 5,
+        "permanent_order": 11
+      },
+      {
+        "b": 3,
+        "t": 4,
+        "d": 4,
+        "s": 4,
+        "permanent_order": 12
+      },
+      {
+        "b": 2,
+        "t": 6,
+        "d": 6,
+        "s": 6,
+        "permanent_order": 12
+      }
+    ]
+  },
+  "moments": {
+    "partition_gradient_checks": 104,
+    "leading_terms": [
+      {
+        "q": 2,
+        "partitions": 2,
+        "leading_coefficient": 2
+      },
+      {
+        "q": 3,
+        "partitions": 5,
+        "leading_coefficient": -6
+      },
+      {
+        "q": 4,
+        "partitions": 15,
+        "leading_coefficient": 24
+      },
+      {
+        "q": 5,
+        "partitions": 52,
+        "leading_coefficient": -120
+      }
+    ]
+  },
+  "polar": {
+    "symbolic_brackets": 35,
+    "envelope_checks": 3900,
+    "det2_control": {
+      "k": 4,
+      "d": 2,
+      "m": 2,
+      "polar_points": 2,
+      "bezout": 2
+    },
+    "det3_full_smoothness_negative_control": true
+  },
+  "parameters": {
+    "integer_boundary_cases": 20405,
+    "maximum_log2_scale": 4096,
+    "examples": [
+      {
+        "n": 65536,
+        "t": 8,
+        "d": 4,
+        "s": 32768,
+        "b": 4096,
+        "K": 804261888,
+        "k": 268435456
+      },
+      {
+        "n": 1048576,
+        "t": 10,
+        "d": 5,
+        "s": 524288,
+        "b": 52429,
+        "K": 192361633997,
+        "k": 68719476736
+      },
+      {
+        "n": 4294967296,
+        "t": 16,
+        "d": 8,
+        "s": 2147483648,
+        "b": 134217728,
+        "K": 2882294965558312960,
+        "k": 1152921504606846976
+      }
+    ]
+  },
+  "schur": {
+    "generic_3_by_3_schur_identity": true,
+    "adjugate_kernel_pairing": true
+  },
+  "status": "passed",
+  "seconds": 1.7538240998983383,
+  "script_sha256": "bde5dfd6ac7cc3b738e689e586a3c58115756e54f1235126d47aa77d3d889f01"
+}

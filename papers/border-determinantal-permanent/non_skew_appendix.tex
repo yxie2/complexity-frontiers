@@ -1,0 +1,208 @@
+\section{A charge for non-skew multiplication gates}\label{app:nonskew}
+
+This appendix extends the polar count to a circuit model with a stated
+budget on non-skew multiplication gates. A binary multiplication
+gate is called \emph{non-skew} if neither child is an input variable or
+field constant. Other multiplication gates are skew. Circuits are
+commutative and division-free; arbitrary fan-out and cancellation are
+allowed. The related noncommutative restrictions studied
+in~\cite{LMS} are different models, and their lower bounds are not used.
+
+\begin{theorem}[Circuit-state polar count]\label{thm:nonskew}
+Let $f$ be a homogeneous degree-$d$ form in $k\ge3$ variables with
+smooth projective hypersurface. Suppose $f$ is a fixed affine
+restriction of a coefficient limit of outputs of circuits with $S$
+internal binary gates, $N$ input variables, and at most $q$ non-skew
+multiplication gates, where $0\le q\le S$. A larger stated budget may
+always be replaced by $S$. Put $M=S+N+1$. Then
+\[
+ d(d-1)^{k-2}\le T_q(M,k),
+\]
+where $T_0(M,k)=B(M,k)$ and, for $q\ge1$,
+\begin{equation}\label{eq:nonskew-count}
+ T_q(M,k)\le
+ 2^{q+k-2}\binom{q+k-3}{k-2}\binom{2M-1}{k-1}.
+\end{equation}
+In particular, for every fixed $C\ge0$, the budget $q\le C(k-1)$
+implies $M=\Omega_C(kd)$ as $d$ tends to infinity.
+\end{theorem}
+
+\begin{corollary}\label{cor:nonskew-per}
+For each fixed constant $C$, a division-free circuit computing
+$\per_n$ with at most $Cn^2$ non-skew multiplication gates has
+$\Omega_C(n^2\log n)$ internal gates. The same holds for coefficient
+approximation with these size and non-skew-gate budgets.
+\end{corollary}
+
+\begin{proof}
+Use the fixed smooth restriction from the proof of
+the first part of Theorem~\ref{thm:main}, taking
+$t=\lfloor\log_2 n\rfloor$, $d=\lfloor t/2\rfloor$,
+$k=\lfloor n^2/16\rfloor$ for all sufficiently large $n$,
+and $N=n^2$ original
+input registers. Affine restriction changes their labels to affine
+forms but preserves their role as skew operands in the construction
+below. Theorem~\ref{thm:nonskew} gives
+$S+N+1=\Omega_C(n^2\log n)$; subtracting $N+1$ proves the assertion
+for all sufficiently large $n$.
+\end{proof}
+
+\subsection*{State equations and their adjoints}
+
+Introduce one state $w$ for each original input variable and each
+internal gate, for a total of $M-1$ states. After restriction, the input
+equations are $w_i=L_i(x)$ with $L_i$ affine. In topological order, each
+addition, subtraction, or skew multiplication has an equation affine
+in the states, with coefficients affine in $x$. For a skew product,
+replace its input child by the affine label $L_i(x)$; retain the state
+register for the other operand. Constants require no state register.
+Each non-skew product has an equation
+\[
+ w_g-w_aw_b=0.
+\]
+The Jacobian of these $M-1$ graph equations with respect to the states
+is triangular with diagonal one. Thus they define the graph of the
+computation, including every use of every shared value.
+
+Add the output equation $w_{\rm out}=0$. On
+$\PP^k_{[t:x]}\times\PP^{M-1}_{[v_0:w]}$, the $M-q$ linear-state
+equations, including the output, become forms $F_i$ of bidegree
+$(1,1)$. Examples are
+\[
+ tv_i-\widehat L_i(x)v_0,\qquad
+ tv_g-\widehat L_i(x)v_a,\qquad tv_{\rm out}.
+\]
+For the other $q$ equations use
+\[
+ tQ_j(v)=t(v_gv_0-v_av_b),
+\]
+of bidegree $(1,2)$. The added factors $t$ have no effect on the
+chart $t=v_0=1$. Their extra components at infinity are permitted.
+
+At a zero of the output with nonzero differential, the Jacobian of
+all $M$ constraints in the $M-1$ state directions has rank $M-1$.
+Its left kernel is a unique multiplier line. Write the multipliers as
+$u_i$ for the $F_i$ and $\lambda_j$ for the $tQ_j$. The multiplier of
+the output equation is nonzero: otherwise the invertible graph
+Jacobian forces every multiplier to vanish. Normalize that multiplier
+to one. Implicit differentiation of the graph equations shows that
+\[
+ S_y=\sum_i u_i(F_i)_y+\sum_j\lambda_j(tQ_j)_y
+\]
+vanishes for all state directions, and its $x$-components are, up to
+sign, the differential of the output. The state adjoints sum all
+contributions from fan-out; no parse-tree expansion occurs.
+
+Choose a simple polar fiber as in Proposition~\ref{prop:polar}. It
+has $\delta=d(d-1)^{k-2}$ points. At each point the graph equations
+eliminate the states and the adjoint equations eliminate the normalized
+multipliers, by invertible Jacobians. The resulting local system is
+the original square polar system. Every lifted point is therefore
+isolated and reduced. The same is true for the $\delta$ points
+persisting in any sufficiently close polynomial circuit output.
+
+\subsection*{A bundle count that respects reuse}
+
+Write $H,V$ for the hyperplane classes of
+$Y=\PP^k\times\PP^{M-1}$ and use the quotient projective bundle
+\[
+ \pi:\PP(E')\longrightarrow Y,\qquad
+ E'=\mathcal O_Y^{\oplus(M-q)}\oplus
+       \mathcal O_Y(V)^{\oplus q},\qquad
+ L=c_1(\mathcal O_{\PP(E')}(1)).
+\]
+The coordinates $u_i$ have class $L$, whereas the $\lambda_j$ have
+class $L-V$. Hence a state-adjoint equation has class $L+H$, and an
+$x$-directional adjoint equation has class $L+V$. The latter has no
+quadratic-constraint contribution, since $Q_j$ is independent of $x$;
+it is nevertheless a section of the stated line bundle. The
+homogenizing coordinate $t$ is not one of these $x$ directions.
+
+The incidence has $M-q$ equations of class $H+V$, $q$ of class
+$H+2V$, $M-1$ state adjoints of class $L+H$, $k-2$ polar adjoints of
+class $L+V$, and one equation $\ell(x)-t$ of class $H$. Their number
+is $k+2M-2=\dim\PP(E')$. All these bundles are globally generated:
+$E'$ is globally generated, as are its twists by $H$ and $V$.
+General perturbations of the sections thus have proper
+zero-dimensional intersection. The isolated points just constructed
+persist, giving the upper bound
+\begin{equation}\label{eq:state-intersection}
+ T_q(M,k)=\int_{\PP(E')}
+ H(H+V)^{M-q}(H+2V)^q(L+H)^{M-1}(L+V)^{k-2}.
+\end{equation}
+This bound concerns the original system's isolated points and allows
+excess components elsewhere. In particular, it does not assume
+properness of the incidence at infinity.
+
+For $q=0$ the bundle is trivial and
+\eqref{eq:state-intersection} is $B(M,k)$ after exchanging the two
+kernel-factor names. For $q\ge1$, the projective-bundle formula gives
+\[
+ \pi_*(L^{M-1+a})=\binom{q+a-1}{a}V^a\quad(a\ge0),\qquad
+ \pi_*(L^j)=0\quad(j<M-1).
+\]
+For precision about conventions, these formulas follow from
+$L^{M-q}(L-V)^q=0$ and $\pi_*(L^{M-1})=1$ by induction;
+see~\cite[Sections 27.21 and 42.36]{Stacks}. No sign convention for
+Segre classes is implicit.
+
+All coefficients in the integrand and pushforward are nonnegative.
+Bound $(H+2V)^q$ coefficientwise by $2^q(H+V)^q$. If $i$ copies
+of $H$ are chosen from $(H+V)^M$ and $c$ from $(L+H)^{M-1}$, the
+required $H$ degree is equivalent to $i+c=k-1$. Choosing $j$ copies
+of $L$ from $(L+V)^{k-2}$ leaves a pushforward contribution bounded by
+\[
+ \sum_{j=c}^{k-2}\binom{k-2}{j}\binom{q+j-c-1}{j-c}
+ \le 2^{k-2}\binom{q+k-3}{k-2}.
+\]
+The remaining sum is
+\[
+ \sum_{i+c=k-1}\binom Mi\binom{M-1}c
+ =\binom{2M-1}{k-1},
+\]
+which proves~\eqref{eq:nonskew-count}. The count is nondecreasing
+in $q$: both the constraint coefficients and the pushforward
+coefficients increase. An upper budget on $q$ therefore suffices.
+
+Fixed-size circuit families form a finite union of constructible
+polynomial images. The simple target polar points persist under
+coefficient approximation, with no boundedness assumption on circuit
+parameters or state values. This proves the border assertion and
+completes the proof of Theorem~\ref{thm:nonskew}.
+
+\subsection*{An explicit tradeoff and its limit}
+
+Taking $(k-1)$-st roots and using the standard binomial estimates
+gives the convenient bound, for all $q\ge0$,
+\begin{equation}\label{eq:state-tradeoff}
+ M\ge\frac12+
+ \frac{(k-1)(d-1)}
+ {4e^2\,2^{q/(k-1)}(1+q/(k-2))}.
+\end{equation}
+For $q=0$, Proposition~\ref{prop:polar} gives a stronger constant.
+For $q\ge1$, use
+\[
+ \binom{q+k-3}{k-2}^{1/(k-1)}
+ \le e\left(1+\frac q{k-2}\right),\qquad
+ \binom{2M-1}{k-1}^{1/(k-1)}
+ \le\frac{e(2M-1)}{k-1}.
+\]
+If $q\le C(k-1)$, the denominator of
+\eqref{eq:state-tradeoff} is bounded by a constant depending only on
+$C$, proving the last assertion of the theorem.
+
+This charge tolerates $O(k)$ non-skew gates but weakens as their number
+grows. For example, repeated squaring computes
+$\sum_{i=1}^k x_i^{2^a}$ using $k(a-1)$ non-skew squarings after the
+first squares. Here $q/k$ grows with $\log d$, outside the fixed-$C$
+regime. Thus the argument respects the earlier counterexample to a
+linear charge of smooth-slice score to unrestricted circuit size.
+Corollary~\ref{cor:nonskew-per} is a restricted circuit result, not an
+unrestricted $\Omega(n^2\log n)$ circuit bound.
+
+The accompanying finite checker independently expands 416 intersection
+coefficients, checks 364 monic projective-bundle reductions and 32
+repeated-squaring controls, and verifies 35 full local incidence
+Jacobians, including 77 multiply-used internal states. These checks
+support the displayed identities and local elimination; the preceding
+argument proves the uniform statement.

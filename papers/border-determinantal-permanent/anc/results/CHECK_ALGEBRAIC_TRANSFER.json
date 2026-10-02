@@ -1,0 +1,122 @@
+{
+  "inseparable_families": [
+    {
+      "characteristic": 2,
+      "variables": 3,
+      "degree": 3,
+      "scheme_length": 6,
+      "geometric_points": 3,
+      "multiplicity_per_point": 2,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 2,
+      "variables": 4,
+      "degree": 3,
+      "scheme_length": 12,
+      "geometric_points": 3,
+      "multiplicity_per_point": 4,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 2,
+      "variables": 5,
+      "degree": 3,
+      "scheme_length": 24,
+      "geometric_points": 3,
+      "multiplicity_per_point": 8,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 3,
+      "variables": 3,
+      "degree": 4,
+      "scheme_length": 12,
+      "geometric_points": 4,
+      "multiplicity_per_point": 3,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 3,
+      "variables": 4,
+      "degree": 4,
+      "scheme_length": 36,
+      "geometric_points": 4,
+      "multiplicity_per_point": 9,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 3,
+      "variables": 5,
+      "degree": 4,
+      "scheme_length": 108,
+      "geometric_points": 4,
+      "multiplicity_per_point": 27,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 5,
+      "variables": 3,
+      "degree": 6,
+      "scheme_length": 30,
+      "geometric_points": 6,
+      "multiplicity_per_point": 5,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 5,
+      "variables": 4,
+      "degree": 6,
+      "scheme_length": 150,
+      "geometric_points": 6,
+      "multiplicity_per_point": 25,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 5,
+      "variables": 5,
+      "degree": 6,
+      "scheme_length": 750,
+      "geometric_points": 6,
+      "multiplicity_per_point": 125,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 7,
+      "variables": 3,
+      "degree": 8,
+      "scheme_length": 56,
+      "geometric_points": 8,
+      "multiplicity_per_point": 7,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 7,
+      "variables": 4,
+      "degree": 8,
+      "scheme_length": 392,
+      "geometric_points": 8,
+      "multiplicity_per_point": 49,
+      "original_and_triangular_ideals_equal": true
+    },
+    {
+      "characteristic": 7,
+      "variables": 5,
+      "degree": 8,
+      "scheme_length": 2744,
+      "geometric_points": 8,
+      "multiplicity_per_point": 343,
+      "original_and_triangular_ideals_equal": true
+    }
+  ],
+  "char2_smooth_conic_length": 2,
+  "char2_smooth_conic_geometric_points": 1,
+  "overdetermined_nonflat_control": {
+    "special_length": 2,
+    "generic_length": 1
+  },
+  "all_checks_passed": true,
+  "seconds": 0.1341606993228197,
+  "script_sha256": "809fcad63a03e52863305bda7c9886129bc8f77e9b0dab17a41a0c2da77c8871",
+  "scope": "Exact controls; the general conservation statement has a separate proof."
+}

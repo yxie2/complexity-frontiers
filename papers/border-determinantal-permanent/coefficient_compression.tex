@@ -1,0 +1,100 @@
+\subsection{The coefficient image and its constant block}\label{app:compression}
+
+We refine the preceding argument by counting the coefficients of
+$Q_i$, rather than all the moments. The same disjointness-matrix
+coefficient count is used in~\cite[Section 3]{Guo}. The additional
+identity~\eqref{eq:constant-block} removes its constant block on
+the critical locus. We give the details over an algebraically closed
+field of characteristic zero or characteristic $p>\max(t,s)$.
+
+For $\varnothing\ne S\subseteq[t]$ with $|S|\le d-1$, put
+\[
+ h_S=\sum_{\pi\vdash S}\mu(\pi)\prod_{B\in\pi}p_B,
+ \qquad h_\varnothing=1.
+\]
+For $\varnothing\ne T\subseteq[t]$, $|T|\le d$, define
+\[
+ c_T=\sum_{\substack{S\subseteq[t]\setminus T\\|S|=d-|T|}}h_S.
+\]
+Collecting coefficients in~\eqref{eq:partitionQ} gives
+\begin{equation}\label{eq:collected-Q}
+ Q_i(u;p)=\sum_{\substack{J\subseteq[t]\setminus\{i\}\\|J|\le d-1}}
+       (-1)^{|J|}|J|!\,c_{J\cup\{i\}}u_J.
+\end{equation}
+To see this, choose the blocks supplying a factor $-u_B$ and let
+$J$ be their union. The partitions of the remaining rows contribute
+$h_S$. On $J$, summing the products of cyclic-order counts over its
+partitions gives $|J|!$, with sign $(-1)^{|J|}$. Summing over the
+remaining $S$ proves the identity. The leading coefficients, for
+$|J|=d-1$, have $c_{J\cup\{i\}}=1$.
+
+For $|T|=j$, the vector $(c_T)$ is a linear image of $(h_S)_{|S|=d-j}$
+under the disjointness matrix on $j$-subsets and $(d-j)$-subsets
+of $[t]$. Its rank is
+\[
+ \min\left\{\binom tj,\binom t{d-j}\right\}
+ =\binom t{\min(j,d-j)}.
+\]
+Here is a proof of the rank fact, including its characteristic range.
+Transpose and complement subsets to reduce to the following assertion:
+if $a\le v\le t-a$ and
+\[
+ \sum_{\substack{A\subseteq V\\|A|=a}}z_A=0
+ \quad\hbox{for every $v$-subset $V\subseteq[t]$},
+\]
+then every $z_A=0$. Induct on $a$, the case $a=0$ being immediate.
+For distinct $i,j$, subtract the equations for $U\cup\{i\}$ and
+$U\cup\{j\}$, where $U$ ranges over the $(v-1)$-subsets avoiding
+$i,j$. On the remaining $t-2$ elements the induction hypothesis
+applies to the coefficients $z_{C\cup\{i\}}-z_{C\cup\{j\}}$:
+$a-1\le v-1\le(t-2)-(a-1)$. They all vanish. The exchange graph
+of $a$-subsets is connected, so every $z_A$ has one common value $z$.
+The original equation now reads $\binom va z=0$; this binomial
+coefficient is nonzero in the stated characteristics. This proves
+the rank formula, a form of the classical inclusion-matrix rank
+theorem also used in~\cite{Guo}.
+
+The change from the independent moments $p_S$ to the $h_S$ is
+triangular by $|S|$, with nonzero diagonal coefficient
+$(-1)^{|S|-1}(|S|-1)!$. Thus the $h_S$ are independent coordinates.
+Different $j$ use different degrees $d-j$, and their images occupy
+different monomials in~\eqref{eq:collected-Q}. Consequently the
+formal coefficient image has dimension exactly
+\[
+ R(t,d)=\sum_{j=1}^{d-1}\binom t{\min(j,d-j)}.
+\]
+The $j=1$ block consists of $t$ independent constant coefficients.
+
+At an actual matrix, inclusion--exclusion identifies $h_S$ with the
+sum of the matchings using exactly the row set $S$. For each $i$,
+direct counting gives
+\begin{equation}\label{eq:constant-block}
+ \sum_{a=1}^s\partial_{ia}M_{t,s,d}=(s-d+1)c_{\{i\}}.
+\end{equation}
+A matching of size $d-1$ avoiding row $i$ is counted once for each
+unused column. Since $s-d+1\ne0$ in the ground field, every
+$c_{\{i\}}$ vanishes on the critical locus. Imposing this zero
+block on the formal coefficient image leaves dimension
+$R_{\rm crit}(t,d)=R(t,d)-t$.
+
+Choose coordinates on each remaining disjointness image and use
+them to reconstruct the coefficients of~\eqref{eq:collected-Q}.
+Together with the $s(d-2)$ column elementary invariants used above,
+these coordinates generate a polynomial parameter ring of dimension
+$R_{\rm crit}(t,d)+s(d-2)$. Its universal column incidence still
+contains every critical matrix with its actual coefficient data.
+The leading part of $Q_i$ is unchanged, so the same degree-reducing
+monic relations make its coordinate ring finite over this parameter
+ring. Surjecting onto the critical-locus coordinate ring proves
+\eqref{eq:critical-compressed}.
+
+For use in the parameter estimates, the count has the explicit forms
+\[
+ \begin{split}
+ R_{\rm crit}(t,2h)&=2\sum_{j=1}^{h-1}\binom tj+\binom th-t,\\
+ R_{\rm crit}(t,2h+1)&=2\sum_{j=1}^{h}\binom tj-t.
+ \end{split}
+\]
+The dimension calculation is exact for the formal coefficient image.
+It does not assert that actual critical matrices fill that image,
+or that the resulting upper bound on their dimension is sharp.

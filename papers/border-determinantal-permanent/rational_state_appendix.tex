@@ -1,0 +1,169 @@
+\section{Generic output levels and valid divisions}\label{app:rationalstate}
+
+This appendix extends the state construction to valid divisions and
+formal rational-output approximation over $\C$. It is separate from the
+main determinantal theorem and retains an explicit gate budget. In
+particular, it does not extend the two-kernel determinant incidence to
+nonzero determinant levels.
+
+\begin{theorem}\label{thm:rationalstate}
+Let a circuit over $\C((\varepsilon))$ have $S$ internal binary gates,
+$N$ inputs, arbitrary fan-out, and valid divisions. Replace divisions
+by nonzero field constants by scalar multiplications. Count in $q$
+every remaining division and every non-skew multiplication, as defined
+in Appendix~\ref{app:nonskew}; thus $0\le q\le S$. Suppose its rational
+output satisfies
+\[
+ r_\varepsilon(X)=F(X)+O(\varepsilon)
+ \quad\hbox{in }\C(X)((\varepsilon)),
+\]
+where $F$ is a polynomial. Suppose a fixed affine restriction $F(Ax)$
+is a homogeneous degree-$d$ form $f$ in $k\ge3$ variables, with $d\ge2$
+and smooth projective hypersurface. Set $M=S+N+1$. Then
+\begin{equation}\label{eq:rationalstate}
+ d(d-1)^{k-1}\le T_q(M,k+1).
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:rationaltradeoff}
+ M\ge\frac12+
+ \frac{k(d-1)}{4e^2\,2^{q/k}(1+q/(k-1))}.
+\end{equation}
+For every fixed $C$, the budget $q\le Cn^2$ therefore forces
+$S=\Omega_C(n^2\log n)$ for such an approximation to $\per_n$.
+\end{theorem}
+
+Here $A$ denotes an affine map, including its constant term. The
+output need not be polynomial for nonzero parameter. The gate graph
+and its input roles are fixed; constants may be Laurent series.
+
+\subsection*{A full-dimensional polar target}
+
+Smoothness and Euler's identity imply $\Crit(f)=\{0\}$. The gradient
+defines a finite morphism
+\[
+ \gamma:\PP^{k-1}\longrightarrow\PP^{k-1},\qquad
+ \gamma^*\mathcal O(1)=\mathcal O(d-1),
+\]
+of degree $(d-1)^{k-1}$. In characteristic zero it is generically
+\'{e}tale. A general direction $a$ avoids both its branch locus and
+$\gamma(V(f))$. Its projective fiber has $(d-1)^{k-1}$ distinct
+points at which $f$ is nonzero. For each nonzero $c$, every such point
+has exactly $d$ scalar representatives with $f=c$. Thus the map
+\[
+ \Psi_f:x\longmapsto(f(x),[\nabla f(x)])
+\]
+has a general fiber of $\delta=d(d-1)^{k-1}$ simple points. In a target
+chart $a_k=1$ the corresponding square system is
+\begin{equation}\label{eq:levelpolar}
+ f-c=0,\qquad f_{x_i}-a_i f_{x_k}=0\quad(1\le i<k).
+\end{equation}
+Its Jacobian is invertible: the direction equations are \'{e}tale in
+projective coordinates, while the remaining radial derivative is
+$d\,c$, which is nonzero.
+
+For any nonzero polynomial $E_0$, the closure of the image of
+$\{E_0=0\}$ under this map, on its domain, has dimension at most
+$k-1$. The target has dimension $k$. A general $(c,a)$ consequently
+has all its $\delta$ preimages outside $\{E_0=0\}$. Allowing the
+output level to vary is essential: a circuit with output $f^2/f=f$
+is invalid at every point of the zero level.
+
+\subsection*{A ramified translation of the fixed slice}
+
+We give the argument because direct substitution of a fixed slice
+can annihilate internal divisors. Represent each intermediate value
+as a quotient of polynomials in $X$ over $\C((\varepsilon))$.
+There is a finite list of nonzero polynomials whose nonvanishing
+ensures every division is valid; include all these numerators and
+denominators, and an output denominator. Normalize each polynomial
+$H$ by a Laurent scalar so that $H\in\C[[\varepsilon]][X]$ and its
+reduction $H_0$ is nonzero. The degrees are finite. Choose a constant
+vector $b$ such that no $H_0(A(0)+\tau b)$ is identically zero, and
+choose an integer $R$ larger than all these degrees. These choices
+exist because there are finitely many proper exceptional algebraic
+sets of vectors $b$.
+
+Substitute $\varepsilon=\tau^R$ and $X=Ax+\tau b$. The $\tau$-adic
+valuation of each $H_0(Ax+\tau b)$ is at most $\deg H_0<R$.
+Terms of positive $\varepsilon$ order have $\tau$ order at least
+$R$, so cannot cancel this leading term. Every original division
+therefore remains valid as a rational function after substitution.
+Neither $S$ nor $q$ changes: an original input operand is still
+represented by its affine label in the state construction.
+
+Write the output as $N/D$, normalizing the denominator to have
+coefficientwise valuation zero. The approximation hypothesis and
+the Gauss valuation imply $N-FD\in\varepsilon\C[[\varepsilon]][X]$.
+If $a<R$ is the valuation of the substituted denominator, write it
+as $\tau^a E$, with $E\in\C[[\tau]][x]$ and $E_0\ne0$. The new
+rational output has the form
+\begin{equation}\label{eq:ramifiedoutput}
+ g(\tau,x)=F(Ax+\tau b)+\tau^{R-a}\frac{H(\tau,x)}{E(\tau,x)},
+ \qquad H\in\C[[\tau]][x].
+\end{equation}
+On $E_0\ne0$, the output and its $x$-derivatives reduce to $f$ and
+its derivatives.
+
+Choose $(c_0,a_0)$ so that the $\delta$ simple points of
+\eqref{eq:levelpolar} avoid $E_0=0$. For every $b'\in\C^k$,
+the target $(c_0,a_0)+\tau b'$ has $\delta$ distinct simple Hensel
+lifts for the system with $f$ replaced by $g$. At these lifts $E$
+and $g_{x_k}$ are units. Internal canceled poles still require a
+separate check. Over $K=\C((\tau))$, let $U$ be the nonempty open
+set where all original divisions are valid and let
+$V=\{E\ne0,\ g_{x_k}\ne0\}$. On $V$ the map
+\[
+ \Psi_g=(g,g_{x_1}/g_{x_k},\ldots,g_{x_{k-1}}/g_{x_k})
+\]
+is a morphism to $\mathbb A^k_K$. The closure of the image of
+$V\setminus U$ has dimension at most $k-1$. The set
+$(c_0,a_0)+\tau\C^k$ is Zariski dense over $K$: an invertible affine
+change reduces this to the density of the infinite Cartesian set
+$\C^k$ for polynomials over $K$. Choose $b'$ avoiding that bad image.
+All the retained Hensel lifts then belong to $U$.
+
+\subsection*{Shared states, division pivots, and the count}
+
+Introduce the $M-1$ input and gate states as in
+Appendix~\ref{app:nonskew}. A division $w_g=w_a/w_b$ has equation
+$w_gw_b-w_a=0$. At every retained valid point the graph Jacobian in
+topological state order is triangular, with pivot one at ordinary
+gates and nonzero pivot $w_b$ at a division. It is invertible.
+Add $w_{\rm out}-c(\tau)=0$. The state adjoints have a unique
+multiplier line whose output multiplier is nonzero. Normalizing it
+to one and eliminating states and adjoints recovers
+\eqref{eq:levelpolar} with $g,c(\tau),a(\tau)$ in place of
+$f,c,a$. Implicit differentiation includes every outgoing use of a
+shared gate. The lifted incidence points are isolated and reduced.
+
+On $Y=\PP^k_H\times\PP^{M-1}_V$, homogenize the $M-q$ linear-state
+constraints to class $H+V$. The $q$ quadratic-state constraints have
+class $H+2V$; for division use $t(v_gv_b-v_av_0)$. The added factor
+$t$ is a unit on the chosen affine chart. Use the same quotient
+bundle $E'=\mathcal O^{M-q}\oplus\mathcal O(V)^q$ and tautological
+class $L$ as in Appendix~\ref{app:nonskew}. There are $M-1$ state
+adjoints of class $L+H$ and now $k-1$ polar adjoints of class $L+V$.
+There is no equation $\ell=1$. The total number of equations is
+$k+2M-2=\dim\PP(E')$. Their bundles are globally generated, so the
+same isolated-point conservation argument gives
+\[
+ \delta\le\int_{\PP(E')}
+ (H+V)^{M-q}(H+2V)^q(L+H)^{M-1}(L+V)^{k-1}
+ =T_q(M,k+1).
+\]
+For the last identity, the additional $H$ in
+\eqref{eq:state-intersection} cancels the additional required base
+$H$ degree when $k$ is replaced by $k+1$. All counts may be made
+over an algebraic closure of $K$; no boundedness of gate constants
+or state values is needed. Substituting $k+1$ into
+\eqref{eq:nonskew-count} and the root estimate proves
+\eqref{eq:rationaltradeoff}. Applying the fixed permanent slice and
+subtracting $N+1$ proves the final assertion of the theorem.
+
+The independent finite controls check 294 shifted coefficient
+identities, 24 full rational-circuit incidence Jacobians, two
+canceled-pole examples, and eight Fermat level counts. They reject
+24 deliberately incorrect unit-pivot substitutions. These are
+implementation checks, not a substitute for the argument above.
+No extension of this generic-level proof to positive characteristic
+is asserted here.

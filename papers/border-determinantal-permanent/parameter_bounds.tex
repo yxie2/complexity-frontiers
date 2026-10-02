@@ -1,0 +1,97 @@
+\subsection{Explicit parameter choices}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+We first prove~\eqref{eq:main-simple} using the uncompressed estimate.
+For $n\ge64$, set
+\[
+ t=\lfloor\log_2 n\rfloor,\qquad d=\lfloor t/2\rfloor,\qquad
+ b=\left\lfloor\frac{n}{2t}\right\rfloor,\qquad
+ r=bt,\qquad s=n-r+d.
+\]
+Then $t\ge6$, $b\ge1$, $3\le d\le\min(t,s)$, and $r+s-d=n$.
+Since $n/2-t<r\le n/2$,
+\[
+ rs=r(n-r+d)\ge\frac{n^2}{4}-t^2.
+\]
+For $K=b(s(t-d+2)-2^t+1)$, using $2^t\le n$ gives
+\begin{align*}
+ K&=rs\frac{t-d+2}{t}-\frac rt(2^t-1)\\
+  &\ge\left(\frac{n^2}{4}-t^2\right)
+          \left(\frac12+\frac2t\right)-\frac{n^2}{2t}
+   =\frac{n^2}{8}-\frac{t^2}{2}-2t.
+\end{align*}
+This lower bound is greater than three: at $t=6$ it is at least
+$512-18-12$, and $2^{2t}/8-t^2/2-2t$ increases thereafter.
+Also $K\le rs$. As $d-1\ge(t-3)/2$, we have
+\[
+ (K-1)(d-1)\ge
+ \frac{n^2(t-3)}{16}
+ -\frac{(t^2/2+2t+1)(t-3)}2.
+\]
+For $t\ge6$,
+\[
+ 8(t^2/2+2t+1)(t-3)\le8t^3\le2^{2t}\le n^2.
+\]
+For the middle inequality, check $t=6$ and note that
+$((t+1)/t)^3<4$. Consequently
+\[
+ (K-1)(d-1)\ge\frac{n^2(t-4)}{16}
+ >\frac{n^2(\log_2 n-5)}{16}.
+\]
+Proposition~\ref{prop:parameters} proves~\eqref{eq:main-simple}.
+
+For~\eqref{eq:main-compressed}, put
+\[
+ \gamma=H_2(1/8),\qquad c=\frac{8^8}{7^7}=2^{8\gamma}.
+\]
+Let $a$ be the largest integer with $c^a\le n$, and set
+\[
+ t=8a,\qquad d=2a,\qquad b=\left\lfloor\frac{n}{16a}\right\rfloor,
+ \qquad r=bt,\qquad s=n-r+d.
+\]
+Since $20<c<21$ and $n\ge512$, we have $a\ge2$ and $b\ge1$;
+all hypotheses of Proposition~\ref{prop:parameters} hold.
+The profile in Appendix~\ref{app:compression} gives
+\begin{equation}\label{eq:entropy-cost}
+ R_{\rm crit}(8a,2a)
+ =2\sum_{j=1}^{a-1}\binom{8a}{j}+\binom{8a}{a}-8a
+ \le\frac43\binom{8a}{a}\le\frac43c^a\le\frac43n.
+\end{equation}
+Indeed, the ratios of consecutive terms below $\binom{8a}{a}$
+are at most $a/(7a+1)<1/7$. For the next inequality, the single
+$a$th term in the binomial expansion of $(1/8+7/8)^{8a}$ is at
+most one, so $\binom{8a}{a}\le (8^8/7^7)^a$.
+
+Write $K=b(s(t-d+2)-R_{\rm crit}(t,d))$. As before,
+$rs\ge n^2/4-64a^2$; therefore
+\begin{align*}
+ K&\ge\left(\frac{n^2}{4}-64a^2\right)
+              \left(\frac34+\frac{1}{4a}\right)-\frac{n^2}{12a}\\
+  &=\frac{3n^2}{16}-\frac{n^2}{48a}-48a^2-16a.
+\end{align*}
+For $a\ge2$, the polynomial error satisfies
+\[
+ (48a^2+16a+1)(2a-1)\le96a^3,\qquad
+ 48\cdot96a^3\le20^{2a}<c^{2a}\le n^2.
+\]
+The second inequality holds at $a=2$ and is preserved on increasing
+$a$, because $((a+1)/a)^3<400$. It follows that
+\begin{align*}
+ (K-1)(2a-1)
+ &\ge n^2\left(\frac{3a}{8}-\frac{11}{48}
+                         +\frac{1}{48a}\right)
+      -(48a^2+16a+1)(2a-1)\\
+ &\ge n^2\left(\frac{3a}{8}-\frac14\right).
+\end{align*}
+This estimate in particular ensures $K\ge3$; for example its
+right side divided by $2a-1$ is greater than $n^2/8$.
+Also $K\le rs$, directly from its definition.
+Since $a>\log_2 n/(8\gamma)-1$ and $\gamma<3/5$,
+\[
+ (K-1)(d-1)
+ \ge n^2\left(\frac{3\log_2 n}{64\gamma}-\frac58\right)
+ \ge\frac{3n^2(\log_2 n-8)}{64\gamma}.
+\]
+Another application of Proposition~\ref{prop:parameters} proves
+\eqref{eq:main-compressed}. Finally $\dc\ge\bdc$.
+\end{proof}

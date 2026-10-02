@@ -1,0 +1,17 @@
+{
+  "title": "Smooth slices and superquadratic border determinantal complexity of the permanent",
+  "authors": [
+    {
+      "name": "Ying Xie",
+      "affiliation": "Kennesaw State University",
+      "email": "yxie2@kennesaw.edu"
+    }
+  ],
+  "abstract": "We prove that the border determinantal complexity of the $n\\times n$ permanent over $\\mathbb C$ is $\\Omega(n^2\\log n)$. In particular, it is at least $n^2(\\log_2 n-5)/(64e)$ for $n\\ge64$, and at least $3n^2(\\log_2 n-8)/(256eH_2(1/8))$ for $n\\ge512$, where $H_2$ is binary entropy. The proof combines the matching-polynomial restrictions of OpenAI with Sheshadri's determinantal kernel incidence, using a general linear slice to obtain a smooth homogeneous target. A direct perturbation argument transfers its polar count to coefficient limits of arbitrary affine-linear determinants. We refine the shared matching coefficients by removing their constant block on the critical locus; the remaining coefficient compression also appears in work of Guo. The argument gives corresponding bounds for arbitrary acyclic algebraic branching programs and determines the order of border determinantal complexity of elementary symmetric polynomials. An algebraic transfer retains multiplicities and extends the permanent bounds to algebraically closed fields of characteristic $p>n$. Separate circuit-state bounds allow $O(n^2)$ non-skew products and nonscalar divisions. These restricted circuit consequences do not separate VP from VNP.",
+  "suggested_primary_category": "cs.CC",
+  "suggested_secondary_category": "math.AG",
+  "comments": "20 pages; supplementary verification code available separately.",
+  "main_source": "main.tex",
+  "bibliography": "Embedded in main.tex",
+  "external_submission_performed": false
+}

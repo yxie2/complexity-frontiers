@@ -1,0 +1,382 @@
+{
+  "status": "passed",
+  "prime": 1009,
+  "shifted_coefficient_identities": 294,
+  "random_local_controls": [
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 879
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 4,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 488
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 40
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 49
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 401
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 826
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 530
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 808
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 3,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 824
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 3,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 63
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 3,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 776
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 479
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 3,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 431
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 428
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 5,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 662
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 593
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 424
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 559
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 494
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 281
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 132
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 2,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 442
+    },
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 907
+    },
+    {
+      "k": 4,
+      "states": 15,
+      "incidence_jacobian_rank": 34,
+      "division_gates": 2,
+      "nonunit_division_pivots": 2,
+      "reused_internal_states": 4,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 3
+    }
+  ],
+  "canceled_pole_controls": [
+    {
+      "k": 3,
+      "states": 13,
+      "incidence_jacobian_rank": 29,
+      "division_gates": 1,
+      "nonunit_division_pivots": 1,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 36,
+      "polynomial_output": "f^2/f=f, f=sum x_i^3",
+      "invalid_zero_level": "division denominator is f, hence zero on all f=0"
+    },
+    {
+      "k": 4,
+      "states": 17,
+      "incidence_jacobian_rank": 38,
+      "division_gates": 1,
+      "nonunit_division_pivots": 1,
+      "reused_internal_states": 1,
+      "wrong_unit_pivot_rejected": true,
+      "level_mod_prime": 100,
+      "polynomial_output": "f^2/f=f, f=sum x_i^3",
+      "invalid_zero_level": "division denominator is f, hence zero on all f=0"
+    }
+  ],
+  "fermat_level_counts": [
+    {
+      "k": 3,
+      "degree": 3,
+      "direction_parameters": [
+        662,
+        687
+      ],
+      "projective_points": 4,
+      "affine_points_over_algebraic_closure": 12,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    },
+    {
+      "k": 3,
+      "degree": 4,
+      "direction_parameters": [
+        855,
+        624
+      ],
+      "projective_points": 9,
+      "affine_points_over_algebraic_closure": 36,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    },
+    {
+      "k": 3,
+      "degree": 7,
+      "direction_parameters": [
+        745,
+        375
+      ],
+      "projective_points": 36,
+      "affine_points_over_algebraic_closure": 252,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    },
+    {
+      "k": 3,
+      "degree": 8,
+      "direction_parameters": [
+        803,
+        578
+      ],
+      "projective_points": 49,
+      "affine_points_over_algebraic_closure": 392,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    },
+    {
+      "k": 4,
+      "degree": 3,
+      "direction_parameters": [
+        491,
+        461,
+        200
+      ],
+      "projective_points": 8,
+      "affine_points_over_algebraic_closure": 24,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    },
+    {
+      "k": 4,
+      "degree": 4,
+      "direction_parameters": [
+        17,
+        753,
+        643
+      ],
+      "projective_points": 27,
+      "affine_points_over_algebraic_closure": 108,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    },
+    {
+      "k": 4,
+      "degree": 7,
+      "direction_parameters": [
+        629,
+        509,
+        87
+      ],
+      "projective_points": 216,
+      "affine_points_over_algebraic_closure": 1512,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    },
+    {
+      "k": 4,
+      "degree": 8,
+      "direction_parameters": [
+        32,
+        41,
+        711
+      ],
+      "projective_points": 343,
+      "affine_points_over_algebraic_closure": 2744,
+      "all_nonzero_level_coefficients": true,
+      "scope": "q-th roots split in the base field; radial d-th roots are counted over its algebraic closure."
+    }
+  ],
+  "scope": "Finite controls, not an asymptotic proof or novelty certification.",
+  "script_sha256": "4976d98495cb7c50b49483a54ebe1f8db4924cb7cc2703eb73ca4fbf485a7611",
+  "dependencies": {
+    "check_hybrid_charge.py": "269704a110274d93e2c0a86b7c09f42c028e41cdb3d7acd0bfae665386402e00",
+    "check_non_skew_tradeoff.py": "4d442e378d1bb86ed010853d63806b716cfd4e726483280f6dd2d0dc91917227"
+  },
+  "seconds": 18.797236900776625
+}

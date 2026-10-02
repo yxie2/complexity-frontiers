@@ -1,0 +1,109 @@
+{
+  "files": [
+    {
+      "path": "check_algebraic_transfer.py",
+      "bytes": 2745,
+      "sha256": "809fcad63a03e52863305bda7c9886129bc8f77e9b0dab17a41a0c2da77c8871"
+    },
+    {
+      "path": "check_column_coefficient_compression.py",
+      "bytes": 5758,
+      "sha256": "262a689ed4258268784dded4bfa5e58d2367b9fa8f38ddd16f573f0e980a7ec0"
+    },
+    {
+      "path": "check_compressed_border_parameters.py",
+      "bytes": 2916,
+      "sha256": "61006486f267717ef89bb2bead1a2a6387c350f4d78401a3a2ff3222bdbc244e"
+    },
+    {
+      "path": "check_homogeneous_fft.py",
+      "bytes": 5050,
+      "sha256": "41be86dfeb5107ebe2d4774430ea6c03bb400cef9baa555bda8a3a0d76e7ff60"
+    },
+    {
+      "path": "check_hybrid_charge.py",
+      "bytes": 10569,
+      "sha256": "269704a110274d93e2c0a86b7c09f42c028e41cdb3d7acd0bfae665386402e00"
+    },
+    {
+      "path": "check_improved_border_parameters.py",
+      "bytes": 2255,
+      "sha256": "6bd32199422a29b630079523e10da33f9e496fa00a940075c0212a5e6449b1d6"
+    },
+    {
+      "path": "check_multilinear_fft.py",
+      "bytes": 4960,
+      "sha256": "42b095d06dc87892cd5aa220fe365d3940061016c473730b79d0d7a42abf6fe1"
+    },
+    {
+      "path": "check_non_skew_tradeoff.py",
+      "bytes": 8949,
+      "sha256": "4d442e378d1bb86ed010853d63806b716cfd4e726483280f6dd2d0dc91917227"
+    },
+    {
+      "path": "check_polar_composition.py",
+      "bytes": 7767,
+      "sha256": "bde5dfd6ac7cc3b738e689e586a3c58115756e54f1235126d47aa77d3d889f01"
+    },
+    {
+      "path": "check_rational_state_level.py",
+      "bytes": 10337,
+      "sha256": "4976d98495cb7c50b49483a54ebe1f8db4924cb7cc2703eb73ca4fbf485a7611"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 2201,
+      "sha256": "8e6a2215ca3a93ca7b62695b51031e3c0ed76e0ad5f7ac3d2b4ca52fb7965f14"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 28,
+      "sha256": "47fd19021144e071cc43b6e265aafada0056abe89724ad95bd6e3a8e37995b94"
+    },
+    {
+      "path": "results/CHECK_ALGEBRAIC_TRANSFER.json",
+      "bytes": 3251,
+      "sha256": "4eb332362969dec7e972b6de0b801d1501d8ae2f697339660bde9f180bad8fa1"
+    },
+    {
+      "path": "results/CHECK_HOMOGENEOUS_FFT.json",
+      "bytes": 2736,
+      "sha256": "c14057820eef2416f081c9528c4fc89f1da7a05400b78bd3c06e5dee3a9e57be"
+    },
+    {
+      "path": "results/CHECK_NON_SKEW_TRADEOFF.json",
+      "bytes": 13571,
+      "sha256": "6b503dcd03a7f38122fdf80b2d0978aa71b1835660a78d6c20ab18ff01124ff3"
+    },
+    {
+      "path": "results/CHECK_POLAR_COMPOSITION.json",
+      "bytes": 2671,
+      "sha256": "2398590987bf9f031ecd7070121a0e1e2aed67d33ffccd712d188a6531097817"
+    },
+    {
+      "path": "results/CHECK_RATIONAL_STATE_LEVEL.json",
+      "bytes": 10650,
+      "sha256": "a20e02d5a753058109411606c4036aee67ec83fee1d17660367c7cd0a8c088d6"
+    },
+    {
+      "path": "results/COLUMN_COEFFICIENT_COMPRESSION_CHECKS.json",
+      "bytes": 1443,
+      "sha256": "0972fd0d4f95d6f72b8e3841c105287753f948985ad5c08b5da4dc4ebbd22fcf"
+    },
+    {
+      "path": "results/COMPRESSED_BORDER_PARAMETER_CHECKS.json",
+      "bytes": 1834,
+      "sha256": "c6cfa27adf7ef89924d6a7aa3ccf04de91edbec03abae1c9846c162fa4d01035"
+    },
+    {
+      "path": "results/IMPROVED_BORDER_PARAMETER_CHECKS.json",
+      "bytes": 1858,
+      "sha256": "7ca5f55a9c6da63e5a7f5096fde548742e927e9b84f479a0e6ff3d68e576881f"
+    },
+    {
+      "path": "run_verification.py",
+      "bytes": 2853,
+      "sha256": "e34eb723b14a2d7e6224cdea7d5508f94f8b2578ac65c5432cd4cb0e90a07006"
+    }
+  ]
+}

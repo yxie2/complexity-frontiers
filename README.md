@@ -31,6 +31,7 @@ depth of the methods, and potential usefulness for further research.
 
 | Paper | Open problem addressed | Materials | Status |
 | --- | --- | --- | --- |
+| **Smooth slices and superquadratic border determinantal complexity of the permanent** | Superquadratic border-determinantal lower bounds for the permanent, beyond the [quadratic bound of Landsberg–Manivel–Ressayre](https://doi.org/10.4171/CMH/292). | [Paper and reproduction guide](papers/border-determinantal-permanent/README.md) · [PDF](papers/border-determinantal-permanent/paper.pdf) · [LaTeX](papers/border-determinantal-permanent/main.tex) · [Code](papers/border-determinantal-permanent/anc/) | [Zenodo preprint](https://zenodo.org/records/23108131). |
 | **Dimensions of permanental varieties in arbitrary size** | [Boralevi–Carlini–Michałek–Ventura, Conjecture 3.4](https://arxiv.org/html/2402.17839v2): complete intersections of maximal near-square permanents, in every size. | [Paper and reproduction guide](papers/all-size-permanents/README.md) · [PDF](papers/all-size-permanents/paper.pdf) · [LaTeX](papers/all-size-permanents/main.tex) · [Code](papers/all-size-permanents/anc/) | [Zenodo preprint](https://zenodo.org/records/22901136). |
 | **Sharp FRS and singularity thresholds for off-diagonal Gram maps** | [Casabella–Sammartano, Question 8.1](https://arxiv.org/html/2512.25058v1#S8.SS1): the exact rational-singularity threshold in characteristic zero; sharp F-rational sufficiency remains open. | [Paper and reproduction guide](papers/gram-singularity-thresholds/README.md) · [PDF](papers/gram-singularity-thresholds/paper.pdf) · [LaTeX](papers/gram-singularity-thresholds/main.tex) · [Code](papers/gram-singularity-thresholds/anc/) | [Zenodo preprint](https://zenodo.org/records/23005526). |
 | **Symmetric-determinant apolarity in odd characteristic** | NA | [Paper and reproduction guide](papers/symmetric-determinant-apolarity/README.md) · [PDF](papers/symmetric-determinant-apolarity/paper.pdf) · [LaTeX](papers/symmetric-determinant-apolarity/main.tex) · [Code](papers/symmetric-determinant-apolarity/anc/) | [Zenodo record](https://zenodo.org/records/22950380). |
@@ -44,6 +45,16 @@ depth of the methods, and potential usefulness for further research.
 The open-problem column identifies the cited question or conjecture and the
 scope addressed by each draft. “NA” means that the manuscript does not
 identify a specific previously stated open problem.
+
+**Superquadratic border determinantal complexity.** This paper proves an
+$\Omega(n^2\log n)$ lower bound for the permanent over the complex numbers,
+with explicit finite-size estimates and consequences for exact determinants
+and arbitrary acyclic algebraic branching programs. The proof composes
+matching restrictions with determinantal incidence through a smooth slice.
+It also determines the order of border determinantal complexity of elementary
+symmetric polynomials and gives large-characteristic extensions. Its first
+position reflects the potential significance of this asymptotic improvement
+for algebraic complexity, subject to independent review of the draft.
 
 **Permanental dimensions in arbitrary size.** This paper determines the
 dimensions of proper permanental varieties in characteristic different from
@@ -105,6 +116,20 @@ Use Python 3.11 and run the commands below from the repository root.
 The suites listed below have archived results. The verifiers check file hashes,
 run the code in temporary copies, and compare the new results with those
 records without overwriting them.
+
+### Superquadratic border determinantal complexity
+
+```sh
+python -m pip install -r papers/border-determinantal-permanent/anc/requirements.txt
+python scripts/verify_border_determinantal.py
+```
+
+The eight suites check matching and polar identities, multiplicity and
+characteristic controls, circuit-state bounds, coefficient compression, and
+2,010,774 parameter cases across two overlapping exhaustive ranges and
+additional samples. See the
+[reproduction guide](papers/border-determinantal-permanent/README.md#reproduce-the-checks)
+and [recorded results](papers/border-determinantal-permanent/anc/results/).
 
 ### Permanental dimensions in arbitrary size
 
@@ -212,6 +237,8 @@ and [recorded results](papers/prime-size-permanents/anc/verification_results.jso
 ### Run all available check suites
 
 ```sh
+python -m pip install -r papers/border-determinantal-permanent/anc/requirements.txt
+python scripts/verify_border_determinantal.py
 python -m pip install -r papers/orthogonal-frame-varieties/anc/requirements.txt
 python -m pip install -r papers/sensitive-monotone-vp/anc/requirements.txt
 python -m pip install -r papers/elementary-symmetric-loci/anc/requirements.txt
@@ -227,6 +254,7 @@ python scripts/verify_permanents.py prime-size-permanents
 ```
 
 GitHub Actions runs the
+[border-determinantal checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/border-determinantal-checks.yml),
 [Newton-cancellation checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/newton-cancellation-checks.yml),
 [Gram-map checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/gram-singularity-checks.yml),
 [sensitive monotone checks](https://github.com/yxie2/complexity-frontiers/actions/workflows/finite-checks.yml),
@@ -241,6 +269,14 @@ prove the asymptotic theorems or establish independent peer review or novelty.
 
 Please cite the individual paper whose results or code you use. Each has a
 separate citation below and its own machine-readable citation file.
+
+### Superquadratic border determinantal complexity
+
+> Ying Xie. *Smooth slices and superquadratic border determinantal complexity of the permanent*.
+> [Zenodo record 23108131](https://zenodo.org/records/23108131).
+> DOI: [10.5281/zenodo.23108131](https://doi.org/10.5281/zenodo.23108131).
+
+[Citation metadata](papers/border-determinantal-permanent/CITATION.cff) · [Zenodo record](https://zenodo.org/records/23108131)
 
 ### Permanental dimensions in arbitrary size
 
@@ -316,7 +352,7 @@ separate citation below and its own machine-readable citation file.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22878451.svg)](https://doi.org/10.5281/zenodo.22878451)
 
 The root [CITATION.cff](CITATION.cff) describes the collection and lists all
-nine papers as references. Each Zenodo link identifies the individual
+ten papers as references. Each Zenodo link identifies the individual
 record listed with it.
 
 ## Feedback
@@ -328,7 +364,7 @@ reports, include the command and relevant software versions.
 
 ## Acknowledgment
 
-All nine manuscripts retain their acknowledgments to OpenAI GPT-6.
+All ten manuscripts retain their acknowledgments to OpenAI GPT-6.
 Each manuscript states the assistance acknowledged for that work.
 
 ## Licenses
@@ -340,6 +376,7 @@ Manuscript-specific license notices are listed separately:
 
 | Paper | Manuscript license information |
 | --- | --- |
+| Superquadratic border determinantal complexity | [CC BY 4.0 notice](papers/border-determinantal-permanent/LICENSE.md), consistent with its Zenodo record. |
 | Permanental dimensions in arbitrary size | [CC BY 4.0 notice](papers/all-size-permanents/LICENSE.md), consistent with its Zenodo record. |
 | Gram-map FRS and singularity thresholds | [CC BY 4.0 notice](papers/gram-singularity-thresholds/LICENSE.md), consistent with its Zenodo record. |
 | Symmetric-determinant apolarity | Consult the [Zenodo record](https://zenodo.org/records/22950380) for manuscript license information. |

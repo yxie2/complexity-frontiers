@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "integer_parameter_checks": 1001375,
+  "exhaustive_interval": [
+    512,
+    1000000
+  ],
+  "extra_samples": 1886,
+  "controls": [
+    {
+      "n": 512,
+      "a": 2,
+      "t": 16,
+      "d": 4,
+      "b": 16,
+      "r": 256,
+      "s": 260,
+      "moment_cost": 136,
+      "K": 56064,
+      "four_e_times_bridge_bound": 168189
+    },
+    {
+      "n": 1024,
+      "a": 2,
+      "t": 16,
+      "d": 4,
+      "b": 32,
+      "r": 512,
+      "s": 516,
+      "moment_cost": 136,
+      "K": 226816,
+      "four_e_times_bridge_bound": 680445
+    },
+    {
+      "n": 65536,
+      "a": 3,
+      "t": 24,
+      "d": 6,
+      "b": 1365,
+      "r": 32760,
+      "s": 32782,
+      "moment_cost": 2600,
+      "K": 891399600,
+      "four_e_times_bridge_bound": 4456997995
+    },
+    {
+      "n": 1000000,
+      "a": 4,
+      "t": 32,
+      "d": 8,
+      "b": 15625,
+      "r": 500000,
+      "s": 500008,
+      "moment_cost": 46904,
+      "K": 202395375000,
+      "four_e_times_bridge_bound": 1416767624993
+    },
+    {
+      "n": 1267650600228229401496703205376,
+      "a": 22,
+      "t": 176,
+      "d": 44,
+      "b": 3601280114284742617888361378,
+      "r": 633825300114114700748351602528,
+      "s": 633825300114114700748351602892,
+      "moment_cost": 7565384903990620122424344466,
+      "K": 305838803126812065812642519681663570607013008951171988859436,
+      "four_e_times_bridge_bound": 13151068534452918829943628346311533536101559384900395520955705
+    }
+  ],
+  "seconds": 3.0268489001318812,
+  "checker_sha256": "61006486f267717ef89bb2bead1a2a6387c350f4d78401a3a2ff3222bdbc244e",
+  "scope": "All parameter and inequality checks use integers; the uniform estimate and its logarithmic conversion are proved in the accompanying manuscript."
+}

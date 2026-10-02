@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "symbolic_equations": 125,
+  "exact_symbolic_terms": 130389,
+  "independent_incidence_rank_checks": 210,
+  "constant_block_checks": 21,
+  "profiles": [
+    {
+      "rows": 8,
+      "degree": 4,
+      "former": 255,
+      "exact_formal": 44,
+      "critical": 36
+    },
+    {
+      "rows": 16,
+      "degree": 4,
+      "former": 65535,
+      "exact_formal": 152,
+      "critical": 136
+    },
+    {
+      "rows": 24,
+      "degree": 6,
+      "former": 16777215,
+      "exact_formal": 2624,
+      "critical": 2600
+    },
+    {
+      "rows": 32,
+      "degree": 8,
+      "former": 4294967295,
+      "exact_formal": 46936,
+      "critical": 46904
+    },
+    {
+      "rows": 64,
+      "degree": 16,
+      "former": 18446744073709551615,
+      "exact_formal": 5835153752,
+      "critical": 5835153688
+    },
+    {
+      "rows": 100,
+      "degree": 20,
+      "former": 1267650600228229401496703205375,
+      "exact_formal": 21521506839230,
+      "critical": 21521506839130
+    }
+  ],
+  "seconds": 0.6623227996751666,
+  "sources": [
+    {
+      "path": "check_column_coefficient_compression.py",
+      "sha256": "262a689ed4258268784dded4bfa5e58d2367b9fa8f38ddd16f573f0e980a7ec0"
+    }
+  ],
+  "scope": "Exact integer symbolic expansion, independent finite-field incidence ranks, and monomial counting controls. The written proof supplies the arbitrary-size theorem."
+}

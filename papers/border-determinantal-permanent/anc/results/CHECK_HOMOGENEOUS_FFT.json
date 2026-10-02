@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "prime": 65537,
+  "cases": [
+    {
+      "pairs": 2,
+      "variables": 4,
+      "gates": 26,
+      "non_skew_gates": 4,
+      "output_homogeneous_degree": 2,
+      "checked_same_group_additions": 16,
+      "checked_disjoint_group_products": 10,
+      "affine_slice_score_lower_bound": 0
+    },
+    {
+      "pairs": 4,
+      "variables": 8,
+      "gates": 126,
+      "non_skew_gates": 16,
+      "output_homogeneous_degree": 4,
+      "checked_same_group_additions": 80,
+      "checked_disjoint_group_products": 46,
+      "affine_slice_score_lower_bound": 3
+    },
+    {
+      "pairs": 8,
+      "variables": 16,
+      "gates": 458,
+      "non_skew_gates": 48,
+      "output_homogeneous_degree": 8,
+      "checked_same_group_additions": 296,
+      "checked_disjoint_group_products": 162,
+      "affine_slice_score_lower_bound": 15
+    },
+    {
+      "pairs": 16,
+      "variables": 32,
+      "gates": 1458,
+      "non_skew_gates": 128,
+      "output_homogeneous_degree": 16,
+      "checked_same_group_additions": 952,
+      "checked_disjoint_group_products": 506,
+      "affine_slice_score_lower_bound": 63
+    },
+    {
+      "pairs": 32,
+      "variables": 64,
+      "gates": 4274,
+      "non_skew_gates": 320,
+      "output_homogeneous_degree": 32,
+      "checked_same_group_additions": 2808,
+      "checked_disjoint_group_products": 1466,
+      "affine_slice_score_lower_bound": 255
+    },
+    {
+      "pairs": 64,
+      "variables": 128,
+      "gates": 11826,
+      "non_skew_gates": 768,
+      "output_homogeneous_degree": 64,
+      "checked_same_group_additions": 7800,
+      "checked_disjoint_group_products": 4026,
+      "affine_slice_score_lower_bound": 1023
+    },
+    {
+      "pairs": 128,
+      "variables": 256,
+      "gates": 31346,
+      "non_skew_gates": 1792,
+      "output_homogeneous_degree": 128,
+      "checked_same_group_additions": 20728,
+      "checked_disjoint_group_products": 10618,
+      "affine_slice_score_lower_bound": 4095
+    },
+    {
+      "pairs": 256,
+      "variables": 512,
+      "gates": 80370,
+      "non_skew_gates": 4096,
+      "output_homogeneous_degree": 256,
+      "checked_same_group_additions": 53240,
+      "checked_disjoint_group_products": 27130,
+      "affine_slice_score_lower_bound": 16383
+    }
+  ],
+  "paired_coefficient_comparisons": 2590,
+  "affine_restriction_comparisons": 2590,
+  "scope": "Explicit construction control; the uniform proof is in HOMOGENEOUS_MULTILINEAR_BARRIER.md.",
+  "script_sha256": "41be86dfeb5107ebe2d4774430ea6c03bb400cef9baa555bda8a3a0d76e7ff60",
+  "dependency_sha256": "42b095d06dc87892cd5aa220fe365d3940061016c473730b79d0d7a42abf6fe1"
+}

@@ -1,0 +1,590 @@
+{
+  "status": "passed",
+  "coefficients": {
+    "expanded_coefficient_identities": 416,
+    "upper_bounds": 352,
+    "monotonicity_checks": 416,
+    "monic_relation_checks": 364,
+    "repeated_squaring_controls": [
+      {
+        "k": 3,
+        "power_log2": 1,
+        "S": 5,
+        "M": 9,
+        "q": 0,
+        "polar_count": 2,
+        "incidence_count": 108
+      },
+      {
+        "k": 3,
+        "power_log2": 2,
+        "S": 8,
+        "M": 12,
+        "q": 3,
+        "polar_count": 12,
+        "incidence_count": 2532
+      },
+      {
+        "k": 3,
+        "power_log2": 3,
+        "S": 11,
+        "M": 15,
+        "q": 6,
+        "polar_count": 56,
+        "incidence_count": 40656
+      },
+      {
+        "k": 3,
+        "power_log2": 4,
+        "S": 14,
+        "M": 18,
+        "q": 9,
+        "polar_count": 240,
+        "incidence_count": 555264
+      },
+      {
+        "k": 3,
+        "power_log2": 5,
+        "S": 17,
+        "M": 21,
+        "q": 12,
+        "polar_count": 992,
+        "incidence_count": 6899712
+      },
+      {
+        "k": 3,
+        "power_log2": 6,
+        "S": 20,
+        "M": 24,
+        "q": 15,
+        "polar_count": 4032,
+        "incidence_count": 80461824
+      },
+      {
+        "k": 3,
+        "power_log2": 7,
+        "S": 23,
+        "M": 27,
+        "q": 18,
+        "polar_count": 16256,
+        "incidence_count": 895942656
+      },
+      {
+        "k": 3,
+        "power_log2": 8,
+        "S": 26,
+        "M": 30,
+        "q": 21,
+        "polar_count": 65280,
+        "incidence_count": 9629073408
+      },
+      {
+        "k": 4,
+        "power_log2": 1,
+        "S": 7,
+        "M": 12,
+        "q": 0,
+        "polar_count": 2,
+        "incidence_count": 2332
+      },
+      {
+        "k": 4,
+        "power_log2": 2,
+        "S": 11,
+        "M": 16,
+        "q": 4,
+        "polar_count": 36,
+        "incidence_count": 267912
+      },
+      {
+        "k": 4,
+        "power_log2": 3,
+        "S": 15,
+        "M": 20,
+        "q": 8,
+        "polar_count": 392,
+        "incidence_count": 14387456
+      },
+      {
+        "k": 4,
+        "power_log2": 4,
+        "S": 19,
+        "M": 24,
+        "q": 12,
+        "polar_count": 3600,
+        "incidence_count": 577443840
+      },
+      {
+        "k": 4,
+        "power_log2": 5,
+        "S": 23,
+        "M": 28,
+        "q": 16,
+        "polar_count": 30752,
+        "incidence_count": 19622395904
+      },
+      {
+        "k": 4,
+        "power_log2": 6,
+        "S": 27,
+        "M": 32,
+        "q": 20,
+        "polar_count": 254016,
+        "incidence_count": 596843692032
+      },
+      {
+        "k": 4,
+        "power_log2": 7,
+        "S": 31,
+        "M": 36,
+        "q": 24,
+        "polar_count": 2064512,
+        "incidence_count": 16754180882432
+      },
+      {
+        "k": 4,
+        "power_log2": 8,
+        "S": 35,
+        "M": 40,
+        "q": 28,
+        "polar_count": 16646400,
+        "incidence_count": 442361096175616
+      },
+      {
+        "k": 8,
+        "power_log2": 1,
+        "S": 15,
+        "M": 24,
+        "q": 0,
+        "polar_count": 2,
+        "incidence_count": 883579224
+      },
+      {
+        "k": 8,
+        "power_log2": 2,
+        "S": 23,
+        "M": 32,
+        "q": 8,
+        "polar_count": 2916,
+        "incidence_count": 57170273109712
+      },
+      {
+        "k": 8,
+        "power_log2": 3,
+        "S": 31,
+        "M": 40,
+        "q": 16,
+        "polar_count": 941192,
+        "incidence_count": 351070296112996352
+      },
+      {
+        "k": 8,
+        "power_log2": 4,
+        "S": 39,
+        "M": 48,
+        "q": 24,
+        "polar_count": 182250000,
+        "incidence_count": 994612966851817242624
+      },
+      {
+        "k": 8,
+        "power_log2": 5,
+        "S": 47,
+        "M": 56,
+        "q": 32,
+        "polar_count": 28400117792,
+        "incidence_count": 1819968257213992580153344
+      },
+      {
+        "k": 8,
+        "power_log2": 6,
+        "S": 55,
+        "M": 64,
+        "q": 40,
+        "polar_count": 4001504141376,
+        "incidence_count": 2490827531195467765416722432
+      },
+      {
+        "k": 8,
+        "power_log2": 7,
+        "S": 63,
+        "M": 72,
+        "q": 48,
+        "polar_count": 537071733080192,
+        "incidence_count": 2763034925393552316934115033088
+      },
+      {
+        "k": 8,
+        "power_log2": 8,
+        "S": 71,
+        "M": 80,
+        "q": 56,
+        "polar_count": 70385151204000000,
+        "incidence_count": 2610928453170940018194066144493568
+      },
+      {
+        "k": 16,
+        "power_log2": 1,
+        "S": 31,
+        "M": 48,
+        "q": 0,
+        "polar_count": 2,
+        "incidence_count": 273276919157354852400
+      },
+      {
+        "k": 16,
+        "power_log2": 2,
+        "S": 47,
+        "M": 64,
+        "q": 16,
+        "polar_count": 19131876,
+        "incidence_count": 5513220821608645755947624071328
+      },
+      {
+        "k": 16,
+        "power_log2": 3,
+        "S": 63,
+        "M": 80,
+        "q": 32,
+        "polar_count": 5425784582792,
+        "incidence_count": 414001642450094154218244028136945614848
+      },
+      {
+        "k": 16,
+        "power_log2": 4,
+        "S": 79,
+        "M": 96,
+        "q": 48,
+        "polar_count": 467086816406250000,
+        "incidence_count": 5618203133400365809539761583269974439932985344
+      },
+      {
+        "k": 16,
+        "power_log2": 5,
+        "S": 95,
+        "M": 112,
+        "q": 64,
+        "polar_count": 24222205927065482250272,
+        "incidence_count": 29001695374894570543978233398132179370875980284428288
+      },
+      {
+        "k": 16,
+        "power_log2": 6,
+        "S": 111,
+        "M": 128,
+        "q": 80,
+        "polar_count": 992996382446877942685048896,
+        "incidence_count": 78719318779220077378778024978346779811371722872722093506560
+      },
+      {
+        "k": 16,
+        "power_log2": 7,
+        "S": 127,
+        "M": 144,
+        "q": 96,
+        "polar_count": 36346455340431962488646559105152,
+        "incidence_count": 134158602722459529544553914928321522571488886457485130320660398080
+      },
+      {
+        "k": 16,
+        "power_log2": 8,
+        "S": 143,
+        "M": 160,
+        "q": 112,
+        "polar_count": 1258353007376548909340939062500000000,
+        "incidence_count": 160245891022079683429247417217191104391797390970111671022556017179230208
+      }
+    ]
+  },
+  "state_local_checks": {
+    "cases": [
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 0,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 1,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 4,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 4,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 1,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 2,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 2,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 1,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 2,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 1,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 2,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 2,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 1,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 2,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 3,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 4,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 1,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 2,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 1,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 3,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 2,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 1,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 1,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 4,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 1,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 0,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 1,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 3,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 3,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 1,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 2,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      },
+      {
+        "k": 4,
+        "state_count": 16,
+        "M": 17,
+        "non_skew_gates": 2,
+        "lifted_variables": 36,
+        "lifted_jacobian_rank": 36
+      },
+      {
+        "k": 3,
+        "state_count": 11,
+        "M": 12,
+        "non_skew_gates": 1,
+        "lifted_variables": 25,
+        "lifted_jacobian_rank": 25
+      },
+      {
+        "k": 4,
+        "state_count": 14,
+        "M": 15,
+        "non_skew_gates": 1,
+        "lifted_variables": 32,
+        "lifted_jacobian_rank": 32
+      },
+      {
+        "k": 3,
+        "state_count": 13,
+        "M": 14,
+        "non_skew_gates": 1,
+        "lifted_variables": 29,
+        "lifted_jacobian_rank": 29
+      }
+    ],
+    "internal_states_with_multiple_uses": 77,
+    "scope": "Generic affine output levels test local isolation; these controls do not assert global smoothness."
+  },
+  "prime": 1009,
+  "script_sha256": "4d442e378d1bb86ed010853d63806b716cfd4e726483280f6dd2d0dc91917227",
+  "dependency_sha256": "269704a110274d93e2c0a86b7c09f42c028e41cdb3d7acd0bfae665386402e00",
+  "scope": "Finite controls, not an asymptotic proof or novelty certification.",
+  "seconds": 23.26852469984442
+}

@@ -18,3 +18,4 @@ papers/gram-singularity-thresholds/main.tex -text -whitespace
 papers/gram-singularity-thresholds/anc/** -text -whitespace
 papers/sharp-newton-cancellation/main.tex -text -whitespace
 papers/sharp-newton-cancellation/anc/** -text -whitespace
+papers/border-determinantal-permanent/** -text -whitespace

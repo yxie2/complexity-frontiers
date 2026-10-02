@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: Please cite this manuscript when using its results or verification code.
+type: software
+title: Smooth slices and superquadratic border determinantal complexity of the permanent
+authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+repository-code: https://github.com/yxie2/complexity-frontiers
+url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/border-determinantal-permanent
+license: MIT
+preferred-citation:
+  type: article
+  title: Smooth slices and superquadratic border determinantal complexity of the permanent
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+    orcid: https://orcid.org/0000-0002-8661-8877
+  doi: 10.5281/zenodo.23108131
+  url: https://zenodo.org/records/23108131
+  publisher:
+    name: Zenodo
+  notes: Preprint; not peer reviewed.
