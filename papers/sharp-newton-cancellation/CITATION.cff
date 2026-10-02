@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: Please cite this manuscript when using its results or verification code.
+type: software
+title: Sharp Newton-edge bounds and cancellation families with one nonzero quadratic norm
+authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+repository-code: https://github.com/yxie2/complexity-frontiers
+url: https://github.com/yxie2/complexity-frontiers/tree/main/papers/sharp-newton-cancellation
+license: MIT
+preferred-citation:
+  type: article
+  title: Sharp Newton-edge bounds and cancellation families with one nonzero quadratic norm
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+  year: 2026
+  url: https://zenodo.org/records/23094728
+  publisher:
+    name: Zenodo

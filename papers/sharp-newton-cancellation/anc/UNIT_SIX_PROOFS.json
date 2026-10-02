@@ -1,0 +1,186 @@
+{
+  "at": "2026-10-01T20:51:19.943897+00:00",
+  "rows": [
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "anchor": 1,
+      "primary": [
+        0,
+        2
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_1_2_3_4_8_a1_p02_barycenter.json",
+      "sha256": "1c35f6223fc69741ededaf80bebe19069b9d5cd7cf6846075c8ce82e16b05c3f"
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "anchor": 2,
+      "primary": [
+        0,
+        4
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_1_2_3_4_8_a2_p04.json",
+      "sha256": "b605e2afc1522c511d60808772c9bdd7cac2aff4a4852c72fd09d320d9b9a9e7"
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "anchor": 2,
+      "primary": [
+        1,
+        3
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_1_2_3_4_8_a2_p13.json",
+      "sha256": "ee22aee8968f50a0943d8a6d6bfc9d36e165bc57bb3d560d0899124e7bd26804"
+    },
+    {
+      "support": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "anchor": 1,
+      "primary": [
+        0,
+        3
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_2_3_4_5_8_a1_p03.json",
+      "sha256": "f5f8113e8d24738acc40580366d3c85d11f4cedc923bcadbaef7abe49c07f77c"
+    },
+    {
+      "support": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "anchor": 2,
+      "primary": [
+        1,
+        3
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_2_3_4_5_8_a2_p13_barycenter.json",
+      "sha256": "22989b53261c407b1ea95f2f22e5f4f125123f4a3dec9ad55f3d81f75dadfac4"
+    },
+    {
+      "support": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "anchor": 1,
+      "primary": [
+        0,
+        4
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_3_4_5_6_8_a1_p04.json",
+      "sha256": "e5ca19a6b0fd4813fcc44449182dda811145a6a65a9a610e621172eac5bc9a8b"
+    },
+    {
+      "support": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "anchor": 2,
+      "primary": [
+        0,
+        5
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_3_4_5_6_8_a2_p05.json",
+      "sha256": "93d26e44e7c526057bd65072779fa07ac16edb09aad916ead591336e95536fec"
+    },
+    {
+      "support": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "anchor": 2,
+      "primary": [
+        1,
+        3
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_3_4_5_6_8_a2_p13.json",
+      "sha256": "e1ea340acf642bba94123ee10c52045868655a15f9964168f810c890caafc3d8"
+    },
+    {
+      "support": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "anchor": 1,
+      "primary": [
+        0,
+        5
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_4_5_6_7_8_a1_p05.json",
+      "sha256": "87049ce5aafad5b42c10ad9906542c6cf077adf4dff86329656b23c9d1aa98cf"
+    },
+    {
+      "support": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "anchor": 2,
+      "primary": [
+        1,
+        3
+      ],
+      "status": "certified",
+      "proof": "linear_proofs/unit11_A0_4_5_6_7_8_a2_p13.json",
+      "sha256": "bf1343bd8540fb40b02bfabc7de15d6d34fee563b0850e4044fb9afb9eb2d595"
+    }
+  ],
+  "script_sha256": "42bdce490cfa7ee28e310fd5a08a5bb20186bd9809a56b12af2251bb575a7930"
+}

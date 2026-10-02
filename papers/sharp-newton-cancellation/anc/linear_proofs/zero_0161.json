@@ -1,0 +1,119 @@
+{
+  "at": "2026-10-01T20:31:50.625595+00:00",
+  "case": {
+    "anchor": 1,
+    "primary": [
+      0,
+      3
+    ],
+    "unmarked": [
+      [
+        0,
+        5
+      ],
+      [
+        2,
+        5
+      ]
+    ]
+  },
+  "barycenter": false,
+  "status": "certified",
+  "reason": null,
+  "nodes": 1,
+  "leaves": 1,
+  "seconds": 0.12843309994786978,
+  "axioms": 197,
+  "clauses": 12,
+  "proof": {
+    "multipliers": [
+      [
+        46,
+        -2
+      ],
+      [
+        196,
+        -1
+      ],
+      [
+        184,
+        1
+      ],
+      [
+        67,
+        -1
+      ],
+      [
+        172,
+        2
+      ],
+      [
+        45,
+        2
+      ],
+      [
+        52,
+        -1
+      ],
+      [
+        63,
+        1
+      ],
+      [
+        170,
+        1
+      ],
+      [
+        195,
+        1
+      ],
+      [
+        51,
+        1
+      ],
+      [
+        54,
+        -1
+      ],
+      [
+        66,
+        1
+      ],
+      [
+        48,
+        -2
+      ],
+      [
+        49,
+        2
+      ],
+      [
+        142,
+        2
+      ],
+      [
+        60,
+        -2
+      ],
+      [
+        64,
+        -1
+      ],
+      [
+        61,
+        2
+      ],
+      [
+        55,
+        1
+      ],
+      [
+        182,
+        1
+      ]
+    ]
+  },
+  "system_sha256": "10bff133ec8c75238173019ba06b14245b3da0faf42e18d72c390d165b737a18",
+  "builder_sha256": "8fe306a44ac36a56eb7a48dd3e20c31c59386ba7be52c50ad94e9fc3a5e77017",
+  "scope": "Explicit finite disjunction tree with integer Farkas identities. Requires separate arithmetic, coverage, and mathematical-rule verification."
+}

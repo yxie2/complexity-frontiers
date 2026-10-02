@@ -16,3 +16,5 @@ papers/orthogonal-frame-varieties/anc/** -text -whitespace
 papers/symmetric-determinant-apolarity/anc/** -text -whitespace
 papers/gram-singularity-thresholds/main.tex -text -whitespace
 papers/gram-singularity-thresholds/anc/** -text -whitespace
+papers/sharp-newton-cancellation/main.tex -text -whitespace
+papers/sharp-newton-cancellation/anc/** -text -whitespace

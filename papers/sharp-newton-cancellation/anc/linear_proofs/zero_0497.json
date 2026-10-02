@@ -1,0 +1,204 @@
+{
+  "at": "2026-10-01T20:31:51.499879+00:00",
+  "case": {
+    "anchor": 2,
+    "primary": [
+      0,
+      3
+    ],
+    "unmarked": [
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ]
+    ]
+  },
+  "barycenter": false,
+  "status": "certified",
+  "reason": null,
+  "nodes": 4,
+  "leaves": 3,
+  "seconds": 0.16633309982717037,
+  "axioms": 196,
+  "clauses": 13,
+  "proof": {
+    "clause": 8,
+    "children": [
+      {
+        "multipliers": [
+          [
+            196,
+            1
+          ],
+          [
+            33,
+            4
+          ],
+          [
+            64,
+            -2
+          ],
+          [
+            142,
+            4
+          ],
+          [
+            194,
+            -2
+          ],
+          [
+            36,
+            -2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            34,
+            -4
+          ],
+          [
+            63,
+            2
+          ],
+          [
+            54,
+            -4
+          ],
+          [
+            193,
+            2
+          ],
+          [
+            82,
+            4
+          ],
+          [
+            55,
+            4
+          ],
+          [
+            9,
+            -2
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "multipliers": [
+          [
+            196,
+            1
+          ],
+          [
+            195,
+            -2
+          ],
+          [
+            58,
+            4
+          ],
+          [
+            64,
+            -2
+          ],
+          [
+            57,
+            -4
+          ],
+          [
+            36,
+            2
+          ],
+          [
+            37,
+            -2
+          ],
+          [
+            63,
+            2
+          ],
+          [
+            193,
+            2
+          ],
+          [
+            9,
+            -2
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "multipliers": [
+          [
+            196,
+            -1
+          ],
+          [
+            33,
+            4
+          ],
+          [
+            195,
+            2
+          ],
+          [
+            58,
+            -4
+          ],
+          [
+            57,
+            4
+          ],
+          [
+            142,
+            4
+          ],
+          [
+            194,
+            -2
+          ],
+          [
+            36,
+            -4
+          ],
+          [
+            37,
+            4
+          ],
+          [
+            34,
+            -4
+          ],
+          [
+            54,
+            -4
+          ],
+          [
+            82,
+            4
+          ],
+          [
+            55,
+            4
+          ]
+        ]
+      }
+    ]
+  },
+  "system_sha256": "10bff133ec8c75238173019ba06b14245b3da0faf42e18d72c390d165b737a18",
+  "builder_sha256": "8fe306a44ac36a56eb7a48dd3e20c31c59386ba7be52c50ad94e9fc3a5e77017",
+  "scope": "Explicit finite disjunction tree with integer Farkas identities. Requires separate arithmetic, coverage, and mathematical-rule verification."
+}

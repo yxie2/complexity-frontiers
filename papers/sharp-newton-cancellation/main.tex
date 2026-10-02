@@ -1,0 +1,999 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\DeclareMathSizes{10}{10}{7}{7}
+\DeclareMathSizes{10.95}{10.95}{8}{8}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\hypersetup{pdftitle={Sharp Newton-edge bounds and cancellation families with one nonzero quadratic norm},
+pdfauthor={Ying Xie},pdfsubject={Newton polygons over valued fields}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\val}{\nu}
+\newcommand{\qf}{\mathfrak q}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\supp}{\operatorname{supp}}
+\title{Sharp Newton-edge bounds and cancellation families\newline
+with one nonzero quadratic norm}
+\author{Ying Xie\\Kennesaw State University\\
+\href{mailto:yxie2@kennesaw.edu}{yxie2@kennesaw.edu}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $g=(P,Q,R)=\sum_{i=0}^{5}c_i x^{A_i}$ have six occupied vector
+coefficients, exactly one of which has nonzero norm for
+$\qf(P,Q,R)=PQ+R^2$. Over every field of characteristic different from
+two with a real-valued nonarchimedean valuation, we prove that
+$\qf(g)$ has at most eleven strict lower Newton edges and at most ten
+edges of width one. Both maxima are attained simultaneously over every
+such nontrivially valued field. At every prime, integer examples have
+coordinate sparsity fourteen and exactly ten simple nonzero local roots
+of distinct valuations. The dyadic example has 228-bit input coefficients.
+The upper bound is computer assisted: a generic null-cone perturbation
+and a rank-three initial-matrix argument reduce the problem to 2,359
+marked support patterns. Exact disjunction trees and integer linear
+identities exclude every pattern, without an exponent or precision
+cutoff. Six patterns require convexity inequalities forced by equal
+barycenters of exponent sums. The supplied verifier uses only the Python
+standard library. We also prove the sharp five-support bound of eight
+edges and construct, at every prime and every support size $n\ge8$,
+one-norm examples with $2n+1$ edges, of which $2n$ have width one.
+The envelope lemmas and the family construction are proved in full.
+\end{abstract}
+
+\section{The extremal problem}
+
+Let $K$ be a field of characteristic different from two and let
+$\val:K\to\R\cup\{+\infty\}$ be a nonarchimedean valuation. For
+$f=\sum_e f_e x^e\ne0$, write $V(f)$ for the number of strict edges on
+the lower convex hull of the finite points $(e,\val(f_e))$, and $U(f)$
+for the number of those edges having horizontal width one. Collinear
+coefficient points do not create additional edges. Laurent exponents are
+allowed. Put
+\[
+ \qf(p,q,r)=pq+r^2,\qquad
+ g=(P,Q,R)=\sum_{i=0}^{n-1}c_i x^{A_i},\quad A_0<\cdots<A_{n-1}.
+\]
+All $c_i$ are nonzero. Let $k=|\{i:\qf(c_i)\ne0\}|$, and let $S$ be
+the sum of the three scalar support sizes.
+
+\begin{theorem}\label{thm:main}
+If $n=6$, $k=1$, and $\qf(g)\ne0$, then
+\[
+ V(\qf(g))\le11,\qquad U(\qf(g))\le10.
+\]
+Over every $K$ as above with nontrivial valuation, a formula attains
+$(V,U)=(11,10)$. No bound on the input exponents or coefficient
+valuations is imposed. No completeness or residue-field assumption is needed.
+\end{theorem}
+
+\begin{corollary}\label{cor:prime}
+For every prime $p$ there are integer polynomials $P,Q,R$ with
+$n=6$, $k=1$, $S=14$, and $(V_p,U_p)=(11,10)$. Their sole nonzero
+coefficient norm is an ordinary integer square. The output has exactly
+ten simple nonzero $\Q_p$ roots, of distinct valuations, and a separate
+double zero at the origin.
+\end{corollary}
+
+The small-support results fit into a wider cancellation picture.
+Section~\ref{sec:five} proves that five coefficient vectors with one
+nonzero norm have at most eight edges, and gives every-prime examples
+with eight unit edges. Together with Theorem~\ref{thm:main}, this makes
+six the smallest support size violating $V\le2n-2$ over $\Q_p$.
+Section~\ref{sec:family} constructs integer examples with
+$V_p=2n+1$, $U_p=2n$, and $S=3n-4$ for every $n\ge8$ and every prime.
+Their input bit lengths are $O(n^2\log p)$. Thus the small-support
+extrema coexist with larger families exceeding $2n$ edges.
+All envelope arguments and constructions used for these statements
+are included below.
+
+Sparse Newton-polygon bounds are motivated in part by algebraic
+complexity. Koiran, Portier, Tavenas, and Thomass\'e study a
+$\tau$-conjecture for ordinary bivariate Newton polygons and show that
+a suitable weak version implies an arithmetic-circuit lower bound for
+the permanent \cite{KPTT}. Their polygon and representation model
+are different from the valued univariate, fixed ternary quadratic
+problem here. We use their work only as context; we do not infer its
+complexity conclusion from a six-support bound.
+
+\section{Reduction to finite pair and coefficient heights}
+
+Write $c_i=(P_i,Q_i,R_i)$ and set
+\[
+ d_i=\qf(c_i),\qquad
+ C_{ij}=P_iQ_j+P_jQ_i+2R_iR_j \quad(i<j).
+\]
+The matrix $M$ with diagonal $2d_i$ and off-diagonal $C_{ij}$ has rank
+at most three, and
+\[
+ f=\qf(g)=\sum_i d_i x^{2A_i}+\sum_{i<j}C_{ij}x^{A_i+A_j}.
+\]
+Let $a$ be the unique index with $d_a\ne0$.
+
+\begin{lemma}[Generic null-cone perturbation]\label{lem:perturb}
+After passing to a real-valued nonarchimedean field extension, the five
+null vectors can be perturbed so that every $C_{ij}$ and every possible
+output coefficient is nonzero. The support and the number of nonzero
+coefficient norms remain unchanged, and every original strict Newton
+vertex can be preserved. Every original unit edge can also be preserved.
+\end{lemma}
+\begin{proof}
+Every nonzero null vector has the form
+$t_i(-u_i^2,v_i^2,u_iv_i)$ with $t_i\ne0$. If $Q_i\ne0$, take
+$t_i=Q_i$, $v_i=1$, and $u_i=R_i/Q_i$. If $Q_i=0$, nullity gives
+$R_i=0$ and $P_i\ne0$; use $t_i=-P_i$, $u_i=1$, $v_i=0$.
+
+Replace $u_i,v_i$ by $u_i+Z_i,v_i+W_i$, where the ten variables are
+algebraically independent and have a common sufficiently large positive
+Gauss valuation. Keep $c_a$ fixed. The perturbed vectors are nonzero
+and null. Between two null vectors the cross coefficient is
+\[
+ -t_it_j(u_iv_j-u_jv_i)^2,
+\]
+which is a nonzero polynomial in the independent parameters. With
+$c_a$ it is the nonzero quadratic form
+$t_i(-Q_a u_i^2+P_a v_i^2+2R_a u_iv_i)$.
+
+Pairs at a common exponent have disjoint endpoints. A null-null pair
+has a mixed monomial involving its own two endpoints, absent from all
+other contributions in that exponent group. A pair involving $a$ has
+a nonconstant polynomial in its own null endpoint, likewise absent
+elsewhere in the group. Thus no possible output coefficient vanishes
+identically, even if a diagonal constant is present.
+
+For each old strict vertex select a finite supporting slope exposing
+it uniquely. There are finitely many selected slopes and possible
+output exponents. Sufficiently large parameter valuations preserve
+all old nonzero coefficient heights and place every newly nonzero
+coefficient strictly above these selected supporting lines. All old
+vertices therefore persist. A unit edge persists because no integer
+exponent lies between its endpoints.
+\end{proof}
+
+The use of a field extension is legitimate for the universal upper
+bound: the alleged counterexample would become another counterexample
+over a field in the same class. The lemma does not assert that a
+specialization can always be chosen inside the original field.
+
+\section{The hidden primary pair}
+
+For $t\in\R$ define the concave Gauss functions
+\begin{align*}
+ E(t)&=\min\{\val(d_i)+2A_it,\ \val(C_{ij})+(A_i+A_j)t\},\\
+ D(t)&=\min_i\{\val(d_i)+2A_it\},\\
+ F(t)&=\min_e\{\val(f_e)+et\}.
+\end{align*}
+Zero contributions are assigned infinite height. The following envelope
+lemma holds for arbitrary $n$ and $k$; its full proof supplies the
+preliminaries for both small-support bounds.
+
+\begin{lemma}\label{lem:envelope}
+For rank at most three, $E=\min(F,D)$. If $E=F$, then
+$V(f)\le2n+k-4$ for $n\ge2$.
+\end{lemma}
+\begin{proof}
+Always $E\le\min(F,D)$. If the inequality were strict on an interval,
+choose $t$ there avoiding ties between distinct contribution exponents.
+Over $K(T)$ with the Gauss valuation $\val(T)=t$, conjugate $M$ by
+$\operatorname{diag}(T^{A_i})$ and divide by a minimum off-diagonal
+entry times its monomial. All entries are integral, all diagonal
+reductions vanish, and the nonzero off-diagonal reductions are precisely
+the minimum pairs. There must be at least two such pairs, since the
+output coefficient is raised. Equal-sum pairs are disjoint, so the
+residue matrix contains two nonsingular two-by-two blocks and has rank
+at least four. This contradicts the vanishing of every four-by-four
+minor. Continuity gives the identity at exceptional parameters too.
+
+Now assume $E=F$. At each strict output vertex, choose a contribution
+of that height. Such a contribution exists by the ultrametric inequality.
+At most $k$ selected vertices use diagonals. Two strictly nested chosen
+off-diagonal pairs, on four ordered exponents $x_0<x_1<x_2<x_3$, are
+impossible. Here is an explicit strictness argument. Write
+$s=x_0+x_3$, $t=x_1+x_2$, and let $\phi$ be the piecewise-linear
+Newton boundary, extended convexly with strict endpoint corners if needed.
+The selected reverse entries have heights $\phi(s),\phi(t)$, and
+both arguments are strict vertices. For sufficiently small $\eta>0$,
+the function
+$\psi(x)=\phi(x)-\eta(|x-s|+|x-t|)$ is still convex.
+For any convex function, the reverse permutation minimizes the assignment
+sum $\sum_i\psi(x_i+x_{\pi(i)})$: successively swapping increasing
+permutation values cannot increase the sum, by the convex Monge inequality.
+
+Every other permutation has an argument outside the interval with
+endpoints $s,t$. Indeed, $\pi(0)\ne3$ gives an argument below both;
+$\pi(3)\ne0$ gives one above both. The remaining nonreverse permutation
+fixes the middle indices, and one of $2x_1,2x_2$ lies outside that
+interval. Therefore its sum of $|x-s|+|x-t|$ is strictly larger than
+the reverse sum. The reverse permutation uniquely minimizes the
+$\phi$ assignment cost. All matrix entries are at least their boundary
+heights, since $E=F$ (and $\val(2)\ge0$ for doubled diagonals), while
+the reverse entries attain their heights. Thus the reverse determinant
+term is uniquely minimum, contradicting rank at most three.
+
+The selected pairs consequently form a nonnesting antichain. In
+lexicographic order both indices are nondecreasing and their sum
+strictly increases, through the range $1,\ldots,2n-3$ in zero-based
+indexing. There are at most $2n-3$ pairs. Adding $k$ diagonal vertices
+gives $V+1\le2n-3+k$.
+\end{proof}
+
+\begin{corollary}\label{cor:visible-diagonals}
+For $n\ge2$, if every nonzero diagonal contribution lies on or above
+the output Newton boundary, then $V(f)\le2n+k-4$. In particular,
+$V(f)\le2n-4$ when all coefficient vectors are null. The bound
+$V(f)\le2n+k-4$ also holds whenever the support contains no nontrivial
+three-term arithmetic progression.
+\end{corollary}
+\begin{proof}
+The diagonal hypothesis says $D\ge F$, so Lemma~\ref{lem:envelope}
+gives $E=F$ and the bound. For null vectors $D=+\infty$.
+If the support has no nontrivial three-term progression, no
+off-diagonal pair contributes at $2A_i$; hence $f_{2A_i}=d_i$ and
+every finite diagonal point belongs to the output coefficient cloud.
+\end{proof}
+
+\begin{lemma}\label{lem:primary}
+For $n=6,k=1$, any formula with $V>9$ can be normalized to have a
+unique primary pair $(p,q)$ satisfying
+\begin{gather*}
+ p<a<q,\qquad A_p+A_q=2A_a,\\
+ w_{pq}=0,\qquad w_{ij}>0\ ((i,j)\ne(p,q)),\qquad H_e>0.
+\end{gather*}
+Here $w_{ij}$ are pair-entry heights and $H_e$ are output heights
+after a common vertical translation and affine tilt. The normalized
+exceptional diagonal contribution has height zero. Reflection permits
+$a\in\{1,2\}$.
+\end{lemma}
+\begin{proof}
+Lemma~\ref{lem:perturb} permits all pair and output coefficients to be
+nonzero. If $E=F$, Lemma~\ref{lem:envelope} gives $V\le9$. Thus $E<F$
+on an open interval. At a generic parameter in that interval, the
+unique diagonal at exponent $2A_a$ is minimal, and at least one pair
+at the same exponent must tie it. Such a pair avoids $a$ and straddles it.
+
+There cannot be two minimum pairs. They would give two disjoint
+nonsingular blocks in the residue matrix used above. With
+$\epsilon=\val(2)>0$ the diagonal vanishes on reduction; with
+$\epsilon=0$ it adds a separate nonzero diagonal block. Either case
+contradicts rank at most three. Subtracting the minimum height and
+tilting by the chosen parameter gives the assertions. The extreme
+indices cannot be exceptional in a hidden primary, and reflection
+reduces $a=3,4$ to $a=2,1$.
+\end{proof}
+
+\section{The sharp five-support bound}\label{sec:five}
+
+\begin{theorem}\label{thm:five}
+If $n=5$, $k=1$, and $\qf(g)\ne0$, then $V(\qf(g))\le8$ over
+every field in the standing hypotheses. For every prime $p$, integer
+examples attain $V_p=U_p=8$ with $S=11$ and a sole nonzero coefficient
+norm that is an integer square.
+\end{theorem}
+
+\begin{proof}[Proof of the upper bound]
+Suppose $n=5$, $k=1$, and, toward a contradiction, $V\geq9$.
+Let $a$ be the exceptional exponent. There are only eleven possible
+contributions: ten off-diagonal pairs and $d_a x^{2a}$.
+Lemma~\ref{lem:envelope} implies $E\neq F$, and Lemma~\ref{lem:envelope}
+then forces the diagonal to be hidden by cancellation.
+Counting contributions shows that all ten off-diagonal terms are
+nonzero with distinct exponent sums, precisely one pair
+$p<a<q$ satisfies $p+q=2a$, and every one of the ten output points is
+a strict vertex. No output coefficient vanishes.
+
+Put $d=\val(d_a)$, $w_{ij}=\val(C_{ij})$, and let $h_{ij}$ be the
+actual output height at $i+j$. In this section the letters $p,a,q,r,s$ denote actual support exponents, not their ordinal indices. Then
+\begin{equation}\label{five:eq:onecollision}
+ w_{pq}=d<h_{pq},\qquad w_{ij}=h_{ij}\quad(\{i,j\}\neq\{p,q\}).
+\end{equation}
+Strict convexity gives, whenever $i<j<k<l$,
+\begin{equation}\label{five:eq:convex4}
+ h_{ij}+h_{kl}>h_{ik}+h_{jl}>h_{il}+h_{jk},
+\end{equation}
+and, for $r\notin\{p,a,q\}$,
+\begin{equation}\label{five:eq:midpoint}
+ h_{pr}+h_{qr}>2h_{ar}.
+\end{equation}
+In \eqref{five:eq:convex4} the paired arguments have equal totals and
+successively smaller spreads.
+
+For four null vectors, the Gram determinant identity is
+\begin{equation}\label{five:eq:gramnull}
+ X^2+Y^2+Z^2-2XY-2XZ-2YZ=0,
+\end{equation}
+where $X,Y,Z$ are the three matching products of cross coefficients.
+Their valuations cannot have a unique minimum.
+For the exceptional vector $a$ and three null vectors $p,q,r$, the
+identity has the additional term
+\begin{equation}\label{five:eq:gramexception}
+ 4d_a C_{pq}C_{pr}C_{qr}.
+\end{equation}
+These are direct determinant expansions of $M$.
+
+If another exponent $r$ lies strictly between $p$ and $q$, the nested
+matching $(p,q),(a,r)$ is uniquely smallest by
+\eqref{five:eq:onecollision}--\eqref{five:eq:convex4}, with valuation $d+w_{ar}$.
+The additional term has valuation
+$2\epsilon+2d+w_{pr}+w_{qr}>2d+2w_{ar}$ by \eqref{five:eq:midpoint}.
+The square of that matching product is the unique minimum determinant
+term, a contradiction.
+
+Thus $p,a,q$ are consecutive. If the other exponents lie on opposite
+sides, write $r<p<a<q<s$. On the four null vectors $r,p,q,s$ the nested
+matching $(r,s),(p,q)$ is uniquely smallest, contradicting
+\eqref{five:eq:gramnull}.
+
+Otherwise reflect the exponents so that $p<a<q<r<s$.
+The four-null identity on $p,q,r,s$ forces
+\[
+ d+w_{rs}=w_{ps}+w_{qr},
+\]
+since the middle matching is strictly larger than the nested matching.
+On $a,q,r,s$ the nested matching $(a,s),(q,r)$ is uniquely smallest.
+The additional determinant term must have exactly its doubled valuation:
+\[
+ 2\epsilon+d+w_{qr}+w_{qs}+w_{rs}=2w_{as}+2w_{qr}.
+\]
+Substitution gives $2\epsilon+w_{ps}+w_{qs}=2w_{as}$, contradicting
+\eqref{five:eq:midpoint}. This proves $V\leq8$.
+\end{proof}
+
+\subsection{Sharpness with eight unit edges at every prime}
+
+Set $c_3=(0,2,1)$ and $c_i=t_i(-s_i^2,1,s_i)$ for $i=0,2,4,6$.
+In the dyadic case take
+\[
+ (s_0,s_2,s_4,s_6)=(16,80,2,10),\qquad
+ (t_0,t_2,t_6)=(64,1/2,1),
+\]
+and define
+\[
+ t_4=\frac{1-t_0t_6(s_0-s_6)^2-4}{t_2(s_2-s_4)^2}
+     =-\frac{769}{1014}.
+\]
+For an odd prime put $T=p$ and take instead
+\[
+ (s_0,s_2,s_4,s_6)=(T^6,T^6+T^7,T,T+T^2),\qquad
+ (t_0,t_2,t_6)=(T^5,T^{-2},T),
+\]
+with the same formula for $t_4$ replacing $4$ by $T^2$.
+The numerator is a unit. The output coefficient at exponent $6$
+is exactly $p^2$, and each other nonzero coefficient has one contribution.
+For both recipes the complete height list, at exponents $2,\ldots,10$, is
+\[
+ 17,11,7,4,2,1,1,2,5.
+\]
+The slopes $-6,-4,-3,-2,-1,0,1,3$ increase strictly.
+Thus $V=U=8$. Apply the isometry \eqref{eq:isometry} below with
+$a=s_0,b=s_2$, and clear a common denominator.
+Two coefficients become axis vectors and the remaining three have
+three coordinates, giving $S=11$ and one integer-square norm.
+
+For $p=2$ this gives the explicit 26-bit integer example
+\begin{align*}
+ P&=519168x^2+121680x^3-37681x^4+9126x^6,\\
+ Q&=-66453504-3204240x^3+1169649x^4-1242150x^6,\\
+ R&=-624624x^3+209937x^4-106470x^6.
+\end{align*}
+The sole nonzero norm is $16224^2$, at exponent $3$.
+Its output heights are the displayed list shifted upward by ten.
+Every unit edge has a simple linear residual factor, so each example
+has exactly eight simple nonzero $\Q_p$ roots.
+
+
+For $n\le4$, there are at most $\binom n2+1$ contributions when $k=1$,
+so $V\le\binom n2\le2n-2$. Together with the five-support bound and
+the six-support construction in Section~\ref{sec:sharpness}, this shows
+that six is the smallest vector-support size for which $V>2n-2$ is
+possible over $\Q_p$, for every prime $p$.
+
+\section{The finite necessary-condition certificate}
+
+\subsection{Complete geometry and vertex patterns}
+
+The exceptional diagonal exponent is already a pair exponent. If
+$V\ge12$, at least thirteen distinct pair sums are needed, among the
+fifteen pairs $i<j$. Equality of distinct pair sums can occur only as
+$A_i+A_l=A_j+A_k$ with $i<j<k<l$. There are fifteen possible elementary
+equalities. Every pair partition with at least thirteen groups is
+generated by at most two such equalities: choose a spanning tree within
+each group. Taking all equivalence closures gives 119 partitions.
+There are ten reflected primary placements, hence 1,190 geometry cases.
+
+The geometry certificate accounts for all cases as follows.
+\begin{center}
+\begin{tabular}{lrp{7.1cm}}
+\toprule
+Outcome&Cases&Exact evidence\\
+\midrule
+Forced unlisted collision&915&Rational row-space identity between two
+pair sums declared distinct\\
+Impossible strict order&48&Integer linear contradiction from the
+support equalities and $A_{i+1}>A_i$\\
+Feasible geometry&227&Rational ordered support with exactly the
+specified pair-sum equalities\\
+\bottomrule
+\end{tabular}
+\end{center}
+In a feasible partition with $N$ output groups, mark thirteen strict
+vertices and leave $N-13$ groups unmarked. The unmarked groups are
+allowed to be vertices too. This yields 1,050 marked cases with no
+pair collisions, 1,176 with one, and 133 with two: 2,359 in total.
+The classification uses no numerical bound on the exponents.
+
+\subsection{Convexity rules}
+
+Let $\psi$ be the lower Newton boundary after normalization. Extend
+it outside the output interval with affine rays of slopes strictly
+below the first edge slope and strictly above the last. Choose the
+left slope nonpositive and the right slope nonnegative. Then all
+marked vertices, including endpoints, remain strict vertices of the
+extension, and $\psi$ stays positive. Set
+$h_{ij}=\psi(A_i+A_j)$ for $0\le i\le j\le5$.
+
+At marked groups, $H_e=\psi(e)$; at unmarked groups, $H_e\ge\psi(e)$.
+Identically equal exponents have equal $h$ values, and $h_{pq}>0$.
+The following rules are immediate from convexity:
+\begin{align}
+ h_{ij}+h_{kl}&\ge h_{il}+h_{kj} &&(i<k,\ j<l),\label{eq:monge}\\
+ h_{pr}+h_{qr}&\ge2h_{ar}.\label{eq:midpoint}
+\end{align}
+The first is strict if either inner argument is marked; the second
+is strict if $A_a+A_r$ is marked. For the first, both inner arguments
+are strictly between the outer arguments and their sums agree.
+
+We also use all equal-barycenter relations implied by the primary and
+collision equalities. If $u+v=s+t$ and $u<s,u<t$, convexity gives
+\begin{equation}\label{eq:barycenter}
+ \psi(u)+\psi(v)\ge\psi(s)+\psi(t),
+\end{equation}
+strictly if either inner argument is marked. This is encoded as the
+finite disjunction
+\[
+ u\ge s\quad\text{or}\quad u\ge t\quad\text{or}\quad
+ \psi(u)+\psi(v)\ge\psi(s)+\psi(t).
+\]
+The support relations are checked by exact rational row reduction.
+The inequalities are not inferred from one sampled support realization.
+
+\begin{lemma}[Rigidity of two additive height equations]\label{lem:rigidity}
+Let $\phi$ be finite and convex on an interval containing $[0,a+b]$,
+where $s>0$, $a>s$, and $b>2s$. If
+\[
+ \phi(a+s)-\phi(a)=\tfrac12\phi(2s),\qquad
+ \phi(a+b)=\phi(a)+\phi(b),
+\]
+then $\phi(t)=\lambda t$ on $[\min(a,2s),a+b]$, where
+$\lambda=\phi(2s)/(2s)$.
+\end{lemma}
+\begin{proof}
+Subtract $\lambda t$ and write the resulting convex function as $\chi$.
+Then $\chi(2s)=0$, $\chi(a+s)=\chi(a)$, and
+$\chi(a+b)=\chi(a)+\chi(b)$.
+If $a\le b$, monotonicity of equal-length increments gives
+$\chi(b+s)\ge\chi(b)$, while convexity on the equal-barycenter pairs
+$(2s,a+b)$ and $(a+s,b+s)$ gives the reverse inequality.
+Equality forces affinity on $[2s,a+b]$. The equal values at $b,b+s$
+force slope zero, hence value zero. The equality $\chi(a)=0$ extends
+this interval to $a$ if $a<2s$.
+If $a>b>2s$, comparison with the zero secant on $[a,a+s]$ gives
+$\chi(a)\le0$, and convexity gives $\chi(b)\le0$. Since $b>s$,
+convexity also gives $\chi(a+b)\ge\chi(a)$, hence $\chi(b)\ge0$.
+Thus $\chi(b)=\chi(a)=0$. Equality on the chord with endpoints
+$2s,a+b$ at the interior point $b$ forces affinity and value zero
+throughout that interval.
+\end{proof}
+
+\subsection{Coefficient and Gram rules}
+
+For a coefficient group not containing the primary, the minimum among
+its pair-entry heights and its output height occurs at least twice.
+In particular, a singleton group has $H=w$. The primary group already
+has two zero-height contributions, its pair and the exceptional
+diagonal; we impose no further coefficient rule there.
+
+For four ordered indices $i<j<k<l$, put
+$X=C_{ij}C_{kl}$, $Y=C_{ik}C_{jl}$, and $Z=C_{il}C_{jk}$.
+Their Gram determinant is
+\begin{equation}\label{eq:gram}
+ X^2+Y^2+Z^2-2XY-2XZ-2YZ=0
+\end{equation}
+if all four vectors are null. If the exceptional vector is present,
+add $4d_a C_{rs}C_{rt}C_{st}$, where $r,s,t$ are the other indices.
+Thus the minimum among
+\begin{equation}\label{eq:minimum}
+ 2(w_{ij}+w_{kl}),\quad2(w_{ik}+w_{jl}),\quad2(w_{il}+w_{jk})
+\end{equation}
+and, in the exceptional case,
+\[
+ 2\epsilon+w_{rs}+w_{rt}+w_{st}
+\]
+must occur at least twice. A unique minimum in this list would remain
+unique in the full determinant, because a mixed term has height
+$\epsilon$ plus the average of two square-term heights and
+$\epsilon\ge0$. The argument remains valid in residue characteristic two.
+
+For an exceptional quartet whose six pairs are singleton marked groups
+and avoid the primary, strict convexity makes the nested matching
+uniquely smallest among the three matchings. The additional diagonal
+term must tie its square exactly. This forced linear equality is the
+certificate rule named \texttt{clean\_gram}.
+
+\subsection{Direct obstructions and finite disjunction trees}
+
+Let $L$ contain the primary and all pairs in nonsingleton groups, and
+let $U_0$ contain all pairs in nonsingleton or unmarked groups. A null
+quartet $i<j<k<l$ is impossible whenever
+\[
+ \{ij,kl,ik,jl\}\cap L=\varnothing,
+ \qquad \{il,jk\}\cap U_0=\varnothing.
+\]
+Indeed, the nonnested entries are at least their boundary heights,
+while the nested entries are at most their boundary heights: they
+equal the marked singleton heights, or are the primary at zero below
+its positive boundary. The nested arguments are marked strict
+vertices. Strict convexity therefore makes the nested matching
+uniquely smallest, contrary to \eqref{eq:gram}. This excludes 1,397
+marked cases.
+
+Each of the remaining 962 cases is encoded by the preceding linear
+rules and finite disjunctions. A repeated minimum is encoded by choosing
+every possible pair of equal minimal entries. At an internal proof-tree
+node, every branch of the selected disjunction is present. A leaf gives
+integer multipliers for its accumulated linear constraints. Multipliers
+of inequalities are nonnegative, multipliers of equalities are unrestricted,
+and some strict inequality has positive weight. The weighted sum of
+the linear forms is identically zero, giving $0>0$.
+
+The certificate has 9,085 nodes and 6,627 such leaves. Exactly six cases
+require the additional equal-barycenter rules. The solver-free checker
+independently enumerates the partitions, verifies all geometry certificates,
+regenerates the marked patterns, checks all direct null obstructions,
+audits each rule instance, verifies every branch, and evaluates each
+integer identity exactly. All 2,359 cases are excluded. This proves
+the all-edge assertion of Theorem~\ref{thm:main}.
+
+\section{The unit-edge bound}
+
+Suppose $U\ge11$. The established $V\le11$ gives $V=U=11$, so the
+twelve strict vertices have consecutive integer exponents and the
+output span is eleven. Apply Lemma~\ref{lem:perturb}. All old vertices
+persist, and the bound $V\le11$ permits no additional vertex. The
+output interval is therefore unchanged. Since all pair entries are
+now finite and the hidden diagonal exponent is a pair sum,
+\[
+ A_4+A_5-A_0-A_1=11.
+\]
+Translate $A_0$ to zero. The integer support order gives
+$A_4-A_1\ge3$, whence $A_5\le8$. This bound follows from the
+assumed eleven unit edges; it is not an imposed search limit.
+
+Exactly four six-element subsets of $\{0,\ldots,8\}$ containing zero
+have twelve consecutive pair sums:
+\[
+ \begin{split}
+ &\{0,1,2,3,4,8\},\qquad\{0,2,3,4,5,8\},\\
+ &\{0,3,4,5,6,8\},\qquad\{0,4,5,6,7,8\}.
+ \end{split}
+\]
+After reflection $a\in\{1,2\}$, and there are ten possible primary
+placements across these supports. Mark every one of the twelve output
+groups. The same linear rules exclude all ten cases, with 749 nodes
+and 567 exact contradiction leaves; two cases use equal-barycenter
+convexity. The separate checker \texttt{verify\_unit\_six.py} regenerates
+the supports and primary placements and verifies the full certificate.
+This proves $U\le10$.
+
+\section{Simultaneous sharpness and a compact formula}\label{sec:sharpness}
+
+Set $c_3=(0,2,1)$ and $c_i=t_i(-s_i^2,1,s_i)$ for
+$i\in\{0,2,4,6,8\}$. Over $\Q_p$ put $T=p$ and use the parameters
+in Table~\ref{tab:parameters}.
+\begin{table}[ht]
+\centering
+\begin{tabular}{crrrrrrrrr}
+\toprule
+Case&$A$&$B$&$D$&$E$&$u$&$v$&$w$&$H_6$&$H_{10}$\\
+\midrule
+$p=2$&39&41&18&13&10&$-17$&$-2$&20&18\\
+$p$ odd&33&34&14&11&9&$-14$&$-1$&16&14\\
+\bottomrule
+\end{tabular}
+\caption{Parameters for the sharp six-support formula.}\label{tab:parameters}
+\end{table}
+Define
+\begin{gather*}
+ s_0=T^A,\quad s_2=T^A+T^B,\quad s_4=T^{-1},\quad
+ s_6=T^D,\quad s_8=T^E,\\
+ t_0=T^u,\quad t_2=T^v,\quad t_6=T^w,\\
+ t_4=\frac{1-T^{H_6}-t_0t_6(s_0-s_6)^2}{t_2(s_2-s_4)^2},\qquad
+ t_8=\frac{-T^{H_{10}}-t_4t_6(s_4-s_6)^2}{t_2(s_2-s_8)^2}.
+\end{gather*}
+The directions are distinct and all denominators are nonzero.
+The coefficient norms are zero except $\qf(c_3)=1$.
+
+The definitions force the output coefficients at 6 and 10 to be
+$T^{H_6}$ and $T^{H_{10}}$. The numerator defining $t_4$ is a unit:
+$H_6>0$ and $u+w+2D>0$. Hence $\val_p(t_4)=2-v$.
+The two terms in the numerator defining $t_8$ have unequal valuations,
+with $w-v<H_{10}$. Therefore
+$\val_p(t_8)=w-2v-2E$.
+
+With $\epsilon=\val_p(2)$, the output heights in exponent order
+$2,3,\ldots,12,14$ are
+\begin{gather*}
+ u+v+2B,\quad \epsilon+u+A,\quad u-v,\quad \epsilon+v+A,\quad H_6,\\
+ \epsilon-v,\quad v+w+2D,\quad \epsilon+w+D,\quad H_{10},\\
+ \epsilon+w-2v-E,\quad w-3v-2E,\quad 2w-2v.
+\end{gather*}
+Every unforced coefficient has a unique minimum contribution. At
+exponent 8 the two heights are $u+w-2v$ and $v+w+2D$, and the latter
+is smaller because $u-3v>2D$. All other unforced coefficients have a
+single pair. The resulting tables are
+\begin{center}\small
+\begin{tabular}{crrrrrrrrrrrr}
+\toprule
+Exponent&2&3&4&5&6&7&8&9&10&11&12&14\\
+\midrule
+$p=2$&75&50&27&23&20&18&17&17&18&20&23&30\\
+$p$ odd&63&42&23&19&16&14&13&13&14&16&19&26\\
+\bottomrule
+\end{tabular}
+\end{center}
+For odd $p$ the consecutive slopes are
+\[
+ -21,-19,-4,-3,-2,-1,0,1,2,3,7/2;
+\]
+for $p=2$ the first two become $-25,-23$. They are strictly increasing.
+Thus all twelve points are strict vertices, the first ten edges have
+width one, and the last has width two. This proves $(V,U)=(11,10)$.
+
+For integer coordinates, put $a=s_0$, $b=s_2$, and apply
+\begin{equation}\label{eq:isometry}
+ (P,Q,R)\longmapsto
+ \frac{(P+2aR-a^2Q,\ -P-2bR+b^2Q,\ -P-(a+b)R+abQ)}{a-b}.
+\end{equation}
+Direct expansion verifies preservation of $PQ+R^2$. The vectors at
+0 and 2 become coordinate-axis vectors; the other four have three
+nonzero coordinates for the displayed rational parameters. Clearing a
+common denominator $M$ gives $S=1+1+4\cdot3=14$, a sole nonzero norm
+$M^2$, and a common output-height shift $2\val_p(M)$. The dyadic
+frozen witness has maximum input length 228 bits.
+
+If $\val(2)=0$ in a general nontrivially valued field, choose any $T$
+with positive valuation and use the odd row of the table. The displayed
+heights are multiplied by $\val(T)$. The valuation proof uses only
+unit leading coefficients. Independently, the exact formal checker
+clears denominator factors with constant term one and expands in
+$\Z[T,T^{-1}]$; every leading coefficient is a signed power of two.
+This verifies specialization in every odd positive characteristic too.
+
+If $\val(2)>0$, then $K$ has characteristic zero and $\val|_{\Q}$ is
+$\val(2)$ times the ordinary dyadic valuation. Indeed, every odd
+integer is a unit by the ultrametric inequality. The rational dyadic
+formula therefore specializes to $K$. This proves sharpness in
+Theorem~\ref{thm:main}. A trivial valuation has at most one strict
+lower edge, explaining the nontriviality qualification.
+
+Finally, over $\Q_p$ every unit edge has a linear residual polynomial
+with a nonzero simple root. Hensel's lemma gives one simple root of
+its valuation. The last edge has nonintegral slope $7/2$ and gives no
+$\Q_p$ root. This proves Corollary~\ref{cor:prime}.
+
+\section{An all-size one-norm cancellation family}\label{sec:family}
+
+We prove the following uniform construction directly.
+\begin{theorem}\label{thm:family}
+For every prime $p$ and integer $n\ge8$, there are integer polynomials
+$P,Q,R$ with
+\[
+ k=1,\qquad V_p=2n+1,\qquad U_p=2n,\qquad S=3n-4.
+\]
+Their vector support is $\{0,1,2,4\}\cup\{7,\ldots,n+2\}$.
+For each $p$, one fixed nonzero integer-square norm works for every $n$.
+The input coefficient bit lengths are $O(n^2\log p)$, and the output
+has exactly $2n$ simple nonzero $\Q_p$ roots, of distinct valuations.
+\end{theorem}
+
+\subsection{The eight-support core}
+Set $T=p$, $c_4=(0,2,1)$, and $c_i=t_i(-s_i^2,1,s_i)$ elsewhere.
+In both residue characteristics put
+\[
+ s_0=T^{-3},\qquad s_1=T^{-4},\qquad s_2=1+T^{35},
+ \qquad s_9=1+T^{152},\qquad s_{10}=1+T^{144}.
+\]
+For $p=2$ take
+\[
+\begin{split}
+ s_7&=1+T^{141},\qquad s_8=1+(T^{18}-1)T^{142},\\
+ t_0&=T^{226},\qquad t_1=\frac{T^{153}}{(1-T^4)^2},
+ \qquad t_2=T^{74}.
+\end{split}
+\]
+For odd $p$ take
+\[
+\begin{split}
+ s_7&=1+(T-1)T^{141}/2,\qquad
+ s_8=1+(T^{18}-1)T^{142}/2,\\
+ t_0&=T^{225},\qquad t_1=\frac{T^{152}}{(1-T^4)^2},
+ \qquad t_2=T^{73}.
+\end{split}
+\]
+Write $D_{ij}=(s_i-s_j)^2$ and define $t_7,t_8,t_9,t_{10}$ by
+\begin{equation}\label{eq:family-system}
+\begin{pmatrix}
+t_1D_{17}&t_0D_{08}&0&0\\
+t_2D_{27}&t_1D_{18}&t_0D_{09}&0\\
+0&t_2D_{28}&t_1D_{19}&t_0D_{0,10}\\
+-2s_7(1-s_7)&0&t_2D_{29}&t_1D_{1,10}
+\end{pmatrix}
+\begin{pmatrix}t_7\\t_8\\t_9\\t_{10}\end{pmatrix}
+=\begin{pmatrix}1-T^{61}\\-T^{48}\\-T^{36}\\-T^{25}\end{pmatrix}.
+\end{equation}
+The null-null cross coefficients are $-t_it_jD_{ij}$, and those with
+$c_4$ are $2t_is_i(1-s_i)$. Thus these equations prescribe the output
+coefficients at $8,9,10,11$ exactly.
+The dyadic valuation matrix is
+\[
+\begin{pmatrix}
+145&220&\infty&\infty\\
+144&145&220&\infty\\
+\infty&144&145&220\\
+142&\infty&144&145
+\end{pmatrix};
+\]
+for odd $p$, subtract one from every finite entry.
+The diagonal determinant term is uniquely minimal, of valuation
+$580$ or $576$: every nontrivial permutation cycle uses an upper
+entry with excess $75$, whereas the total decreases from the other
+entries in that cycle are at most five. Put $K=145$ or $144$, respectively, and normalize
+\[
+ a=T^Kt_7,\quad b=T^{K+1}t_8,\quad
+ c=T^{K+2}t_9,\quad d=T^{K+2}t_{10}.
+\]
+Multiplying the rows by $1,T,T^2,T^3$, respectively, the first
+three normalized rows give
+\[
+ a=1-T^{61}\pmod {T^{74}},\quad
+ b=-a-T^{49}\pmod {T^{74}},\quad
+ c=-b-T^{38}\pmod {T^{75}}.
+\]
+The normalized $t_1D_{1j}$ correction is
+$((1-T^4s_j)/(1-T^4))^2$, which is one to precision greater than
+$140$. The normalized $D_{2j}$ correction is one to precision at
+least $106$. These exceed all precisions used in the elimination.
+The fourth row gives
+\[
+ a+c+2d=-2^{28}\pmod {2^{49}}\quad(p=2),
+ \qquad
+ (T-1)a+c+Td=-T^{28}\pmod {T^{49}}\quad(p\ne2).
+\]
+The normalized matrix is integral with determinant valuation one.
+Its cofactor formula first bounds all four unknown valuations below by
+$-1$. The first three rows then give their congruences with precision
+reduced by one; the fourth gives $Td=-T\pmod {T^{28}}$. This proves
+integrality and recovers the full displayed precisions.
+Thus $a,c\equiv1$ and $b,d\equiv-1\pmod {T^{27}}$.
+The coefficient at exponent $12$ is
+\[
+ -T^{-3}\left((T^{18}-1)s_8b+
+       \left(\frac{s_2-s_{10}}{T^{35}}\right)^2d\right),
+\]
+whose bracket is $-T^{18}$ modulo $T^{27}$.
+The four solved coefficients and all remaining unique minima now give
+the strict dyadic vertices
+\[
+\begin{split}
+ &(1,371),(2,294),(3,219),(5,146),(6,110),(7,75),\\
+ &(8,61),(9,48),(10,36),(11,25),(12,15),(13,6),(14,-2),\\
+ &(15,-9),(16,-10),(17,-10),(18,-9),(19,-6).
+\end{split}
+\]
+For odd $p$, replace these boundary heights as follows:
+\[
+\begin{array}{c|rrrrr}
+e&1&2&3&5&6\\ \hline
+\val(f_e)&369&292&217&144&108\\
+e&15&16&17&18&19\\ \hline
+\val(f_e)&-7&-8&-8&-7&-4
+\end{array}
+\]
+The sole additional nonzero point has exponent $4$ and height
+$221$ or $219$, respectively, strictly above the boundary.
+The dyadic slopes are
+\[
+\begin{split}
+&-77,-75,-73/2,-36,-35,-14,-13,-12,-11,\\
+&-10,-9,-8,-7,-1,0,1,3.
+\end{split}
+\]
+At odd primes, $-35$ becomes $-33$, and $-7$ becomes $-5$.
+In either case there are seventeen strict edges and sixteen unit
+edges. The sole nonunit edge, from exponent $3$ to $5$, has slope
+$-73/2$.
+
+\subsection{The tail and its complete height comparison}
+
+For $11\leq j\leq n+2$ append the dyadic tail
+\[
+ t_j=T^{4j^2-66j+113},\qquad
+ s_j=1+T^{144}+\sum_{r=11}^jT^{6r+89},
+\]
+or the odd-prime tail
+\[
+ t_j=T^{4j^2-66j+114},\qquad
+ s_j=1+T^{144}+\sum_{r=11}^jT^{6r+88}.
+\]
+Put $h_j=\val_p(t_j)$, using the displayed quadratic also at $j=10$.
+For $10\le i<j$, the direction distance has valuation $6i+95$ in the
+dyadic case and $6i+94$ otherwise. In both cases the cross height is
+\[
+ 4i^2+4j^2-54i-66j+416.
+\]
+At a fixed sum $e=i+j\ge21$, this is a strictly convex quadratic
+in $i$, with real minimizer $e/2-3/4$. The unique allowed integer
+minimizer is the adjacent pair for odd $e$ and the gap-two pair for
+even $e$. Its height is
+\begin{equation}\label{eq:family-tail-height}
+ H_e=2e^2-60e+412.
+\end{equation}
+The pair $(9,11)$ has height $12$ for $p=2$ and $14$ otherwise, at
+exponent $20$. More generally, the height of $(9,j)$ minus $H_{j+9}$
+is $2(j-10)(j-11)$ for $p=2$, and that expression plus two otherwise.
+It is positive for every $j\ge12$.
+
+For the other old indices, the new cross heights are $h_j+C_i$, where
+\[
+\begin{array}{c|rrrrrr}
+i&0&1&2&4&7&8\\ \hline
+C_i\ (p=2)&220&145&144&145&137&138\\
+C_i\ (p\ne2)&219&144&143&144&138&139
+\end{array}
+\]
+For $p=2$, subtracting $H_{j+i}$ gives
+\[
+\begin{array}{c|l|c}
+i&\text{difference}&\text{range for }j+i\ge20\\ \hline
+0&2j^2-6j-79&j\ge20\\
+1&2j^2-10j-96&j\ge19\\
+2&2j^2-14j-43&j\ge18\\
+4&2j^2-22j+54&j\ge16\\
+7&2j^2-34j+160&j\ge13\\
+8&2j^2-38j+191&j\ge12
+\end{array}
+\]
+For odd $p$, the first four differences are unchanged and the last
+two increase by two. Each polynomial is positive and increasing in
+the indicated range. For the finitely many $j\ge11$ with $j+i<20$,
+substitution in the core table also gives strict inequalities; the
+smallest margin is one, at $(i,j)=(1,11)$. At exponent $20$, every
+competitor to $(9,11)$ is strictly higher, including in the odd case
+where the boundary height is $14$ instead of $H_{20}=12$.
+
+Hence no core vertex is lost and all new coefficients have a unique
+minimum contribution. The added vertices are $(20,12)$ for $p=2$,
+$(20,14)$ for odd $p$, and $(e,H_e)$ for $21\le e\le2n+3$.
+The first new slopes are $18,22,26,30,\ldots$ for $p=2$ and
+$18,20,26,30,\ldots$ for odd $p$. They increase strictly, starting
+above the core's final slope three. Each appended coefficient therefore
+adds two unit edges. This proves $V=17+2(n-8)=2n+1$ and
+$U=16+2(n-8)=2n$ for all $n\ge8$.
+
+\subsection{Integer coefficients, sparsity, and roots}
+
+For the integer realization, put $a=s_0,b=s_1$ and apply
+\begin{equation}\label{eq:strongeriso}
+(p_0,q_0,r_0)\longmapsto
+\frac{(p_0+2ar_0-a^2q_0,\,
+       -p_0-2br_0+b^2q_0,\,
+       -p_0-(a+b)r_0+abq_0)}{a-b}.
+\end{equation}
+Direct expansion proves that this is a $\qf$-isometry.
+The first two coefficient vectors become coordinate axes, and all
+others have three nonzero coordinates. Hence $S=3n-4$.
+Each matrix denominator divides $p^4(p-1)$ and every new scale
+denominator divides $p^{129}$. The core denominator already contains
+$p^{K+6}$, from its exponent-$9$ coefficient, and contains $p-1$,
+from the exponent-$2$ coordinate
+$p^{\val(t_2)-4}(p^4+p^{39}-1)^2/(p-1)$.
+Its numerator is coprime to $p-1$.
+Thus the same core denominator clears every tail, giving one fixed
+integer-square norm. The displayed exponents give $O(n^2\log p)$ input bits.
+This completes Theorem~\ref{thm:family}.
+
+Each unit edge gives one simple nonzero $\Q_p$ root, by its linear
+residual polynomial. The remaining slope $-73/2$ is nonintegral
+at every prime. Consequently the nonzero $\Q_p$ root count is
+exactly $2n$.
+
+
+
+In particular, the candidate inequalities $V\le2n+2k-4$ and
+$U\le2n+2k-4$ fail already at $k=1$. The exceptional coefficient in
+this construction is interior, at exponent four. The family does not
+represent a prescribed target polynomial with an exceptional constant term.
+
+\section{Computational verification}
+
+The ancillary archive \texttt{verification.zip} contains the exact
+certificates, example coefficients, and checking programs. After
+extracting the archive, \texttt{python -B -X utf8 verify.py} checks
+the file manifest and runs all five verification programs. The
+programs can also be run individually:
+\begin{verbatim}
+python -B -X utf8 verify_sharp_six.py
+python -B -X utf8 verify_unit_six.py
+python -B -X utf8 verify_unit10_examples.py
+python -B -X utf8 verify_positive_control.py
+python -B -X utf8 verify_families.py
+\end{verbatim}
+They require no solver. The first two regenerate the rule systems,
+independently audit the formula and justification metadata of every
+instance, and check all finite coverage and integer contradictions.
+The third imports no constructor: it expands the frozen integer
+inputs by ordered scalar convolution, checks every coefficient
+against every proposed supporting line, checks all coefficient norms,
+and lifts sixty roots modulo $p^{24}$ at
+$p=2,3,5,7,11,17$. It also verifies the formal field-uniform sharpness
+calculation. The fourth evaluates 192 axioms and 4,176 disjunctions
+on a genuine eleven-edge equality example and rejects invalid
+arithmetic-certificate controls.
+
+The fifth checker verifies the results in
+Sections~\ref{sec:five} and~\ref{sec:family}: six frozen five-support
+examples, twenty-five family members through $n=35$ at six primes,
+and 144 simple root lifts to precision $p^{24}$. It checks the twelve
+polynomial tail inequalities on their full integer ranges using
+their coefficients and monotonicity, the sixty-four finite core
+comparisons, and uniqueness of the core determinant minimum in both
+residue-characteristic cases. The general upper bound at five supports
+and the uniform family assertions follow from the written proofs.
+
+Z3 was used to generate the certificates. The checking programs
+verify their integer identities directly and require only the Python
+standard library. Each selected proof file is hashed in a manifest;
+the checkers validate these hashes and record their own source hashes.
+Python optimization flags are rejected because the implementation
+uses assertions for exact checks. The archive is self-contained.
+The mathematical reduction to the verified finite systems is proved
+in the preceding sections.
+
+\section{Further questions}
+
+The convexity argument uses additive relations among exponent
+sums before introducing their boundary heights. It resolves six
+patterns that the principal Gram conditions and the basic Monge and
+primary-midpoint inequalities did not exclude. The resulting finite
+proof depends on at most two pair-sum losses when thirteen vertices
+are demanded from fifteen pairs. This counting feature is specific
+to the present extremal problem. No extrapolation to arbitrary support
+size follows from the certificate.
+
+The next broader questions concern a uniform bound for growing $n$
+with one nonzero norm, and restrictions on endpoint-normalized
+representations of specified completely convex outputs. Theorem~\ref{thm:family} rules out the candidate bound $2n+2k-4$
+for both edge statistics. The sharp five- and six-support results
+and this all-size construction leave open a uniform upper bound
+for growing support. None of these results supplies an unrestricted
+circuit separation.
+
+\paragraph{Acknowledgment.}
+The author thanks OpenAI\textquoteright{}s GPT-6 for assistance with
+exploratory calculations, proof development, code checks, and manuscript
+drafting. The author takes responsibility for the mathematical claims
+and the final manuscript.
+
+\begin{thebibliography}{1}
+\bibitem{KPTT}
+P. Koiran, N. Portier, S. Tavenas, and S. Thomass\'e,
+\emph{A tau-conjecture for Newton polygons}, arXiv:1308.2286v2 (2014).
+\url{https://arxiv.org/abs/1308.2286v2}
+
+\end{thebibliography}
+\end{document}

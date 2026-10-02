@@ -1,0 +1,906 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "script": "verify_sharp_six.py",
+      "report": "SHARP_SIX_VERIFICATION.json",
+      "result": {
+        "status": "PASS",
+        "partitions": 119,
+        "geometry_cases": 1190,
+        "geometry_counts": {
+          "feasible": 227,
+          "forced_collision": 915,
+          "order_contradiction": 48
+        },
+        "marked_patterns_by_collision_count": {
+          "0": 1050,
+          "1": 1176,
+          "2": 133
+        },
+        "direct_null_obstructions": 1397,
+        "linear_cases": 962,
+        "barycenter_cases": 6,
+        "proof_nodes": 9085,
+        "farkas_leaves": 6627,
+        "formal_gram_determinant_terms": 7,
+        "readable_case_identities": 2,
+        "convex_rigidity_case_hypotheses_checked": [
+          "c1_0046",
+          "c1_0312"
+        ],
+        "audited_rule_instances": {
+          "epsilon": 962,
+          "support_order": 4810,
+          "support_relation": 2007,
+          "entry_normalization": 14430,
+          "hidden_boundary": 962,
+          "same_exponent": 2239,
+          "output_positive": 13385,
+          "boundary": 14430,
+          "singleton_coefficient": 11483,
+          "monge": 115440,
+          "primary_midpoint": 5772,
+          "clean_gram": 1220,
+          "coefficient_minimum": 940,
+          "gram_minimum": 13210,
+          "barycenter_convexity": 11464,
+          "distinct_output_exponents": 507
+        },
+        "proof_bytes": 12919547,
+        "hashes": {
+          "verify_sharp_six.py": "660ecb01d556edf95c153a03e8920aee4ae1c68788613256ba79ee77890b2ddf",
+          "certificate_system.py": "10bff133ec8c75238173019ba06b14245b3da0faf42e18d72c390d165b737a18",
+          "GEOMETRY_CERTIFICATE.json": "bd33a7dbba9f0eccbb839e302b460e7337e3ebd7beb9b5ca91bb63f696c4f96c",
+          "PROOF_BATCH.json": "ea63c2f095f79b4a24724279bfdc273b5244ef17269da4265f4c324d1ce7bf8e"
+        },
+        "scope": "Exact standard-library verification of rule instances, complete finite coverage, and integer contradictions. The mathematical reduction is proved in the manuscript."
+      }
+    },
+    {
+      "script": "verify_unit_six.py",
+      "report": "UNIT_SIX_VERIFICATION.json",
+      "result": {
+        "status": "PASS",
+        "supports": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8
+          ],
+          [
+            0,
+            2,
+            3,
+            4,
+            5,
+            8
+          ],
+          [
+            0,
+            3,
+            4,
+            5,
+            6,
+            8
+          ],
+          [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "primary_cases": 10,
+        "proof_nodes": 749,
+        "farkas_leaves": 567,
+        "bound": "n=6,k=1 implies U<=10",
+        "hashes": {
+          "verify_unit_six.py": "3f18f7bdd12530902efc5b13989f5d2463f1a8286fbdc9dc50d546587aa7dee0",
+          "UNIT_SIX_PROOFS.json": "3714b3558cb795743637d0b21254edd1106547700c1737a3433a0f683e5df816",
+          "verify_sharp_six.py": "660ecb01d556edf95c153a03e8920aee4ae1c68788613256ba79ee77890b2ddf",
+          "certificate_system.py": "10bff133ec8c75238173019ba06b14245b3da0faf42e18d72c390d165b737a18"
+        },
+        "scope": "Exact certificate verification; reduction uses the separately proved V<=11 theorem and preservation of unit edges under generic perturbation."
+      }
+    },
+    {
+      "script": "verify_unit10_examples.py",
+      "report": "UNIT10_EXAMPLES_VERIFICATION.json",
+      "result": {
+        "status": "PASS",
+        "members": [
+          {
+            "prime": 2,
+            "n": 6,
+            "k": 1,
+            "V": 11,
+            "U": 10,
+            "S": 14,
+            "roots": [
+              {
+                "valuation": 25,
+                "unit_mod_p24": "8533861",
+                "precision": 24
+              },
+              {
+                "valuation": 23,
+                "unit_mod_p24": "9380461",
+                "precision": 24
+              },
+              {
+                "valuation": 4,
+                "unit_mod_p24": "11184523",
+                "precision": 24
+              },
+              {
+                "valuation": 3,
+                "unit_mod_p24": "12915919",
+                "precision": 24
+              },
+              {
+                "valuation": 2,
+                "unit_mod_p24": "16729267",
+                "precision": 24
+              },
+              {
+                "valuation": 1,
+                "unit_mod_p24": "6268205",
+                "precision": 24
+              },
+              {
+                "valuation": 0,
+                "unit_mod_p24": "1333173",
+                "precision": 24
+              },
+              {
+                "valuation": -1,
+                "unit_mod_p24": "16448879",
+                "precision": 24
+              },
+              {
+                "valuation": -2,
+                "unit_mod_p24": "2575117",
+                "precision": 24
+              },
+              {
+                "valuation": -3,
+                "unit_mod_p24": "6027701",
+                "precision": 24
+              }
+            ],
+            "source": "SHARP_N6_U10_P2.json",
+            "sha256": "ae068692b23fb782d156bfaf3262d54cfc597c1ed970ca9eec97f02511b9c4d8",
+            "maximum_input_bits": 228
+          },
+          {
+            "prime": 3,
+            "n": 6,
+            "k": 1,
+            "V": 11,
+            "U": 10,
+            "S": 14,
+            "roots": [
+              {
+                "valuation": 21,
+                "unit_mod_p24": "70629414917",
+                "precision": 24
+              },
+              {
+                "valuation": 19,
+                "unit_mod_p24": "211136012354",
+                "precision": 24
+              },
+              {
+                "valuation": 4,
+                "unit_mod_p24": "238595301488",
+                "precision": 24
+              },
+              {
+                "valuation": 3,
+                "unit_mod_p24": "276106624732",
+                "precision": 24
+              },
+              {
+                "valuation": 2,
+                "unit_mod_p24": "198704786330",
+                "precision": 24
+              },
+              {
+                "valuation": 1,
+                "unit_mod_p24": "223631964247",
+                "precision": 24
+              },
+              {
+                "valuation": 0,
+                "unit_mod_p24": "121834340924",
+                "precision": 24
+              },
+              {
+                "valuation": -1,
+                "unit_mod_p24": "219820604056",
+                "precision": 24
+              },
+              {
+                "valuation": -2,
+                "unit_mod_p24": "262336944638",
+                "precision": 24
+              },
+              {
+                "valuation": -3,
+                "unit_mod_p24": "4131671219",
+                "precision": 24
+              }
+            ],
+            "source": "SHARP_N6_U10_P3.json",
+            "sha256": "8eff8aef05d43eced7cb0a7a50e24d52efabf28f77e30563661e6f947d9d917e",
+            "maximum_input_bits": 303
+          },
+          {
+            "prime": 5,
+            "n": 6,
+            "k": 1,
+            "V": 11,
+            "U": 10,
+            "S": 14,
+            "roots": [
+              {
+                "valuation": 21,
+                "unit_mod_p24": "30880305976840863",
+                "precision": 24
+              },
+              {
+                "valuation": 19,
+                "unit_mod_p24": "2845347405150302",
+                "precision": 24
+              },
+              {
+                "valuation": 4,
+                "unit_mod_p24": "3821940460996638",
+                "precision": 24
+              },
+              {
+                "valuation": 3,
+                "unit_mod_p24": "16938942328268488",
+                "precision": 24
+              },
+              {
+                "valuation": 2,
+                "unit_mod_p24": "23473229677818128",
+                "precision": 24
+              },
+              {
+                "valuation": 1,
+                "unit_mod_p24": "47276972519990883",
+                "precision": 24
+              },
+              {
+                "valuation": 0,
+                "unit_mod_p24": "17241726188349038",
+                "precision": 24
+              },
+              {
+                "valuation": -1,
+                "unit_mod_p24": "44756902901470798",
+                "precision": 24
+              },
+              {
+                "valuation": -2,
+                "unit_mod_p24": "19457949286490743",
+                "precision": 24
+              },
+              {
+                "valuation": -3,
+                "unit_mod_p24": "12468516114157797",
+                "precision": 24
+              }
+            ],
+            "source": "SHARP_N6_U10_P5.json",
+            "sha256": "9c596a63e4acf847a92dbf7db6f3e154c3ec8bfa98ede71be12870b9731d516a",
+            "maximum_input_bits": 443
+          },
+          {
+            "prime": 7,
+            "n": 6,
+            "k": 1,
+            "V": 11,
+            "U": 10,
+            "S": 14,
+            "roots": [
+              {
+                "valuation": 21,
+                "unit_mod_p24": "49680000495778707359",
+                "precision": 24
+              },
+              {
+                "valuation": 19,
+                "unit_mod_p24": "56232631875780706866",
+                "precision": 24
+              },
+              {
+                "valuation": 4,
+                "unit_mod_p24": "103523586223875695658",
+                "precision": 24
+              },
+              {
+                "valuation": 3,
+                "unit_mod_p24": "29683063154715347984",
+                "precision": 24
+              },
+              {
+                "valuation": 2,
+                "unit_mod_p24": "56640577691595711706",
+                "precision": 24
+              },
+              {
+                "valuation": 1,
+                "unit_mod_p24": "5103034213421347964",
+                "precision": 24
+              },
+              {
+                "valuation": 0,
+                "unit_mod_p24": "2397607602539486796",
+                "precision": 24
+              },
+              {
+                "valuation": -1,
+                "unit_mod_p24": "152298590743825216794",
+                "precision": 24
+              },
+              {
+                "valuation": -2,
+                "unit_mod_p24": "174735137947422977754",
+                "precision": 24
+              },
+              {
+                "valuation": -3,
+                "unit_mod_p24": "98980181636633005284",
+                "precision": 24
+              }
+            ],
+            "source": "SHARP_N6_U10_P7.json",
+            "sha256": "664af72c96f76189a8612a23b8c999c1b23da6369e1008e281b2811648d1b61e",
+            "maximum_input_bits": 535
+          },
+          {
+            "prime": 11,
+            "n": 6,
+            "k": 1,
+            "V": 11,
+            "U": 10,
+            "S": 14,
+            "roots": [
+              {
+                "valuation": 21,
+                "unit_mod_p24": "4469080904753186860925562",
+                "precision": 24
+              },
+              {
+                "valuation": 19,
+                "unit_mod_p24": "976496056469600045154569",
+                "precision": 24
+              },
+              {
+                "valuation": 4,
+                "unit_mod_p24": "2967013654213879374537593",
+                "precision": 24
+              },
+              {
+                "valuation": 3,
+                "unit_mod_p24": "9422869611830914367992873",
+                "precision": 24
+              },
+              {
+                "valuation": 2,
+                "unit_mod_p24": "523543653947281989911665",
+                "precision": 24
+              },
+              {
+                "valuation": 1,
+                "unit_mod_p24": "5644752872300432580957232",
+                "precision": 24
+              },
+              {
+                "valuation": 0,
+                "unit_mod_p24": "155348417947672580019890",
+                "precision": 24
+              },
+              {
+                "valuation": -1,
+                "unit_mod_p24": "4000990543014874444054754",
+                "precision": 24
+              },
+              {
+                "valuation": -2,
+                "unit_mod_p24": "8458253394258146814231815",
+                "precision": 24
+              },
+              {
+                "valuation": -3,
+                "unit_mod_p24": "182266151782570560342068",
+                "precision": 24
+              }
+            ],
+            "source": "SHARP_N6_U10_P11.json",
+            "sha256": "03366a03a9e3b4ce971d50333a12c2a9f4854dc41ab093cb0c91e45ceed07246",
+            "maximum_input_bits": 658
+          },
+          {
+            "prime": 17,
+            "n": 6,
+            "k": 1,
+            "V": 11,
+            "U": 10,
+            "S": 14,
+            "roots": [
+              {
+                "valuation": 21,
+                "unit_mod_p24": "300376235536154452256475400734",
+                "precision": 24
+              },
+              {
+                "valuation": 19,
+                "unit_mod_p24": "90127757320872761876286871634",
+                "precision": 24
+              },
+              {
+                "valuation": 4,
+                "unit_mod_p24": "106543042117832681649022895556",
+                "precision": 24
+              },
+              {
+                "valuation": 3,
+                "unit_mod_p24": "97177570825457671616358007721",
+                "precision": 24
+              },
+              {
+                "valuation": 2,
+                "unit_mod_p24": "273337528401598909363426587771",
+                "precision": 24
+              },
+              {
+                "valuation": 1,
+                "unit_mod_p24": "144820926341504217311350463912",
+                "precision": 24
+              },
+              {
+                "valuation": 0,
+                "unit_mod_p24": "272739358392802334017053142123",
+                "precision": 24
+              },
+              {
+                "valuation": -1,
+                "unit_mod_p24": "171464204411557694908851392735",
+                "precision": 24
+              },
+              {
+                "valuation": -2,
+                "unit_mod_p24": "50121055255896268984030020025",
+                "precision": 24
+              },
+              {
+                "valuation": -3,
+                "unit_mod_p24": "86100405751361907084787759349",
+                "precision": 24
+              }
+            ],
+            "source": "SHARP_N6_U10_P17.json",
+            "sha256": "be2ee8e05a8655895f7a99aefb35009f643d201a306fba0702d2c924a4711b38",
+            "maximum_input_bits": 777
+          }
+        ],
+        "root_lifts": 60,
+        "formal_v2_zero_sharpness": {
+          "table": [
+            {
+              "exponent": 2,
+              "valuation_in_vT_units": 63,
+              "leading_coefficient": -1
+            },
+            {
+              "exponent": 3,
+              "valuation_in_vT_units": 42,
+              "leading_coefficient": 2
+            },
+            {
+              "exponent": 4,
+              "valuation_in_vT_units": 23,
+              "leading_coefficient": -1
+            },
+            {
+              "exponent": 5,
+              "valuation_in_vT_units": 19,
+              "leading_coefficient": 2
+            },
+            {
+              "exponent": 6,
+              "valuation_in_vT_units": 16,
+              "leading_coefficient": 1
+            },
+            {
+              "exponent": 7,
+              "valuation_in_vT_units": 14,
+              "leading_coefficient": -2
+            },
+            {
+              "exponent": 8,
+              "valuation_in_vT_units": 13,
+              "leading_coefficient": -1
+            },
+            {
+              "exponent": 9,
+              "valuation_in_vT_units": 13,
+              "leading_coefficient": 2
+            },
+            {
+              "exponent": 10,
+              "valuation_in_vT_units": 14,
+              "leading_coefficient": 1
+            },
+            {
+              "exponent": 11,
+              "valuation_in_vT_units": 16,
+              "leading_coefficient": -2
+            },
+            {
+              "exponent": 12,
+              "valuation_in_vT_units": 19,
+              "leading_coefficient": 1
+            },
+            {
+              "exponent": 14,
+              "valuation_in_vT_units": 26,
+              "leading_coefficient": 1
+            }
+          ],
+          "denominator_constant_term": 1,
+          "scope": "Formal Laurent-polynomial identity with unit leading coefficients at every field where v(2)=0."
+        },
+        "hashes": {
+          "verify_unit10_examples.py": "f7f6697be7d931630fd340449f79baadc0baea39218b40ef253d4b1103c0d84c",
+          "verify_field_sharpness.py": "826dcea778e1b8c77aa74d81928dd54aa5a2e76593cc2b443876c26b220d0efc"
+        },
+        "scope": "Exact frozen-input expansion and supporting-line checks; 60 simple root lifts to p^24; symbolic specialization for v(2)=0. Dyadic rational specialization covers v(2)>0. No constructor imported."
+      }
+    },
+    {
+      "script": "verify_positive_control.py",
+      "report": "CERTIFICATE_POSITIVE_CONTROL.json",
+      "result": {
+        "status": "PASS",
+        "axioms": 192,
+        "clauses": 4176,
+        "negative_controls_rejected": 3,
+        "witness_sha256": "74b84b3658a9471cfe81bff9898cc714a31fd3c0213deb1f12e44655b474f169",
+        "checker_sha256": "b786ac680cc3d5568f802c97d7cb8768459e6af271e11c32aab6deadd4259dbb",
+        "scope": "Exact positive control for all rule families on an eleven-edge formula; negative controls for arithmetic rejection. Universal rule validity relies on the written proof."
+      }
+    },
+    {
+      "script": "verify_families.py",
+      "report": "FAMILIES_VERIFICATION.json",
+      "result": {
+        "status": "PASS",
+        "sources": [
+          {
+            "source": "family_examples/SHARP_N5_UNIT_COMPACT_P2.json",
+            "sha256": "1846d644a0eb01e246ec72d82d20d6276c755d7e9541d55e68b9a70c9ccaeb79"
+          },
+          {
+            "source": "family_examples/STRONGER_N8_U16_P2.json",
+            "sha256": "bd2fb1aa3f9d64a0876ae690aaa8eb8e9ab7b33cab29776e7f8740227b86e102"
+          },
+          {
+            "source": "family_examples/SHARP_N5_UNIT_COMPACT_P3.json",
+            "sha256": "fad2c39c2e53bc4b3fa6fe223931739c8aeeed2a08c908cae27ff9e2504e1a65"
+          },
+          {
+            "source": "family_examples/STRONGER_N8_U16_P3.json",
+            "sha256": "821b6b562b3660e784ebbbe8beaf25297705ade1667ed5c55a224ddb65476186"
+          },
+          {
+            "source": "family_examples/SHARP_N5_UNIT_COMPACT_P5.json",
+            "sha256": "862e0c9718347ae92e20202fe34a1994e0333b6621feda3dad7fd81bbf763bd3"
+          },
+          {
+            "source": "family_examples/STRONGER_N8_U16_P5.json",
+            "sha256": "d7c5951231d214d10386a5ca9a0ff2d58b49296c2ea8102e08fe2aa898fc370b"
+          },
+          {
+            "source": "family_examples/SHARP_N5_UNIT_COMPACT_P7.json",
+            "sha256": "b59784ed25456faec579b29c7c43b91073482b65c5eb61324929b3cf3b6313d9"
+          },
+          {
+            "source": "family_examples/STRONGER_N8_U16_P7.json",
+            "sha256": "eea4837996e92a8276ecb7717898983f0809bb53e0465c32d92da55dfa059747"
+          },
+          {
+            "source": "family_examples/SHARP_N5_UNIT_COMPACT_P11.json",
+            "sha256": "b99b0134d8d5dc947c3e35dcae37b4cfdbe372b489236c2ba938aacb12432077"
+          },
+          {
+            "source": "family_examples/STRONGER_N8_U16_P11.json",
+            "sha256": "501c8a38a9a71192dcf58eb316136184de44f3a0829a07456ecc7fd0e20b1851"
+          },
+          {
+            "source": "family_examples/SHARP_N5_UNIT_COMPACT_P17.json",
+            "sha256": "e6a590223f4614b99c2a0a3b44f6767c63fb19746d5cd99fdbf6c4abd332a803"
+          },
+          {
+            "source": "family_examples/STRONGER_N8_U16_P17.json",
+            "sha256": "c2d881fc26042361709da1d5ef9c93047188460a7b81856cb2f2de00e1560a8f"
+          }
+        ],
+        "five_support_examples": [
+          {
+            "prime": 2,
+            "n": 5,
+            "k": 1,
+            "V": 8,
+            "U": 8,
+            "S": 11
+          },
+          {
+            "prime": 3,
+            "n": 5,
+            "k": 1,
+            "V": 8,
+            "U": 8,
+            "S": 11
+          },
+          {
+            "prime": 5,
+            "n": 5,
+            "k": 1,
+            "V": 8,
+            "U": 8,
+            "S": 11
+          },
+          {
+            "prime": 7,
+            "n": 5,
+            "k": 1,
+            "V": 8,
+            "U": 8,
+            "S": 11
+          },
+          {
+            "prime": 11,
+            "n": 5,
+            "k": 1,
+            "V": 8,
+            "U": 8,
+            "S": 11
+          },
+          {
+            "prime": 17,
+            "n": 5,
+            "k": 1,
+            "V": 8,
+            "U": 8,
+            "S": 11
+          }
+        ],
+        "family_members": [
+          {
+            "prime": 2,
+            "n": 8,
+            "k": 1,
+            "V": 17,
+            "U": 16,
+            "S": 20
+          },
+          {
+            "prime": 2,
+            "n": 9,
+            "k": 1,
+            "V": 19,
+            "U": 18,
+            "S": 23
+          },
+          {
+            "prime": 2,
+            "n": 12,
+            "k": 1,
+            "V": 25,
+            "U": 24,
+            "S": 32
+          },
+          {
+            "prime": 2,
+            "n": 25,
+            "k": 1,
+            "V": 51,
+            "U": 50,
+            "S": 71
+          },
+          {
+            "prime": 2,
+            "n": 35,
+            "k": 1,
+            "V": 71,
+            "U": 70,
+            "S": 101
+          },
+          {
+            "prime": 3,
+            "n": 8,
+            "k": 1,
+            "V": 17,
+            "U": 16,
+            "S": 20
+          },
+          {
+            "prime": 3,
+            "n": 9,
+            "k": 1,
+            "V": 19,
+            "U": 18,
+            "S": 23
+          },
+          {
+            "prime": 3,
+            "n": 12,
+            "k": 1,
+            "V": 25,
+            "U": 24,
+            "S": 32
+          },
+          {
+            "prime": 3,
+            "n": 25,
+            "k": 1,
+            "V": 51,
+            "U": 50,
+            "S": 71
+          },
+          {
+            "prime": 5,
+            "n": 8,
+            "k": 1,
+            "V": 17,
+            "U": 16,
+            "S": 20
+          },
+          {
+            "prime": 5,
+            "n": 9,
+            "k": 1,
+            "V": 19,
+            "U": 18,
+            "S": 23
+          },
+          {
+            "prime": 5,
+            "n": 12,
+            "k": 1,
+            "V": 25,
+            "U": 24,
+            "S": 32
+          },
+          {
+            "prime": 5,
+            "n": 25,
+            "k": 1,
+            "V": 51,
+            "U": 50,
+            "S": 71
+          },
+          {
+            "prime": 7,
+            "n": 8,
+            "k": 1,
+            "V": 17,
+            "U": 16,
+            "S": 20
+          },
+          {
+            "prime": 7,
+            "n": 9,
+            "k": 1,
+            "V": 19,
+            "U": 18,
+            "S": 23
+          },
+          {
+            "prime": 7,
+            "n": 12,
+            "k": 1,
+            "V": 25,
+            "U": 24,
+            "S": 32
+          },
+          {
+            "prime": 7,
+            "n": 25,
+            "k": 1,
+            "V": 51,
+            "U": 50,
+            "S": 71
+          },
+          {
+            "prime": 11,
+            "n": 8,
+            "k": 1,
+            "V": 17,
+            "U": 16,
+            "S": 20
+          },
+          {
+            "prime": 11,
+            "n": 9,
+            "k": 1,
+            "V": 19,
+            "U": 18,
+            "S": 23
+          },
+          {
+            "prime": 11,
+            "n": 12,
+            "k": 1,
+            "V": 25,
+            "U": 24,
+            "S": 32
+          },
+          {
+            "prime": 11,
+            "n": 25,
+            "k": 1,
+            "V": 51,
+            "U": 50,
+            "S": 71
+          },
+          {
+            "prime": 17,
+            "n": 8,
+            "k": 1,
+            "V": 17,
+            "U": 16,
+            "S": 20
+          },
+          {
+            "prime": 17,
+            "n": 9,
+            "k": 1,
+            "V": 19,
+            "U": 18,
+            "S": 23
+          },
+          {
+            "prime": 17,
+            "n": 12,
+            "k": 1,
+            "V": 25,
+            "U": 24,
+            "S": 32
+          },
+          {
+            "prime": 17,
+            "n": 25,
+            "k": 1,
+            "V": 51,
+            "U": 50,
+            "S": 71
+          }
+        ],
+        "root_lifts": 144,
+        "tail_checks": {
+          "unbounded_tail_polynomial_ranges": 12,
+          "finite_core_comparisons": 64,
+          "core_determinant_patterns": 2
+        },
+        "hashes": {
+          "verify_families.py": "95e33f4d7f2fa0a863ed282ae8cf5400bb7d9ee40cffef7dc8a2d15e3f73908c",
+          "polynomial_arithmetic.py": "976118595a5c5d3fe0288579285216068aebf3eb843a930efc60bcbd8ad1ad04",
+          "verify_unit10_examples.py": "f7f6697be7d931630fd340449f79baadc0baea39218b40ef253d4b1103c0d84c"
+        },
+        "scope": "Exact independent expansion of incorporated frozen examples and finite family members; symbolic tail comparisons supplement the written all-n and every-prime proof."
+      }
+    }
+  ]
+}

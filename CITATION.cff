@@ -96,6 +96,17 @@ references:
     name: Zenodo
   notes: Preprint; not peer reviewed.
 - type: article
+  title: Sharp Newton-edge bounds and cancellation families with one nonzero quadratic norm
+  authors:
+  - family-names: Xie
+    given-names: Ying
+    affiliation: Kennesaw State University
+    email: yxie2@kennesaw.edu
+  year: 2026
+  url: https://zenodo.org/records/23094728
+  publisher:
+    name: Zenodo
+- type: article
   title: F-purity of the maximal permanental ideal of a generic three-by-four matrix
   authors:
   - family-names: Xie
